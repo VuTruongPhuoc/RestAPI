@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <root>
+    <ErrorID>0</ErrorID>
+    <ErrorCode>0</ErrorCode>
+    <ErrorDesc>Transaction success!</ErrorDesc>
+  </root>
+  <root>
+    <ErrorID>-1</ErrorID>
+    <ErrorCode>-1</ErrorCode>
+    <ErrorDesc>[-1]: Lỗi hệ thống.</ErrorDesc>
+  </root>
+  <root>
+    <ErrorID>500</ErrorID>
+    <ErrorCode>-1</ErrorCode>
+    <ErrorDesc>Internal Server Error!</ErrorDesc>
+  </root>
+</NewDataSet>
