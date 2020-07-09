@@ -213,7 +213,7 @@ namespace RestAPI.Bussiness
 
         #endregion
                
-        public static DataSet call_prc_DBTransactions(string pv_strMethod, List<keyField> pv_keyField)
+        public static DataSet call_prc_DBTransactions(string pv_strMethod, List<KeyField> pv_keyField)
         {
             string preFixlogSession = "call_prc_DBTransactions" + pv_strMethod + ": ";
             try

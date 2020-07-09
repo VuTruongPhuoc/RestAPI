@@ -12,7 +12,7 @@ namespace RestAPI.Models
         public string id = "";
         public string instrument = "";
         public long price = 0;
-        public long time = 0;
+        public string time = "";
         public long qty = 0;
         public string side = "";
     }
