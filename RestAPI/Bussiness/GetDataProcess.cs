@@ -34,7 +34,7 @@ namespace RestAPI.Bussiness
                     string v_strSQL = "SELECT DECODE(:p_lang,'VI',errdesc,en_errdesc) ERRDESC FROM deferror where errnum = :p_error";
                     ReportParameters[] arrayParam = new ReportParameters[2];
                     arrayParam[0] = new ReportParameters() { ParamName = "p_lang", ParamValue = lang, ParamSize = lang.Length, ParamType = Type.GetType("System.String").Name };
-                    arrayParam[0] = new ReportParameters() { ParamName = "p_error", ParamValue = lang, ParamSize = errorCode.ToString().Length, ParamType = Type.GetType("System.String").Name };
+                    arrayParam[1] = new ReportParameters() { ParamName = "p_error", ParamValue = errorCode, ParamSize = errorCode.ToString().Length, ParamType = Type.GetType("System.String").Name };
 
 
                     DataAccess v_obj = new DataAccess(gc_DBModule);

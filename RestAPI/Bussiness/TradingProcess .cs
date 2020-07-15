@@ -14,33 +14,187 @@ namespace RestAPI.Bussiness
         private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static string COMMAND_DEL_ORDERS = "fopks_restapi.pr_delete_orders";
         private static string COMMAND_POST_ORDERS = "fopks_restapi.pr_post_orders";
+        private static string COMMAND_PUT_ORDERS = "fopks_restapi.pr_put_orders";
         #region orders
-        public static object getTrading_delt_orders(DataSet data)
+        //huy lenh
+        public static object delTradingorders(string strRequest, string accountNo, string orderId, string p_ipAddress)
         {
             try
             {
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
 
-                Models.OrderDelete[] orderDelete = null;
-                if (data != null && data.Tables.Count > 0 && data.Tables[0].Rows.Count > 0)
-                {
-                    orderDelete = new OrderDelete[data.Tables[0].Rows.Count];
-                    for (int i = 0; i < data.Tables[0].Rows.Count; i++)
-                    {
-                        orderDelete[i] = new OrderDelete()
-                        {
-                            errorCode = data.Tables[0].Rows[i]["ID"].ToString(),
-                            errorMesage = data.Tables[0].Rows[i]["INSTRUSMENT"].ToString(),
-                        };
-                    }
-                }
-                return new list() { s = "ok", d = orderDelete };
+                string errparam = "";
+
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[6];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_accountid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountNo;
+                v_objParam.ParamSize = accountNo.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_orderid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = orderId;
+                v_objParam.ParamSize = orderId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_userName";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = String.Empty;
+                v_objParam.ParamSize = 0;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_ipaddress";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = ipAddress;
+                v_objParam.ParamSize = ipAddress.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                string v_strerrorMessage = string.Empty;
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_DEL_ORDERS, ref v_arrParam, 4);
+                errparam = (string)v_arrParam[5].ParamValue;
+
+
+                return modCommon.getBoResponse(returnErr, errparam);
+
             }
             catch (Exception ex)
             {
                 Log.Error("get_accounts: ", ex);
-                return new ErrorMapHepper().getResponse("400", "bad request!");
+                return 1;
             }
         }
+
+        //sua lenh
+        public static object putTradingorders(string strRequest, string accountNo, string orderId, string p_ipAddress)
+        {
+            try
+            {
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string limitprice = "" , errparam = "";
+                long qty = 0;
+
+                if (request.TryGetValue("qty", out jToken))
+                    Int64.TryParse(jToken.ToString(), out qty);
+                if (request.TryGetValue("limitprice", out jToken))
+                    limitprice = jToken.ToString();
+
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[8];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_accountid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountNo;
+                v_objParam.ParamSize = accountNo.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_orderid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = orderId;
+                v_objParam.ParamSize = orderId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_userName";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = String.Empty;
+                v_objParam.ParamSize = 0;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_qty";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = qty;
+                v_objParam.ParamSize = qty.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "limitPrice";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = limitprice;
+                v_objParam.ParamSize = limitprice.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_ipaddress";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = ipAddress;
+                v_objParam.ParamSize = ipAddress.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[7] = v_objParam;
+
+                string v_strerrorMessage = string.Empty;
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_PUT_ORDERS, ref v_arrParam, 6);
+                errparam = (string)v_arrParam[7].ParamValue;
+
+                return modCommon.getBoResponse(returnErr, errparam);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("get_accounts: ", ex);
+                return 1;
+            }
+        }
+
         //dat lenh
         public static object postTradingorders(string strRequest, string accountNo, string p_ipAddress, string p_via)
         {
