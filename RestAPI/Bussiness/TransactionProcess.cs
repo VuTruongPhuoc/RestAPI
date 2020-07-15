@@ -79,7 +79,7 @@ namespace RestAPI.Bussiness
         }
 
         #region doTransaction
-        public static long doTransaction(string pv_strProcessId, string pv_strTxMessage, ref string returnKey, string pv_strMethod/*, HttpRequestMessage pv_request*/ )
+        public static long doTransaction(string pv_strProcessId, string pv_strTxMessage, ref string returnKey, StoreParameter[] pv_keyField/*, HttpRequestMessage pv_request*/ )
         {
             string preFixlogSession = "doTransaction_" + pv_strProcessId + ": ";
             long v_lngErrorCode = 0;
@@ -95,8 +95,8 @@ namespace RestAPI.Bussiness
                     return -100023; // ma loi dinh nghia trong deferror: he thong khong active
                 }
 
-                var jTran = JObject.Parse(pv_strTxMessage);
-                var jHeaders = JObject.Parse(jTran["headers"].ToString());
+                //var jTran = JObject.Parse(pv_strTxMessage);
+                //var jHeaders = JObject.Parse(jTran["headers"].ToString());
 
                 // for BO process
                 using (TransactionScope tran = new TransactionScope())
@@ -104,7 +104,7 @@ namespace RestAPI.Bussiness
                     //gọi packages thuc hien api 
                     try
                     {
-                        v_lngErrorCode = callDBTransaction(pv_strProcessId, pv_strTxMessage, ref returnKey, pv_strMethod);
+                        v_lngErrorCode = callDBTransaction(pv_strProcessId, pv_strTxMessage, ref returnKey, pv_keyField);
                         Log.Info(preFixlogSession + "callDBTransaction.v_lngErrorCode: " + v_lngErrorCode.ToString());
                         if (v_lngErrorCode == 0)
                             tran.Complete();
@@ -135,7 +135,7 @@ namespace RestAPI.Bussiness
             return string.Format("{0}{1}{2}{3}", DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second, DateTime.Now.Millisecond);
         }
 
-        public static long callDBTransaction(string pv_strProcessID, string pv_strTxMessage, ref string returnKey, string pv_strMethod)
+        public static long callDBTransaction(string pv_strProcessID, string pv_strTxMessage, ref string returnKey, StoreParameter[] pv_keyField)
         {
             string preFixlogSession = "callDBTransaction_" + pv_strProcessID + ": ";
             try
@@ -147,58 +147,27 @@ namespace RestAPI.Bussiness
                 StoreParameter[] v_arrParam = new StoreParameter[5];
 
 
-                string v_strStoredName = "pck_api_" + pv_strProcessID + "." + pv_strMethod;
+                string v_strStoredName = pv_strProcessID;
 
-                v_objParam = new StoreParameter();
-                v_objParam.ParamName = "return";
-                v_objParam.ParamValue = 0;
-                v_objParam.ParamDirection = "6"; // ParameterDirection.ReturnValue.ToString();
-                v_objParam.ParamSize = 100;
-                v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[0] = v_objParam;
+                //v_objParam = new StoreParameter();
+                //v_objParam.ParamName = "return";
+                //v_objParam.ParamValue = 0;
+                //v_objParam.ParamDirection = "6"; // ParameterDirection.ReturnValue.ToString();
+                //v_objParam.ParamSize = 100;
+                //v_objParam.ParamType = Type.GetType("System.Double").Name;
+                //v_arrParam[0] = v_objParam;
 
-                v_objParam = new StoreParameter();
-                v_objParam.ParamName = "pv_strTxMessage";
-                v_objParam.ParamValue = pv_strTxMessage;
-                v_objParam.ParamDirection = "1"; // ParameterDirection.Input.ToString();
-                v_objParam.ParamSize = 32000;
-                v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[1] = v_objParam;
-
-                v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_wsname";
-                v_objParam.ParamDirection = "1"; // ParameterDirection.Input.ToString();
-                v_objParam.ParamValue = System.Net.Dns.GetHostName();
-                v_objParam.ParamSize = 200;
-                v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[2] = v_objParam;
-
-                v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_ws_ipaddress";
-                v_objParam.ParamDirection = "1"; // ParameterDirection.Input.ToString();
-                v_objParam.ParamType = Type.GetType("System.String").Name;
-                foreach (IPAddress ipAddress in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
-                {
-                    if (ipAddress.AddressFamily == AddressFamily.InterNetwork) // filter out ipv4
-                    {
-                        v_objParam.ParamValue = ipAddress.ToString();
-                    }
-                }
-                v_arrParam[3] = v_objParam;
+                //v_objParam = new StoreParameter();
+                //v_objParam.ParamName = "pv_strTxMessage";
+                //v_objParam.ParamValue = pv_strTxMessage;
+                //v_objParam.ParamDirection = "1"; // ParameterDirection.Input.ToString();
+                //v_objParam.ParamSize = 32000;
+                //v_objParam.ParamType = Type.GetType("System.String").Name;
+                //v_arrParam[1] = v_objParam;
 
 
-                v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_out_key";
-                v_objParam.ParamDirection = "3"; //ParameterDirection.InputOutput.ToString();
-                v_objParam.ParamValue = "";
-                v_objParam.ParamSize = 4000;
-                v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[4] = v_objParam;
-
-
-
-                returnKey = v_DataAccess.ExecuteOracleStored(v_strStoredName, ref v_arrParam, 4);
-                long v_lngErrorCode = long.Parse(v_arrParam[0].ParamValue.ToString());
+                returnKey = v_DataAccess.ExecuteOracleStored(v_strStoredName, ref pv_keyField, 15);
+                long v_lngErrorCode = long.Parse(pv_keyField[14].ParamValue.ToString());
 
                 Log.Info(preFixlogSession + "======================END");
                 return v_lngErrorCode;
@@ -212,7 +181,7 @@ namespace RestAPI.Bussiness
         }
 
         #endregion
-               
+           
         public static DataSet call_prc_DBTransactions(string pv_strMethod, List<KeyField> pv_keyField)
         {
             string preFixlogSession = "call_prc_DBTransactions" + pv_strMethod + ": ";

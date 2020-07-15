@@ -279,15 +279,18 @@
     <Compile Include="Bussiness\ErrorMapHelper.cs" />
     <Compile Include="Bussiness\modCommon.cs" />
     <Compile Include="Bussiness\GetDataProcess.cs" />
+    <Compile Include="Bussiness\TradingProcess .cs" />
     <Compile Include="Bussiness\TransactionProcess.cs" />
     <Compile Include="Bussiness\UtilObject.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\TradingController.cs" />
     <Compile Include="FrontGateServiceService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\TradingModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
