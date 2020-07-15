@@ -108,8 +108,11 @@ namespace RestAPI.Controllers
             {
                 if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
-                    var result = Bussiness.TradingProcess.postTradingorders(request.Content.ReadAsStringAsync().Result, accountNo);
-                    if (result.GetType() == typeof(Models.Execution) || result.GetType() == typeof(Bussiness.list))
+                    string via = modCommon.getRequesetHeaderValue(request, "xvia");
+                    string ipaddress = modCommon.getRequesetHeaderValue(request, "client-ip");
+
+                    var result = Bussiness.TradingProcess.postTradingorders(request.Content.ReadAsStringAsync().Result, accountNo, ipaddress, via);
+                    if (result.GetType() == typeof(BoResponse))
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");

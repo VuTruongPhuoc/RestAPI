@@ -20,36 +20,40 @@ namespace RestAPI.Bussiness
         private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static string gc_DBModule = "@DIRECT_REPORT";
         
-        public static string getErrmsg(long errorCode, string errorType = "400", string lang = "VI")
+        public static string getErrmsg(long errorCode, string lang = "VI")
         {
+            string errorMsg = string.Empty;
             try
-            {   
-                if(errorCode == -1)
+            {
+                if (errorCode == 0)
+                    errorMsg = "Success";
+                else if (errorCode == -1 || errorCode == 1)
+                    errorMsg = "System Error";
+                else
                 {
-                    return "500#System error!";
-                }else if (errorCode == 400)
-                {
-                    return "400#bad request!";
-                }
+                    string v_strSQL = "SELECT DECODE(:p_lang,'VI',errdesc,en_errdesc) ERRDESC FROM deferror where errnum = :p_error";
+                    ReportParameters[] arrayParam = new ReportParameters[2];
+                    arrayParam[0] = new ReportParameters() { ParamName = "p_lang", ParamValue = lang, ParamSize = lang.Length, ParamType = Type.GetType("System.String").Name };
+                    arrayParam[0] = new ReportParameters() { ParamName = "p_error", ParamValue = lang, ParamSize = errorCode.ToString().Length, ParamType = Type.GetType("System.String").Name };
 
-                string v_strSQL = "SELECT pck_api_common.fn_get_errorObject('"+ errorCode + "', '" + lang + "', '" + errorType + "') ERRDESC FROM DUAL";
-                string errorMsg = string.Empty;
-                DataAccess v_obj = new DataAccess();
-                v_obj.NewDBInstance("@DIRECT_HOST");
-                DataSet ds = new DataSet();
-                ds = v_obj.ExecuteSQLReturnDataset(CommandType.Text, v_strSQL);
-                if (ds.Tables.Count > 0)
-                {
-                    if (ds.Tables[0].Rows.Count > 0)
-                        errorMsg = ds.Tables[0].Rows[0]["ERRDESC"].ToString();
+
+                    DataAccess v_obj = new DataAccess(gc_DBModule);
+                    DataSet ds = v_obj.ExecuteSQLParametersReturnDataset(v_strSQL, arrayParam);
+
+                    if (ds.Tables.Count > 0)
+                    {
+                        if (ds.Tables[0].Rows.Count > 0)
+                            errorMsg = ds.Tables[0].Rows[0]["ERRDESC"].ToString();
+                    }
                 }
-                return errorMsg;
+                
             }
             catch (Exception ex)
             {
                 Log.Error(ex);
-                return "500#Undefined Error!";
+                return "Undefined Error!";
             }
+            return errorMsg;
         }
         
         public static DataSet executeGetData(string pv_strMethod, List<KeyField> pv_keyField)

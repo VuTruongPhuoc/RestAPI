@@ -42,26 +42,22 @@ namespace RestAPI.Bussiness
             }
         }
         //dat lenh
-        public static long postTradingorders(string strRequest, string accountNo)
+        public static object postTradingorders(string strRequest, string accountNo, string p_ipAddress, string p_via)
         {
             try
             {
+                string via = p_via, ipAddress = p_ipAddress;
+                if (via == null || via.Length == 0)
+                    via = modCommon.getConfigValue("DEFAULT_VIA", "O");
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string instrument = "";
-                string requestid = "";
-                string side = "";
-                string type = "";
-                string limitprice = "";
-                string durationtype = "";
-                string orderid = "";
-                string errcode = "";
-                string errparam = "";
+                string instrument = "", requestid = "", side = "", type = "", limitprice = "", durationtype = "", timeInForce = "";
+                string orderid = "", errcode = "", errparam = "";
 
-                int qty = 0;
-                int stopprice = 0;
-                int stoploss = 0;
-                int takeprofit = 0;
+                long qty = 0;
 
                 if (request.TryGetValue("instrument", out jToken))
                     instrument = jToken.ToString();
@@ -71,6 +67,8 @@ namespace RestAPI.Bussiness
                     side = jToken.ToString();
                 if (request.TryGetValue("type", out jToken))
                     type = jToken.ToString();
+                if (request.TryGetValue("timeInForce", out jToken))
+                    timeInForce = jToken.ToString();
                 if (request.TryGetValue("limitprice", out jToken))
                     limitprice = jToken.ToString();
                 if (request.TryGetValue("durationtype", out jToken))
@@ -83,38 +81,32 @@ namespace RestAPI.Bussiness
                     errparam = jToken.ToString();
 
                 if (request.TryGetValue("qty", out jToken))
-                    Int32.TryParse(jToken.ToString(), out qty);
-                if (request.TryGetValue("stopprice", out jToken))
-                    Int32.TryParse(jToken.ToString(), out stopprice);
-                if (request.TryGetValue("stoploss", out jToken))
-                    Int32.TryParse(jToken.ToString(), out stoploss);
-                if(request.TryGetValue("takeprofit", out jToken))
-                    Int32.TryParse(jToken.ToString(), out takeprofit);
+                    Int64.TryParse(jToken.ToString(), out qty);
 
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[15];
+                StoreParameter[] v_arrParam = new StoreParameter[13];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_accountid";
-                v_objParam.ParamDirection = "0"; 
+                v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = accountNo;
-                v_objParam.ParamSize = 4000;
+                v_objParam.ParamSize = accountNo.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[0] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_requestid";
-                v_objParam.ParamDirection = "1"; 
+                v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = requestid;
-                v_objParam.ParamSize = 4000;
+                v_objParam.ParamSize = requestid.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[1] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_userName";
-                v_objParam.ParamDirection = "1"; 
-                v_objParam.ParamValue = System.Net.Dns.GetHostName();
-                v_objParam.ParamSize = 4000;
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = String.Empty;
+                v_objParam.ParamSize = 0;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[2] = v_objParam;
 
@@ -122,15 +114,15 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamName = "p_instrument";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = instrument;
-                v_objParam.ParamSize = 4000;
+                v_objParam.ParamSize = instrument.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[3] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_qty";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = Convert.ToString(qty);
-                v_objParam.ParamSize = 4000;
+                v_objParam.ParamValue = qty;
+                v_objParam.ParamSize = qty.ToString().Length;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
                 v_arrParam[4] = v_objParam;
 
@@ -138,7 +130,7 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamName = "p_side";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = side;
-                v_objParam.ParamSize = 4000;
+                v_objParam.ParamSize = side.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[5] = v_objParam;
 
@@ -146,87 +138,66 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamName = "p_type";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = type;
-                v_objParam.ParamSize = 4000;
+                v_objParam.ParamSize = type.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[6] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_limitprice";
+                v_objParam.ParamName = "timeInForce";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = limitprice;
-                v_objParam.ParamSize = 4000;
+                v_objParam.ParamValue = timeInForce;
+                v_objParam.ParamSize = timeInForce.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[7] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_stopprice";
+                v_objParam.ParamName = "limitPrice";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = Convert.ToString(stopprice);
-                v_objParam.ParamSize = 4000;
-                v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[8] = v_objParam;
-
-                v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_durationtype";
-                v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = durationtype;
-                v_objParam.ParamSize = 4000;
+                v_objParam.ParamValue = limitprice;
+                v_objParam.ParamSize = limitprice.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[9] = v_objParam;
-
-                v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_stoploss";
-                v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = Convert.ToString(stoploss);
-                v_objParam.ParamSize = 4000;
-                v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[10] = v_objParam;
+                v_arrParam[8] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_ipaddress";
                 v_objParam.ParamDirection = "1";
-                foreach (IPAddress ipAddress in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
-                {
-                    if (ipAddress.AddressFamily == AddressFamily.InterNetwork) // filter out ipv4
-                    {
-                        v_objParam.ParamValue = ipAddress.ToString();
-                    }
-                }
+                v_objParam.ParamValue = ipAddress;
+                v_objParam.ParamSize = ipAddress.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[9] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_via";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = via;
+                v_objParam.ParamSize = via.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[10] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[11] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_orderid";
-                v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = orderid;
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[12] = v_objParam;
 
-                v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_code";
-                v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = errcode;
-                v_objParam.ParamSize = 4000;
-                v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[13] = v_objParam;
-
-                v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_param";
-                v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = errparam;
-                v_objParam.ParamSize = 4000;
-                v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[14] = v_objParam;
-
                 string v_strerrorMessage = string.Empty;
                 string returnKey = "";
                 long returnErr = 0;
-                returnErr = TransactionProcess.doTransaction(COMMAND_POST_ORDERS, v_strerrorMessage, ref returnKey, v_arrParam);
+                returnErr = TransactionProcess.doTransaction(COMMAND_POST_ORDERS, ref v_arrParam, 11);
+                errparam = (string )v_arrParam[12].ParamValue;
 
-                
-                    return returnErr;
+
+                return modCommon.getBoResponse(returnErr, errparam);
 
             }
             catch (Exception ex)

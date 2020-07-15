@@ -283,6 +283,7 @@
     <Compile Include="Bussiness\TransactionProcess.cs" />
     <Compile Include="Bussiness\UtilObject.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\RootController.cs" />
     <Compile Include="Controllers\TradingController.cs" />
     <Compile Include="FrontGateServiceService.cs" />
     <Compile Include="Global.asax.cs">

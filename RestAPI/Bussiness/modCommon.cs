@@ -173,7 +173,7 @@ namespace RestAPI.Bussiness
             }
         }
 
-        private static string GetClientIp()
+        public static string GetClientIp()
         {
             foreach (IPAddress ipAddress in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
             {
@@ -904,9 +904,51 @@ namespace RestAPI.Bussiness
             return "%";
         }
 
+        public static string getConfigValue (string name, string defaultValue)
+        {
+            try
+            {
+                return System.Configuration.ConfigurationManager.AppSettings[name].ToString();
+            }
+            catch (Exception ex)
+            {
+                Log.Error("getConfigValue:.Error:.name=" + name, ex);
+            }
+            return defaultValue;
+        }
+
+        public static string getRequesetHeaderValue(HttpRequestMessage request, string name)
+        {
+            try
+            {
+                return request.Headers.GetValues("name").ToArray()[0].ToString();
+            }
+            catch (Exception ex)
+            {
+                Log.Error("getRequesetHeaderValue:.Error:.name=" + name, ex);
+            }
+            return String.Empty;
+        }
+
+        public static BoResponse getBoResponse(long error, string message = "")
+        {
+            BoResponse response = new BoResponse();
+            try
+            {
+                response.s = error.ToString();
+                if (message != null && message.Length > 0)
+                    response.errmsg = GetDataProcess.getErrmsg(error);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("modCommon.getBoResponse:.error=" + error.ToString(), ex);
+                response.errmsg = "System Error";
+            }
+            return response;
+        }
     }
 
 
 
     
-    }
+}
