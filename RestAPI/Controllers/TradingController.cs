@@ -33,7 +33,7 @@ namespace RestAPI.Controllers
             {
                 if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
-                    string ipaddress = modCommon.getRequesetHeaderValue(request, "client-ip");
+                    string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.TradingProcess.delTradingorders(request.Content.ReadAsStringAsync().Result, accountNo, orderId, ipaddress);
                     if (result.GetType() == typeof(BoResponse))
@@ -79,8 +79,8 @@ namespace RestAPI.Controllers
             {
                 if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
-                    string via = modCommon.getRequesetHeaderValue(request, "xvia");
-                    string ipaddress = modCommon.getRequesetHeaderValue(request, "client-ip");
+                    string via = modCommon.getRequestHeaderValue(request, "xvia");
+                    string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.TradingProcess.postTradingorders(request.Content.ReadAsStringAsync().Result, accountNo, ipaddress, via);
                     if (result.GetType() == typeof(BoResponse))
@@ -126,7 +126,7 @@ namespace RestAPI.Controllers
             {
                 if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
-                    string ipaddress = modCommon.getRequesetHeaderValue(request, "client-ip");
+                    string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.TradingProcess.putTradingorders(request.Content.ReadAsStringAsync().Result, accountNo, orderId, ipaddress);
                     if (result.GetType() == typeof(BoResponse))

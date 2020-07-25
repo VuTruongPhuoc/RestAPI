@@ -917,15 +917,15 @@ namespace RestAPI.Bussiness
             return defaultValue;
         }
 
-        public static string getRequesetHeaderValue(HttpRequestMessage request, string name)
+        public static string getRequestHeaderValue(HttpRequestMessage request, string name)
         {
             try
             {
-                return request.Headers.GetValues("name").ToArray()[0].ToString();
+                return request.Headers.GetValues(name).ToArray()[0].ToString();
             }
             catch (Exception ex)
             {
-                Log.Error("getRequesetHeaderValue:.Error:.name=" + name, ex);
+                Log.Error("getRequestHeaderValue:.Error:.name=" + name, ex);
             }
             return String.Empty;
         }
