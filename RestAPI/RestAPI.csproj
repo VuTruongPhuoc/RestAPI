@@ -18,7 +18,7 @@
     <AssemblyName>RestAPI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -276,13 +276,15 @@
     <Compile Include="Bussiness\AccountProcess.cs" />
     <Compile Include="Bussiness\BussinessObject.cs" />
     <Compile Include="Bussiness\CacheObject.cs" />
+    <Compile Include="Bussiness\CustomersProcess.cs" />
     <Compile Include="Bussiness\ErrorMapHelper.cs" />
     <Compile Include="Bussiness\modCommon.cs" />
     <Compile Include="Bussiness\GetDataProcess.cs" />
     <Compile Include="Bussiness\TradingProcess .cs" />
     <Compile Include="Bussiness\TransactionProcess.cs" />
     <Compile Include="Bussiness\UtilObject.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\RootController.cs" />
     <Compile Include="Controllers\TradingController.cs" />
     <Compile Include="FrontGateServiceService.cs" />
@@ -398,11 +400,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54240</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8081/</IISUrl>
+          <IISUrl>http://localhost/RestAPI</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

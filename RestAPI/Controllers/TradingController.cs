@@ -173,7 +173,7 @@ namespace RestAPI.Controllers
                 if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.getAccountorders(request.Content.ReadAsStringAsync().Result, accountNo);
-                    if (result.GetType() == typeof(Models.Execution) || result.GetType() == typeof(Bussiness.list))
+                    if (result.GetType() == typeof(Models.orders) || result.GetType() == typeof(Bussiness.list))
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -202,6 +202,51 @@ namespace RestAPI.Controllers
                 return responses;
             }
         }
+
+        //Orders By Orderid
+        [Route("accounts/{accountNo}/orders/{orderid}")]
+        [System.Web.Http.HttpGet]
+        public HttpResponseMessage getAccountorders(HttpRequestMessage request, string accountNo, string orderid)
+        {
+            string preFixlogSession = "accounts/" + accountNo + "/orders/" + orderid;
+            Log.Info(preFixlogSession + "======================BEGIN");
+            Bussiness.modCommon.LogFullRequest(request);
+
+            try
+            {
+                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                {
+                    var result = Bussiness.AccountProcess.getOrder(accountNo, orderid);
+                    if (result.GetType() == typeof(Models.ordersInfo) || result.GetType() == typeof(Bussiness.list))
+                    {
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
+                        Log.Info(preFixlogSession + "======================END");
+                        return responses;
+                    }
+                    else
+                    {
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        Log.Info(preFixlogSession + "======================END");
+                        return responses;
+                    }
+                }
+                else
+                {
+                    var v_err_request = JObject.Parse("{'error': 400, 'message': 'Invalid Input Content-Type'}");
+                    Log.Info(preFixlogSession + "======================END");
+                    return request.CreateResponse(HttpStatusCode.BadRequest, v_err_request);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error(preFixlogSession, ex);
+                var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, ex);
+                Log.Info(preFixlogSession + "======================END");
+                return responses;
+            }
+        }
+
         #endregion
     }
 }

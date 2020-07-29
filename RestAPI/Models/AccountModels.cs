@@ -36,6 +36,17 @@ namespace RestAPI.Models
         public string status = "";
         public long lastModified = 0;
     }
+    public class ordersInfo
+    {
+        public string txdate = "";
+        public string txtime = "";
+        public string action = "";
+        public string orderId = "";
+        public long matchQtty = 0;
+        public long matchPrice = 0;
+        public long quoteQtty = 0;
+        public long quotePrice = 0;
+    }
     #endregion
 
     #region ordersHistory
@@ -57,5 +68,21 @@ namespace RestAPI.Models
         public long lastModified = 0;
     }
     #endregion
+
+    #region "Account"
+    public class Account
+    {
+        public string id = "";
+        public string name = "";
+        public string currency = "";
+    }
+    #endregion
+
+    public class PPSE
+    {
+        public long ppse = 0;
+        public long maxQtty = 0;
+        public long trade = 0;
+    }
 }
 

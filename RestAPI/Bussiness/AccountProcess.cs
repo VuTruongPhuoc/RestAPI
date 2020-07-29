@@ -4,6 +4,8 @@ using log4net;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Data;
+using CommonLibrary;
+
 namespace RestAPI.Bussiness
 {
     public static class AccountProcess
@@ -12,6 +14,8 @@ namespace RestAPI.Bussiness
         private static string COMMAND_GET_EXECUTIONS = "fopks_restapi.pr_get_executions";
         private static string COMMAND_GET_ORDERS = "fopks_restapi.pr_get_orders";
         private static string COMMAND_GET_ORDERSHISTORY = "fopks_restapi.pr_get_ordersHistory";
+        private static string COMMAND_GET_PPSE = "fopks_restapi.pr_getAvailableTrade";
+        private static string COMMAND_DO_BANKDEPOSIT = "fopks_restapi.pr_post_deposit";
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
         {
@@ -99,13 +103,13 @@ namespace RestAPI.Bussiness
                 DataSet ds = null;
                 ds = GetDataProcess.executeGetData(COMMAND_GET_ORDERS, keyField);
 
-                Models.orders[] execution = null;
+                Models.orders[] order = null;
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
-                    execution = new orders[ds.Tables[0].Rows.Count];
+                    order = new orders[ds.Tables[0].Rows.Count];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                     {
-                        execution[i] = new orders()
+                        order[i] = new orders()
                         {
                             id = ds.Tables[0].Rows[i]["ID"].ToString(),
                             instrument = ds.Tables[0].Rows[i]["INSTRUMENT"].ToString(),
@@ -125,7 +129,7 @@ namespace RestAPI.Bussiness
                     }
                 }
                 
-                return new list() { s = "ok", d = execution };
+                return new list() { s = "ok", d = order };
             }
             catch (Exception ex)
             {
@@ -133,6 +137,7 @@ namespace RestAPI.Bussiness
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
+       
 
         #endregion
 
@@ -199,6 +204,204 @@ namespace RestAPI.Bussiness
             }
         }
 
+        public static object getAvailableTrade(string strRequest, string accountNo)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string symbol = "", via = "";
+                long price = 0;
+
+                if (request.TryGetValue("symbol", out jToken))
+                    symbol = jToken.ToString();
+                //if (request.TryGetValue("via", out jToken))
+                //    via = jToken.ToString();
+                via = modCommon.getConfigValue("DEFAULT_VIA", "B");
+                if (request.TryGetValue("price", out jToken))
+                    Int64.TryParse(jToken.ToString(), out price);
+
+                List<KeyField> keyField = new List<KeyField>();
+
+                keyField.Add(new KeyField() { keyName = "p_accountId", keyType = "VARCHAR2", keyValue = accountNo });
+                keyField.Add(new KeyField() { keyName = "p_symbol", keyType = "VARCHAR2", keyValue = symbol });
+                keyField.Add(new KeyField() { keyName = "p_quoteprice", keyType = "VARCHAR2", keyValue = price.ToString() });
+                keyField.Add(new KeyField() { keyName = "p_via", keyType = "VARCHAR2", keyValue = via });
+                
+                DataSet ds = null;
+                ds = GetDataProcess.executeGetData(COMMAND_GET_PPSE, keyField);
+
+                Models.PPSE[] ppse = null;
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    ppse = new PPSE[ds.Tables[0].Rows.Count];
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        ppse[i] = new PPSE()
+                        {
+                            ppse = Int64.Parse(ds.Tables[0].Rows[i]["PPSE"].ToString()),
+                            maxQtty = Int64.Parse(ds.Tables[0].Rows[i]["MAXQTTY"].ToString()),
+                            trade = Int64.Parse(ds.Tables[0].Rows[i]["TRADE"].ToString())
+                        };
+                    }
+                }
+
+                return new list() { s = "ok", d = ppse };
+            }
+            catch (Exception ex)
+            {
+                Log.Error("getAvailableTrade: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
+
+        public static object getOrder(string accountNo, string orderid)
+        {
+            try
+            {
+                Log.Info(String.Format("Begin getOrder: acctno={0} orderid={1}", accountNo,orderid));
+                List<KeyField> keyField = new List<KeyField>();
+
+                KeyField fieldAccountNo = new KeyField();
+                fieldAccountNo.keyName = "p_accountid";
+                fieldAccountNo.keyValue = accountNo;
+                fieldAccountNo.keyType = "VARCHAR2";
+                keyField.Add(fieldAccountNo);
+
+                KeyField fieldOrderId = new KeyField();
+                fieldOrderId.keyName = "p_orderid";
+                fieldOrderId.keyValue = orderid;
+                fieldOrderId.keyType = "VARCHAR2";
+                keyField.Add(fieldOrderId);
+
+                DataSet ds = null;
+                ds = GetDataProcess.executeGetData(COMMAND_GET_ORDERS, keyField);
+
+                Models.ordersInfo[] orders = null;
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    orders = new ordersInfo[ds.Tables[0].Rows.Count];
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        orders[i] = new ordersInfo()
+                        {
+                            txdate = ds.Tables[0].Rows[i]["TXDATE"].ToString(),
+                            txtime = ds.Tables[0].Rows[i]["TXTIME"].ToString(),
+                            action = ds.Tables[0].Rows[i]["ACTION"].ToString(),
+                            orderId =  ds.Tables[0].Rows[i]["ORDERID"].ToString(),
+                            matchQtty = Convert.ToInt64(ds.Tables[0].Rows[i]["MATCHQTTY"].ToString()),
+                            matchPrice = Convert.ToInt64(ds.Tables[0].Rows[i]["MATCHPRICE"].ToString()),
+                            quoteQtty = Convert.ToInt64(ds.Tables[0].Rows[i]["QUOTEQTTY"].ToString()),
+                            quotePrice = Convert.ToInt64(ds.Tables[0].Rows[i]["QUOTEPRICE"].ToString())
+                        };
+                    }
+                }
+                Log.Info(String.Format("End getOrder: acctno={0} orderid={1}", accountNo, orderid));
+                return new list() { s = "ok", d = orders };
+            }
+            catch (Exception ex)
+            {
+                Log.Error("getOrder: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
+
+        #endregion
+
+        #region "Account Transaction"
+        public static object bankDeposit(string strRequest, string accountNo)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string bankAccount = "", bankTxnum = "", desc = "";
+                long amt = 0;
+
+                if (request.TryGetValue("bankAccount", out jToken))
+                    bankAccount = jToken.ToString();
+                if (request.TryGetValue("bankTxnum", out jToken))
+                    bankTxnum = jToken.ToString();
+                if (request.TryGetValue("description", out jToken))
+                    desc = jToken.ToString();
+                if (request.TryGetValue("amount", out jToken))
+                    Int64.TryParse(jToken.ToString(), out amt);
+
+
+
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[7];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_accountid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountNo;
+                v_objParam.ParamSize = accountNo.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankacctno";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankAccount;
+                v_objParam.ParamSize = bankAccount.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_refnum";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankTxnum;
+                v_objParam.ParamSize = bankTxnum.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_amt";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = amt;
+                v_objParam.ParamSize = amt.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_desc";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = desc;
+                v_objParam.ParamSize = desc.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_DO_BANKDEPOSIT, ref v_arrParam, 5);
+                string errparam = (string) v_arrParam[6].ParamValue;
+
+
+                return modCommon.getBoResponse(returnErr, errparam);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("get_accounts: ", ex);
+                return 1;
+            }
+        }
         #endregion
     }
 }
