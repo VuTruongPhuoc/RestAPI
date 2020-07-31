@@ -20,6 +20,16 @@ namespace RestAPI.Bussiness
         public string s = "";
         public string errmsg = "";
     }
+    public class BoResponse1
+    {
+        public long s = 0;
+        public string errmsg = "";
+        public object d = null;
+    }
+    public class orderResponse
+    {
+        public string orderid = "";
+    }
 
     public class KeyField
     {

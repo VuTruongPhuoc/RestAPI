@@ -209,7 +209,8 @@ namespace RestAPI.Bussiness
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
                 string instrument = "", requestid = "", side = "", type = "", limitprice = "", durationtype = "", timeInForce = "";
-                string orderid = "", errcode = "", errparam = "";
+                string errcode = "", errparam = "";
+                object v_orderid = "";
 
                 long qty = 0;
 
@@ -227,18 +228,13 @@ namespace RestAPI.Bussiness
                     limitprice = jToken.ToString();
                 if (request.TryGetValue("durationtype", out jToken))
                     durationtype = jToken.ToString();
-                if (request.TryGetValue("orderid", out jToken))
-                    orderid = jToken.ToString();
-                if (request.TryGetValue("errcode", out jToken))
-                    errcode = jToken.ToString();
-                if (request.TryGetValue("errparam", out jToken))
-                    errparam = jToken.ToString();
+                
 
                 if (request.TryGetValue("qty", out jToken))
                     Int64.TryParse(jToken.ToString(), out qty);
 
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[13];
+                StoreParameter[] v_arrParam = new StoreParameter[14];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_accountid";
@@ -329,12 +325,20 @@ namespace RestAPI.Bussiness
                 v_arrParam[10] = v_objParam;
 
                 v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_orderid";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = orderid;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[11] = v_objParam;
+
+                v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
                 //v_objParam.ParamValue = errcode;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[11] = v_objParam;
+                v_arrParam[12] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_param";
@@ -342,16 +346,17 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = errparam;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[12] = v_objParam;
+                v_arrParam[13] = v_objParam;
 
                 string v_strerrorMessage = string.Empty;
-                string returnKey = "";
+                string returnMsg = "";
                 long returnErr = 0;
-                returnErr = TransactionProcess.doTransaction(COMMAND_POST_ORDERS, ref v_arrParam, 11);
-                errparam = (string )v_arrParam[12].ParamValue;
+                returnErr = TransactionProcess.doTransaction(COMMAND_POST_ORDERS, ref v_arrParam, 12);
+                errparam = (string )v_arrParam[13].ParamValue;
+                returnMsg = modCommon.getBoResponse(returnErr, errparam).errmsg;
+                v_orderid =  new orderResponse() { orderid = (string)v_arrParam[11].ParamValue };
 
-
-                return modCommon.getBoResponse(returnErr, errparam);
+                return new BoResponse1() { s = returnErr, errmsg = returnMsg, d = v_orderid };
 
             }
             catch (Exception ex)

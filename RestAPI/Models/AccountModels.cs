@@ -34,7 +34,8 @@ namespace RestAPI.Models
         public string parenttype = "";
         public string duration = "";
         public string status = "";
-        public long lastModified = 0;
+        public string lastModified = "";
+        public string txdate = "";
     }
     public class ordersInfo
     {
@@ -83,6 +84,73 @@ namespace RestAPI.Models
         public long ppse = 0;
         public long maxQtty = 0;
         public long trade = 0;
+    }
+
+    public class summaryAccount
+    {
+        public long balance = 0;
+        public long cibalance = 0;
+        public long tdbalance = 0;
+        public long interestbalance = 0; 
+        public long receivingt1 = 0;
+        public long receivingt2 = 0;
+        public long receivingt3 = 0;
+        public long securitiesamt = 0;
+        public long marginqttyamt = 0;
+        public long nonmarginqttyamt = 0;
+        public long dfqttyamt = 0;
+        public long totaldebtamt = 0;
+        public long secureamt = 0;
+        public long trfbuyamt = 0;
+        public long marginamt = 0;
+        public long t0debtamt = 0;
+        public long advancedamt = 0;
+        public long dfdebtamt = 0;
+        public long tddebtamt = 0;
+        public long depofeeamt = 0;
+        public long netassetvalue = 0;
+        public long requiredmarginamt = 0;
+        public long sesecuredavl = 0;
+        public long sesecured_buy = 0;
+        public long accountvalue = 0;
+        public long qttyamt = 0;
+        public long mrcrlimit = 0;
+        public long bankavlbal = 0;
+        public long debtamt = 0;
+        public long advancemaxamtfee = 0;
+        public long receivingamt = 0;
+        public long basicpurchasingpower = 0;
+        public long marginrate = 0;
+        public long holdbalance = 0;
+        public string bankinqirytime = "";
+    }
+
+    public class securitiesPortfolio
+    {
+        public string custodycd = "";
+        public string accountid = "";
+        public string symbol = "";
+        public long total = 0;
+        public long trade = 0;
+        public long blocked = 0;
+        public long vsdmortgage = 0;
+        public long mortgage = 0;
+        public long restrict = 0;
+        public long receivingright = 0;
+        public long receivingt0 = 0;
+        public long receivingt1 = 0;
+        public long receivingt2 = 0;
+        public long costprice = 0;
+        public long costpriceamt = 0;
+        public long basicprice = 0;
+        public long basicpriceamt = 0;
+        public long marginratio = 0;
+        public long requiredmarginamt = 0;
+        public long marginamt = 0;
+        public long pnlamt = 0;
+        public string pnlrate = "";
+        public string issell = "";
+        public long withdraw = 0;
     }
 }
 

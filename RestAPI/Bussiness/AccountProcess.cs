@@ -16,6 +16,9 @@ namespace RestAPI.Bussiness
         private static string COMMAND_GET_ORDERSHISTORY = "fopks_restapi.pr_get_ordersHistory";
         private static string COMMAND_GET_PPSE = "fopks_restapi.pr_getAvailableTrade";
         private static string COMMAND_DO_BANKDEPOSIT = "fopks_restapi.pr_post_deposit";
+        private static string COMMAND_DO_SUMMARY = "fopks_restapi.pr_getSummaryAccount";
+        private static string COMMAND_DO_SECURITIES = "fopks_restapi.pr_getSecuritiesPortfolio";
+        
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
         {
@@ -124,7 +127,8 @@ namespace RestAPI.Bussiness
                             parenttype = ds.Tables[0].Rows[i]["PARENTTYPE"].ToString(),
                             duration = ds.Tables[0].Rows[i]["DURATION"].ToString(),
                             status = ds.Tables[0].Rows[i]["STATUS"].ToString(),
-                            lastModified = Convert.ToInt64(ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString())
+                            lastModified = ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString(),
+                            txdate = ds.Tables[0].Rows[i]["TXDATE"].ToString()
                         };
                     }
                 }
@@ -190,7 +194,7 @@ namespace RestAPI.Bussiness
                             parenttype = ds.Tables[0].Rows[i]["PARENTTYPE"].ToString(),
                             duration = ds.Tables[0].Rows[i]["DURATION"].ToString(),
                             status = ds.Tables[0].Rows[i]["STATUS"].ToString(),
-                            lastModified = Convert.ToInt64(ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString())
+                            lastModified = ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString()
                         };
                     }
                 }
@@ -400,6 +404,154 @@ namespace RestAPI.Bussiness
             {
                 Log.Error("get_accounts: ", ex);
                 return 1;
+            }
+        }
+        #endregion
+
+        #region summaryAccount
+        public static object getsummaryAccount(string strRequest, string accountNo)
+        {
+            try
+            {
+
+                List<KeyField> keyField = new List<KeyField>();
+
+                KeyField fieldAccountNo = new KeyField();
+                fieldAccountNo.keyName = "p_accountid";
+                fieldAccountNo.keyValue = accountNo;
+                fieldAccountNo.keyType = "VARCHAR2";
+                keyField.Add(fieldAccountNo);
+
+                DataSet ds = null;
+                ds = GetDataProcess.executeGetData(COMMAND_DO_SUMMARY, keyField);
+
+                Models.summaryAccount[] summary = null;
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    summary = new summaryAccount[ds.Tables[0].Rows.Count];
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        summary[i] = new summaryAccount()
+                        {
+                            balance = Convert.ToInt64(ds.Tables[0].Rows[i]["BALANCE"].ToString()),
+                            cibalance = Convert.ToInt64(ds.Tables[0].Rows[i]["CIBALANCE"].ToString()),
+                            tdbalance = Convert.ToInt64(ds.Tables[0].Rows[i]["TDBALANCE"].ToString()),
+                            interestbalance = Convert.ToInt64(ds.Tables[0].Rows[i]["INTERESTBALANCE"].ToString()),
+                            receivingt1 = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGT1"].ToString()),
+                            receivingt2 = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGT2"].ToString()),
+                            receivingt3 = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGT3"].ToString()),
+                            securitiesamt = Convert.ToInt64(ds.Tables[0].Rows[i]["SECURITIESAMT"].ToString()),
+                            marginqttyamt = Convert.ToInt64(ds.Tables[0].Rows[i]["MARGINQTTYAMT"].ToString()),
+                            nonmarginqttyamt = Convert.ToInt64(ds.Tables[0].Rows[i]["NONMARGINQTTYAMT"].ToString()),
+                            dfqttyamt = Convert.ToInt64(ds.Tables[0].Rows[i]["DFQTTYAMT"].ToString()),
+                            totaldebtamt = Convert.ToInt64(ds.Tables[0].Rows[i]["TOTALDEBTAMT"].ToString()),
+                            secureamt = Convert.ToInt64(ds.Tables[0].Rows[i]["SECUREAMT"].ToString()),
+                            trfbuyamt = Convert.ToInt64(ds.Tables[0].Rows[i]["TRFBUYAMT"].ToString()),
+                            marginamt = Convert.ToInt64(ds.Tables[0].Rows[i]["MARGINAMT"].ToString()),
+                            t0debtamt = Convert.ToInt64(ds.Tables[0].Rows[i]["T0DEBTAMT"].ToString()),
+                            advancedamt = Convert.ToInt64(ds.Tables[0].Rows[i]["ADVANCEDAMT"].ToString()),
+                            dfdebtamt = Convert.ToInt64(ds.Tables[0].Rows[i]["DFDEBTAMT"].ToString()),
+                            tddebtamt = Convert.ToInt64(ds.Tables[0].Rows[i]["TDDEBTAMT"].ToString()),
+                            depofeeamt = Convert.ToInt64(ds.Tables[0].Rows[i]["DEPOFEEAMT"].ToString()),
+                            netassetvalue = Convert.ToInt64(ds.Tables[0].Rows[i]["NETASSETVALUE"].ToString()),
+                            requiredmarginamt = Convert.ToInt64(ds.Tables[0].Rows[i]["REQUIREDMARGINAMT"].ToString()),
+                            sesecuredavl = Convert.ToInt64(ds.Tables[0].Rows[i]["SESECUREDAVL"].ToString()),
+                            sesecured_buy = Convert.ToInt64(ds.Tables[0].Rows[i]["SESECURED_BUY"].ToString()),
+                            accountvalue = Convert.ToInt64(ds.Tables[0].Rows[i]["ACCOUNTVALUE"].ToString()),
+                            qttyamt = Convert.ToInt64(ds.Tables[0].Rows[i]["QTTYAMT"].ToString()),
+                            mrcrlimit = Convert.ToInt64(ds.Tables[0].Rows[i]["MRCRLIMIT"].ToString()),
+                            bankavlbal = Convert.ToInt64(ds.Tables[0].Rows[i]["BANKAVLBAL"].ToString()),
+                            debtamt = Convert.ToInt64(ds.Tables[0].Rows[i]["DEBTAMT"].ToString()),
+                            advancemaxamtfee = Convert.ToInt64(ds.Tables[0].Rows[i]["ADVANCEMAXAMTFEE"].ToString()),
+                            receivingamt = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGAMT"].ToString()),
+                            basicpurchasingpower = Convert.ToInt64(ds.Tables[0].Rows[i]["BASICPURCHASINGPOWER"].ToString()),
+                            marginrate = Convert.ToInt64(ds.Tables[0].Rows[i]["MARGINRATE"].ToString()),
+                            holdbalance = Convert.ToInt64(ds.Tables[0].Rows[i]["HOLDBALANCE"].ToString()),
+                            bankinqirytime = ds.Tables[0].Rows[i]["BANKINQIRYTIME"].ToString()
+                        };
+                    }
+                }
+
+                return new list() { s = "ok", d = summary };
+            }
+            catch (Exception ex)
+            {
+                Log.Error("get_accounts: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
+        #endregion
+
+        #region summaryAccount
+        public static object getsecuritiesPortfolio(string strRequest, string accountNo)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string symbol = "";
+                if (request.TryGetValue("symbol", out jToken))
+                    symbol = jToken.ToString();
+
+                List<KeyField> keyField = new List<KeyField>();
+
+                KeyField fieldAccountNo = new KeyField();
+                fieldAccountNo.keyName = "p_accountid";
+                fieldAccountNo.keyValue = accountNo;
+                fieldAccountNo.keyType = "VARCHAR2";
+                keyField.Add(fieldAccountNo);
+
+                KeyField fieldSymbol = new KeyField();
+                fieldSymbol.keyName = "p_symbol";
+                fieldSymbol.keyValue = symbol;
+                fieldSymbol.keyType = "VARCHAR2";
+                keyField.Add(fieldSymbol);
+
+                DataSet ds = null;
+                ds = GetDataProcess.executeGetData(COMMAND_DO_SECURITIES, keyField);
+
+                Models.securitiesPortfolio[] securities = null;
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    securities = new securitiesPortfolio[ds.Tables[0].Rows.Count];
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        securities[i] = new securitiesPortfolio()
+                        {
+                            custodycd = ds.Tables[0].Rows[i]["CUSTODYCD"].ToString(),
+                            accountid = ds.Tables[0].Rows[i]["ACCOUNTID"].ToString(),
+                            symbol = ds.Tables[0].Rows[i]["SYMBOL"].ToString(),
+                            total = Convert.ToInt64(ds.Tables[0].Rows[i]["TOTAL"].ToString()),
+                            trade = Convert.ToInt64(ds.Tables[0].Rows[i]["TRADE"].ToString()),
+                            blocked = Convert.ToInt64(ds.Tables[0].Rows[i]["BLOCKED"].ToString()),
+                            vsdmortgage = Convert.ToInt64(ds.Tables[0].Rows[i]["VSDMORTGAGE"].ToString()),
+                            mortgage = Convert.ToInt64(ds.Tables[0].Rows[i]["MORTGAGE"].ToString()),
+                            restrict = Convert.ToInt64(ds.Tables[0].Rows[i]["RESTRICT"].ToString()),
+                            receivingright = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGRIGHT"].ToString()),
+                            receivingt0 = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGT0"].ToString()),
+                            receivingt1 = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGT1"].ToString()),
+                            receivingt2 = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGT2"].ToString()),
+                            costprice = Convert.ToInt64(ds.Tables[0].Rows[i]["COSTPRICE"].ToString()),
+                            costpriceamt = Convert.ToInt64(ds.Tables[0].Rows[i]["COSTPRICEAMT"].ToString()),
+                            basicprice = Convert.ToInt64(ds.Tables[0].Rows[i]["BASICPRICE"].ToString()),
+                            basicpriceamt = Convert.ToInt64(ds.Tables[0].Rows[i]["BASICPRICEAMT"].ToString()),
+                            marginratio = Convert.ToInt64(ds.Tables[0].Rows[i]["MARGINRATIO"].ToString()),
+                            requiredmarginamt = Convert.ToInt64(ds.Tables[0].Rows[i]["REQUIREDMARGINAMT"].ToString()),
+                            marginamt = Convert.ToInt64(ds.Tables[0].Rows[i]["MARGINAMT"].ToString()),
+                            pnlamt = Convert.ToInt64(ds.Tables[0].Rows[i]["PNLAMT"].ToString()),
+                            pnlrate = ds.Tables[0].Rows[i]["PNLRATE"].ToString(),
+                            issell = ds.Tables[0].Rows[i]["ISSELL"].ToString(),
+                            withdraw = Convert.ToInt64(ds.Tables[0].Rows[i]["WITHDRAW"].ToString())
+                        };
+                    }
+                }
+
+                return new list() { s = "ok", d = securities };
+            }
+            catch (Exception ex)
+            {
+                Log.Error("get_accounts: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
         #endregion
