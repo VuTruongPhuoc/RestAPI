@@ -35,7 +35,7 @@ namespace RestAPI.Models
         public string duration = "";
         public string status = "";
         public string lastModified = "";
-        public string txdate = "";
+        public string createTime = "";
     }
     public class ordersInfo
     {

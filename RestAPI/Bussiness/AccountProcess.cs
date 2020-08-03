@@ -128,7 +128,7 @@ namespace RestAPI.Bussiness
                             duration = ds.Tables[0].Rows[i]["DURATION"].ToString(),
                             status = ds.Tables[0].Rows[i]["STATUS"].ToString(),
                             lastModified = ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString(),
-                            txdate = ds.Tables[0].Rows[i]["TXDATE"].ToString()
+                            createTime = ds.Tables[0].Rows[i]["CREATETIME"].ToString()
                         };
                     }
                 }
@@ -194,7 +194,8 @@ namespace RestAPI.Bussiness
                             parenttype = ds.Tables[0].Rows[i]["PARENTTYPE"].ToString(),
                             duration = ds.Tables[0].Rows[i]["DURATION"].ToString(),
                             status = ds.Tables[0].Rows[i]["STATUS"].ToString(),
-                            lastModified = ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString()
+                            lastModified = ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString(),
+                            createTime = ds.Tables[0].Rows[i]["CREATETIME"].ToString()
                         };
                     }
                 }
