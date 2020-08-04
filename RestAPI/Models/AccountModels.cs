@@ -27,7 +27,7 @@ namespace RestAPI.Models
         public string side = "";
         public string type = "";
         public long filledqty = 0;
-        public long avgprice = 0;
+        public double avgprice = 0;
         public long limitprice = 0;
         public long stopprice = 0;
         public string parentid = "";
