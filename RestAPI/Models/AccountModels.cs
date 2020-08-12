@@ -76,6 +76,7 @@ namespace RestAPI.Models
         public string id = "";
         public string name = "";
         public string currency = "";
+        public string actype = "";
     }
     #endregion
 
