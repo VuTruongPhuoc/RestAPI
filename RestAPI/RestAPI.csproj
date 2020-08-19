@@ -280,12 +280,14 @@
     <Compile Include="Bussiness\ErrorMapHelper.cs" />
     <Compile Include="Bussiness\modCommon.cs" />
     <Compile Include="Bussiness\GetDataProcess.cs" />
+    <Compile Include="Bussiness\SymtemProcess.cs" />
     <Compile Include="Bussiness\TradingProcess .cs" />
     <Compile Include="Bussiness\TransactionProcess.cs" />
     <Compile Include="Bussiness\UtilObject.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\RootController.cs" />
+    <Compile Include="Controllers\SymtemController.cs" />
     <Compile Include="Controllers\TradingController.cs" />
     <Compile Include="FrontGateServiceService.cs" />
     <Compile Include="Global.asax.cs">
@@ -389,6 +391,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
