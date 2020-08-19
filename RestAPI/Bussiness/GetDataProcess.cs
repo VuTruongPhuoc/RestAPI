@@ -106,6 +106,20 @@ namespace RestAPI.Bussiness
                 return null;
             }
         }
-        
+
+        public static DataSet executeSQL(string pv_strSSQL)
+        {
+            try
+            {
+                DataAccess v_DataAccess = new DataAccess(gc_DBModule);
+
+                return v_DataAccess.ExecuteSQLReturnDataset(CommandType.Text,pv_strSSQL);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
     }
 }

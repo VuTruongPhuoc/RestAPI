@@ -26,6 +26,7 @@ namespace RestAPI.Models
         public long qty = 0;
         public string side = "";
         public string type = "";
+        public string timeInForce = "";
         public long filledqty = 0;
         public double avgprice = 0;
         public long limitprice = 0;
@@ -77,6 +78,7 @@ namespace RestAPI.Models
         public string name = "";
         public string currency = "";
         public string actype = "";
+        public string openDate = "";
     }
     #endregion
 
@@ -141,7 +143,7 @@ namespace RestAPI.Models
         public long receivingt0 = 0;
         public long receivingt1 = 0;
         public long receivingt2 = 0;
-        public long costprice = 0;
+        public double costprice = 0;
         public long costpriceamt = 0;
         public long basicprice = 0;
         public long basicpriceamt = 0;

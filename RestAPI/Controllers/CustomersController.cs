@@ -24,7 +24,8 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.CustomersProcess.getAccounts(custodycd);
                     if (result.GetType() == typeof(Models.Execution) || result.GetType() == typeof(Bussiness.list))
@@ -68,11 +69,12 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
 
                     var result = Bussiness.CustomersProcess.openAccount(request.Content.ReadAsStringAsync().Result, custodycd);
-                    if (result.GetType() == typeof(BoResponse))
+                    if (result.GetType() == typeof(BoResponseWithData))
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -104,21 +106,22 @@ namespace RestAPI.Controllers
 
         // Mo KH
         //Mo TK
-        [Route("customers/{custodycd?}/openCfmast")]
+        [Route("customers/openCustomer")]
         [System.Web.Http.HttpPost]
-        public HttpResponseMessage postopenCfmast(HttpRequestMessage request, string custodycd ="")
+        public HttpResponseMessage postOpenCustomer(HttpRequestMessage request)
         {
-            string preFixlogSession = "customers/" + custodycd + "/openAccount ";
+            string preFixlogSession = "customers/openCustomer ";
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
 
-                    var result = Bussiness.CustomersProcess.openCfmast(request.Content.ReadAsStringAsync().Result, custodycd);
-                    if (result.GetType() == typeof(BoResponse))
+                    var result = Bussiness.CustomersProcess.openCustomer(request.Content.ReadAsStringAsync().Result);
+                    if (result.GetType() == typeof(BoResponseWithData))
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");

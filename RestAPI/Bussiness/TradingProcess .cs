@@ -89,7 +89,7 @@ namespace RestAPI.Bussiness
             }
             catch (Exception ex)
             {
-                Log.Error("get_accounts: ", ex);
+                Log.Error("delTradingorders: ", ex);
                 return 1;
             }
         }
@@ -190,7 +190,7 @@ namespace RestAPI.Bussiness
             }
             catch (Exception ex)
             {
-                Log.Error("get_accounts: ", ex);
+                Log.Error("putTradingorders: ", ex);
                 return 1;
             }
         }
@@ -352,17 +352,21 @@ namespace RestAPI.Bussiness
                 string returnMsg = "";
                 long returnErr = 0;
                 returnErr = TransactionProcess.doTransaction(COMMAND_POST_ORDERS, ref v_arrParam, 12);
-                errparam = (string )v_arrParam[13].ParamValue;
-                returnMsg = modCommon.getBoResponse(returnErr, errparam).errmsg;
-                v_orderid =  new orderResponse() { orderid = (string)v_arrParam[11].ParamValue };
+                errparam = (string) v_arrParam[13].ParamValue;
 
-                return new BoResponse1() { s = returnErr, errmsg = returnMsg, d = v_orderid };
+                if (returnErr == 0)
+                {
+                    v_orderid = new orderResponse() { orderid = (string)v_arrParam[11].ParamValue };
+                    modCommon.getBoResponseWithData(returnErr, v_orderid, errparam);
+                }
+
+                return modCommon.getBoResponse(returnErr, returnMsg);
 
             }
             catch (Exception ex)
             {
-                Log.Error("get_accounts: ", ex);
-                return 1;
+                Log.Error("postTradingorders: ", ex);
+                return modCommon.getBoResponse(-1);
             }
         }
         #endregion

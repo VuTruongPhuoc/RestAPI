@@ -20,15 +20,19 @@ namespace RestAPI.Bussiness
         public string s = "";
         public string errmsg = "";
     }
-    public class BoResponse1
+    public class BoResponseWithData
     {
-        public long s = 0;
+        public string s = "";
         public string errmsg = "";
         public object d = null;
     }
     public class orderResponse
     {
         public string orderid = "";
+    }
+    public class idResponse
+    {
+        public string id = "";
     }
 
     public class KeyField
@@ -38,5 +42,10 @@ namespace RestAPI.Bussiness
         public string keyType = "";   //VARCHAR2 OR NUMBER
     }
 
-
+    public class HealthCheck
+    {
+        public string errorCode = "200";
+        public string dbHostStatus = "ok";
+        public string dbReportStatus = "ok";
+    }
 }

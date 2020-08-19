@@ -30,7 +30,8 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.getAccountExecutions(request.Content.ReadAsStringAsync().Result, accountNo);
                     if (result.GetType() == typeof(Models.Execution) || result.GetType() == typeof(Bussiness.list))
@@ -75,7 +76,8 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.getAccountordersHistory(request.Content.ReadAsStringAsync().Result, accountNo);
                     if (result.GetType() == typeof(Models.Execution) || result.GetType() == typeof(Bussiness.list))
@@ -122,7 +124,8 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.bankDeposit(request.Content.ReadAsStringAsync().Result, accountNo);
                     if (result.GetType() == typeof(BoResponse))
@@ -166,7 +169,8 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.getAvailableTrade(request.Content.ReadAsStringAsync().Result, accountNo);
                     if (result.GetType() == typeof(Models.PPSE) || result.GetType() == typeof(Bussiness.list))
@@ -209,7 +213,8 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.getsummaryAccount(request.Content.ReadAsStringAsync().Result, accountNo);
                     if (result.GetType() == typeof(Models.PPSE) || result.GetType() == typeof(Bussiness.list))
@@ -252,7 +257,8 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.getsecuritiesPortfolio(request.Content.ReadAsStringAsync().Result, accountNo);
                     if (result.GetType() == typeof(Models.PPSE) || result.GetType() == typeof(Bussiness.list))

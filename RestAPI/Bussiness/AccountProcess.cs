@@ -82,7 +82,7 @@ namespace RestAPI.Bussiness
             }
             catch (Exception ex)
             {
-                Log.Error("get_accounts: ", ex);
+                Log.Error("getAccountExecutions: ", ex);
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
@@ -90,7 +90,7 @@ namespace RestAPI.Bussiness
         #endregion
 
         #region orders
-        public static object getAccountorders(string strRequest, string accountNo)
+        public static object getOrders(string accountNo)
         {
             try
             {
@@ -118,7 +118,7 @@ namespace RestAPI.Bussiness
                             instrument = ds.Tables[0].Rows[i]["INSTRUMENT"].ToString(),
                             qty = Convert.ToInt64(ds.Tables[0].Rows[i]["QTY"].ToString()),
                             side = ds.Tables[0].Rows[i]["SIDE"].ToString(),
-                            type = ds.Tables[0].Rows[i]["TYPE"].ToString(),
+                            timeInForce = ds.Tables[0].Rows[i]["TIMEINFORCE"].ToString(),
                             filledqty = Convert.ToInt64(ds.Tables[0].Rows[i]["FILLEDQTY"].ToString()),
                             avgprice = Convert.ToDouble(ds.Tables[0].Rows[i]["AVGPRICE"].ToString()),
                             limitprice = Convert.ToInt64(ds.Tables[0].Rows[i]["LIMITPRICE"].ToString()),
@@ -128,7 +128,8 @@ namespace RestAPI.Bussiness
                             duration = ds.Tables[0].Rows[i]["DURATION"].ToString(),
                             status = ds.Tables[0].Rows[i]["STATUS"].ToString(),
                             lastModified = ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString(),
-                            createTime = ds.Tables[0].Rows[i]["CREATETIME"].ToString()
+                            createTime = ds.Tables[0].Rows[i]["CREATETIME"].ToString(),
+                            type = ds.Tables[0].Rows[i]["TYPE"].ToString()
                         };
                     }
                 }
@@ -137,7 +138,7 @@ namespace RestAPI.Bussiness
             }
             catch (Exception ex)
             {
-                Log.Error("get_accounts: ", ex);
+                Log.Error("getOrders: ", ex);
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
@@ -152,26 +153,26 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                int maxCount = 0;
-                if (request.TryGetValue("maxCount", out jToken))
-                    Int32.TryParse(jToken.ToString(), out maxCount);
+                string frDate, toDate, symbol = "", side = "";
+                frDate = request.GetValue("frDate").ToString();
+                toDate = request.GetValue("toDate").ToString();
 
-                List<KeyField> keyField = new List<KeyField>();
+                if (request.TryGetValue("symbol", out jToken))
+                    symbol = jToken.ToString();
+                if (request.TryGetValue("side", out jToken))
+                    side = jToken.ToString();
 
-                KeyField fieldAccountNo = new KeyField();
-                fieldAccountNo.keyName = "p_accountid";
-                fieldAccountNo.keyValue = accountNo;
-                fieldAccountNo.keyType = "VARCHAR2";
-                keyField.Add(fieldAccountNo);
+                List<KeyField> lstField = new List<KeyField>();
 
-                KeyField fieldMaxcount = new KeyField();
-                fieldMaxcount.keyName = "p_maxcount";
-                fieldMaxcount.keyValue = Convert.ToString(maxCount);
-                fieldMaxcount.keyType = "NUMBER";
-                keyField.Add(fieldMaxcount);
+                lstField.Add(new KeyField() { keyName = "p_accountid", keyValue = accountNo, keyType = "VARCHAR2" });
+                lstField.Add(new KeyField() { keyName = "p_frDate", keyValue = frDate, keyType = "VARCHAR2" });
+                lstField.Add(new KeyField() { keyName = "p_toDate", keyValue = toDate, keyType = "VARCHAR2" });
+                lstField.Add(new KeyField() { keyName = "p_symbol", keyValue = symbol, keyType = "VARCHAR2" });
+                lstField.Add(new KeyField() { keyName = "p_side", keyValue = side, keyType = "VARCHAR2" });
+                
 
                 DataSet ds = null;
-                ds = GetDataProcess.executeGetData(COMMAND_GET_ORDERSHISTORY, keyField);
+                ds = GetDataProcess.executeGetData(COMMAND_GET_ORDERSHISTORY, lstField);
 
                 Models.orders[] execution = null;
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
@@ -195,7 +196,8 @@ namespace RestAPI.Bussiness
                             duration = ds.Tables[0].Rows[i]["DURATION"].ToString(),
                             status = ds.Tables[0].Rows[i]["STATUS"].ToString(),
                             lastModified = ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString(),
-                            createTime = ds.Tables[0].Rows[i]["CREATETIME"].ToString()
+                            createTime = ds.Tables[0].Rows[i]["CREATETIME"].ToString(),
+                            timeInForce = ds.Tables[0].Rows[i]["TIMEINFORCE"].ToString()
                         };
                     }
                 }
@@ -204,7 +206,7 @@ namespace RestAPI.Bussiness
             }
             catch (Exception ex)
             {
-                Log.Error("get_accounts: ", ex);
+                Log.Error("getAccountordersHistory: ", ex);
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
@@ -260,7 +262,7 @@ namespace RestAPI.Bussiness
             }
         }
 
-        public static object getOrder(string accountNo, string orderid)
+        public static object getOrders(string accountNo, string orderid)
         {
             try
             {
@@ -306,7 +308,7 @@ namespace RestAPI.Bussiness
             }
             catch (Exception ex)
             {
-                Log.Error("getOrder: ", ex);
+                Log.Error("getOrders: ", ex);
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
@@ -403,8 +405,8 @@ namespace RestAPI.Bussiness
             }
             catch (Exception ex)
             {
-                Log.Error("get_accounts: ", ex);
-                return 1;
+                Log.Error("bankDeposit: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
         #endregion
@@ -477,7 +479,7 @@ namespace RestAPI.Bussiness
             }
             catch (Exception ex)
             {
-                Log.Error("get_accounts: ", ex);
+                Log.Error("getsummaryAccount: ", ex);
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
@@ -488,12 +490,16 @@ namespace RestAPI.Bussiness
         {
             try
             {
-                JObject request = JObject.Parse(strRequest);
-                JToken jToken;
                 string symbol = "";
-                if (request.TryGetValue("symbol", out jToken))
-                    symbol = jToken.ToString();
+                if (strRequest != null && strRequest.Length > 0)
+                {
+                    JObject request = JObject.Parse(strRequest);
+                    JToken jToken;
 
+                    if (request.TryGetValue("symbol", out jToken))
+                        symbol = jToken.ToString();
+                }
+                
                 List<KeyField> keyField = new List<KeyField>();
 
                 KeyField fieldAccountNo = new KeyField();
@@ -532,7 +538,7 @@ namespace RestAPI.Bussiness
                             receivingt0 = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGT0"].ToString()),
                             receivingt1 = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGT1"].ToString()),
                             receivingt2 = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGT2"].ToString()),
-                            costprice = Convert.ToInt64(ds.Tables[0].Rows[i]["COSTPRICE"].ToString()),
+                            costprice = Double.Parse(ds.Tables[0].Rows[i]["COSTPRICE"].ToString()),
                             costpriceamt = Convert.ToInt64(ds.Tables[0].Rows[i]["COSTPRICEAMT"].ToString()),
                             basicprice = Convert.ToInt64(ds.Tables[0].Rows[i]["BASICPRICE"].ToString()),
                             basicpriceamt = Convert.ToInt64(ds.Tables[0].Rows[i]["BASICPRICEAMT"].ToString()),
@@ -551,7 +557,7 @@ namespace RestAPI.Bussiness
             }
             catch (Exception ex)
             {
-                Log.Error("get_accounts: ", ex);
+                Log.Error("getsecuritiesPortfolio: ", ex);
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }

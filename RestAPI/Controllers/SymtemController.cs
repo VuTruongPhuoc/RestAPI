@@ -22,20 +22,17 @@ namespace RestAPI.Controllers
         #region symtem
         //Huy lenh
         [Route("symtem/HealthCheck")]
-        [System.Web.Http.HttpGet]
+        [System.Web.Http.HttpPost]
         public HttpResponseMessage HealthCheck(HttpRequestMessage request)
         {
-            string preFixlogSession = "symtem/HealthCheck/" + " " + request.Method;
+            string preFixlogSession = "symtem/HealthCheck/";
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
-                {
-
-                    var result = Bussiness.SymtemProcess.HealthCheck(request.Content.ReadAsStringAsync().Result);
-                    if (result.GetType() == typeof(BoResponse))
+                    var result = Bussiness.SymtemProcess.HealthCheck();
+                    if (result.GetType() == typeof(HealthCheck) && ((HealthCheck)result).errorCode == "200" )
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -43,17 +40,10 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }
-                }
-                else
-                {
-                    var v_err_request = JObject.Parse("{'error': 400, 'message': 'Invalid Input Content-Type'}");
-                    Log.Info(preFixlogSession + "======================END");
-                    return request.CreateResponse(HttpStatusCode.BadRequest, v_err_request);
-                }
 
             }
             catch (Exception ex)

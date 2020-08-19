@@ -31,7 +31,8 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
@@ -77,13 +78,14 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     string via = modCommon.getRequestHeaderValue(request, "xvia");
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.TradingProcess.postTradingorders(request.Content.ReadAsStringAsync().Result, accountNo, ipaddress, via);
-                    if (result.GetType() == typeof(BoResponse1)) 
+                    if (result.GetType() == typeof(BoResponseWithData)) 
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -124,7 +126,8 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
@@ -170,9 +173,10 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
-                    var result = Bussiness.AccountProcess.getAccountorders(request.Content.ReadAsStringAsync().Result, accountNo);
+                    var result = Bussiness.AccountProcess.getOrders(accountNo);
                     if (result.GetType() == typeof(Models.orders) || result.GetType() == typeof(Bussiness.list))
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
@@ -214,9 +218,10 @@ namespace RestAPI.Controllers
 
             try
             {
-                if (request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
-                    var result = Bussiness.AccountProcess.getOrder(accountNo, orderid);
+                    var result = Bussiness.AccountProcess.getOrders(accountNo, orderid);
                     if (result.GetType() == typeof(Models.ordersInfo) || result.GetType() == typeof(Bussiness.list))
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);

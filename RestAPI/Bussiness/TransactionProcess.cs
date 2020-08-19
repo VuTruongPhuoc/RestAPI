@@ -18,7 +18,7 @@ namespace RestAPI.Bussiness
     public static class TransactionProcess
     {
         private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
+        private static string gc_DBModule = "@DIRECT_HOST";
         public static Boolean isHostActive()
         {
             try
@@ -26,7 +26,7 @@ namespace RestAPI.Bussiness
                 string v_strSQL = "SELECT cspks_system.fn_get_sysvar('SYSTEM', 'HOSTATUS') HostStatus FROM DUAL";
                 string v_hostStatus = "0";
                 DataAccess v_obj = new DataAccess();
-                v_obj.NewDBInstance("@DIRECT_HOST");
+                v_obj.NewDBInstance(gc_DBModule);
                 DataSet ds = new DataSet();
                 ds = v_obj.ExecuteSQLReturnDataset(CommandType.Text, v_strSQL);
                 if (ds.Tables.Count > 0)
@@ -61,7 +61,7 @@ namespace RestAPI.Bussiness
                 string v_strSQL = "SELECT pck_api_common.fn_get_errorObject('"+ errorCode + "', '" + lang + "', '" + errorType + "') ERRDESC FROM DUAL";
                 string errorMsg = string.Empty;
                 DataAccess v_obj = new DataAccess();
-                v_obj.NewDBInstance("@DIRECT_HOST");
+                v_obj.NewDBInstance(gc_DBModule);
                 DataSet ds = new DataSet();
                 ds = v_obj.ExecuteSQLReturnDataset(CommandType.Text, v_strSQL);
                 if (ds.Tables.Count > 0)
@@ -138,7 +138,7 @@ namespace RestAPI.Bussiness
             {
                 Log.Info(preFixlogSession + "======================BEGIN");
                 DataAccess v_DataAccess = new DataAccess();
-                v_DataAccess.NewDBInstance("@DIRECT_HOST");
+                v_DataAccess.NewDBInstance(gc_DBModule);
                 
 
                 string v_strStoredName = pv_strProcessID;
@@ -171,7 +171,7 @@ namespace RestAPI.Bussiness
 
                 DataSet v_ds = null;
                 DataAccess v_DataAccess = new DataAccess();
-                v_DataAccess.NewDBInstance("@DIRECT_HOST");
+                v_DataAccess.NewDBInstance(gc_DBModule);
 
                 ReportParameters v_objRptParam = new ReportParameters();
                 ReportParameters[] v_arrRptPara = new ReportParameters[length];
@@ -210,7 +210,18 @@ namespace RestAPI.Bussiness
                 return null;
             }
         }
-        
 
+        public static DataSet executeSQL(string pv_strSSQL)
+        {
+            try
+            {
+                DataAccess v_DataAccess = new DataAccess(gc_DBModule);
+                return v_DataAccess.ExecuteSQLReturnDataset(CommandType.Text, pv_strSSQL);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

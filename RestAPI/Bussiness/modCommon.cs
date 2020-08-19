@@ -936,8 +936,26 @@ namespace RestAPI.Bussiness
             try
             {
                 response.s = error.ToString();
+                response.errmsg = message;
+                if (message == null || message.Length == 0)
+                    response.errmsg = GetDataProcess.getErrmsg(error);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("modCommon.getBoResponse:.error=" + error.ToString(), ex);
+                response.errmsg = "System Error";
+            }
+            return response;
+        }
+        public static BoResponseWithData getBoResponseWithData(long error, object data, string message = "")
+        {
+            BoResponseWithData response = new BoResponseWithData();
+            try
+            {
+                response.s = error.ToString();
                 if (message != null && message.Length > 0)
                     response.errmsg = GetDataProcess.getErrmsg(error);
+                response.d = data;
             }
             catch (Exception ex)
             {
