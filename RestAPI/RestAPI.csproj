@@ -280,7 +280,7 @@
     <Compile Include="Bussiness\ErrorMapHelper.cs" />
     <Compile Include="Bussiness\modCommon.cs" />
     <Compile Include="Bussiness\GetDataProcess.cs" />
-    <Compile Include="Bussiness\SymtemProcess.cs" />
+    <Compile Include="Bussiness\SystemProcess.cs" />
     <Compile Include="Bussiness\TradingProcess .cs" />
     <Compile Include="Bussiness\TransactionProcess.cs" />
     <Compile Include="Bussiness\UtilObject.cs" />

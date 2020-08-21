@@ -935,7 +935,7 @@ namespace RestAPI.Bussiness
             BoResponse response = new BoResponse();
             try
             {
-                response.s = error.ToString();
+                response.s = error == 0 ? "ok" : error.ToString();
                 response.errmsg = message;
                 if (message == null || message.Length == 0)
                     response.errmsg = GetDataProcess.getErrmsg(error);
@@ -952,7 +952,7 @@ namespace RestAPI.Bussiness
             BoResponseWithData response = new BoResponseWithData();
             try
             {
-                response.s = error.ToString();
+                response.s = error == 0 ? "ok" : error.ToString();
                 if (message != null && message.Length > 0)
                     response.errmsg = GetDataProcess.getErrmsg(error);
                 response.d = data;

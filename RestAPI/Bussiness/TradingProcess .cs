@@ -357,7 +357,7 @@ namespace RestAPI.Bussiness
                 if (returnErr == 0)
                 {
                     v_orderid = new orderResponse() { orderid = (string)v_arrParam[11].ParamValue };
-                    modCommon.getBoResponseWithData(returnErr, v_orderid, errparam);
+                    return modCommon.getBoResponseWithData(returnErr, v_orderid, errparam);
                 }
 
                 return modCommon.getBoResponse(returnErr, returnMsg);

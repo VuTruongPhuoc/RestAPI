@@ -78,6 +78,7 @@ namespace RestAPI.Models
         public string name = "";
         public string currency = "";
         public string actype = "";
+        public string typeName = "";
         public string openDate = "";
     }
     #endregion

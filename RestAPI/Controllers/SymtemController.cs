@@ -21,17 +21,17 @@ namespace RestAPI.Controllers
 
         #region symtem
         //Huy lenh
-        [Route("symtem/HealthCheck")]
-        [System.Web.Http.HttpPost]
+        [Route("system/health")]
+        [System.Web.Http.HttpGet]
         public HttpResponseMessage HealthCheck(HttpRequestMessage request)
         {
-            string preFixlogSession = "symtem/HealthCheck/";
+            string preFixlogSession = "system/health/";
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
             try
             {
-                    var result = Bussiness.SymtemProcess.HealthCheck();
+                    var result = Bussiness.SystemProcess.HealthCheck();
                     if (result.GetType() == typeof(HealthCheck) && ((HealthCheck)result).errorCode == "200" )
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);

@@ -10,7 +10,7 @@ using System.Net;
 using DataAccessLayer;
 namespace RestAPI.Bussiness
 {
-    public static class SymtemProcess
+    public static class SystemProcess
     {
         private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         

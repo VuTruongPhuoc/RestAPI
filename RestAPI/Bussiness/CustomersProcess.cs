@@ -46,6 +46,7 @@ namespace RestAPI.Bussiness
                             name = ds.Tables[0].Rows[i]["NAME"].ToString(),
                             currency = ds.Tables[0].Rows[i]["CURRENCY"].ToString(),
                             actype = ds.Tables[0].Rows[i]["ACTYPE"].ToString(),
+                            typeName = ds.Tables[0].Rows[i]["TYPENAME"].ToString(),
                             openDate = ds.Tables[0].Rows[i]["OPNDATE"].ToString()
                         };
                     }
@@ -180,10 +181,11 @@ namespace RestAPI.Bussiness
                 email = request.GetValue("email").ToString();
                 phone1 = request.GetValue("phone1").ToString();
                 address = request.GetValue("address").ToString();
-                province = request.GetValue("province").ToString();
                 custAtCom = request.GetValue("custAtCom").ToString();
                 vat = request.GetValue("vat").ToString();
 
+                if (request.TryGetValue("province", out jToken))
+                    province = jToken.ToString();
                 if (request.TryGetValue("pin", out jToken))
                     pin = jToken.ToString();
                 if (request.TryGetValue("floorTrading", out jToken))
