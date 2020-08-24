@@ -156,5 +156,28 @@ namespace RestAPI.Models
         public string issell = "";
         public long withdraw = 0;
     }
+
+    public class WithdrawalTransactionInfo : WithdrawalTransaction
+    {
+        public string enpayTransId;
+        public string status;
+        public string code;
+        public string message;
+    }
+
+    public class WithdrawalTransaction
+    {
+        public string benAccNo;
+        public string benAccType;
+        public string benName;
+        public string desc;
+        public double amt;
+        public string benBankName;
+        public string benBankCode;
+        public string benBankBranchName;
+        public string benBankBranchCode;
+        public string benBankNapasCode;
+        public string srcTransId;
+    }
 }
 

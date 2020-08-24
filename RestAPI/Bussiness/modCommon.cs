@@ -91,7 +91,7 @@ namespace RestAPI.Bussiness
             return responses;
         }
 
-        private static void LogFullResponses(HttpResponseMessage responses, HttpStatusCode statusCode)
+        public static void LogFullResponses(HttpResponseMessage responses, HttpStatusCode statusCode)
         {
             StringBuilder preFixlogSession = new StringBuilder();
             preFixlogSession.Append("Responses");
@@ -128,14 +128,11 @@ namespace RestAPI.Bussiness
             preFixlogSession.Append("LogFullRequest");
             //preFixlogSession.Append("===============================BEGIN");
             try
-            {
-                if (Log.IsDebugEnabled)
-                {
-                    preFixlogSession.Append("| GUID:" + HttpContext.Current.Request.Headers["GUID"].ToString());
-                }                    
+            {                                   
                 preFixlogSession.Append("| uri:" + request.RequestUri);
                 preFixlogSession.Append("| method:" + request.Method);
-                preFixlogSession.Append("| ClientIPAddress:" + ((HttpContextBase)request.Properties["MS_HttpContext"]).Request.UserHostAddress);
+                if (request.Properties.Count > 0 && request.Properties["MS_HttpContext"] != null)
+                    preFixlogSession.Append("| ClientIPAddress:" + ((HttpContextBase)request.Properties["MS_HttpContext"]).Request.UserHostAddress);
                 if (request.Headers.Any())
                 {                    
                     foreach (var header in request.Headers)
