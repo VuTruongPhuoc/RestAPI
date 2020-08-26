@@ -45,8 +45,8 @@ namespace RestAPI.Bussiness
                             id = ds.Tables[0].Rows[i]["ID"].ToString(),
                             name = ds.Tables[0].Rows[i]["NAME"].ToString(),
                             currency = ds.Tables[0].Rows[i]["CURRENCY"].ToString(),
-                            actype = ds.Tables[0].Rows[i]["ACTYPE"].ToString(),
-                            typeName = ds.Tables[0].Rows[i]["TYPENAME"].ToString(),
+                            accountType = ds.Tables[0].Rows[i]["ACTYPE"].ToString(),
+                            accountTypeName = ds.Tables[0].Rows[i]["TYPENAME"].ToString(),
                             openDate = ds.Tables[0].Rows[i]["OPNDATE"].ToString()
                         };
                     }
@@ -75,7 +75,7 @@ namespace RestAPI.Bussiness
 
                     if (request.TryGetValue("accountNo", out jToken))
                         accountNo = jToken.ToString();
-                    if (request.TryGetValue("actype", out jToken))
+                    if (request.TryGetValue("accountType", out jToken))
                         actype = jToken.ToString();
                     if (request.TryGetValue("loanLimit", out jToken))
                         Int64.TryParse(jToken.ToString(), out loanLimit);

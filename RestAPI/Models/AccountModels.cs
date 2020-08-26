@@ -37,7 +37,7 @@ namespace RestAPI.Models
         public string status = "";
         public string txdate = "";
         public string lastModified = "";
-        public string createTime = "";
+        public string createdDate = "";
     }
     public class ordersInfo
     {
@@ -78,8 +78,8 @@ namespace RestAPI.Models
         public string id = "";
         public string name = "";
         public string currency = "";
-        public string actype = "";
-        public string typeName = "";
+        public string accountType = "";
+        public string accountTypeName = "";
         public string openDate = "";
     }
     #endregion
