@@ -8,12 +8,14 @@ using CommonLibrary;
 using System.Net.Sockets;
 using System.Net;
 using DataAccessLayer;
+using System.Net.Http;
 namespace RestAPI.Bussiness
 {
     public static class SystemProcess
     {
         private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        
+        private static string ENPAY_SERVICE_URL = modCommond.GetConfigValue("ENPAY_SERVICE_URL", "");
+
         #region orders
         //huy lenh
         public static object HealthCheck()
@@ -39,7 +41,31 @@ namespace RestAPI.Bussiness
                     health.dbHostStatus = "error";
                     health.errorCode = "500";
                 }
-                
+
+                if (!String.IsNullOrEmpty(ENPAY_SERVICE_URL))
+                {
+                    HttpClient client = new HttpClient();
+                    try
+                    {
+                        HttpResponseMessage response = 
+                            client.SendAsync(new HttpRequestMessage(HttpMethod.Get, ENPAY_SERVICE_URL + "/health")).Result;
+
+                        if (!response.IsSuccessStatusCode)
+                        {
+                            health.enPayStatus = "error";
+                            health.errorCode = "500";
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        health.enPayStatus = "error";
+                        health.errorCode = "500";
+                    }
+                    finally
+                    {
+                        client.Dispose();
+                    }
+                }
                 return health;
             }
             catch (Exception ex)

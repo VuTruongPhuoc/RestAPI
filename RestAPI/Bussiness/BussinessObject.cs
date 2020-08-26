@@ -47,5 +47,6 @@ namespace RestAPI.Bussiness
         public string errorCode = "200";
         public string dbHostStatus = "ok";
         public string dbReportStatus = "ok";
+        public string enPayStatus = "ok";
     }
 }

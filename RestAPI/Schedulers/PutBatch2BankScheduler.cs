@@ -17,7 +17,7 @@ namespace RestAPI.Schedulers
         private static PutBatch2BankScheduler _instance;
         public static PutBatch2BankScheduler Instance => _instance ?? (_instance = new PutBatch2BankScheduler());
 
-        private const string KEY_PUT_BATCH_SERVICE_URL = "PUT_BATCH_SERVICE_URL";
+        private const string KEY_ENPAY_SERVICE_URL = "ENPAY_SERVICE_URL";
         private const string KEY_PUT_BATCH_AUTH_API_KEY = "PUT_BATCH_AUTH_API_KEY";
         private const string KEY_PUT_BATCH_INTERVAL = "PUT_BATCH_INTERVAL";
         private const string DEF_PUT_BATCH_INTERVAL = "3000";
@@ -29,7 +29,7 @@ namespace RestAPI.Schedulers
 
         private PutBatch2BankScheduler () : base (modCommond.GetConfigValue(KEY_PUT_BATCH_INTERVAL, DEF_PUT_BATCH_INTERVAL))
         {
-            _url = modCommond.GetConfigValue(KEY_PUT_BATCH_SERVICE_URL, "");
+            _url = modCommond.GetConfigValue(KEY_ENPAY_SERVICE_URL, "");
             _xAuthApiKey = modCommond.GetConfigValue(KEY_PUT_BATCH_AUTH_API_KEY, "");
         }
 
@@ -77,8 +77,8 @@ namespace RestAPI.Schedulers
             HttpClient client = new HttpClient();
             try
             {
-                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, _url);
-                request.Headers.Add("X-AUTH-APIKEY", _xAuthApiKey);
+                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, _url + "/withdrawals");
+                request.Headers.Add("apikey", _xAuthApiKey);
                 request.Content = new StringContent(JsonConvert.SerializeObject(tran), Encoding.UTF8, "application/json");
                 modCommon.LogFullRequest(request);
 
