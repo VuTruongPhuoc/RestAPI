@@ -172,7 +172,7 @@ namespace RestAPI.Models
         public string benAccType;
         public string benName;
         public string desc;
-        public double amt;
+        public int amt;
         public string benBankName;
         public string benBankCode;
         public string benBankBranchName;

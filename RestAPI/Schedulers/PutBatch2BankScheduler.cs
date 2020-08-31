@@ -8,6 +8,7 @@ using RestAPI.Bussiness;
 using RestAPI.Models;
 using System.Net.Http;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace RestAPI.Schedulers
 {
@@ -31,6 +32,7 @@ namespace RestAPI.Schedulers
         {
             _url = modCommond.GetConfigValue(KEY_ENPAY_SERVICE_URL, "");
             _xAuthApiKey = modCommond.GetConfigValue(KEY_PUT_BATCH_AUTH_API_KEY, "");
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
         }
 
         public override void Execute()
@@ -53,7 +55,7 @@ namespace RestAPI.Schedulers
                         benAccType = ds.Tables[0].Rows[i]["ACCOUNTTYPE"].ToString(),
                         benName = ds.Tables[0].Rows[i]["BENEFCUSTNAME"].ToString(),
                         desc = ds.Tables[0].Rows[i]["REMARK"].ToString(),
-                        amt = Convert.ToDouble(ds.Tables[0].Rows[i]["AMOUNT"].ToString()),
+                        amt = Convert.ToInt32(ds.Tables[0].Rows[i]["AMOUNT"].ToString()),
                         benBankName = ds.Tables[0].Rows[i]["BANKNAME"].ToString(),
                         benBankCode = ds.Tables[0].Rows[i]["BANKCODE"].ToString(),
                         benBankBranchName = ds.Tables[0].Rows[i]["BANKBRANCHNAME"].ToString(),
