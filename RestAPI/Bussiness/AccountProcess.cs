@@ -470,7 +470,7 @@ namespace RestAPI.Bussiness
                             advancemaxamtfee = Convert.ToInt64(ds.Tables[0].Rows[i]["ADVANCEMAXAMTFEE"].ToString()),
                             receivingamt = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGAMT"].ToString()),
                             basicpurchasingpower = Convert.ToInt64(ds.Tables[0].Rows[i]["BASICPURCHASINGPOWER"].ToString()),
-                            marginrate = Convert.ToInt64(ds.Tables[0].Rows[i]["MARGINRATE"].ToString()),
+                            marginrate = Convert.ToDouble(ds.Tables[0].Rows[i]["MARGINRATE"].ToString()),
                             holdbalance = Convert.ToInt64(ds.Tables[0].Rows[i]["HOLDBALANCE"].ToString()),
                             bankinqirytime = ds.Tables[0].Rows[i]["BANKINQIRYTIME"].ToString()
                         };
