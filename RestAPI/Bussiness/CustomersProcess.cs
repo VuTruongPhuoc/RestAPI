@@ -165,7 +165,7 @@ namespace RestAPI.Bussiness
                 string floorTrading = "Y", teleTrading = "N";
                 string managementGroup = "", accountManagementType = "", marginAllowance = "", description = "";
                 string nationality = "", gender = "", expiryDate = "", identificationType = "";
-                string province = "", custAtCom = "", vat = "";
+                string province = "", custAtCom = "", vat = "", onlineTradingRegister = "Y";
 
                 long onlineTransaction = 0;
 
@@ -183,6 +183,7 @@ namespace RestAPI.Bussiness
                 address = request.GetValue("address").ToString();
                 custAtCom = request.GetValue("custAtCom").ToString();
                 vat = request.GetValue("vat").ToString();
+                //onlineTradingRegister = request.GetValue("onlineTradingRegister").ToString();
 
                 if (request.TryGetValue("province", out jToken))
                     province = jToken.ToString();
@@ -210,9 +211,11 @@ namespace RestAPI.Bussiness
                     expiryDate = jToken.ToString();
                 if (request.TryGetValue("identificationType", out jToken))
                     identificationType = jToken.ToString();
+                if (request.TryGetValue("onlineTradingRegister", out jToken))
+                    onlineTradingRegister = jToken.ToString();
 
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[27];
+                StoreParameter[] v_arrParam = new StoreParameter[28];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_custodycd";
@@ -427,6 +430,15 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[26] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_onlineTrading";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = onlineTradingRegister;
+                v_objParam.ParamSize = onlineTradingRegister.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[27] = v_objParam;
+
 
                 long returnErr = TransactionProcess.doTransaction(COMMAND_POST_OPEN_CFMAST, ref v_arrParam, 25);
                 string v_strerrorMessage = (string)v_arrParam[26].ParamValue;

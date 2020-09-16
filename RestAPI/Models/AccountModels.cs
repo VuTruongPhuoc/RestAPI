@@ -125,7 +125,7 @@ namespace RestAPI.Models
         public long advancemaxamtfee = 0;
         public long receivingamt = 0;
         public long basicpurchasingpower = 0;
-        public long marginrate = 0;
+        public double marginrate = 0;
         public long holdbalance = 0;
         public string bankinqirytime = "";
     }
