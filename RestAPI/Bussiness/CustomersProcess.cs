@@ -47,6 +47,7 @@ namespace RestAPI.Bussiness
                             currency = ds.Tables[0].Rows[i]["CURRENCY"].ToString(),
                             accountType = ds.Tables[0].Rows[i]["ACTYPE"].ToString(),
                             accountTypeName = ds.Tables[0].Rows[i]["TYPENAME"].ToString(),
+                            accountTypeBriefName = ds.Tables[0].Rows[i]["SHORTNAME"].ToString(),
                             openDate = ds.Tables[0].Rows[i]["OPNDATE"].ToString()
                         };
                     }
