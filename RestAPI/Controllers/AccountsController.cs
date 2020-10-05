@@ -42,7 +42,7 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }
@@ -88,7 +88,7 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }
@@ -181,7 +181,7 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }
@@ -225,7 +225,7 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }
@@ -269,7 +269,7 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }

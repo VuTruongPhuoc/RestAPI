@@ -62,7 +62,11 @@ namespace RestAPI.Bussiness
                 ds = GetDataProcess.executeGetData(COMMAND_GET_EXECUTIONS, keyField);
 
                 Models.Execution[] execution = null;
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                if (ds == null)
+                {
+                    return new ErrorMapHepper().getResponse("500", "bad request!");
+                }
+                else if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     execution = new Execution[ds.Tables[0].Rows.Count];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -107,7 +111,11 @@ namespace RestAPI.Bussiness
                 ds = GetDataProcess.executeGetData(COMMAND_GET_ORDERS, keyField);
 
                 Models.orders[] order = null;
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                if (ds == null)
+                {
+                    return new ErrorMapHepper().getResponse("500", "bad request!");
+                }
+                else if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     order = new orders[ds.Tables[0].Rows.Count];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -176,7 +184,11 @@ namespace RestAPI.Bussiness
                 ds = GetDataProcess.executeGetData(COMMAND_GET_ORDERSHISTORY, lstField);
 
                 Models.orders[] execution = null;
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                if (ds == null)
+                {
+                    return new ErrorMapHepper().getResponse("500", "bad request!");
+                }
+                else if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     execution = new orders[ds.Tables[0].Rows.Count];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -241,7 +253,11 @@ namespace RestAPI.Bussiness
                 ds = GetDataProcess.executeGetData(COMMAND_GET_PPSE, keyField);
 
                 Models.PPSE[] ppse = null;
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                if (ds == null)
+                {
+                    return new ErrorMapHepper().getResponse("500", "bad request!");
+                }
+                else if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     ppse = new PPSE[ds.Tables[0].Rows.Count];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -287,7 +303,11 @@ namespace RestAPI.Bussiness
                 ds = GetDataProcess.executeGetData(COMMAND_GET_ORDERS, keyField);
 
                 Models.ordersInfo[] orders = null;
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                if (ds == null)
+                {
+                    return new ErrorMapHepper().getResponse("500", "bad request!");
+                }
+                else if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     orders = new ordersInfo[ds.Tables[0].Rows.Count];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -430,7 +450,11 @@ namespace RestAPI.Bussiness
                 ds = GetDataProcess.executeGetData(COMMAND_DO_SUMMARY, keyField);
 
                 Models.summaryAccount[] summary = null;
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                if(ds == null)
+                {
+                    return new ErrorMapHepper().getResponse("500", "bad request!");
+                }
+                else if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     summary = new summaryAccount[ds.Tables[0].Rows.Count];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -458,8 +482,8 @@ namespace RestAPI.Bussiness
                             //tddebtamt = Convert.ToInt64(ds.Tables[0].Rows[i]["TDDEBTAMT"].ToString()),
                             stockDeopositFee = Convert.ToInt64(ds.Tables[0].Rows[i]["DEPOFEEAMT"].ToString()),
                             netassetvalue = Convert.ToInt64(ds.Tables[0].Rows[i]["NETASSETVALUE"].ToString()),
-                            requiredmarginamt = Convert.ToInt64(ds.Tables[0].Rows[i]["REQUIREDMARGINAMT"].ToString()),
-                            //sesecuredavl = Convert.ToInt64(ds.Tables[0].Rows[i]["SESECUREDAVL"].ToString()),
+                            //requiredmarginamt = Convert.ToInt64(ds.Tables[0].Rows[i]["REQUIREDMARGINAMT"].ToString()),
+                            marginableValue = Convert.ToInt64(ds.Tables[0].Rows[i]["SESECUREDAVL"].ToString()),
                             //sesecured_buy = Convert.ToInt64(ds.Tables[0].Rows[i]["SESECURED_BUY"].ToString()),
                             //accountvalue = Convert.ToInt64(ds.Tables[0].Rows[i]["ACCOUNTVALUE"].ToString()),
                             //qttyamt = Convert.ToInt64(ds.Tables[0].Rows[i]["QTTYAMT"].ToString()),
@@ -468,7 +492,7 @@ namespace RestAPI.Bussiness
                             //debtamt = Convert.ToInt64(ds.Tables[0].Rows[i]["DEBTAMT"].ToString()),
                             //advancemaxamtfee = Convert.ToInt64(ds.Tables[0].Rows[i]["ADVANCEMAXAMTFEE"].ToString()),
                             receivingamt = Convert.ToInt64(ds.Tables[0].Rows[i]["RECEIVINGAMT"].ToString()),
-                            purchasingPower = Convert.ToInt64(ds.Tables[0].Rows[i]["BASICPURCHASINGPOWER"].ToString()),
+                            purchasingPower = Convert.ToInt64(ds.Tables[0].Rows[i]["PURCHASINGPOWER"].ToString()),
                             marginrate = Convert.ToDouble(ds.Tables[0].Rows[i]["MARGINRATE"].ToString()),
                             //holdbalance = Convert.ToInt64(ds.Tables[0].Rows[i]["HOLDBALANCE"].ToString()),
                             //bankinqirytime = ds.Tables[0].Rows[i]["BANKINQIRYTIME"].ToString()
@@ -478,7 +502,8 @@ namespace RestAPI.Bussiness
                             maxLoanLimit = Convert.ToInt64(ds.Tables[0].Rows[i]["MAXLOANLIMIT"].ToString()),
                             withdrawableCash = Convert.ToInt64(ds.Tables[0].Rows[i]["WITHDRAWABLECASH"].ToString()),
                             collateralValue = Convert.ToInt64(ds.Tables[0].Rows[i]["COLLATERALVALUE"].ToString()),
-                            orderSecured = Convert.ToInt64(ds.Tables[0].Rows[i]["ORDERSECURED"].ToString())
+                            orderSecured = Convert.ToInt64(ds.Tables[0].Rows[i]["ORDERSECURED"].ToString()),
+                            marginCallAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["MARGINCALLAMOUNT"].ToString())
                         };
                     }
                 }
@@ -526,7 +551,11 @@ namespace RestAPI.Bussiness
                 ds = GetDataProcess.executeGetData(COMMAND_DO_SECURITIES, keyField);
 
                 Models.securitiesPortfolio[] securities = null;
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                if (ds == null)
+                {
+                    return new ErrorMapHepper().getResponse("500", "bad request!");
+                }
+                else if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     securities = new securitiesPortfolio[ds.Tables[0].Rows.Count];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)

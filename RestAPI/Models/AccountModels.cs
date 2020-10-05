@@ -114,8 +114,8 @@ namespace RestAPI.Models
         //public long tddebtamt = 0;
         public long stockDeopositFee = 0;
         public long netassetvalue = 0;
-        public long requiredmarginamt = 0;
-        //public long sesecuredavl = 0;
+        //public long requiredmarginamt = 0;
+        public long marginableValue = 0;
         //public long sesecured_buy = 0;
         //public long accountvalue = 0;
         //public long qttyamt = 0;
@@ -135,6 +135,7 @@ namespace RestAPI.Models
         public long withdrawableCash = 0;
         public long collateralValue = 0;
         public long orderSecured = 0;
+        public long marginCallAmount = 0;
     }
 
     public class securitiesPortfolio
