@@ -112,7 +112,7 @@ namespace RestAPI.Models
         public long advancedAmount = 0;
         public long dealFinancingDebt = 0;
         //public long tddebtamt = 0;
-        public long stockDeopositFee = 0;
+        public long stockDepositFee = 0;
         public long netassetvalue = 0;
         //public long requiredmarginamt = 0;
         public long marginableValue = 0;

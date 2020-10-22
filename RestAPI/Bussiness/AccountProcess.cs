@@ -480,7 +480,7 @@ namespace RestAPI.Bussiness
                             advancedAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["ADVANCEDAMT"].ToString()),
                             dealFinancingDebt = Convert.ToInt64(ds.Tables[0].Rows[i]["DFDEBTAMT"].ToString()),
                             //tddebtamt = Convert.ToInt64(ds.Tables[0].Rows[i]["TDDEBTAMT"].ToString()),
-                            stockDeopositFee = Convert.ToInt64(ds.Tables[0].Rows[i]["DEPOFEEAMT"].ToString()),
+                            stockDepositFee = Convert.ToInt64(ds.Tables[0].Rows[i]["DEPOFEEAMT"].ToString()),
                             netassetvalue = Convert.ToInt64(ds.Tables[0].Rows[i]["NETASSETVALUE"].ToString()),
                             //requiredmarginamt = Convert.ToInt64(ds.Tables[0].Rows[i]["REQUIREDMARGINAMT"].ToString()),
                             marginableValue = Convert.ToInt64(ds.Tables[0].Rows[i]["SESECUREDAVL"].ToString()),
