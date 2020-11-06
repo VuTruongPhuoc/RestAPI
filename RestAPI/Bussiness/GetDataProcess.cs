@@ -79,16 +79,15 @@ namespace RestAPI.Bussiness
                     v_objRptParam = new ReportParameters();
                     v_objRptParam.ParamName = pv_keyField[i].keyName;
                     v_objRptParam.ParamValue = pv_keyField[i].keyValue;
-                    v_objRptParam.ParamSize = 32000;
+                    if (String.IsNullOrEmpty(pv_keyField[i].keyValue))
+                        v_objRptParam.ParamSize = 0;
+                    else
+                        v_objRptParam.ParamSize =  pv_keyField[i].keyValue.Length;
 
                     if (pv_keyField[i].keyType.ToUpper() == "VARCHAR2")
-                    {
                         v_objRptParam.ParamType = Type.GetType("System.String").Name;
-                    }
                     else
-                    {
                         v_objRptParam.ParamType = Type.GetType("System.Double").Name;
-                    }
 
                     v_arrRptPara[i] = v_objRptParam;
 

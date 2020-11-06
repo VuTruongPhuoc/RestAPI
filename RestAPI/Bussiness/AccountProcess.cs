@@ -434,7 +434,7 @@ namespace RestAPI.Bussiness
                 jToken = request.GetValue("withdrawAmount");
                 if (!Int64.TryParse(jToken.ToString(), out withdrawAmount))
                     return modCommon.getBoResponse(-10020);
-                if (request.TryGetValue(feeCode, out jToken))
+                if (request.TryGetValue("feeCode", out jToken))
                     feeCode = jToken.ToString();
 
                 string ipAddress = p_ipAddress;
