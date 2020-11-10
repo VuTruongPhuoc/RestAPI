@@ -18,7 +18,8 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_BANKDEPOSIT = "fopks_restapi.pr_post_deposit";
         private static string COMMAND_DO_SUMMARY = "fopks_restapi.pr_getSummaryAccount";
         private static string COMMAND_DO_SECURITIES = "fopks_restapi.pr_getSecuritiesPortfolio";
-        
+        private static string COMMAND_DO_ADVANCEPAYMENT = "fopks_restapi.pr_advancePayment";
+
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
         {
@@ -411,6 +412,133 @@ namespace RestAPI.Bussiness
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
+
+        public static object advancePayment(string strRequest, string ipAddress)
+        {
+           
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string accountId = "", custodyCode = "", matchedDate = "", settleDate = "", description = "";
+                long advanceAmount = 0;
+                string refId = "";
+
+                if (request.TryGetValue("accountId", out jToken))
+                    accountId = jToken.ToString();
+                if (request.TryGetValue("custodyCode", out jToken))
+                    custodyCode = jToken.ToString();
+                if (request.TryGetValue("matchedDate", out jToken))
+                    matchedDate = jToken.ToString();
+                if (request.TryGetValue("settleDate", out jToken))
+                    settleDate = jToken.ToString();
+                if (request.TryGetValue("Desc", out jToken))
+                    description = jToken.ToString();
+                if (request.TryGetValue("refId", out jToken))
+                    refId = jToken.ToString();
+                if (request.TryGetValue("advanceAmount", out jToken))
+                    Int64.TryParse(jToken.ToString(), out advanceAmount);
+
+
+
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[10];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_accountid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountId;
+                v_objParam.ParamSize = accountId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_custodyCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = custodyCode;
+                v_objParam.ParamSize = custodyCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_matchedDate";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = matchedDate;
+                v_objParam.ParamSize = matchedDate.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_settleDate";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = settleDate;
+                v_objParam.ParamSize = settleDate.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_advanceAmount";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = advanceAmount;
+                v_objParam.ParamSize = advanceAmount.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_refId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = refId;
+                v_objParam.ParamSize = refId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_desc";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = description;
+                v_objParam.ParamSize = description.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_ipAddress";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = ipAddress;
+                v_objParam.ParamSize = ipAddress.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[7] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[8] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[9] = v_objParam;
+
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_DO_ADVANCEPAYMENT, ref v_arrParam, 8);
+                string errparam = (string)v_arrParam[9].ParamValue;
+
+
+                return modCommon.getBoResponse(returnErr, errparam);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("advancePayment: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
+
         #endregion
 
         #region summaryAccount
@@ -487,7 +615,7 @@ namespace RestAPI.Bussiness
         }
         #endregion
 
-        #region summaryAccount
+        #region Portfolio
         public static object getsecuritiesPortfolio(string strRequest, string accountNo)
         {
             try
