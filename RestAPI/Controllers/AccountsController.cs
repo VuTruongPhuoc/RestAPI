@@ -19,6 +19,7 @@ namespace RestAPI.Controllers
 
 
         #region accounts
+        #region "Api P1"
         //Chi tiết khớp
         [Route("accounts/{accountNo}/executions")]
         [System.Web.Http.HttpGet]
@@ -288,7 +289,9 @@ namespace RestAPI.Controllers
                 return responses;
             }
         }
+        #endregion "Api P1"
 
+        #region "Api P2"
         [Route("accounts/bankTransactions")]
         [System.Web.Http.HttpPost]
         public HttpResponseMessage trfMoney2Bank(HttpRequestMessage request)
@@ -334,8 +337,6 @@ namespace RestAPI.Controllers
             }
         }
 
-
-        #region "AdvancePayment"
         [Route("accounts/advancePayment")]
         [System.Web.Http.HttpPost]
         public HttpResponseMessage advancePayment(HttpRequestMessage request)
@@ -381,7 +382,10 @@ namespace RestAPI.Controllers
                 return responses;
             }
         }
-        #endregion
+
+        
+        #endregion "Api P2"
+
 
         #endregion
     }
