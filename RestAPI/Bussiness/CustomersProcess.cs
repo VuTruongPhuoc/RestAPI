@@ -36,7 +36,11 @@ namespace RestAPI.Bussiness
                 ds = GetDataProcess.executeGetData(COMMAND_GET_ACCOUNT, keyField);
 
                 Account[] accounts = null;
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                if (ds == null)
+                {
+                    return new ErrorMapHepper().getResponse("500", "bad request!");
+                }
+                else if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     accounts = new Account[ds.Tables[0].Rows.Count];
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -48,6 +52,7 @@ namespace RestAPI.Bussiness
                             currency = ds.Tables[0].Rows[i]["CURRENCY"].ToString(),
                             accountType = ds.Tables[0].Rows[i]["ACTYPE"].ToString(),
                             accountTypeName = ds.Tables[0].Rows[i]["TYPENAME"].ToString(),
+                            accountTypeBriefName = ds.Tables[0].Rows[i]["SHORTNAME"].ToString(),
                             openDate = ds.Tables[0].Rows[i]["OPNDATE"].ToString()
                         };
                     }
