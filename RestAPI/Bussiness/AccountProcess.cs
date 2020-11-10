@@ -543,7 +543,7 @@ namespace RestAPI.Bussiness
             }
         }
         
-        public static object advancePayment(string strRequest, string ipAddress)
+        public static object advancePayment(string strRequest, string p_ipAddress)
         {
            
             try
@@ -569,13 +569,15 @@ namespace RestAPI.Bussiness
                 if (request.TryGetValue("advanceAmount", out jToken))
                     Int64.TryParse(jToken.ToString(), out advanceAmount);
 
-
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
 
                 StoreParameter v_objParam = new StoreParameter();
                 StoreParameter[] v_arrParam = new StoreParameter[10];
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_accountid";
+                v_objParam.ParamName = "p_accountId";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = accountId;
                 v_objParam.ParamSize = accountId.Length;
