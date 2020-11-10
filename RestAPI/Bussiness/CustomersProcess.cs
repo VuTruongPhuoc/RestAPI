@@ -17,6 +17,7 @@ namespace RestAPI.Bussiness
         private const string COMMAND_GET_ACCOUNT = "fopks_restapi.pr_get_accounts";
         private const string COMMAND_POST_OPEN_ACCOUNT = "fopks_restapi.pr_post_openAccount";
         private const string COMMAND_POST_OPEN_CFMAST = "fopks_restapi.pr_post_openCustomer";
+        private const string COMMAND_REGISTER_BANK_ACC = "fopks_restapi.pr_registerBankAcc";
 
         public static object getAccounts(string custodycd)
         {
@@ -458,5 +459,118 @@ namespace RestAPI.Bussiness
                 return modCommon.getBoResponse(400, "Bad Request");
             }
         }
+
+        public static object registerBankAcc(string strRequest)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string napasCode = "", bankAccountNumber = "", bankAccountName = "", bankCode = "", bankBranchCode = "", custodycd = "";
+                string refId = "";
+
+                custodycd = request.GetValue("custodyCode").ToString();
+                bankAccountNumber = request.GetValue("bankAccountNumber").ToString();
+                bankAccountName = request.GetValue("bankAccountName").ToString();
+                bankCode = request.GetValue("bankCode").ToString();
+                bankBranchCode = request.GetValue("bankBranchCode").ToString();
+                refId = request.GetValue("refId").ToString();
+
+                if (request.TryGetValue("napasCode", out jToken))
+                    napasCode = jToken.ToString();
+                
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[9];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_custodycd";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = custodycd;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_napasCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = napasCode;
+                v_objParam.ParamSize = napasCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankAccountNumber";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankAccountNumber;
+                v_objParam.ParamSize = bankAccountNumber.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankAccountName";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankAccountName;
+                v_objParam.ParamSize = bankAccountName.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankCode;
+                v_objParam.ParamSize = bankCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankBranchCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankBranchCode;
+                v_objParam.ParamSize = bankBranchCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_refId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = refId;
+                v_objParam.ParamSize = refId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[7] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[8] = v_objParam;
+               
+
+                long returnErr = TransactionProcess.doTransaction(COMMAND_REGISTER_BANK_ACC, ref v_arrParam, 7);
+                string v_strerrorMessage = (string)v_arrParam[8].ParamValue;
+
+                //if (returnErr == 0)
+                //{
+                //    idResponse id = new idResponse() { id = (string)v_arrParam[0].ParamValue };
+                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                //}
+
+                return modCommon.getBoResponse(returnErr, v_strerrorMessage);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("registerBankAcc:.strRequest: " + strRequest, ex);
+                return modCommon.getBoResponse(400, "Bad Request");
+            }
+        }
+        
     }
 }
