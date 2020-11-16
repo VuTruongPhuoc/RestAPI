@@ -20,6 +20,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_SECURITIES = "fopks_restapi.pr_getSecuritiesPortfolio";
         private static string COMMAND_TRF_MONEY_2_BANK = "fopks_restapi.pr_trfMoney2Bank";
         private static string COMMAND_DO_ADVANCEPAYMENT = "fopks_restapi.pr_advancePayment";
+        private static string COMMAND_DO_RIGHT_REGISTER = "fopks_restapi.pr_rightRegister"; 
 
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
@@ -561,7 +562,6 @@ namespace RestAPI.Bussiness
                 return modCommon.getBoResponse(400, "Bad Request");
             }
         }
-        
         public static object advancePayment(string strRequest, string p_ipAddress)
         {
            
@@ -686,6 +686,66 @@ namespace RestAPI.Bussiness
             catch (Exception ex)
             {
                 Log.Error("advancePayment: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
+        public static object rightRegister(string strRequest, string p_ipAddress)
+        {
+
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string keyID = "", accountId = "", custodyCode = "", description = "";
+                long exerciseQuantity = 0;//, exercisePrice = 0, exerciseValue= 0;
+                string refId = "";
+
+                if (request.TryGetValue("keyID", out jToken))
+                    keyID = jToken.ToString();
+                if (request.TryGetValue("custodyCode", out jToken))
+                    custodyCode = jToken.ToString();
+                if (request.TryGetValue("accountId", out jToken))
+                    accountId = jToken.ToString();
+                if (request.TryGetValue("exerciseQuantity", out jToken))
+                    Int64.TryParse(jToken.ToString(), out exerciseQuantity);
+                //if (request.TryGetValue("exercisePrice", out jToken))
+                //    Int64.TryParse(jToken.ToString(), out exercisePrice);
+                //if (request.TryGetValue("exerciseValue", out jToken))
+                //    Int64.TryParse(jToken.ToString(), out exerciseValue);
+                //if (request.TryGetValue("description", out jToken))
+                    description = jToken.ToString();
+                if (request.TryGetValue("refId", out jToken))
+                    refId = jToken.ToString();
+
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[9];
+
+                v_arrParam[0] = new StoreParameter() { ParamName = "p_keyID", ParamDirection = "1", ParamValue = keyID, ParamSize=keyID.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[1] = new StoreParameter() { ParamName = "p_custodycd", ParamDirection = "1", ParamValue = custodyCode, ParamSize = custodyCode.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[2] = new StoreParameter() { ParamName = "p_accountId", ParamDirection = "1", ParamValue = accountId, ParamSize = accountId.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[3] = new StoreParameter() { ParamName = "p_exerciseQuantity", ParamDirection = "1", ParamValue = exerciseQuantity, ParamSize = exerciseQuantity.ToString().Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[4] = new StoreParameter() { ParamName = "p_description", ParamDirection = "1", ParamValue = description, ParamSize = description.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[5] = new StoreParameter() { ParamName = "p_refId", ParamDirection = "1", ParamValue = keyID, ParamSize = keyID.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[6] = new StoreParameter() { ParamName = "p_ipAddress", ParamDirection = "1", ParamValue = keyID, ParamSize = keyID.Length, ParamType = Type.GetType("System.String").Name };
+
+                v_arrParam[7] = new StoreParameter() { ParamName = "p_err_code", ParamDirection = "2", ParamSize = 4000, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[8] = new StoreParameter() { ParamName = "p_err_param", ParamDirection = "2", ParamSize = 4000, ParamType = Type.GetType("System.String").Name };
+                
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_DO_RIGHT_REGISTER, ref v_arrParam, 7);
+                string errparam = (string)v_arrParam[8].ParamValue;
+
+
+                return modCommon.getBoResponse(returnErr, errparam);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("rightRegister: ", ex);
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
