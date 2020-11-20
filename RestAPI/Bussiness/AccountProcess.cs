@@ -437,7 +437,7 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string custodycd = "", bankAccountNumber = "", feeType = "", accountId = "", feeCode = "";
+                string custodycd = "", bankAccountNumber = "", feeType = "", accountId = "", feeCode = "", bankCode = "", bankBranchCode = "";
                 long withdrawAmount = 0;
                 string refId = "";
 
@@ -448,6 +448,8 @@ namespace RestAPI.Bussiness
                 accountId = request.GetValue("accountId").ToString();
                 bankAccountNumber = request.GetValue("bankAccountNumber").ToString();
                 feeType = request.GetValue("feeType").ToString();
+                bankCode = request.GetValue("bankCode").ToString();
+                bankBranchCode = request.GetValue("bankBranchCode").ToString();
                 refId = request.GetValue("refId").ToString();
 
                 jToken = request.GetValue("withdrawAmount");
@@ -461,7 +463,7 @@ namespace RestAPI.Bussiness
                     ipAddress = modCommon.GetClientIp();
 
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[10];
+                StoreParameter[] v_arrParam = new StoreParameter[12];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_custodycd";
@@ -496,20 +498,36 @@ namespace RestAPI.Bussiness
                 v_arrParam[3] = v_objParam;
 
                 v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankCode;
+                v_objParam.ParamSize = bankCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankBranchCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankBranchCode;
+                v_objParam.ParamSize = bankBranchCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_feeType";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = feeType;
                 v_objParam.ParamSize = feeType.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[4] = v_objParam;
+                v_arrParam[6] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_feeCOde";
+                v_objParam.ParamName = "p_feeCode";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = feeCode;
                 v_objParam.ParamSize = feeCode.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[5] = v_objParam;
+                v_arrParam[7] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_refId";
@@ -517,7 +535,7 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamValue = refId;
                 v_objParam.ParamSize = refId.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[6] = v_objParam;
+                v_arrParam[8] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_ipAddress";
@@ -525,25 +543,25 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamValue = ipAddress;
                 v_objParam.ParamSize = ipAddress.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[7] = v_objParam;
+                v_arrParam[9] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[8] = v_objParam;
+                v_arrParam[10] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_param";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[9] = v_objParam;
+                v_arrParam[11] = v_objParam;
 
 
-                long returnErr = TransactionProcess.doTransaction(COMMAND_TRF_MONEY_2_BANK, ref v_arrParam, 8);
-                string v_strerrorMessage = (string)v_arrParam[9].ParamValue;
+                long returnErr = TransactionProcess.doTransaction(COMMAND_TRF_MONEY_2_BANK, ref v_arrParam, 10);
+                string v_strerrorMessage = (string)v_arrParam[11].ParamValue;
 
                 //if (returnErr == 0)
                 //{
