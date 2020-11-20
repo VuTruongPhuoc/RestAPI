@@ -307,7 +307,7 @@ namespace RestAPI.Controllers
                 {
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
                     var result = Bussiness.AccountProcess.trfMoney2Bank(request.Content.ReadAsStringAsync().Result, ipaddress);
-                    if (result.GetType() == typeof(BoResponse))
+                    if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == Constants.Result_OK)
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
