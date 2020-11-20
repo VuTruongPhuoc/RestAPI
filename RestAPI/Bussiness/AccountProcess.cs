@@ -729,8 +729,8 @@ namespace RestAPI.Bussiness
                 v_arrParam[2] = new StoreParameter() { ParamName = "p_accountId", ParamDirection = "1", ParamValue = accountId, ParamSize = accountId.Length, ParamType = Type.GetType("System.String").Name };
                 v_arrParam[3] = new StoreParameter() { ParamName = "p_exerciseQuantity", ParamDirection = "1", ParamValue = exerciseQuantity, ParamSize = exerciseQuantity.ToString().Length, ParamType = Type.GetType("System.String").Name };
                 v_arrParam[4] = new StoreParameter() { ParamName = "p_description", ParamDirection = "1", ParamValue = description, ParamSize = description.Length, ParamType = Type.GetType("System.String").Name };
-                v_arrParam[5] = new StoreParameter() { ParamName = "p_refId", ParamDirection = "1", ParamValue = keyID, ParamSize = keyID.Length, ParamType = Type.GetType("System.String").Name };
-                v_arrParam[6] = new StoreParameter() { ParamName = "p_ipAddress", ParamDirection = "1", ParamValue = keyID, ParamSize = keyID.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[5] = new StoreParameter() { ParamName = "p_refId", ParamDirection = "1", ParamValue = refId, ParamSize = refId.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[6] = new StoreParameter() { ParamName = "p_ipAddress", ParamDirection = "1", ParamValue = ipAddress, ParamSize = ipAddress.Length, ParamType = Type.GetType("System.String").Name };
 
                 v_arrParam[7] = new StoreParameter() { ParamName = "p_err_code", ParamDirection = "2", ParamSize = 4000, ParamType = Type.GetType("System.String").Name };
                 v_arrParam[8] = new StoreParameter() { ParamName = "p_err_param", ParamDirection = "2", ParamSize = 4000, ParamType = Type.GetType("System.String").Name };
