@@ -28,7 +28,7 @@ namespace RestAPI.Controllers
                     || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.CustomersProcess.getAccounts(custodycd);
-                    if (result.GetType() == typeof(Models.Execution) || result.GetType() == typeof(Bussiness.list))
+                    if (result.GetType() == typeof(Models.Account) || result.GetType() == typeof(Bussiness.list))
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -74,7 +74,7 @@ namespace RestAPI.Controllers
                 {
 
                     var result = Bussiness.CustomersProcess.openAccount(request.Content.ReadAsStringAsync().Result, custodycd);
-                    if (result.GetType() == typeof(BoResponseWithData))
+                    if (result.GetType() == typeof(BoResponseWithData) && ((BoResponseWithData)result).s == "ok")
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -121,7 +121,7 @@ namespace RestAPI.Controllers
                 {
 
                     var result = Bussiness.CustomersProcess.openCustomer(request.Content.ReadAsStringAsync().Result);
-                    if (result.GetType() == typeof(BoResponseWithData))
+                    if (result.GetType() == typeof(BoResponseWithData) && ((BoResponseWithData)result).s == "ok")
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");

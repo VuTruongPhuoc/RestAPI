@@ -85,7 +85,7 @@ namespace RestAPI.Controllers
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.TradingProcess.postTradingorders(request.Content.ReadAsStringAsync().Result, accountNo, ipaddress, via);
-                    if (result.GetType() == typeof(BoResponseWithData)) 
+                    if (result.GetType() == typeof(BoResponseWithData) && ((BoResponseWithData)result).s == "ok") 
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -132,7 +132,7 @@ namespace RestAPI.Controllers
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.TradingProcess.putTradingorders(request.Content.ReadAsStringAsync().Result, accountNo, orderId, ipaddress);
-                    if (result.GetType() == typeof(BoResponse))
+                    if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == "ok")
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
