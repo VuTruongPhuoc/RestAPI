@@ -150,6 +150,52 @@ namespace RestAPI.Controllers
                 return responses;
             }
         }
+
+        [Route("customers/customerBankAccounts")]
+        [System.Web.Http.HttpPost]
+        public HttpResponseMessage registerBankAcc(HttpRequestMessage request)
+        {
+            string preFixlogSession = "customers/customerBankAccounts ";
+            Log.Info(preFixlogSession + "======================BEGIN");
+            Bussiness.modCommon.LogFullRequest(request);
+
+            try
+            {
+                if (request.Content.Headers.ContentType == null
+                    || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                {
+
+                    var result = Bussiness.CustomersProcess.registerBankAcc(request.Content.ReadAsStringAsync().Result);
+                    if (result.GetType() == typeof(BoResponse) && ((BoResponse) result).s == Constants.Result_OK)
+                    {
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
+                        Log.Info(preFixlogSession + "======================END");
+                        return responses;
+                    }
+                    else
+                    {
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        Log.Info(preFixlogSession + "======================END");
+                        return responses;
+                    }
+                }
+                else
+                {
+                    var v_err_request = JObject.Parse("{'error': 400, 'message': 'Invalid Input Content-Type'}");
+                    Log.Info(preFixlogSession + "======================END");
+                    return request.CreateResponse(HttpStatusCode.BadRequest, v_err_request);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error(preFixlogSession, ex);
+                var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, ex);
+                Log.Info(preFixlogSession + "======================END");
+                return responses;
+            }
+        }
+
     }
 
 }

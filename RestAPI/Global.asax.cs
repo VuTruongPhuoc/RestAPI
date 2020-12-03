@@ -25,44 +25,52 @@ namespace RestAPI
         }
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
-            Request.RequestContext.HttpContext.Items["timer"] = Stopwatch.StartNew();
-            //HttpApplication httpApp = (HttpApplication)sender;
-            //httpApp.Context.Items["Timer"] = Stopwatch.StartNew();
+            Request.RequestContext.HttpContext.Items["timer"] = DateTime.Now.Ticks;
             if (string.IsNullOrEmpty(HttpContext.Current.Request.Headers["GUID"]))
             {
                 HttpContext.Current.Request.Headers.Add("GUID", Guid.NewGuid().ToString());
             }
             else
             {
-                Log.Debug("URL=[" + this.Request.Url + " ], Already exist GUID in header");
+                if (Log.IsDebugEnabled)
+                    Log.Debug("URL=[" + this.Request.Url + " ], Already exist GUID in header");
             }
-            Log.InfoFormat("URL=[{0}], Method=[{1}], GUID=[{2}] ============= BEGIN",
+            Log.InfoFormat("URL=[{0}], Method=[{1}], GUID=[{2}], timer={3} ============= BEGIN",
                 this.Request.Url,
                 this.Request.RequestType,
-                HttpContext.Current.Request.Headers["GUID"].ToString()
+                HttpContext.Current.Request.Headers["GUID"].ToString(),
+                Request.RequestContext.HttpContext.Items["timer"]
                 );
         }
         protected void Application_EndRequest(object sender, EventArgs e)
         {
-            Stopwatch timer = (Stopwatch)this.Request.RequestContext.HttpContext.Items["timer"];
-            timer.Stop();
-            if (string.IsNullOrEmpty(HttpContext.Current.Request.Headers["RestDuration"]))
+            try
             {
-                HttpContext.Current.Request.Headers.Add("RestDuration", timer.ElapsedMilliseconds.ToString());
+                long elapsedTicks = DateTime.Now.Ticks - (long)this.Request.RequestContext.HttpContext.Items["timer"];
+                TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
+                if (string.IsNullOrEmpty(HttpContext.Current.Request.Headers["RestDuration"]))
+                {
+                    HttpContext.Current.Request.Headers.Add("RestDuration", elapsedSpan.TotalMilliseconds.ToString());
+                }
+                else
+                {
+                    HttpContext.Current.Request.Headers["RestDuration"] = elapsedSpan.TotalMilliseconds.ToString();
+                }
+
+                Log.InfoFormat("URL=[{0}], Method=[{1}], duration time process=[{2}](ms) ============= END",
+                    this.Request.Url,
+                    this.Request.RequestType,
+                    elapsedSpan.TotalMilliseconds.ToString()
+                    );
             }
-            else
+            catch (Exception ex)
             {
-                HttpContext.Current.Request.Headers["RestDuration"] = timer.ElapsedMilliseconds.ToString();
+                Log.ErrorFormat("URL=[{0}], Method=[{1}], exception=[{2}] ============= END",
+                    this.Request.Url,
+                    this.Request.RequestType,
+                    ex
+                    );
             }
-
-            Log.InfoFormat("URL=[{0}], Method=[{1}], duration time process=[{2}](ms) ============= END",
-                this.Request.Url,
-                this.Request.RequestType,
-                timer.ElapsedMilliseconds.ToString()
-                );
-
         }
     }
 }

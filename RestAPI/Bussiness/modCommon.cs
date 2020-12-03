@@ -69,6 +69,8 @@ namespace RestAPI.Bussiness
         public const string gc_AtributeRESERVER = "RESERVER";
         public const string gc_AtributeGUID= "GUID";
 
+        public const string Result_OK = "ok";
+
     }
     #endregion constants
 
@@ -949,7 +951,7 @@ namespace RestAPI.Bussiness
             BoResponseWithData response = new BoResponseWithData();
             try
             {
-                response.s = ((error == 0) ? "ok" : error.ToString());
+                response.s = ((error == 0) ? Constants.Result_OK : error.ToString());
                 if (message != null && message.Length > 0)
                     response.errmsg = GetDataProcess.getErrmsg(error);
                 response.d = data;
