@@ -18,7 +18,8 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_BANKDEPOSIT = "fopks_restapi.pr_post_deposit";
         private static string COMMAND_DO_SUMMARY = "fopks_restapi.pr_getSummaryAccount";
         private static string COMMAND_DO_SECURITIES = "fopks_restapi.pr_getSecuritiesPortfolio";
-        
+        private static string COMMAND_TRF_MONEY_2_BANK = "fopks_restapi.pr_trfMoney2Bank";
+
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
         {
@@ -333,7 +334,7 @@ namespace RestAPI.Bussiness
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
-
+        
         #endregion
 
         #region "Account Transaction"
@@ -428,6 +429,153 @@ namespace RestAPI.Bussiness
             {
                 Log.Error("bankDeposit: ", ex);
                 return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
+        public static object trfMoney2Bank(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string custodycd = "", bankAccountNumber = "", feeType = "", accountId = "", feeCode = "", bankCode = "", bankBranchCode = "";
+                long withdrawAmount = 0;
+                string refId = "";
+
+                //if (request.TryGetValue("custodycd", out jToken))
+                //    custodycd = jToken.ToString();
+
+                custodycd = request.GetValue("custodyCode").ToString();
+                accountId = request.GetValue("accountId").ToString();
+                bankAccountNumber = request.GetValue("bankAccountNumber").ToString();
+                feeType = request.GetValue("feeType").ToString();
+                bankCode = request.GetValue("bankCode").ToString();
+                bankBranchCode = request.GetValue("bankBranchCode").ToString();
+                refId = request.GetValue("refId").ToString();
+
+                jToken = request.GetValue("withdrawAmount");
+                if (!Int64.TryParse(jToken.ToString(), out withdrawAmount))
+                    return modCommon.getBoResponse(-10020);
+                if (request.TryGetValue("feeCode", out jToken))
+                    feeCode = jToken.ToString();
+
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[12];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_custodycd";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = custodycd;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_accountId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountId;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_withdrawAmount";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = withdrawAmount;
+                v_objParam.ParamSize = withdrawAmount.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankAccountNumber";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankAccountNumber;
+                v_objParam.ParamSize = bankAccountNumber.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankCode;
+                v_objParam.ParamSize = bankCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankBranchCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankBranchCode;
+                v_objParam.ParamSize = bankBranchCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_feeType";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = feeType;
+                v_objParam.ParamSize = feeType.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_feeCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = feeCode;
+                v_objParam.ParamSize = feeCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[7] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_refId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = refId;
+                v_objParam.ParamSize = refId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[8] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_ipAddress";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = ipAddress;
+                v_objParam.ParamSize = ipAddress.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[9] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[10] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[11] = v_objParam;
+
+
+                long returnErr = TransactionProcess.doTransaction(COMMAND_TRF_MONEY_2_BANK, ref v_arrParam, 10);
+                string v_strerrorMessage = (string)v_arrParam[11].ParamValue;
+
+                //if (returnErr == 0)
+                //{
+                //    idResponse id = new idResponse() { id = (string)v_arrParam[0].ParamValue };
+                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                //}
+
+                return modCommon.getBoResponse(returnErr, v_strerrorMessage);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("trfMoney2Bank:.strRequest: " + strRequest, ex);
+                return modCommon.getBoResponse(400, "Bad Request");
             }
         }
         #endregion
@@ -599,5 +747,7 @@ namespace RestAPI.Bussiness
             }
         }
         #endregion
+
+        
     }
 }
