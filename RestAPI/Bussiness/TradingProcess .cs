@@ -35,7 +35,7 @@ namespace RestAPI.Bussiness
                 {
                     v_channel = jToken.ToString();
                 }
-                if (request.TryGetValue("Maker", out jToken))
+                if (request.TryGetValue("maker", out jToken))
                 {
                     v_maker = jToken.ToString();
                 }
@@ -145,7 +145,7 @@ namespace RestAPI.Bussiness
                 {
                     v_channel = jToken.ToString();
                 }
-                if (request.TryGetValue("Maker", out jToken))
+                if (request.TryGetValue("maker", out jToken))
                 {
                     v_maker = jToken.ToString();
                 }
