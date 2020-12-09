@@ -32,7 +32,7 @@ namespace RestAPI.Bussiness
                     instrument = jToken.ToString();
 
                 if (request.TryGetValue("maxCount", out jToken))
-                    Int32.TryParse(jToken.ToString(), out maxCount);
+                    maxCount = Int32.Parse(jToken.ToString());
 
                 List<KeyField> keyField = new List<KeyField>();
 
@@ -240,7 +240,7 @@ namespace RestAPI.Bussiness
                 //    via = jToken.ToString();
                 via = modCommon.getConfigValue("DEFAULT_VIA", "B");
                 if (request.TryGetValue("price", out jToken))
-                    Int64.TryParse(jToken.ToString(), out price);
+                    price = Int64.Parse(jToken.ToString());
 
                 List<KeyField> keyField = new List<KeyField>();
 

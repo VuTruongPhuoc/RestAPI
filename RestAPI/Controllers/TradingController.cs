@@ -37,7 +37,7 @@ namespace RestAPI.Controllers
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.TradingProcess.delTradingorders(request.Content.ReadAsStringAsync().Result, accountNo, orderId, ipaddress);
-                    if (result.GetType() == typeof(BoResponse))
+                    if (result.GetType() == typeof(BoResponse) && ((BoResponse) result).s == "ok")
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
