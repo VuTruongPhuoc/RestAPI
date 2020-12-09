@@ -237,9 +237,10 @@ namespace RestAPI.Bussiness
 
                 if (request.TryGetValue("symbol", out jToken))
                     symbol = jToken.ToString();
-                //if (request.TryGetValue("via", out jToken))
-                //    via = jToken.ToString();
-                via = modCommon.getConfigValue("DEFAULT_VIA", "B");
+                if (request.TryGetValue("channel", out jToken))
+                    via = jToken.ToString();
+                else
+                    via = modCommon.getConfigValue("DEFAULT_VIA", "B");
                 if (request.TryGetValue("price", out jToken))
                     price = Int64.Parse(jToken.ToString());
 
