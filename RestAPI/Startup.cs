@@ -12,14 +12,14 @@ namespace RestAPI
 {
     public partial class Startup
     {
-        private const string KEY_PUT_BATCH_PROCESS = "PUT_BATCH_PROCESS";
+        //private const string KEY_PUT_BATCH_PROCESS = "PUT_BATCH_PROCESS";
 
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
 
-            if (modCommond.GetConfigValue(KEY_PUT_BATCH_PROCESS, "N").Equals("Y"))
-                PutBatch2BankScheduler.Instance.Start(); // Call enpay
+            //if (modCommond.GetConfigValue(KEY_PUT_BATCH_PROCESS, "N").Equals("Y"))
+            //    PutBatch2BankScheduler.Instance.Start(); // Call enpay
         }
     }
 }

@@ -26,14 +26,14 @@ namespace RestAPI.Schedulers
         {   
             try
             {
-                if (_timer == null)
-                {
-                    _timer = new Timer { AutoReset = true, Interval = _interval };
-                    _timer.Elapsed += TimerElapsed;
-                    _timer.Enabled = true;
-                }
-                else if (!_timer.Enabled)
-                    _timer.Enabled = true;
+                //if (_timer == null)
+                //{
+                //    _timer = new Timer { AutoReset = true, Interval = _interval };
+                //    _timer.Elapsed += TimerElapsed;
+                //    _timer.Enabled = true;
+                //}
+                //else if (!_timer.Enabled)
+                //    _timer.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -45,8 +45,8 @@ namespace RestAPI.Schedulers
         {
             try
             {
-                if (_timer != null && _timer.Enabled)
-                    _timer.Enabled = false;
+                //if (_timer != null && _timer.Enabled)
+                //    _timer.Enabled = false;
             }
             catch (Exception ex)
             {
