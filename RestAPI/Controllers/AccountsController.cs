@@ -43,7 +43,7 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }
@@ -81,7 +81,7 @@ namespace RestAPI.Controllers
                     || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.getAccountordersHistory(request.Content.ReadAsStringAsync().Result, accountNo);
-                    if (result.GetType() == typeof(Models.Execution) || result.GetType() == typeof(Bussiness.list))
+                    if (result.GetType() == typeof(Models.orders) || result.GetType() == typeof(Bussiness.list))
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -89,7 +89,7 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }
@@ -127,7 +127,7 @@ namespace RestAPI.Controllers
                     || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.bankDeposit(request.Content.ReadAsStringAsync().Result, accountNo);
-                    if (result.GetType() == typeof(BoResponse))
+                    if (result.GetType() == typeof(BoResponse) && ((BoResponse) result).s == "ok")
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -180,7 +180,7 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }
@@ -216,7 +216,7 @@ namespace RestAPI.Controllers
                     || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.getsummaryAccount(request.Content.ReadAsStringAsync().Result, accountNo);
-                    if (result.GetType() == typeof(Models.PPSE) || result.GetType() == typeof(Bussiness.list))
+                    if (result.GetType() == typeof(Models.summaryAccount) || result.GetType() == typeof(Bussiness.list))
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -224,7 +224,7 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }
@@ -260,7 +260,7 @@ namespace RestAPI.Controllers
                     || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     var result = Bussiness.AccountProcess.getsecuritiesPortfolio(request.Content.ReadAsStringAsync().Result, accountNo);
-                    if (result.GetType() == typeof(Models.PPSE) || result.GetType() == typeof(Bussiness.list))
+                    if (result.GetType() == typeof(Models.securitiesPortfolio) || result.GetType() == typeof(Bussiness.list))
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -268,7 +268,7 @@ namespace RestAPI.Controllers
                     }
                     else
                     {
-                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
                         Log.Info(preFixlogSession + "======================END");
                         return responses;
                     }
