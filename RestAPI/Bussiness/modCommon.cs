@@ -181,7 +181,7 @@ namespace RestAPI.Bussiness
                    return ipAddress.ToString();
                 }
             }
-            return null;
+            return String.Empty;
         }
 
         public static string getFilterSQL(HttpRequestMessage request, ref int pageindex, ref int pagesize)
