@@ -588,7 +588,7 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string accountId = "", custodyCode = "", matchedDate = "", settleDate = "", description = "";
+                string accountId = "", custodyCode = "", matchedDate = "", feeCode = "", description = "";
                 long advanceAmount = 0;
                 string refId = "";
 
@@ -598,8 +598,8 @@ namespace RestAPI.Bussiness
                     custodyCode = jToken.ToString();
                 if (request.TryGetValue("matchedDate", out jToken))
                     matchedDate = jToken.ToString();
-                if (request.TryGetValue("settleDate", out jToken))
-                    settleDate = jToken.ToString();
+                if (request.TryGetValue("feeCode", out jToken))
+                    feeCode = jToken.ToString();
                 if (request.TryGetValue("Desc", out jToken))
                     description = jToken.ToString();
                 if (request.TryGetValue("refId", out jToken))
@@ -639,10 +639,10 @@ namespace RestAPI.Bussiness
                 v_arrParam[2] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_settleDate";
+                v_objParam.ParamName = "p_feeCode";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = settleDate;
-                v_objParam.ParamSize = settleDate.Length;
+                v_objParam.ParamValue = feeCode;
+                v_objParam.ParamSize = feeCode.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[3] = v_objParam;
 
