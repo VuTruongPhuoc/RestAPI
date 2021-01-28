@@ -20,7 +20,8 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_SECURITIES = "fopks_restapi.pr_getSecuritiesPortfolio";
         private static string COMMAND_TRF_MONEY_2_BANK = "fopks_restapi.pr_trfMoney2Bank";
         private static string COMMAND_DO_ADVANCEPAYMENT = "fopks_restapi.pr_advancePayment";
-        private static string COMMAND_DO_RIGHT_REGISTER = "fopks_restapi.pr_rightRegister"; 
+        private static string COMMAND_DO_RIGHT_REGISTER = "fopks_restapi.pr_rightRegister";
+        private static string COMMAND_DO_CASH_TRANFER = "fopks_restapi.pr_post_internalCashTranfer";
 
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
@@ -708,6 +709,59 @@ namespace RestAPI.Bussiness
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
+
+        public  static object internalCashTranfer(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+
+                string requestid = "";
+                string account = "";
+                string amount = "";
+                string toaccount = "";
+                string desc = "";
+
+                if (request.TryGetValue("requestid", out jToken))
+                    requestid = jToken.ToString();
+                if (request.TryGetValue("account", out jToken))
+                    account = jToken.ToString();
+                if (request.TryGetValue("amount", out jToken))
+                    amount = jToken.ToString();
+                if (request.TryGetValue("toaccount", out jToken))
+                    toaccount = jToken.ToString();
+                if (request.TryGetValue("desc", out jToken))
+                    desc = jToken.ToString();
+
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[8];
+                v_arrParam[0] = new StoreParameter() { ParamName = "p_requestid", ParamDirection = "1", ParamValue = requestid, ParamSize = requestid.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[1] = new StoreParameter() { ParamName = "p_account", ParamDirection = "1", ParamValue = account, ParamSize = account.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[2] = new StoreParameter() { ParamName = "p_amount", ParamDirection = "1", ParamValue = amount, ParamSize = amount.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[3] = new StoreParameter() { ParamName = "p_toaccount", ParamDirection = "1", ParamValue = toaccount, ParamSize = toaccount.ToString().Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[4] = new StoreParameter() { ParamName = "p_desc", ParamDirection = "1", ParamValue = desc, ParamSize = desc.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[5] = new StoreParameter() { ParamName = "p_ipAddress", ParamDirection = "1", ParamValue = p_ipAddress, ParamSize = p_ipAddress.Length, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[6] = new StoreParameter() { ParamName = "p_err_code", ParamDirection = "2", ParamSize = 4000, ParamType = Type.GetType("System.String").Name };
+                v_arrParam[7] = new StoreParameter() { ParamName = "p_err_param", ParamDirection = "2", ParamSize = 4000, ParamType = Type.GetType("System.String").Name };
+
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_DO_CASH_TRANFER, ref v_arrParam, 6);
+                string errparam = (string)v_arrParam[7].ParamValue;
+                return modCommon.getBoResponse(returnErr, errparam);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("rightRegister: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
+
         public static object rightRegister(string strRequest, string p_ipAddress)
         {
 
