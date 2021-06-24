@@ -362,7 +362,7 @@ namespace RestAPI.Bussiness
                 if (request.TryGetValue("amount", out jToken))
                     Int64.TryParse(jToken.ToString(), out amt);
                 if (request.TryGetValue("flag", out jToken))
-                    desc = jToken.ToString();
+                    flag = jToken.ToString();
 
 
 
