@@ -383,7 +383,7 @@ namespace RestAPI.Controllers
             }
         }
 
-        [Route("accounts/cashTranfer")]
+        [Route("accounts/cashTransfer")]
         [System.Web.Http.HttpPost]
         public HttpResponseMessage internalCashTranfer(HttpRequestMessage request)
         {
@@ -429,7 +429,7 @@ namespace RestAPI.Controllers
         }
 
 
-        [Route("accounts/stockTranfer")]
+        [Route("accounts/stockTransfer")]
         [System.Web.Http.HttpPost]
         public HttpResponseMessage internalStockTranfer(HttpRequestMessage request)
         {
