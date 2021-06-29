@@ -808,7 +808,7 @@ namespace RestAPI.Bussiness
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
                 string requestid = "", infee = "", infeesv = "", symbol = "", typetransfer = "", vsdmessage = "", acctno = "", flag = "",
-                       transferto = "", custodycdto = "", description = "", quantitytransfer = "0", quantityblock = "0", price = "";
+                       transferto = "", custodycdto = "", acctnoto = "",description = "", quantitytransfer = "0", quantityblock = "0", price = "";
 
 
                 //if (request.TryGetValue("custodycd", out jToken))
@@ -837,6 +837,8 @@ namespace RestAPI.Bussiness
                     quantityblock = jToken.ToString();
                 if (request.TryGetValue("custodycdto", out jToken))
                     custodycdto = jToken.ToString();
+                if (request.TryGetValue("acctnoto", out jToken))
+                    acctnoto = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))
                     description = jToken.ToString();
                 if (request.TryGetValue("price", out jToken))
@@ -848,7 +850,7 @@ namespace RestAPI.Bussiness
                 if (p_ipAddress == null || p_ipAddress.Length == 0)
                     ipAddress = modCommon.GetClientIp();
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[16];
+                StoreParameter[] v_arrParam = new StoreParameter[17];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_requestid";
@@ -939,6 +941,13 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[10] = v_objParam;
 
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_acctnoto";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = acctnoto;
+                v_objParam.ParamSize = acctnoto.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[11] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_description";
@@ -946,7 +955,7 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamValue = description;
                 v_objParam.ParamSize = description.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[11] = v_objParam;
+                v_arrParam[12] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_price";
@@ -954,7 +963,7 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamValue = price;
                 v_objParam.ParamSize = price.ToString().Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[12] = v_objParam;
+                v_arrParam[13] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_flag";
@@ -962,25 +971,25 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamValue = flag;
                 v_objParam.ParamSize = 100;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[13] = v_objParam;
+                v_arrParam[14] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[14] = v_objParam;
+                v_arrParam[15] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_param";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[15] = v_objParam;
+                v_arrParam[16] = v_objParam;
 
 
-                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_OUTWARD_SE_TRANFER, ref v_arrParam, 14);
-                string v_strerrorMessage = (string)v_arrParam[15].ParamValue;
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_OUTWARD_SE_TRANFER, ref v_arrParam, 15);
+                string v_strerrorMessage = (string)v_arrParam[16].ParamValue;
 
                 //if (returnErr == 0)
                 //{
