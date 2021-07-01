@@ -24,7 +24,8 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_CASH_TRANFER = "fopks_restapi.pr_post_internalCashTranfer";
         private static string COMMAND_DO_STOCK_TRANFER = "fopks_restapi.pr_post_inStockTranfer";
         private static string COMMAND_PO_INWARD_SE_TRANFER = "fopks_restapi.pr_post_Inward_SE_Transfer";
-        private static string COMMAND_PO_OUTWARD_SE_TRANFER = "fopks_restapi.pr_post_outward_SE_Transfer"; 
+        private static string COMMAND_PO_OUTWARD_SE_TRANFER = "fopks_restapi.pr_post_outward_SE_Transfer";
+        private static string COMMAND_PO_SENDSECURITIES_RIGHTTOCLOSE = "fopks_restapi.pr_sendSecurities_rightToClose";
 
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
@@ -826,8 +827,8 @@ namespace RestAPI.Bussiness
                     typetransfer = jToken.ToString();
                 if (request.TryGetValue("vsdmessage", out jToken))
                     vsdmessage = jToken.ToString();
-                if (request.TryGetValue("acctno", out jToken))
-                    acctno = jToken.ToString();
+                if (request.TryGetValue("account", out jToken))
+                    account = jToken.ToString();
                 if (request.TryGetValue("transferto", out jToken))
                     transferto = jToken.ToString();
                     description = jToken.ToString();
@@ -837,8 +838,8 @@ namespace RestAPI.Bussiness
                     quantityblock = jToken.ToString();
                 if (request.TryGetValue("custodycdto", out jToken))
                     custodycdto = jToken.ToString();
-                if (request.TryGetValue("acctnoto", out jToken))
-                    acctnoto = jToken.ToString();
+                if (request.TryGetValue("accountto", out jToken))
+                    accountto = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))
                     description = jToken.ToString();
                 if (request.TryGetValue("price", out jToken))
@@ -904,7 +905,7 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_acctno";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = acctno;
+                v_objParam.ParamValue = account;
                 v_objParam.ParamSize = 100;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[6] = v_objParam;
@@ -944,8 +945,8 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_acctnoto";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = acctnoto;
-                v_objParam.ParamSize = acctnoto.Length;
+                v_objParam.ParamValue = accountto;
+                v_objParam.ParamSize = accountto.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[11] = v_objParam;
 
@@ -1007,6 +1008,110 @@ namespace RestAPI.Bussiness
             }
         }
 
+        public static object sendSecuritiesrightToClose(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestid = "", symbol = "", account = "", flag = "",
+                      description = "";
+
+
+                //if (request.TryGetValue("custodycd", out jToken))
+                //    custodycd = jToken.ToString();
+
+                if (request.TryGetValue("requestid", out jToken))
+                    requestid = jToken.ToString();
+                if (request.TryGetValue("symbol", out jToken))
+                    symbol = jToken.ToString();
+                if (request.TryGetValue("account", out jToken))
+                    account = jToken.ToString();
+                if (request.TryGetValue("description", out jToken))
+                    description = jToken.ToString();
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[7];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestid;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_symbol";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = symbol;
+                v_objParam.ParamSize = symbol.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_acctno";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = account;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_description";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = description;
+                v_objParam.ParamSize = description.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_SENDSECURITIES_RIGHTTOCLOSE, ref v_arrParam, 5);
+                string v_strerrorMessage = (string)v_arrParam[6].ParamValue;
+
+                //if (returnErr == 0)
+                //{
+                //    idResponse id = new idResponse() { id = (string)v_arrParam[0].ParamValue };
+                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                //}
+
+                return modCommon.getBoResponse(returnErr, v_strerrorMessage);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("sendSecuritiesrightToClose:.strRequest: " + strRequest, ex);
+                return modCommon.getBoResponse(400, "Bad Request");
+            }
+        }
         public static object advancePayment(string strRequest, string p_ipAddress)
         {
            
