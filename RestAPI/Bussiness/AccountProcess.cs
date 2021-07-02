@@ -922,8 +922,8 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamName = "p_quantitytransfer";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = quantitytransfer;
-                v_objParam.ParamSize = quantitytransfer.ToString().Length;
-                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_objParam.ParamSize = quantitytransfer.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[8] = v_objParam;
 
                 v_objParam = new StoreParameter();
@@ -931,7 +931,7 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = quantityblock;
                 v_objParam.ParamSize = quantityblock.ToString().Length;
-                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[9] = v_objParam;
 
                 v_objParam = new StoreParameter();
