@@ -1012,7 +1012,7 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string requestid = "", symbol = "", account = "", accountto = "", flag = "",
+                string requestid = "", symbol = "", account = "", custodycdto = "", flag = "",
                       description = "";
 
 
@@ -1025,8 +1025,8 @@ namespace RestAPI.Bussiness
                     symbol = jToken.ToString();
                 if (request.TryGetValue("account", out jToken))
                     account = jToken.ToString();
-                if (request.TryGetValue("accountto", out jToken))
-                    accountto = jToken.ToString();
+                if (request.TryGetValue("custodycdto", out jToken))
+                    custodycdto = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))
                     description = jToken.ToString();
                 if (request.TryGetValue("flag", out jToken))
@@ -1064,9 +1064,9 @@ namespace RestAPI.Bussiness
                 v_arrParam[2] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_acctnoto";
+                v_objParam.ParamName = "p_custodycdto";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = accountto;
+                v_objParam.ParamValue = custodycdto;
                 v_objParam.ParamSize = 100;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[3] = v_objParam;
