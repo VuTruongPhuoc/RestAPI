@@ -629,19 +629,19 @@ namespace RestAPI.Bussiness
                     infeesv = jToken.ToString();
                 if (request.TryGetValue("symbol", out jToken))
                     symbol = jToken.ToString();
-                if (request.TryGetValue("typetransfer", out jToken))
+                if (request.TryGetValue("typeTransfer", out jToken))
                     typetransfer = jToken.ToString();
                 if (request.TryGetValue("inward", out jToken))
                     inward = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))
                     description = jToken.ToString();
-                if (request.TryGetValue("quantitytransfer", out jToken))
+                if (request.TryGetValue("quantityTransfer", out jToken))
                     quantitytransfer = jToken.ToString();
-                if (request.TryGetValue("quantityblock", out jToken))
+                if (request.TryGetValue("quantityBlock", out jToken))
                     quantityblock = jToken.ToString();
-                if (request.TryGetValue("quantitytransferbonus", out jToken))
+                if (request.TryGetValue("quantityTransferBonus", out jToken))
                     quantitytransferbonus = jToken.ToString();
-                if (request.TryGetValue("quantitytransferdividend", out jToken))
+                if (request.TryGetValue("quantityTransferDividend", out jToken))
                     quantitytransferdividend = jToken.ToString();
                 if (request.TryGetValue("price", out jToken))
                     price = jToken.ToString();
@@ -823,22 +823,22 @@ namespace RestAPI.Bussiness
                     infee = jToken.ToString();
                 if (request.TryGetValue("infeesv", out jToken))
                     infeesv = jToken.ToString();
-                if (request.TryGetValue("typetransfer", out jToken))
+                if (request.TryGetValue("typeTransfer", out jToken))
                     typetransfer = jToken.ToString();
                 if (request.TryGetValue("vsdmessage", out jToken))
                     vsdmessage = jToken.ToString();
                 if (request.TryGetValue("account", out jToken))
                     acctno = jToken.ToString();
-                if (request.TryGetValue("transferto", out jToken))
+                if (request.TryGetValue("transferTo", out jToken))
                     transferto = jToken.ToString();
                     description = jToken.ToString();
-                if (request.TryGetValue("quantitytransfer", out jToken))
+                if (request.TryGetValue("quantityTransfer", out jToken))
                     quantitytransfer = jToken.ToString();
-                if (request.TryGetValue("quantityblock", out jToken))
+                if (request.TryGetValue("quantityBlock", out jToken))
                     quantityblock = jToken.ToString();
-                if (request.TryGetValue("custodycdto", out jToken))
+                if (request.TryGetValue("custodycdTo", out jToken))
                     custodycdto = jToken.ToString();
-                if (request.TryGetValue("accountto", out jToken))
+                if (request.TryGetValue("accountTo", out jToken))
                     acctnoto = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))
                     description = jToken.ToString();
@@ -1130,7 +1130,7 @@ namespace RestAPI.Bussiness
                     feecd = jToken.ToString();
                 if (request.TryGetValue("symbol", out jToken))
                     symbol = jToken.ToString();
-                if (request.TryGetValue("qttytype", out jToken))
+                if (request.TryGetValue("qttyType", out jToken))
                     qttytype = jToken.ToString();
                 if (request.TryGetValue("amt", out jToken))
                     amt = jToken.ToString();
