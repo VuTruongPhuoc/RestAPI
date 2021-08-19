@@ -518,11 +518,11 @@ namespace RestAPI.Controllers
             }
         }
 
-        [Route("accounts/Inward_SE_Transfer")]
+        [Route("accounts/receiveSecurities")]
         [System.Web.Http.HttpPost]
         public HttpResponseMessage Inward_SE_Transfer(HttpRequestMessage request)
         {
-            string preFixlogSession = "accounts/Inward_SE_Transfer ";
+            string preFixlogSession = "accounts/receiveSecurities ";
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
@@ -564,11 +564,11 @@ namespace RestAPI.Controllers
             }
         }
 
-        [Route("accounts/OutwardSETransfer")]
+        [Route("accounts/withdrawSecurities")]
         [System.Web.Http.HttpPost]
         public HttpResponseMessage OutwardSETransfer(HttpRequestMessage request)
         {
-            string preFixlogSession = "accounts/OutwardSETransfer ";
+            string preFixlogSession = "accounts/withdrawSecurities ";
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
@@ -609,11 +609,11 @@ namespace RestAPI.Controllers
                 return responses;
             }
         }
-        [Route("accounts/sendSecuritiesrightToClose")]
+        [Route("accounts/withdrawSecuritiesToCloseSubaccount")]
         [System.Web.Http.HttpPost]
         public HttpResponseMessage sendSecuritiesrightToClose(HttpRequestMessage request)
         {
-            string preFixlogSession = "accounts/sendSecuritiesrightToClose ";
+            string preFixlogSession = "accounts/withdrawSecuritiesToCloseSubaccount ";
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
@@ -654,11 +654,11 @@ namespace RestAPI.Controllers
                 return responses;
             }
         }
-        [Route("accounts/SecuritiesBlock")]
+        [Route("accounts/blockSecurities")]
         [System.Web.Http.HttpPost]
         public HttpResponseMessage SecuritiesBlock(HttpRequestMessage request)
         {
-            string preFixlogSession = "accounts/SecuritiesBlock ";
+            string preFixlogSession = "accounts/blockSecurities ";
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
