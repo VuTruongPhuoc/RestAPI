@@ -622,7 +622,7 @@ namespace RestAPI.Bussiness
                 if (request.TryGetValue("requestId", out jToken))
                     requestId = jToken.ToString();
                 if (request.TryGetValue("accountID", out jToken))
-                    accountID = jToken.ToString();
+                    accountId = jToken.ToString();
                 if (request.TryGetValue("transferFeeCode", out jToken))
                     transferFeeCode = jToken.ToString();
                 if (request.TryGetValue("transactionFeeCode", out jToken))
@@ -654,7 +654,7 @@ namespace RestAPI.Bussiness
                 StoreParameter[] v_arrParam = new StoreParameter[16];
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_requestId";
+                v_objParam.ParamName = "p_requestid";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = requestId;
                 v_objParam.ParamSize = 100;
@@ -662,7 +662,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[0] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_accountId";
+                v_objParam.ParamName = "p_account";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = accountId;
                 v_objParam.ParamSize = 100;
@@ -670,7 +670,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[1] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transferFeeCode";
+                v_objParam.ParamName = "p_infee";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transferFeeCode;
                 v_objParam.ParamSize = transferFeeCode.ToString().Length;
@@ -678,7 +678,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[2] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transactionFeeCode";
+                v_objParam.ParamName = "p_infeesv";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transactionFeeCode;
                 v_objParam.ParamSize = transactionFeeCode.Length;
@@ -694,7 +694,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[4] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transferType";
+                v_objParam.ParamName = "p_typetransfer";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transferType;
                 v_objParam.ParamSize = transferType.Length;
@@ -703,7 +703,7 @@ namespace RestAPI.Bussiness
 
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transferorCompany";
+                v_objParam.ParamName = "p_inward";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transferorCompany;
                 v_objParam.ParamSize = transferorCompany.Length;
@@ -721,7 +721,7 @@ namespace RestAPI.Bussiness
 
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_tradingQuantity";
+                v_objParam.ParamName = "p_quantitytransfer";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = tradingQuantity;
                 v_objParam.ParamSize = tradingQuantity.Length;
@@ -729,7 +729,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[8] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_blockQuantity";
+                v_objParam.ParamName = "p_quantityblock";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = blockQuantity;
                 v_objParam.ParamSize = blockQuantity.ToString().Length;
@@ -737,7 +737,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[9] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_bonusQuantity";
+                v_objParam.ParamName = "p_quantitytransferbonus";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = bonusQuantity;
                 v_objParam.ParamSize = bonusQuantity.ToString().Length;
@@ -745,7 +745,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[10] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_dividendQuantity";
+                v_objParam.ParamName = "p_quantitytransferdividend";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = dividendQuantity;
                 v_objParam.ParamSize = dividendQuantity.ToString().Length;
@@ -753,7 +753,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[11] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transferPrice";
+                v_objParam.ParamName = "p_price";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transferPrice;
                 v_objParam.ParamSize = transferPrice.ToString().Length;
@@ -854,7 +854,7 @@ namespace RestAPI.Bussiness
                 StoreParameter[] v_arrParam = new StoreParameter[17];
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_requestId";
+                v_objParam.ParamName = "p_requestid";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = requestId;
                 v_objParam.ParamSize = 100;
@@ -870,7 +870,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[1] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transferFeeCode";
+                v_objParam.ParamName = "p_infee";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transferFeeCode;
                 v_objParam.ParamSize = transferFeeCode.ToString().Length;
@@ -878,7 +878,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[2] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transactionFeeCode";
+                v_objParam.ParamName = "p_infeesv";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transactionFeeCode;
                 v_objParam.ParamSize = transactionFeeCode.Length;
@@ -886,7 +886,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[3] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transferType";
+                v_objParam.ParamName = "p_typetransfer";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transferType;
                 v_objParam.ParamSize = transferType.Length;
@@ -895,7 +895,7 @@ namespace RestAPI.Bussiness
 
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_vsdMessageType";
+                v_objParam.ParamName = "p_vsdmessage";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = vsdMessageType;
                 v_objParam.ParamSize = vsdMessageType.Length;
@@ -903,7 +903,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[5] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transferorAccountId";
+                v_objParam.ParamName = "p_acctno";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transferorAccountId;
                 v_objParam.ParamSize = 100;
@@ -911,7 +911,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[6] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transfereeCompany";
+                v_objParam.ParamName = "p_transferto";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transfereeCompany;
                 v_objParam.ParamSize = transfereeCompany.Length;
@@ -919,7 +919,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[7] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_tradingQuantity";
+                v_objParam.ParamName = "p_quantitytransfer";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = tradingQuantity;
                 v_objParam.ParamSize = tradingQuantity.Length;
@@ -927,7 +927,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[8] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_blockQuantity";
+                v_objParam.ParamName = "p_quantityblock";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = blockQuantity;
                 v_objParam.ParamSize = blockQuantity.ToString().Length;
@@ -935,7 +935,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[9] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transfereeCustodyCode";
+                v_objParam.ParamName = "p_custodycdto";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transfereeCustodyCode;
                 v_objParam.ParamSize = transfereeCustodyCode.Length;
@@ -959,7 +959,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[12] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transferPrice";
+                v_objParam.ParamName = "p_price";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transferPrice;
                 v_objParam.ParamSize = transferPrice.ToString().Length;
@@ -1038,7 +1038,7 @@ namespace RestAPI.Bussiness
                 StoreParameter[] v_arrParam = new StoreParameter[7];
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_requestId";
+                v_objParam.ParamName = "p_requestid";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = requestId;
                 v_objParam.ParamSize = 100;
@@ -1055,7 +1055,7 @@ namespace RestAPI.Bussiness
 
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_accountId";
+                v_objParam.ParamName = "p_acctno";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = accountId;
                 v_objParam.ParamSize = 100;
@@ -1145,7 +1145,7 @@ namespace RestAPI.Bussiness
                 StoreParameter[] v_arrParam = new StoreParameter[10];
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_requestId";
+                v_objParam.ParamName = "p_requestid";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = requestId;
                 v_objParam.ParamSize = 100;
@@ -1153,7 +1153,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[0] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_accountId";
+                v_objParam.ParamName = "p_account";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = accountId;
                 v_objParam.ParamSize = 100;
@@ -1161,7 +1161,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[1] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_transactionFeeCode";
+                v_objParam.ParamName = "p_feecd";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = transactionFeeCode;
                 v_objParam.ParamSize = transactionFeeCode.ToString().Length;
@@ -1178,7 +1178,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[3] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_blockType";
+                v_objParam.ParamName = "p_qttytype";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = blockType;
                 v_objParam.ParamSize = blockType.Length;
@@ -1187,7 +1187,7 @@ namespace RestAPI.Bussiness
 
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_quantity";
+                v_objParam.ParamName = "p_amt";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = quantity;
                 v_objParam.ParamSize = quantity.Length;
