@@ -621,7 +621,7 @@ namespace RestAPI.Bussiness
 
                 if (request.TryGetValue("requestId", out jToken))
                     requestId = jToken.ToString();
-                if (request.TryGetValue("accountID", out jToken))
+                if (request.TryGetValue("accountId", out jToken))
                     accountId = jToken.ToString();
                 if (request.TryGetValue("transferFeeCode", out jToken))
                     transferFeeCode = jToken.ToString();
