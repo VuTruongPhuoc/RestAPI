@@ -809,7 +809,7 @@ namespace RestAPI.Bussiness
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
                 string requestId = "", transferFeeCode = "", transactionFeeCode = "", symbol = "", transferType = "", vsdMessageType = "", transferorAccountId = "", flag = "",
-                       transfereeCompany = "", transfereeCustodyCode = "", acctnoto = "",description = "", tradingQuantity = "0", blockQuantity = "0", transferPrice = "";
+                       transfereeCompany = "", transfereeCustodyCode = "", accountIdTo = "",description = "", tradingQuantity = "0", blockQuantity = "0", transferPrice = "";
 
 
                 //if (request.TryGetValue("custodycd", out jToken))
@@ -838,8 +838,8 @@ namespace RestAPI.Bussiness
                     blockQuantity = jToken.ToString();
                 if (request.TryGetValue("transfereeCustodyCode", out jToken))
                     transfereeCustodyCode = jToken.ToString();
-                if (request.TryGetValue("accountTo", out jToken))
-                    acctnoto = jToken.ToString();
+                if (request.TryGetValue("accountIdTo", out jToken))
+                    accountIdTo = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))
                     description = jToken.ToString();
                 if (request.TryGetValue("transferPrice", out jToken))
@@ -945,8 +945,8 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_acctnoto";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = acctnoto;
-                v_objParam.ParamSize = acctnoto.Length;
+                v_objParam.ParamValue = accountIdTo;
+                v_objParam.ParamSize = accountIdTo.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[11] = v_objParam;
 
