@@ -38,6 +38,8 @@ namespace RestAPI.Models
         public string txdate = "";
         public string lastModified = "";
         public string createdDate = "";
+        public string channel = "";
+        public string maker = "";
     }
     public class ordersInfo
     {
@@ -48,6 +50,8 @@ namespace RestAPI.Models
         public long matchPrice = 0;
         public long quoteQtty = 0;
         public long quotePrice = 0;
+        public string channel = "";
+        public string maker = "";
     }
     #endregion
 
@@ -68,6 +72,8 @@ namespace RestAPI.Models
         public string duration = "";
         public string status = "";
         public long lastModified = 0;
+        public string channel = "";
+        public string maker = "";
     }
     #endregion
 
