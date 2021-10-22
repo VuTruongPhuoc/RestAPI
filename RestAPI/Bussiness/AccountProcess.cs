@@ -146,7 +146,9 @@ namespace RestAPI.Bussiness
                             lastModified = ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString(),
                             createdDate = ds.Tables[0].Rows[i]["CREATETIME"].ToString(),
                             type = ds.Tables[0].Rows[i]["TYPE"].ToString(),
-                            txdate = ds.Tables[0].Rows[i]["TXDATE"].ToString()
+                            txdate = ds.Tables[0].Rows[i]["TXDATE"].ToString(),
+                            channel = ds.Tables[0].Rows[i]["CHANNEL"].ToString(),
+                            maker = ds.Tables[0].Rows[i]["MAKER"].ToString()
                         };
                     }
                 }
@@ -219,7 +221,9 @@ namespace RestAPI.Bussiness
                             lastModified = ds.Tables[0].Rows[i]["LASTMODIFIED"].ToString(),
                             createdDate = ds.Tables[0].Rows[i]["CREATETIME"].ToString(),
                             timeInForce = ds.Tables[0].Rows[i]["TIMEINFORCE"].ToString(),
-                            txdate = ds.Tables[0].Rows[i]["TXDATE"].ToString()
+                            txdate = ds.Tables[0].Rows[i]["TXDATE"].ToString(),
+                            channel = ds.Tables[0].Rows[i]["CHANNEL"].ToString(),
+                            maker = ds.Tables[0].Rows[i]["MAKER"].ToString()
                         };
                     }
                 }
@@ -329,7 +333,9 @@ namespace RestAPI.Bussiness
                             matchQtty = Convert.ToInt64(ds.Tables[0].Rows[i]["MATCHQTTY"].ToString()),
                             matchPrice = Convert.ToInt64(ds.Tables[0].Rows[i]["MATCHPRICE"].ToString()),
                             quoteQtty = Convert.ToInt64(ds.Tables[0].Rows[i]["QUOTEQTTY"].ToString()),
-                            quotePrice = Convert.ToInt64(ds.Tables[0].Rows[i]["QUOTEPRICE"].ToString())
+                            quotePrice = Convert.ToInt64(ds.Tables[0].Rows[i]["QUOTEPRICE"].ToString()),
+                            channel = ds.Tables[0].Rows[i]["CHANNEL"].ToString(),
+                            maker = ds.Tables[0].Rows[i]["MAKER"].ToString()
                         };
                     }
                 }
