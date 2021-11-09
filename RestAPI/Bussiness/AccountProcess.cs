@@ -27,6 +27,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_PO_OUTWARD_SE_TRANFER = "fopks_restapi.pr_post_outward_SE_Transfer";
         private static string COMMAND_PO_SENDSECURITIES_RIGHTTOCLOSE = "fopks_restapi.pr_sendSecurities_rightToClose";
         private static string COMMAND_PO_SECURITIES_BLOCK = "fopks_restapi.pr_post_Securities_Block";
+        private static string COMMAND_PO_UPDATE_CAREBY = "fopks_restapi.pr_updateCareby";
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
         {
@@ -1247,6 +1248,98 @@ namespace RestAPI.Bussiness
             catch (Exception ex)
             {
                 Log.Error("SecuritiesBlock:.strRequest: " + strRequest, ex);
+                return modCommon.getBoResponse(400, "Bad Request");
+            }
+        }
+
+        public static object updateCareby(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", accountId = "", careBy = "", flag = "";
+
+                //if (request.TryGetValue("custodycd", out jToken))
+                //    custodycd = jToken.ToString();
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("accountId", out jToken))
+                    accountId = jToken.ToString();
+                if (request.TryGetValue("careBy", out jToken))
+                    careBy = jToken.ToString();
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[6];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_acctno";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountId;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_careby";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = careBy;
+                v_objParam.ParamSize = careBy.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_UPDATE_CAREBY, ref v_arrParam, 4);
+                string v_strerrorMessage = (string)v_arrParam[5].ParamValue;
+
+                //if (returnErr == 0)
+                //{
+                //    idResponse id = new idResponse() { id = (string)v_arrParam[0].ParamValue };
+                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                //}
+
+                return modCommon.getBoResponse(returnErr, v_strerrorMessage);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("updateCareby " + strRequest, ex);
                 return modCommon.getBoResponse(400, "Bad Request");
             }
         }
