@@ -705,7 +705,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[5] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_feeType";
+                v_objParam.ParamName = "p_feetype";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = feeType;
                 v_objParam.ParamSize = feeType.Length;
