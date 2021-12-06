@@ -28,6 +28,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_PO_SENDSECURITIES_RIGHTTOCLOSE = "fopks_restapi.pr_sendSecurities_rightToClose";
         private static string COMMAND_PO_SECURITIES_BLOCK = "fopks_restapi.pr_post_Securities_Block";
         private static string COMMAND_PO_UPDATE_CAREBY = "fopks_restapi.pr_updateCareby";
+        private static string COMMAND_PO_CashWithdrawPPse = "fopks_restapi.pr_CashWithdrawPPse";
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
         {
@@ -612,7 +613,174 @@ namespace RestAPI.Bussiness
                 return modCommon.getBoResponse(400, "Bad Request");
             }
         }
-    
+
+        // API Chuyen tien tren suc mua thang du: DNSE-1584 DNS.2021.10.1.44
+        public static object CashWithdrawPPse(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", custodyCode = "", accountId = "", bankAccountNumber = "", bankCode = "", bankBranchCode = "", feeType = "", 
+                       feeCode_withdraw = "", feeCode_transfer = "", flag = "", amount = "0";
+
+
+                //if (request.TryGetValue("custodycd", out jToken))
+                //    custodycd = jToken.ToString();
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("custodyCode", out jToken))
+                    custodyCode = jToken.ToString();
+                if (request.TryGetValue("accountId", out jToken))
+                    accountId = jToken.ToString();
+                if (request.TryGetValue("bankAccountNumber", out jToken))
+                    bankAccountNumber = jToken.ToString();
+                if (request.TryGetValue("bankCode", out jToken))
+                    bankCode = jToken.ToString();
+                if (request.TryGetValue("bankBranchCode", out jToken))
+                    bankBranchCode = jToken.ToString();
+                if (request.TryGetValue("feeType", out jToken))
+                    feeType = jToken.ToString();
+                if (request.TryGetValue("feeCode_withdraw", out jToken))
+                    feeCode_withdraw = jToken.ToString();
+                if (request.TryGetValue("feeCode_transfer", out jToken))
+                    feeCode_transfer = jToken.ToString();
+                if (request.TryGetValue("amount", out jToken))
+                    amount = jToken.ToString();
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[13];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_custodycd";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = custodyCode;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_acctno";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountId;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankacc";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankAccountNumber;
+                v_objParam.ParamSize = bankAccountNumber.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankcode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankCode;
+                v_objParam.ParamSize = bankCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_bankbranchcode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = bankBranchCode;
+                v_objParam.ParamSize = bankBranchCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_feeType";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = feeType;
+                v_objParam.ParamSize = feeType.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_feewithdraw";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = feeCode_withdraw;
+                v_objParam.ParamSize = feeCode_withdraw.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[7] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_feetransfer";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = feeCode_transfer;
+                v_objParam.ParamSize = feeCode_transfer.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[8] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_amount";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = amount;
+                v_objParam.ParamSize = amount.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[9] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[10] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[11] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[12] = v_objParam;
+
+
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_CashWithdrawPPse, ref v_arrParam, 11);
+                string v_strerrorMessage = (string)v_arrParam[12].ParamValue;
+
+                //if (returnErr == 0)
+                //{
+                //    idResponse id = new idResponse() { id = (string)v_arrParam[0].ParamValue };
+                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                //}
+
+                return modCommon.getBoResponse(returnErr, v_strerrorMessage);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("CashWithdrawPPse:.strRequest: " + strRequest, ex);
+                return modCommon.getBoResponse(400, "Bad Request");
+            }
+        }
+
         public static object Inward_SE_Transfer(string strRequest, string p_ipAddress)
        {
             try
