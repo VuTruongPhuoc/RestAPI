@@ -1904,7 +1904,8 @@ namespace RestAPI.Bussiness
                             withdrawableCash = Convert.ToInt64(ds.Tables[0].Rows[i]["WITHDRAWABLECASH"].ToString()),
                             collateralValue = Convert.ToInt64(ds.Tables[0].Rows[i]["COLLATERALVALUE"].ToString()),
                             orderSecured = Convert.ToInt64(ds.Tables[0].Rows[i]["ORDERSECURED"].ToString()),
-                            marginCallAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["MARGINCALLAMOUNT"].ToString())
+                            marginCallAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["MARGINCALLAMOUNT"].ToString()),
+                            ppwithdraw = Convert.ToInt64(ds.Tables[0].Rows[i]["PPWITHDRAW"].ToString())
                         };
                     }
                 }
