@@ -621,8 +621,8 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string requestId = "", custodyCode = "", accountId = "", bankAccountNumber = "", bankCode = "", bankBranchCode = "", feeType = "", 
-                       feeCode_withdraw = "", feeCode_transfer = "", flag = "", amount = "0";
+                string requestId = "", custodyCode = "", accountId = "", bankAccountNumber = "", bankCode = "", bankBranchCode = "", transferFeeType = "",
+                       withdrawFeeCode = "", transferFeeCode = "", flag = "", amount = "0";
 
 
                 //if (request.TryGetValue("custodycd", out jToken))
@@ -640,12 +640,12 @@ namespace RestAPI.Bussiness
                     bankCode = jToken.ToString();
                 if (request.TryGetValue("bankBranchCode", out jToken))
                     bankBranchCode = jToken.ToString();
-                if (request.TryGetValue("feeType", out jToken))
-                    feeType = jToken.ToString();
-                if (request.TryGetValue("feeCode_withdraw", out jToken))
-                    feeCode_withdraw = jToken.ToString();
-                if (request.TryGetValue("feeCode_transfer", out jToken))
-                    feeCode_transfer = jToken.ToString();
+                if (request.TryGetValue("transferFeeType", out jToken))
+                    transferFeeType = jToken.ToString();
+                if (request.TryGetValue("withdrawFeeCode", out jToken))
+                    withdrawFeeCode = jToken.ToString();
+                if (request.TryGetValue("transferFeeCode", out jToken))
+                    transferFeeCode = jToken.ToString();
                 if (request.TryGetValue("amount", out jToken))
                     amount = jToken.ToString();
                 if (request.TryGetValue("flag", out jToken))
@@ -707,8 +707,8 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_feetype";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = feeType;
-                v_objParam.ParamSize = feeType.Length;
+                v_objParam.ParamValue = transferFeeType;
+                v_objParam.ParamSize = transferFeeType.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[6] = v_objParam;
 
@@ -716,8 +716,8 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_feewithdraw";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = feeCode_withdraw;
-                v_objParam.ParamSize = feeCode_withdraw.Length;
+                v_objParam.ParamValue = withdrawFeeCode;
+                v_objParam.ParamSize = withdrawFeeCode.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[7] = v_objParam;
 
@@ -725,8 +725,8 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_feetransfer";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = feeCode_transfer;
-                v_objParam.ParamSize = feeCode_transfer.Length;
+                v_objParam.ParamValue = transferFeeCode;
+                v_objParam.ParamSize = transferFeeCode.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[8] = v_objParam;
 
