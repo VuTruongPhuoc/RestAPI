@@ -274,6 +274,7 @@
     <Compile Include="Bussiness\AccountProcess.cs" />
     <Compile Include="Bussiness\BussinessObject.cs" />
     <Compile Include="Bussiness\CacheObject.cs" />
+    <Compile Include="Bussiness\CorporateActionsProcess.cs" />
     <Compile Include="Bussiness\CustomersProcess.cs" />
     <Compile Include="Bussiness\ErrorMapHelper.cs" />
     <Compile Include="Bussiness\modCommon.cs" />
@@ -283,6 +284,7 @@
     <Compile Include="Bussiness\TransactionProcess.cs" />
     <Compile Include="Bussiness\UtilObject.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\CorporateActionsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\RootController.cs" />
     <Compile Include="Controllers\SymtemController.cs" />

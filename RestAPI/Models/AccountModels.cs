@@ -142,6 +142,7 @@ namespace RestAPI.Models
         public long collateralValue = 0;
         public long orderSecured = 0;
         public long marginCallAmount = 0;
+        public long ppwithdraw = 0;
     }
 
     public class securitiesPortfolio
