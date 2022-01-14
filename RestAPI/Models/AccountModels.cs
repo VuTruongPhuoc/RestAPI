@@ -147,7 +147,7 @@ namespace RestAPI.Models
 
     public class loanInfo //Thong tin mon vay DNS.2022.01.1.02
     {
-        public string custodCode = "";
+        public string custodyCode = "";
         public string subAccountId = "";
         public string lnTypeId = "";
         public string lnAccountnNo = "";

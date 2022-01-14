@@ -44,7 +44,7 @@ namespace RestAPI.Bussiness
                     {
                         summary[i] = new loanInfo()
                         {
-                            custodCode = ds.Tables[0].Rows[i]["CUSTODYCD"].ToString(),
+                            custodyCode = ds.Tables[0].Rows[i]["CUSTODYCD"].ToString(),
                             subAccountId = ds.Tables[0].Rows[i]["AFACCTNO"].ToString(),
                             lnTypeId = ds.Tables[0].Rows[i]["ACTYPE"].ToString(),
                             lnAccountnNo = ds.Tables[0].Rows[i]["ACCTNO"].ToString(),
