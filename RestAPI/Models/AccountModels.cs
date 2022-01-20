@@ -165,7 +165,7 @@ namespace RestAPI.Models
         public double undueFee = 0;
         public double dueFee = 0;
         public double overdueFee = 0;
-        public double feeintovdacr = 0;
+        public double feeOnOverduePrincipal = 0;
         public double interestRate1 = 0;
         public double interestRate2 = 0;
         public double interestRate3 = 0;
