@@ -197,13 +197,13 @@ namespace RestAPI.Bussiness
         }
 
         // API gia han no: DNS.2022.01.1.02
-        public static object LoanExtend(string strRequest, string p_ipAddress)
+        public static object LoanExtend(string strRequest, string id, string p_ipAddress)
         {
             try
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string requestId = "", subAccountId = "", id = "", extendDate = "", feeId = "", flag = "";
+                string requestId = "", subAccountId = "", extendDate = "", feeId = "", flag = "";
 
                 //if (request.TryGetValue("custodycd", out jToken))
                 //    custodycd = jToken.ToString();
@@ -212,8 +212,6 @@ namespace RestAPI.Bussiness
                     requestId = jToken.ToString();
                 if (request.TryGetValue("subAccountId", out jToken))
                     subAccountId = jToken.ToString();
-                if (request.TryGetValue("id", out jToken))
-                    id = jToken.ToString();
                 if (request.TryGetValue("extendDate", out jToken))
                     extendDate = jToken.ToString();
                 if (request.TryGetValue("feeId", out jToken))
@@ -309,13 +307,13 @@ namespace RestAPI.Bussiness
         }
 
         // API tra no: DNS.2022.01.1.02
-        public static object LoanPayment(string strRequest, string p_ipAddress)
+        public static object LoanPayment(string strRequest, string id, string p_ipAddress)
         {
             try
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string requestId = "", account = "", id = "", payAmount = "", description = "", flag = "";
+                string requestId = "", account = "", payAmount = "", description = "", flag = "";
 
                 //if (request.TryGetValue("custodycd", out jToken))
                 //    custodycd = jToken.ToString();
@@ -324,8 +322,6 @@ namespace RestAPI.Bussiness
                     requestId = jToken.ToString();
                 if (request.TryGetValue("account", out jToken))
                     account = jToken.ToString();
-                if (request.TryGetValue("id", out jToken))
-                    id = jToken.ToString();
                 if (request.TryGetValue("payAmount", out jToken))
                     payAmount = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))

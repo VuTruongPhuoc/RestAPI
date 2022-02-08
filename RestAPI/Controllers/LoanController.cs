@@ -18,11 +18,11 @@ namespace RestAPI.Controllers
         private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         //Thong tin mon vay DNS.2022.01.1.02
-        [Route("loan/{id}/loanInfo")]
+        [Route("loan/{id}")]
         [System.Web.Http.HttpGet]
         public HttpResponseMessage getloaninfo(HttpRequestMessage request, string id)
         {
-            string preFixlogSession = "loan/" + id + "/loanInfo " + request.Method;
+            string preFixlogSession = "loan/" + id + request.Method;
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
@@ -63,11 +63,11 @@ namespace RestAPI.Controllers
         }
 
         // API giai ngan: DNS.2022.01.1.02
-        [Route("loan/Drawndown")]
+        [Route("loan")]
         [System.Web.Http.HttpPost]
         public HttpResponseMessage LoanDrawndown(HttpRequestMessage request)
         {
-            string preFixlogSession = "loan/Drawndown";
+            string preFixlogSession = "loan";
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
@@ -109,11 +109,11 @@ namespace RestAPI.Controllers
         }
 
         // API gia han no: DNS.2022.01.1.02
-        [Route("loan/Extend")]
+        [Route("loan/{id}/extend")]
         [System.Web.Http.HttpPost]
-        public HttpResponseMessage LoanExtend(HttpRequestMessage request)
+        public HttpResponseMessage LoanExtend(HttpRequestMessage request, string id)
         {
-            string preFixlogSession = "loan/Extend";
+            string preFixlogSession = "loan/" + id + "/extend " + request.Method;
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
@@ -122,7 +122,7 @@ namespace RestAPI.Controllers
                 if (request.Content.Headers.ContentType == null || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
-                    var result = Bussiness.LoanProcess.LoanExtend(request.Content.ReadAsStringAsync().Result, ipaddress);
+                    var result = Bussiness.LoanProcess.LoanExtend(request.Content.ReadAsStringAsync().Result, id, ipaddress);
                     if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == Constants.Result_OK)
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
@@ -155,11 +155,11 @@ namespace RestAPI.Controllers
         }
 
         // API tra no: DNS.2022.01.1.02
-        [Route("loan/Payment")]
+        [Route("loan/{id}/payment")]
         [System.Web.Http.HttpPost]
-        public HttpResponseMessage LoanPayment(HttpRequestMessage request)
+        public HttpResponseMessage LoanPayment(HttpRequestMessage request, string id)
         {
-            string preFixlogSession = "loan/Payment";
+            string preFixlogSession = "loan/" + id + "/payment " + request.Method;
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
@@ -168,7 +168,7 @@ namespace RestAPI.Controllers
                 if (request.Content.Headers.ContentType == null || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
-                    var result = Bussiness.LoanProcess.LoanPayment(request.Content.ReadAsStringAsync().Result, ipaddress);
+                    var result = Bussiness.LoanProcess.LoanPayment(request.Content.ReadAsStringAsync().Result, id, ipaddress);
                     if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == Constants.Result_OK)
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
