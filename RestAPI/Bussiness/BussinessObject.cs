@@ -49,4 +49,19 @@ namespace RestAPI.Bussiness
         public string dbReportStatus = "ok";
         //public string enPayStatus = "ok";
     }
+
+    public class loanpaymentResponse
+    {
+        public string overdueFee;
+        public string dueFee;
+        public string undueFee;
+        public string interestOnOverduePrincipal;
+        public string overdueInterest;
+        public string dueInterest;
+        public string undueInterest;
+        public string overduePrincipal;
+        public string duePrincipal;
+        public string unduePrincipal;
+        public string feeOnOverduePrincipal;
+    }
 }
