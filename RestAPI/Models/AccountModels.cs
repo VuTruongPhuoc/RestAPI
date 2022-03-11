@@ -145,6 +145,36 @@ namespace RestAPI.Models
         public long ppwithdraw = 0;
     }
 
+    public class loanInfo //Thong tin mon vay DNS.2022.01.1.02
+    {
+        public string custodyCode = "";
+        public string subAccountId = "";
+        public string lnTypeId = "";
+        public string lnAccountnNo = "";
+        public long id = 0;
+        public string releaseDate = "";
+        public string t1 = "";
+        public string dueDate = "";
+        public double unduePrincipal = 0;
+        public double duePrincipal = 0;
+        public double overduePrincipal = 0;
+        public double undueInterest = 0;
+        public double dueInterest = 0;
+        public double overdueInterest = 0;
+        public double interestOnOverduePrincipal = 0;
+        public double undueFee = 0;
+        public double dueFee = 0;
+        public double overdueFee = 0;
+        public double feeOnOverduePrincipal = 0;
+        public double interestRate1 = 0;
+        public double interestRate2 = 0;
+        public double interestRate3 = 0;
+        public double feeRate1 = 0;
+        public double feeRate2 = 0;
+        public double feeRate3 = 0;
+        public long extendTimes = 0;
+    }
+
     public class securitiesPortfolio
     {
         public string custodycd = "";
