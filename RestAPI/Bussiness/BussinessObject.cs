@@ -63,5 +63,7 @@ namespace RestAPI.Bussiness
         public double duePrincipal = 0;
         public double unduePrincipal = 0;
         public double feeOnOverduePrincipal = 0;
+        public string isSettled;
+
     }
 }

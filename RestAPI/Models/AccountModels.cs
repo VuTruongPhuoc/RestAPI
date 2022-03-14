@@ -173,6 +173,7 @@ namespace RestAPI.Models
         public double feeRate2 = 0;
         public double feeRate3 = 0;
         public long extendTimes = 0;
+        public string isSettled = "";
     }
 
     public class securitiesPortfolio
