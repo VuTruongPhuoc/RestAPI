@@ -71,6 +71,7 @@ namespace RestAPI.Bussiness
                             feeRate2 = Convert.ToDouble(ds.Tables[0].Rows[i]["CFRATE2"].ToString()),
                             feeRate3 = Convert.ToDouble(ds.Tables[0].Rows[i]["CFRATE3"].ToString()),
                             extendTimes = Convert.ToInt64(ds.Tables[0].Rows[i]["EXTENDTIMES"].ToString()),
+                            isSettled = ds.Tables[0].Rows[i]["ISSETTLED"].ToString(),
                         };
                     }
                 }
@@ -340,7 +341,7 @@ namespace RestAPI.Bussiness
                 if (p_ipAddress == null || p_ipAddress.Length == 0)
                     ipAddress = modCommon.GetClientIp();
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[19];
+                StoreParameter[] v_arrParam = new StoreParameter[20];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_requestid";
@@ -479,22 +480,29 @@ namespace RestAPI.Bussiness
                 v_arrParam[16] = v_objParam;
 
                 v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_issettled";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[17] = v_objParam;
+
+                v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[17] = v_objParam;
+                v_arrParam[18] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_param";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[18] = v_objParam;
+                v_arrParam[19] = v_objParam;
 
 
-                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_LOANPAYMENT, ref v_arrParam, 17);
-                string v_strerrorMessage = (string)v_arrParam[18].ParamValue;
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_LOANPAYMENT, ref v_arrParam, 18);
+                string v_strerrorMessage = (string)v_arrParam[19].ParamValue;
 
                 if (returnErr == 0)
                 {
@@ -511,6 +519,7 @@ namespace RestAPI.Bussiness
                         duePrincipal = Convert.ToDouble(v_arrParam[14].ParamValue.ToString()),
                         unduePrincipal = Convert.ToDouble(v_arrParam[15].ParamValue.ToString()),
                         feeOnOverduePrincipal = Convert.ToDouble(v_arrParam[16].ParamValue.ToString()),
+                        isSettled = (string)v_arrParam[17].ParamValue,
                     };
                     return modCommon.getBoResponseWithData(returnErr, loanpayment, v_strerrorMessage);
                 }
