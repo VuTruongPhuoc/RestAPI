@@ -109,11 +109,12 @@ namespace RestAPI.Controllers
         }
 
         // API UPDATE LAI VAY: DNS.2022.03.1.12
-        [Route("loanrate")]
+        [Route("loanrate/{id}")]
         [System.Web.Http.HttpPost]
-        public HttpResponseMessage LoanRate(HttpRequestMessage request)
+        public HttpResponseMessage LoanRate(HttpRequestMessage request, string id)
         {
-            string preFixlogSession = "loanrate";
+
+            string preFixlogSession = "loan/" + id + request.Method;
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
@@ -122,7 +123,7 @@ namespace RestAPI.Controllers
                 if (request.Content.Headers.ContentType == null || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
-                    var result = Bussiness.LoanProcess.LoanRate(request.Content.ReadAsStringAsync().Result, ipaddress);
+                    var result = Bussiness.LoanProcess.LoanRate(request.Content.ReadAsStringAsync().Result, id, ipaddress);
                     if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == Constants.Result_OK)
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);

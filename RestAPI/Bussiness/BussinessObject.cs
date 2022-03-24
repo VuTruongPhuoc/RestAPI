@@ -66,4 +66,16 @@ namespace RestAPI.Bussiness
         public string isSettled;
 
     }
+    public class loanrate
+    {
+        public double newundueInterest = 0;
+        public double newdueInterest = 0;
+        public double newoverdueInterest = 0;
+        public double newinterestOnOverduePrincipal = 0;
+        public double newundueFee = 0;
+        public double newdueFee = 0;
+        public double newoverdueFee = 0;
+        public double newfeeOnOverduePrincipal = 0;
+
+    }
 }
