@@ -15,6 +15,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_PO_LOANDRAWNDOWN = "fopks_restapi.pr_loan_drawndown";
         private static string COMMAND_PO_LOANEXTEND = "fopks_restapi.pr_loan_extend";
         private static string COMMAND_PO_LOANPAYMENT = "fopks_restapi.pr_loan_payment";
+        private static string COMMAND_PO_LOANRATE = "fopks_restapi.pr_loan_rate";
 
         //Thong tin mon vay DNS.2022.01.1.02
         public static object getloaninfo(string strRequest, string id)
@@ -205,6 +206,178 @@ namespace RestAPI.Bussiness
             }
         }
 
+        // API UPDATE LAI VAY: DNS.2022.03.1.12
+        public static object LoanRate(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", id="",flag = "";
+                double undueInterest = 0, dueInterest = 0, overdueInterest = 0, interestOnOverduePrincipal = 0, undueFee = 0, dueFee = 0, overdueFee = 0, feeOnOverduePrincipal = 0; 
+                 
+                //if (request.TryGetValue("custodycd", out jToken))
+                //    custodycd = jToken.ToString();
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("id", out jToken))
+                    id = jToken.ToString();
+                if (request.TryGetValue("undueInterest", out jToken))
+                    double.TryParse(jToken.ToString(), out undueInterest);
+                if (request.TryGetValue("dueInterest", out jToken))
+                    double.TryParse(jToken.ToString(), out dueInterest);
+                if (request.TryGetValue("overdueInterest", out jToken))
+                    double.TryParse(jToken.ToString(), out overdueInterest);
+                if (request.TryGetValue("interestOnOverduePrincipal", out jToken))
+                    double.TryParse(jToken.ToString(), out interestOnOverduePrincipal);
+                if (request.TryGetValue("undueFee", out jToken))
+                    double.TryParse(jToken.ToString(), out undueFee);
+                if (request.TryGetValue("dueFee", out jToken))
+                    double.TryParse(jToken.ToString(), out dueFee);
+                if (request.TryGetValue("overdueFee", out jToken))
+                    double.TryParse(jToken.ToString(), out overdueFee);
+                if (request.TryGetValue("feeOnOverduePrincipal", out jToken))
+                    double.TryParse(jToken.ToString(), out feeOnOverduePrincipal);
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[13];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_autoid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = id;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_undueInterest";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = undueInterest;
+                v_objParam.ParamSize = undueInterest.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[2] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_dueInterest";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = dueInterest;
+                v_objParam.ParamSize = dueInterest.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_overdueInterest";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = overdueInterest;
+                v_objParam.ParamSize = overdueInterest.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[4] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_interestOnOverduePrincipal";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = interestOnOverduePrincipal;
+                v_objParam.ParamSize = interestOnOverduePrincipal.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[5] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_undueFee";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = undueFee;
+                v_objParam.ParamSize = undueFee.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[6] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_dueFee";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = dueFee;
+                v_objParam.ParamSize = dueFee.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[7] = v_objParam;
+
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_overdueFee";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = overdueFee;
+                v_objParam.ParamSize = overdueFee.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[8] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_feeOnOverduePrincipal";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = feeOnOverduePrincipal;
+                v_objParam.ParamSize = feeOnOverduePrincipal.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[9] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[10] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[11] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[12] = v_objParam;
+
+
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_LOANRATE, ref v_arrParam, 11);
+                string v_strerrorMessage = (string)v_arrParam[12].ParamValue;
+
+                //if (returnErr == 0)
+                //{
+                //    idResponse id = new idResponse() { id = (string)v_arrParam[6].ParamValue };
+                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                //}
+
+                return modCommon.getBoResponse(returnErr, v_strerrorMessage);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("LoanRate:.strRequest: " + strRequest, ex);
+                return modCommon.getBoResponse(400, "Bad Request");
+            }
+        }
         // API gia han no: DNS.2022.01.1.02
         public static object LoanExtend(string strRequest, string id, string p_ipAddress)
         {
