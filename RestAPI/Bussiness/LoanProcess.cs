@@ -291,7 +291,7 @@ namespace RestAPI.Bussiness
 
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_interestOnOverduePrincipal";
+                v_objParam.ParamName = "p_interestOnOverduePl";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = interestOnOverduePrincipal;
                 v_objParam.ParamSize = interestOnOverduePrincipal.ToString().Length;
@@ -328,7 +328,7 @@ namespace RestAPI.Bussiness
 
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_feeOnOverduePrincipal";
+                v_objParam.ParamName = "p_feeOnOverduePl";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = feeOnOverduePrincipal;
                 v_objParam.ParamSize = feeOnOverduePrincipal.ToString().Length;
@@ -361,7 +361,7 @@ namespace RestAPI.Bussiness
 
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_newinterestOnOverduePrincipal";
+                v_objParam.ParamName = "p_newinterestOnOverduePl";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
@@ -394,7 +394,7 @@ namespace RestAPI.Bussiness
 
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_newfeeOnOverduePrincipal";
+                v_objParam.ParamName = "p_newfeeOnOverduePl";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;

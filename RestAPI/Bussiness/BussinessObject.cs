@@ -76,6 +76,5 @@ namespace RestAPI.Bussiness
         public double newdueFee = 0;
         public double newoverdueFee = 0;
         public double newfeeOnOverduePrincipal = 0;
-
     }
 }

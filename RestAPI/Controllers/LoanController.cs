@@ -110,7 +110,7 @@ namespace RestAPI.Controllers
 
         // API UPDATE LAI VAY: DNS.2022.03.1.12
         [Route("loan/{id}")]
-        [System.Web.Http.HttpPost]
+        [System.Web.Http.HttpPatch]
         public HttpResponseMessage LoanRate(HttpRequestMessage request, string id)
         {
 
