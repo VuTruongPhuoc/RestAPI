@@ -15,6 +15,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DEL_ORDERS = "fopks_restapi.pr_delete_orders";
         private static string COMMAND_POST_ORDERS = "fopks_restapi.pr_post_orders";
         private static string COMMAND_PUT_ORDERS = "fopks_restapi.pr_put_orders";
+        private static string COMMAND_DIVIDEND_ORDERS = "fopks_restapi.pr_dividendorder";
         #region orders
         //huy lenh
         public static object delTradingorders(string strRequest, string accountNo, string orderId, string p_ipAddress)
@@ -452,6 +453,119 @@ namespace RestAPI.Bussiness
             {
                 Log.Error("postTradingorders: ", ex);
                 return modCommon.getBoResponse(-1);
+            }
+        }
+
+        public static object dividendorder(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", foRefId = "", confirmNumber = "";
+                long dealQuantity = 0, dividendQuantity = 0, dealPrice = 0;
+
+                //if (request.TryGetValue("custodycd", out jToken))
+                //    custodycd = jToken.ToString();
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("foRefId", out jToken))
+                    foRefId = jToken.ToString();
+                if (request.TryGetValue("confirmNumber", out jToken))
+                    confirmNumber = jToken.ToString();
+                if (request.TryGetValue("dealQuantity", out jToken))
+                    Int64.TryParse(jToken.ToString(), out dealQuantity);
+                if (request.TryGetValue("dividendQuantity", out jToken))
+                    Int64.TryParse(jToken.ToString(), out dividendQuantity);
+                if (request.TryGetValue("dealPrice", out jToken))
+                    Int64.TryParse(jToken.ToString(), out dealPrice);
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[8];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = requestId.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_foRefId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = foRefId;
+                v_objParam.ParamSize = foRefId.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_confirmNumber";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = confirmNumber;
+                v_objParam.ParamSize = confirmNumber.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_dealQuantity";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = dealQuantity;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.Int64").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_dividendQuantity";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = dividendQuantity;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.Int64").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_dealPrice";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = dealPrice;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.Int64").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[7] = v_objParam;
+
+
+                long returnErr = TransactionProcess.doTransaction(COMMAND_DIVIDEND_ORDERS, ref v_arrParam, 6);
+                string v_strerrorMessage = (string)v_arrParam[7].ParamValue;
+
+                //if (returnErr == 0)
+                //{
+                //    idResponse id = new idResponse() { id = (string)v_arrParam[0].ParamValue };
+                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                //}
+
+                return modCommon.getBoResponse(returnErr, v_strerrorMessage);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("dividendorder " + strRequest, ex);
+                return modCommon.getBoResponse(400, "Bad Request");
             }
         }
         #endregion
