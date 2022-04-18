@@ -30,7 +30,8 @@ namespace RestAPI.Bussiness
         private static string COMMAND_PO_UPDATE_CAREBY = "fopks_restapi.pr_updateCareby";
         private static string COMMAND_PO_CashWithdrawPPse = "fopks_restapi.pr_CashWithdrawPPse";
         private static string COMMAND_DO_ACCOUNTSAVING = "fopks_restapi.pr_account_saving";
- 
+        private static string COMMAND_DO_ACCOUNTSFEECOLLECT = "fopks_restapi.pr_accounts_feecollect";
+
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
         {
@@ -566,7 +567,113 @@ namespace RestAPI.Bussiness
             }
         }
 
+        // API thu phi: DNSE-1670 DNS.2022.04.1.15
+        public static object accountsFeecollect(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", accountId = "", amount = "", feeCode = "", description = "", flag = "";
 
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("accountId", out jToken))
+                    accountId = jToken.ToString();
+                if (request.TryGetValue("amount", out jToken))
+                    amount = jToken.ToString();
+                if (request.TryGetValue("feeCode", out jToken))
+                    feeCode = jToken.ToString();
+                if (request.TryGetValue("description", out jToken))
+                    description = jToken.ToString();
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[8];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = requestId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_accountId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountId;
+                v_objParam.ParamSize = accountId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_amount";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = amount;
+                v_objParam.ParamSize = amount.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_feeCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = feeCode;
+                v_objParam.ParamSize = feeCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_description";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = description;
+                v_objParam.ParamSize = description.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = flag.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[7] = v_objParam;
+
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_DO_ACCOUNTSFEECOLLECT, ref v_arrParam, 6);
+                string errparam = (string)v_arrParam[7].ParamValue;
+
+
+                return modCommon.getBoResponse(returnErr, errparam);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("AccountsFeecollect:.strRequest: " + strRequest, ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
 
 
         public static object trfMoney2Bank(string strRequest, string p_ipAddress)

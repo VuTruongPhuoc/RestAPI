@@ -65,9 +65,9 @@
     <Reference Include="CryptoUtil">
       <HintPath>Libref\CryptoUtil.dll</HintPath>
     </Reference>
-    <Reference Include="DataAccessLayer, Version=1.0.6120.25261, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DataAccessLayer, Version=1.0.7494.16293, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>Libref\DataAccessLayer.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Dia2Lib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Diagnostics.Tracing.TraceEvent.2.0.2\lib\net45\Dia2Lib.dll</HintPath>
@@ -143,6 +143,10 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\app\Admin\product\11.2.0\client_1\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="OSExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Diagnostics.Tracing.TraceEvent.2.0.2\lib\net45\OSExtensions.dll</HintPath>
@@ -277,6 +281,7 @@
     <Compile Include="Bussiness\CorporateActionsProcess.cs" />
     <Compile Include="Bussiness\CustomersProcess.cs" />
     <Compile Include="Bussiness\ErrorMapHelper.cs" />
+    <Compile Include="Bussiness\LoanProcess.cs" />
     <Compile Include="Bussiness\modCommon.cs" />
     <Compile Include="Bussiness\GetDataProcess.cs" />
     <Compile Include="Bussiness\SystemProcess.cs" />
@@ -286,6 +291,7 @@
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\CorporateActionsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\LoanController.cs" />
     <Compile Include="Controllers\RootController.cs" />
     <Compile Include="Controllers\SymtemController.cs" />
     <Compile Include="Controllers\TradingController.cs" />
