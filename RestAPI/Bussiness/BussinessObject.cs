@@ -77,4 +77,9 @@ namespace RestAPI.Bussiness
         public double newoverdueFee = 0;
         public double newfeeOnOverduePrincipal = 0;
     }
+
+    public class loandrawndown
+    {
+        public Int64 id;
+    }
 }
