@@ -169,7 +169,7 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamDirection = "2";
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
-                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_objParam.ParamType = Type.GetType("System.Int64").Name;
                 v_arrParam[6] = v_objParam;
 
                 v_objParam = new StoreParameter();
@@ -192,7 +192,7 @@ namespace RestAPI.Bussiness
 
                 if (returnErr == 0)
                 {
-                    idResponse id = new idResponse() { id = (string)v_arrParam[6].ParamValue };
+                    loandrawndown id = new loandrawndown() { id = Convert.ToInt64(v_arrParam[06].ParamValue.ToString()) };
                     return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
                 }
 
