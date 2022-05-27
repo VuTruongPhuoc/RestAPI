@@ -574,7 +574,7 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string requestId = "", account = "", payAmount = "", description = "", flag = "";
+                string requestId = "", account = "", payAmount = "", payType = "", description = "", flag = "";
 
                 //if (request.TryGetValue("custodycd", out jToken))
                 //    custodycd = jToken.ToString();
@@ -585,6 +585,8 @@ namespace RestAPI.Bussiness
                     account = jToken.ToString();
                 if (request.TryGetValue("payAmount", out jToken))
                     payAmount = jToken.ToString();
+                if (request.TryGetValue("payType", out jToken))
+                    payType = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))
                     description = jToken.ToString();
                 if (request.TryGetValue("flag", out jToken))
@@ -593,7 +595,7 @@ namespace RestAPI.Bussiness
                 if (p_ipAddress == null || p_ipAddress.Length == 0)
                     ipAddress = modCommon.GetClientIp();
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[20];
+                StoreParameter[] v_arrParam = new StoreParameter[21];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_requestid";
@@ -628,12 +630,20 @@ namespace RestAPI.Bussiness
                 v_arrParam[3] = v_objParam;
 
                 v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_paytype";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = payType;
+                v_objParam.ParamSize = payType.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_desc";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = description;
                 v_objParam.ParamSize = description.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[4] = v_objParam;
+                v_arrParam[5] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_flag";
@@ -641,7 +651,7 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamValue = flag;
                 v_objParam.ParamSize = 100;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[5] = v_objParam;
+                v_arrParam[6] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_overduefee";
@@ -649,7 +659,7 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[6] = v_objParam;
+                v_arrParam[7] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_duefee";
@@ -657,7 +667,7 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[7] = v_objParam;
+                v_arrParam[8] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_unduefee";
@@ -665,7 +675,7 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[8] = v_objParam;
+                v_arrParam[9] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_intoverdueprint";
@@ -673,7 +683,7 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[9] = v_objParam;
+                v_arrParam[10] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_overdueint";
@@ -681,7 +691,7 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[10] = v_objParam;
+                v_arrParam[11] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_dueint";
@@ -689,7 +699,7 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[11] = v_objParam;
+                v_arrParam[12] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_undueint";
@@ -697,7 +707,7 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[12] = v_objParam;
+                v_arrParam[13] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_overdueprint";
@@ -705,7 +715,7 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[13] = v_objParam;
+                v_arrParam[14] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_dueprint";
@@ -713,7 +723,7 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[14] = v_objParam;
+                v_arrParam[15] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_undueprint";
@@ -721,7 +731,7 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[15] = v_objParam;
+                v_arrParam[16] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_feeoverdueprint";
@@ -729,49 +739,49 @@ namespace RestAPI.Bussiness
                 //v_objParam.ParamValue = orderid;
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.Double").Name;
-                v_arrParam[16] = v_objParam;
+                v_arrParam[17] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_issettled";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 100;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[17] = v_objParam;
+                v_arrParam[18] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[18] = v_objParam;
+                v_arrParam[19] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_param";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[19] = v_objParam;
+                v_arrParam[20] = v_objParam;
 
 
-                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_LOANPAYMENT, ref v_arrParam, 18);
-                string v_strerrorMessage = (string)v_arrParam[19].ParamValue;
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_LOANPAYMENT, ref v_arrParam, 19);
+                string v_strerrorMessage = (string)v_arrParam[20].ParamValue;
 
                 if (returnErr == 0)
                 {
                     loanpaymentResponse loanpayment = new loanpaymentResponse()
                     {
-                        overdueFee = Convert.ToDouble(v_arrParam[6].ParamValue.ToString()),
-                        dueFee = Convert.ToDouble(v_arrParam[7].ParamValue.ToString()),
-                        undueFee = Convert.ToDouble(v_arrParam[8].ParamValue.ToString()),
-                        interestOnOverduePrincipal = Convert.ToDouble(v_arrParam[9].ParamValue.ToString()),
-                        overdueInterest = Convert.ToDouble(v_arrParam[10].ParamValue.ToString()),
-                        dueInterest = Convert.ToDouble(v_arrParam[11].ParamValue.ToString()),
-                        undueInterest = Convert.ToDouble(v_arrParam[12].ParamValue.ToString()),
-                        overduePrincipal = Convert.ToDouble(v_arrParam[13].ParamValue.ToString()),
-                        duePrincipal = Convert.ToDouble(v_arrParam[14].ParamValue.ToString()),
-                        unduePrincipal = Convert.ToDouble(v_arrParam[15].ParamValue.ToString()),
-                        feeOnOverduePrincipal = Convert.ToDouble(v_arrParam[16].ParamValue.ToString()),
-                        isSettled = (string)v_arrParam[17].ParamValue,
+                        overdueFee = Convert.ToDouble(v_arrParam[7].ParamValue.ToString()),
+                        dueFee = Convert.ToDouble(v_arrParam[8].ParamValue.ToString()),
+                        undueFee = Convert.ToDouble(v_arrParam[9].ParamValue.ToString()),
+                        interestOnOverduePrincipal = Convert.ToDouble(v_arrParam[10].ParamValue.ToString()),
+                        overdueInterest = Convert.ToDouble(v_arrParam[11].ParamValue.ToString()),
+                        dueInterest = Convert.ToDouble(v_arrParam[12].ParamValue.ToString()),
+                        undueInterest = Convert.ToDouble(v_arrParam[13].ParamValue.ToString()),
+                        overduePrincipal = Convert.ToDouble(v_arrParam[14].ParamValue.ToString()),
+                        duePrincipal = Convert.ToDouble(v_arrParam[15].ParamValue.ToString()),
+                        unduePrincipal = Convert.ToDouble(v_arrParam[16].ParamValue.ToString()),
+                        feeOnOverduePrincipal = Convert.ToDouble(v_arrParam[17].ParamValue.ToString()),
+                        isSettled = (string)v_arrParam[18].ParamValue,
                     };
                     return modCommon.getBoResponseWithData(returnErr, loanpayment, v_strerrorMessage);
                 }
