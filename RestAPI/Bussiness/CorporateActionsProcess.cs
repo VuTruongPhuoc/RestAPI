@@ -50,7 +50,7 @@ namespace RestAPI.Bussiness
                 if (p_ipAddress == null || p_ipAddress.Length == 0)
                     ipAddress = modCommon.GetClientIp();
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[11];
+                StoreParameter[] v_arrParam = new StoreParameter[12];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_requestid";
@@ -128,28 +128,35 @@ namespace RestAPI.Bussiness
                 v_arrParam[8] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamName = "p_camastid";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[9] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[10] = v_objParam;
 
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[11] = v_objParam;
 
-                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_STOCK_DIVIDEND, ref v_arrParam, 9);
-                string v_strerrorMessage = (string)v_arrParam[10].ParamValue;
 
-                //if (returnErr == 0)
-                //{
-                //    idResponse id = new idResponse() { id = (string)v_arrParam[0].ParamValue };
-                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
-                //}
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_STOCK_DIVIDEND, ref v_arrParam, 10);
+                string v_strerrorMessage = (string)v_arrParam[11].ParamValue;
+
+                if (returnErr == 0)
+                {
+                    idResponse id = new idResponse() { id = (string)v_arrParam[9].ParamValue };
+                    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                }
 
                 return modCommon.getBoResponse(returnErr, v_strerrorMessage);
 
@@ -193,7 +200,7 @@ namespace RestAPI.Bussiness
                 if (p_ipAddress == null || p_ipAddress.Length == 0)
                     ipAddress = modCommon.GetClientIp();
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[10];
+                StoreParameter[] v_arrParam = new StoreParameter[11];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_requestid";
@@ -263,28 +270,35 @@ namespace RestAPI.Bussiness
                 v_arrParam[7] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamName = "p_camastid";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[8] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[9] = v_objParam;
 
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[10] = v_objParam;
 
-                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_CASH_DIVIDEND, ref v_arrParam, 8);
-                string v_strerrorMessage = (string)v_arrParam[9].ParamValue;
 
-                //if (returnErr == 0)
-                //{
-                //    idResponse id = new idResponse() { id = (string)v_arrParam[0].ParamValue };
-                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
-                //}
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_CASH_DIVIDEND, ref v_arrParam, 9);
+                string v_strerrorMessage = (string)v_arrParam[10].ParamValue;
+
+                if (returnErr == 0)
+                {
+                    idResponse id = new idResponse() { id = (string)v_arrParam[8].ParamValue };
+                    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                }
 
                 return modCommon.getBoResponse(returnErr, v_strerrorMessage);
 
@@ -330,7 +344,7 @@ namespace RestAPI.Bussiness
                 if (p_ipAddress == null || p_ipAddress.Length == 0)
                     ipAddress = modCommon.GetClientIp();
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[11];
+                StoreParameter[] v_arrParam = new StoreParameter[12];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_requestid";
@@ -408,28 +422,35 @@ namespace RestAPI.Bussiness
                 v_arrParam[8] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamName = "p_camastid";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[9] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[10] = v_objParam;
 
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[11] = v_objParam;
 
-                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_STOCK_BONUS, ref v_arrParam, 9);
-                string v_strerrorMessage = (string)v_arrParam[10].ParamValue;
 
-                //if (returnErr == 0)
-                //{
-                //    idResponse id = new idResponse() { id = (string)v_arrParam[0].ParamValue };
-                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
-                //}
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_STOCK_BONUS, ref v_arrParam, 10);
+                string v_strerrorMessage = (string)v_arrParam[11].ParamValue;
+
+                if (returnErr == 0)
+                {
+                    idResponse id = new idResponse() { id = (string)v_arrParam[9].ParamValue };
+                    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                }
 
                 return modCommon.getBoResponse(returnErr, v_strerrorMessage);
 
@@ -486,7 +507,7 @@ namespace RestAPI.Bussiness
                 if (p_ipAddress == null || p_ipAddress.Length == 0)
                     ipAddress = modCommon.GetClientIp();
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[16];
+                StoreParameter[] v_arrParam = new StoreParameter[17];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_requestid";
@@ -605,28 +626,35 @@ namespace RestAPI.Bussiness
                 v_arrParam[13] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamName = "p_camastid";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[14] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[15] = v_objParam;
 
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[16] = v_objParam;
 
-                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_RIGHT, ref v_arrParam, 14);
-                string v_strerrorMessage = (string)v_arrParam[15].ParamValue;
 
-                //if (returnErr == 0)
-                //{
-                //    idResponse id = new idResponse() { id = (string)v_arrParam[0].ParamValue };
-                //    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
-                //}
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_RIGHT, ref v_arrParam, 15);
+                string v_strerrorMessage = (string)v_arrParam[16].ParamValue;
+
+                if (returnErr == 0)
+                {
+                    idResponse id = new idResponse() { id = (string)v_arrParam[14].ParamValue };
+                    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                }
 
                 return modCommon.getBoResponse(returnErr, v_strerrorMessage);
 
