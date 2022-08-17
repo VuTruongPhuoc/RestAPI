@@ -154,8 +154,8 @@ namespace RestAPI.Bussiness
 
                 if (returnErr == 0)
                 {
-                    idResponse id = new idResponse() { id = (string)v_arrParam[9].ParamValue };
-                    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                    idResponse1 keyId = new idResponse1() { keyId = (string)v_arrParam[9].ParamValue };
+                    return modCommon.getBoResponseWithData(returnErr, keyId, v_strerrorMessage);
                 }
 
                 return modCommon.getBoResponse(returnErr, v_strerrorMessage);
@@ -296,8 +296,8 @@ namespace RestAPI.Bussiness
 
                 if (returnErr == 0)
                 {
-                    idResponse id = new idResponse() { id = (string)v_arrParam[8].ParamValue };
-                    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                    idResponse1 keyId = new idResponse1() { keyId = (string)v_arrParam[8].ParamValue };
+                    return modCommon.getBoResponseWithData(returnErr, keyId, v_strerrorMessage);
                 }
 
                 return modCommon.getBoResponse(returnErr, v_strerrorMessage);
@@ -448,8 +448,8 @@ namespace RestAPI.Bussiness
 
                 if (returnErr == 0)
                 {
-                    idResponse id = new idResponse() { id = (string)v_arrParam[9].ParamValue };
-                    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                    idResponse1 keyId = new idResponse1() { keyId = (string)v_arrParam[9].ParamValue };
+                    return modCommon.getBoResponseWithData(returnErr, keyId, v_strerrorMessage);
                 }
 
                 return modCommon.getBoResponse(returnErr, v_strerrorMessage);
@@ -652,8 +652,8 @@ namespace RestAPI.Bussiness
 
                 if (returnErr == 0)
                 {
-                    idResponse id = new idResponse() { id = (string)v_arrParam[14].ParamValue };
-                    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                    idResponse1 keyId = new idResponse1() { keyId = (string)v_arrParam[14].ParamValue };
+                    return modCommon.getBoResponseWithData(returnErr, keyId, v_strerrorMessage);
                 }
 
                 return modCommon.getBoResponse(returnErr, v_strerrorMessage);
