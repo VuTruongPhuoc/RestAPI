@@ -154,7 +154,7 @@ namespace RestAPI.Bussiness
 
                 if (returnErr == 0)
                 {
-                    idResponse1 keyId = new idResponse1() { keyId = (string)v_arrParam[9].ParamValue };
+                    keyIdCamastid keyId = new keyIdCamastid() { keyId = (string)v_arrParam[9].ParamValue };
                     return modCommon.getBoResponseWithData(returnErr, keyId, v_strerrorMessage);
                 }
 
@@ -296,7 +296,7 @@ namespace RestAPI.Bussiness
 
                 if (returnErr == 0)
                 {
-                    idResponse1 keyId = new idResponse1() { keyId = (string)v_arrParam[8].ParamValue };
+                    keyIdCamastid keyId = new keyIdCamastid() { keyId = (string)v_arrParam[8].ParamValue };
                     return modCommon.getBoResponseWithData(returnErr, keyId, v_strerrorMessage);
                 }
 
@@ -448,7 +448,7 @@ namespace RestAPI.Bussiness
 
                 if (returnErr == 0)
                 {
-                    idResponse1 keyId = new idResponse1() { keyId = (string)v_arrParam[9].ParamValue };
+                    keyIdCamastid keyId = new keyIdCamastid() { keyId = (string)v_arrParam[9].ParamValue };
                     return modCommon.getBoResponseWithData(returnErr, keyId, v_strerrorMessage);
                 }
 
@@ -652,7 +652,7 @@ namespace RestAPI.Bussiness
 
                 if (returnErr == 0)
                 {
-                    idResponse1 keyId = new idResponse1() { keyId = (string)v_arrParam[14].ParamValue };
+                    keyIdCamastid keyId = new keyIdCamastid() { keyId = (string)v_arrParam[14].ParamValue };
                     return modCommon.getBoResponseWithData(returnErr, keyId, v_strerrorMessage);
                 }
 
