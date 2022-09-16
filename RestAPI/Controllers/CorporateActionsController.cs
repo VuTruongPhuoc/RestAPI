@@ -34,7 +34,7 @@ namespace RestAPI.Controllers
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.CorporateActionsProcess.stockdividend(request.Content.ReadAsStringAsync().Result, ipaddress);
-                    if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == Constants.Result_OK)
+                    if (result.GetType() == typeof(BoResponseWithData) && ((BoResponseWithData)result).s == Constants.Result_OK)
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -80,7 +80,7 @@ namespace RestAPI.Controllers
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.CorporateActionsProcess.cashdividend(request.Content.ReadAsStringAsync().Result, ipaddress);
-                    if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == Constants.Result_OK)
+                    if (result.GetType() == typeof(BoResponseWithData) && ((BoResponseWithData)result).s == Constants.Result_OK)
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -126,7 +126,7 @@ namespace RestAPI.Controllers
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.CorporateActionsProcess.stockbonus(request.Content.ReadAsStringAsync().Result, ipaddress);
-                    if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == Constants.Result_OK)
+                    if (result.GetType() == typeof(BoResponseWithData) && ((BoResponseWithData)result).s == Constants.Result_OK)
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
@@ -172,7 +172,7 @@ namespace RestAPI.Controllers
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
 
                     var result = Bussiness.CorporateActionsProcess.right(request.Content.ReadAsStringAsync().Result, ipaddress);
-                    if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == Constants.Result_OK)
+                    if (result.GetType() == typeof(BoResponseWithData) && ((BoResponseWithData)result).s == Constants.Result_OK)
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
