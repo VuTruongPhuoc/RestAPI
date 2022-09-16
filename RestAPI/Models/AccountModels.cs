@@ -202,6 +202,12 @@ namespace RestAPI.Models
         public string unrealizedProfitRate = "";
         //public string issell = "";
         public long pendingToWithdraw = 0;
+        public long rightReceiving = 0;
+        public long dividendReceiving = 0;
+        public double loanRate = 0;
+        public double collateralRate = 0;
+        public long loanPrice = 0;
+        public long collateralPrice = 0;
     }
 
     public class WithdrawalTransactionInfo : WithdrawalTransaction

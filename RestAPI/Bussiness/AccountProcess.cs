@@ -2646,7 +2646,13 @@ namespace RestAPI.Bussiness
                             unrealizedProfit = Convert.ToInt64(ds.Tables[0].Rows[i]["PNLAMT"].ToString()),
                             unrealizedProfitRate = ds.Tables[0].Rows[i]["PNLRATE"].ToString(),
                             //issell = ds.Tables[0].Rows[i]["ISSELL"].ToString(),
-                            pendingToWithdraw = Convert.ToInt64(ds.Tables[0].Rows[i]["WITHDRAW"].ToString())
+                            pendingToWithdraw = Convert.ToInt64(ds.Tables[0].Rows[i]["WITHDRAW"].ToString()),
+                            rightReceiving = Convert.ToInt64(ds.Tables[0].Rows[i]["RIGHTRECEIVING"].ToString()),
+                            dividendReceiving = Convert.ToInt64(ds.Tables[0].Rows[i]["DIVIDENDRECEIVING"].ToString()),
+                            loanRate = Double.Parse(ds.Tables[0].Rows[i]["LOANRATE"].ToString()),
+                            collateralRate = Double.Parse(ds.Tables[0].Rows[i]["COLLATERALRATE"].ToString()),
+                            loanPrice = Convert.ToInt64(ds.Tables[0].Rows[i]["LOANPRICE"].ToString()),
+                            collateralPrice = Convert.ToInt64(ds.Tables[0].Rows[i]["COLLATERALPRICE"].ToString())
                         };
                     }
                 }
