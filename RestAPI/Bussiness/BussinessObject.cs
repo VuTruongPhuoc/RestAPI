@@ -82,4 +82,9 @@ namespace RestAPI.Bussiness
     {
         public Int64 id;
     }
+
+    public class keyIdCamastid
+    {
+        public string keyId = "";
+    }
 }
