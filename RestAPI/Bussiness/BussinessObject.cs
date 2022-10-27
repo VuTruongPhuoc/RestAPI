@@ -87,4 +87,26 @@ namespace RestAPI.Bussiness
     {
         public string keyId = "";
     }
+
+    public class accountSavingSettlement
+    {
+        public string principal_txnum = "";
+        public string interest_txnum = "";
+        public string taxAmount_txnum = "";
+    }
+
+    public class accountSavingSettlementErr1211
+    {
+        public string principal_errmsg = "";
+    }
+
+    public class accountSavingSettlementErr1212
+    {
+        public string interest_errmsg = "";
+    }
+
+    public class accountSavingSettlementErr1213
+    {
+        public string taxAmount_errmsg = "";
+    }
 }
