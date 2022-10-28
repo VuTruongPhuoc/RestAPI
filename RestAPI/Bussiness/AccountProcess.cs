@@ -37,7 +37,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_DEPOSITFEETRANSFER = "fopks_restapi.pr_accounts_fee_transfer";
         private static string COMMAND_DO_SMSFEETRANSFER = "fopks_restapi.pr_sms_fee_transfer";
         private static string COMMAND_DO_CHANGEAFTYPE = "fopks_restapi.pr_change_aftype";
-        private static string COMMAND_DO_ACCOUNTSAVINGSSETTLEMENT = "fopks_restapi.pr_accounts_saving_settlement";
+        private static string COMMAND_DO_ACCOUNTSAVINGSSETTLEMENT = "fopks_restapi.pr_saving_settlement";
 
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
