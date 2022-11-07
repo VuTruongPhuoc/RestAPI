@@ -996,7 +996,7 @@ namespace RestAPI.Bussiness
                 JToken jToken;
                 string custodycd = "", bankAccountNumber = "", feeType = "", accountId = "", feeCode = "", bankCode = "", bankBranchCode = "";
                 long withdrawAmount = 0;
-                string refId = "", flag = "";
+                string refId = "", flag = "", description = "";
 
                 //if (request.TryGetValue("custodycd", out jToken))
                 //    custodycd = jToken.ToString();
@@ -1014,14 +1014,15 @@ namespace RestAPI.Bussiness
                     return modCommon.getBoResponse(-10020);
                 if (request.TryGetValue("feeCode", out jToken))
                     feeCode = jToken.ToString();
-
+                if (request.TryGetValue("description", out jToken))
+                    description = jToken.ToString();
                 string ipAddress = p_ipAddress;
                 if (p_ipAddress == null || p_ipAddress.Length == 0)
                     ipAddress = modCommon.GetClientIp();
                 flag = request.GetValue("flag").ToString();
 
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[13];
+                StoreParameter[] v_arrParam = new StoreParameter[14];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_custodycd";
@@ -1104,30 +1105,38 @@ namespace RestAPI.Bussiness
                 v_arrParam[9] = v_objParam;
 
                 v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_description";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = description;
+                v_objParam.ParamSize = description.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[10] = v_objParam;
+
+                v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_flag";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = flag;
                 v_objParam.ParamSize = flag.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[10] = v_objParam;
+                v_arrParam[11] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[11] = v_objParam;
+                v_arrParam[12] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_param";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
-                v_arrParam[12] = v_objParam;
+                v_arrParam[13] = v_objParam;
 
 
-                long returnErr = TransactionProcess.doTransaction(COMMAND_TRF_MONEY_2_BANK, ref v_arrParam, 11);
-                string v_strerrorMessage = (string)v_arrParam[12].ParamValue;
+                long returnErr = TransactionProcess.doTransaction(COMMAND_TRF_MONEY_2_BANK, ref v_arrParam, 12);
+                string v_strerrorMessage = (string)v_arrParam[13].ParamValue;
 
                 //if (returnErr == 0)
                 //{
