@@ -249,12 +249,12 @@ namespace RestAPI.Controllers
             }
         }
 
-        //API thu thue
-        [Route("accounts/tax-collect")]
+        // DNS.2022.10.1.43.APITietkiem: DNSE-1819
+        [Route("accounts/savings-settlement")]
         [System.Web.Http.HttpPost]
-        public HttpResponseMessage AccountsTaxcollect(HttpRequestMessage request)
+        public HttpResponseMessage accountSavingsSettlement(HttpRequestMessage request)
         {
-            string preFixlogSession = "accounts/tax-collect" + request.Method;
+            string preFixlogSession = "accounts/savings-tax-collect" + request.Method;
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
@@ -263,8 +263,9 @@ namespace RestAPI.Controllers
                 if (request.Content.Headers.ContentType == null || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
                 {
                     string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
-                    var result = Bussiness.AccountProcess.accountsTaxcollect(request.Content.ReadAsStringAsync().Result, ipaddress);
-                    if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == Constants.Result_OK)
+                    var result = Bussiness.AccountProcess.accountSavingsSettlement(request.Content.ReadAsStringAsync().Result, ipaddress);
+                    
+                    if (result.GetType() == typeof(BoResponseWithData) && ((BoResponseWithData)result).s == Constants.Result_OK)
                     {
                         var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
                         Log.Info(preFixlogSession + "======================END");
