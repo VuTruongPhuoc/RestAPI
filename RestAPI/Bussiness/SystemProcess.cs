@@ -79,5 +79,38 @@ namespace RestAPI.Bussiness
         }
         #endregion
 
+        // DNS.2022.11.0.49 DNSE-1862
+        #region checkHOStatus
+        public static object checkHOStatus()
+        {
+            string v_strSql = "SELECT VARVALUE FROM SYSVAR WHERE VARNAME='HOSTATUS'";
+            object v_strErrDesc = string.Empty;
+            checkHOStatus status = new checkHOStatus();
+            try
+            {
+                DataSet v_ds = null;
+
+                v_ds = GetDataProcess.executeSQL(v_strSql);
+                if (v_ds == null || v_ds.Tables.Count == 0 || v_ds.Tables[0].Rows.Count == 0)
+                {
+                    status.errorCode = "-1";
+                    status.hoStatus = "";
+                }
+                else
+                {
+                    status.hoStatus = v_ds.Tables[0].Rows[0]["VARVALUE"].ToString();
+                }
+                return status;
+            }
+            catch (Exception ex)
+            {
+                Log.Error("checkHOStatus:.Exception:.", ex);
+                status.errorCode = "-1";
+                status.hoStatus = "";
+                return status;
+            }
+        }
+        #endregion
+        // DNS.2022.11.0.49 DNSE-1862
     }
 }

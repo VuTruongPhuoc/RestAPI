@@ -55,5 +55,43 @@ namespace RestAPI.Controllers
             }
         }
         #endregion
+
+        // DNS.2022.11.0.49 DNSE-1862
+        #region checkHOStatus
+        [Route("system/checkHOStatus")]
+        [System.Web.Http.HttpGet]
+        public HttpResponseMessage checkHOStatus(HttpRequestMessage request)
+        {
+            string preFixlogSession = "system/checkHOStatus/";
+            Log.Info(preFixlogSession + "======================BEGIN");
+            Bussiness.modCommon.LogFullRequest(request);
+
+            try
+            {
+                var result = Bussiness.SystemProcess.checkHOStatus();
+                if (result.GetType() == typeof(checkHOStatus) && ((checkHOStatus)result).errorCode == "ok")
+                {
+                    var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
+                    Log.Info(preFixlogSession + "======================END");
+                    return responses;
+                }
+                else
+                {
+                    var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, result);
+                    Log.Info(preFixlogSession + "======================END");
+                    return responses;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error(preFixlogSession, ex);
+                var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, ex);
+                Log.Info(preFixlogSession + "======================END");
+                return responses;
+            }
+        }
+        #endregion
+        // DNS.2022.11.0.49 DNSE-1862
     }
 }
