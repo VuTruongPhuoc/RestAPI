@@ -83,6 +83,11 @@ namespace RestAPI.Bussiness
         public Int64 id;
     }
 
+    public class LoanTypeId
+    {
+        public string lnTypeId = "";
+    }
+
     public class keyIdCamastid
     {
         public string keyId = "";
