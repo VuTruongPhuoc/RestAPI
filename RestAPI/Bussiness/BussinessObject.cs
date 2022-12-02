@@ -50,13 +50,6 @@ namespace RestAPI.Bussiness
         //public string enPayStatus = "ok";
     }
 
-    // DNS.2022.11.0.49 DNSE-1862
-    public class checkHOStatus
-    {
-        public string errorCode = "ok";
-        public string hoStatus = "";
-    }
-
     public class loanpaymentResponse
     {
         public double overdueFee = 0;
@@ -92,7 +85,7 @@ namespace RestAPI.Bussiness
 
     public class LoanTypeId
     {
-        public string lnTypeId = "";
+        public string lnTypeId = ""; 
     }
 
     public class keyIdCamastid
