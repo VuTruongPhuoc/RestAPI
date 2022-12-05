@@ -37,6 +37,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_SMSFEETRANSFER = "fopks_restapi.pr_sms_fee_transfer";
         private static string COMMAND_DO_CHANGEAFTYPE = "fopks_restapi.pr_change_aftype";
         private static string COMMAND_DO_ACCOUNTSAVINGSSETTLEMENT = "fopks_restapi.pr_saving_settlement";
+        private static string COMMAND_DO_UPDATECOSTPRICE = "fopks_restapi.pr_update_costprice";
 
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
@@ -2985,6 +2986,100 @@ namespace RestAPI.Bussiness
             catch (Exception ex)
             {
                 Log.Error("changeactypeaccount " + strRequest, ex);
+                return modCommon.getBoResponse(400, "Bad Request");
+            }
+        }
+        public static object updatecostprice(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", accountId = "", symbol = "", newCostPrice = "", flag = "";
+
+                //if (request.TryGetValue("custodycd", out jToken))
+                //    custodycd = jToken.ToString();
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("accountId", out jToken))
+                    accountId = jToken.ToString();
+                if (request.TryGetValue("symbol", out jToken))
+                    symbol = jToken.ToString();
+                if (request.TryGetValue("newCostPrice", out jToken))
+                    newCostPrice = jToken.ToString();
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[7];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = 100;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_account";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountId;
+                v_objParam.ParamSize = accountId.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_symbol";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = symbol;
+                v_objParam.ParamSize = symbol.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_newcostprice";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = newCostPrice;
+                v_objParam.ParamSize = newCostPrice.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = flag.ToString().Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+
+                long returnErr = TransactionProcess.doTransaction(COMMAND_DO_UPDATECOSTPRICE, ref v_arrParam, 5);
+                string v_strerrorMessage = (string)v_arrParam[6].ParamValue;
+
+                return modCommon.getBoResponse(returnErr, v_strerrorMessage);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("updatecostprice " + strRequest, ex);
                 return modCommon.getBoResponse(400, "Bad Request");
             }
         }
