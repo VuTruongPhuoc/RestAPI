@@ -268,7 +268,7 @@ namespace RestAPI.Bussiness
                 if (p_ipAddress == null || p_ipAddress.Length == 0)
                     ipAddress = modCommon.GetClientIp();
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[26];
+                StoreParameter[] v_arrParam = new StoreParameter[47];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_requestId";
@@ -454,35 +454,207 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[22] = v_objParam;
 
+
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_out_lnTypeId";
+                v_objParam.ParamName = "p_new_lnTypeId";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[23] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamName = "p_new_name";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[24] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamName = "p_new_loanType";
                 v_objParam.ParamDirection = "2";
                 v_objParam.ParamSize = 4000;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[25] = v_objParam;
 
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_sourceType";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[26] = v_objParam;
 
-                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_ADDLOANTYPE, ref v_arrParam, 24);
-                string v_strerrorMessage = (string)v_arrParam[25].ParamValue;
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_custBank";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[27] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_autoApply";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[28] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_complyApply";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[29] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_basis";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[30] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_loanCalendar";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[31] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_preferentialDays";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[32] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_term";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[33] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_rate1";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[34] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_rate2";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[35] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_rate3";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[36] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_cfRate1";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[37] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_cfRate2";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[38] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_cfRate3";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[39] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_autoPrepay";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[40] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_autoRenew";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[41] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_prepayFee";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[42] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_warningDays";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Double").Name;
+                v_arrParam[43] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_notes";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[44] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[45] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[46] = v_objParam;
+
+
+                long returnErr = TransactionProcess.doTransaction(COMMAND_PO_ADDLOANTYPE, ref v_arrParam, 45);
+                string v_strerrorMessage = (string)v_arrParam[46].ParamValue;
 
                 if (returnErr == 0)
                 {
-                    LoanTypeId id = new LoanTypeId() { lnTypeId = (string)v_arrParam[23].ParamValue };
-                    return modCommon.getBoResponseWithData(returnErr, id, v_strerrorMessage);
+                    AddLoanType s1 = new AddLoanType()
+                    {
+                        lnTypeId = v_arrParam[23].ParamValue.ToString(),
+                        name = v_arrParam[24].ParamValue.ToString(),
+                        loanType = v_arrParam[25].ParamValue.ToString(),
+                        sourceType = v_arrParam[26].ParamValue.ToString(),
+                        custBank = v_arrParam[27].ParamValue.ToString(),
+                        autoApply = v_arrParam[28].ParamValue.ToString(),
+                        complyApply = v_arrParam[29].ParamValue.ToString(),
+                        basis = v_arrParam[30].ParamValue.ToString(),
+                        loanCalendar = v_arrParam[31].ParamValue.ToString(),
+                        preferentialDays = Convert.ToInt64(v_arrParam[32].ParamValue.ToString()),
+                        term = Convert.ToInt64(v_arrParam[33].ParamValue.ToString()),
+                        rate1 = Convert.ToDouble(v_arrParam[34].ParamValue.ToString()),
+                        rate2 = Convert.ToDouble(v_arrParam[35].ParamValue.ToString()),
+                        rate3 = Convert.ToDouble(v_arrParam[36].ParamValue.ToString()),
+                        cfRate1 = Convert.ToDouble(v_arrParam[37].ParamValue.ToString()),
+                        cfRate2 = Convert.ToDouble(v_arrParam[38].ParamValue.ToString()),
+                        cfRate3 = Convert.ToDouble(v_arrParam[39].ParamValue.ToString()),
+                        autoPrepay = v_arrParam[40].ParamValue.ToString(),
+                        autoRenew = v_arrParam[41].ParamValue.ToString(),
+                        prepayFee = Convert.ToDouble(v_arrParam[42].ParamValue.ToString()),
+                        warningDays = Convert.ToInt64(v_arrParam[43].ParamValue.ToString()),
+                        notes = v_arrParam[44].ParamValue.ToString()
+                    };
+                    return modCommon.getBoResponseWithData(returnErr, s1, v_strerrorMessage);
                 }
 
                 return modCommon.getBoResponse(returnErr, v_strerrorMessage);
