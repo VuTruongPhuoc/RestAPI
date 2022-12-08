@@ -110,11 +110,11 @@ namespace RestAPI.Controllers
 
 
         // DNS.2022.12.1.50.APILNTYPE: DNSE-1863
-        [Route("loan-type")]
+        [Route("loan/loan-type")]
         [System.Web.Http.HttpPost]
         public HttpResponseMessage AddLoanType(HttpRequestMessage request)
         {
-            string preFixlogSession = "loan-type";
+            string preFixlogSession = "loan/loan-type";
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
@@ -156,11 +156,11 @@ namespace RestAPI.Controllers
         }
 
         // DNS.2022.12.1.50.APILNTYPE: DNSE-1864
-        [Route("loan-type")]
+        [Route("loan/loan-type")]
         [System.Web.Http.HttpPatch]
         public HttpResponseMessage EditLoanType(HttpRequestMessage request)
         {
-            string preFixlogSession = "loan-type";
+            string preFixlogSession = "loan/loan-type";
             Log.Info(preFixlogSession + "======================BEGIN");
             Bussiness.modCommon.LogFullRequest(request);
 
