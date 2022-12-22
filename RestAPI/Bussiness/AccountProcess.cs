@@ -37,6 +37,9 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_SMSFEETRANSFER = "fopks_restapi.pr_sms_fee_transfer";
         private static string COMMAND_DO_CHANGEAFTYPE = "fopks_restapi.pr_change_aftype";
         private static string COMMAND_DO_ACCOUNTSAVINGSSETTLEMENT = "fopks_restapi.pr_saving_settlement";
+        private static string COMMAND_DO_CASHWITHDRAW = "fopks_restapi.pr_cash_withdraw";
+        private static string COMMAND_DO_CANCELCASHWITHDRAW = "fopks_restapi.pr_cancel_cash_withdraw";
+        private static string COMMAND_DO_SAVINGSOPEN = "fopks_restapi.pr_savings_open";
 
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
@@ -778,6 +781,215 @@ namespace RestAPI.Bussiness
             }
         }
 
+        // DNS.2022.12.1.53.APITietkiem DNSE-1888
+        public static object cashWithdraw(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", accountNo = "", amt = "", description = "", flag = "";
+
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("accountNo", out jToken))
+                    accountNo = jToken.ToString();
+                if (request.TryGetValue("amt", out jToken))
+                    amt = jToken.ToString();
+                if (request.TryGetValue("description", out jToken))
+                    description = jToken.ToString();
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[8];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = requestId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_accountNo";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountNo;
+                v_objParam.ParamSize = accountNo.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_amt";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = amt;
+                v_objParam.ParamSize = amt.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_description";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = description;
+                v_objParam.ParamSize = description.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = flag.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_autoid";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[7] = v_objParam;
+
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_DO_CASHWITHDRAW, ref v_arrParam, 6);
+                string errparam = (string)v_arrParam[7].ParamValue;
+
+
+                if (returnErr == 0)
+                {
+                    cashWithdraw s1 = new cashWithdraw()
+                    {
+                        Autoid = v_arrParam[5].ParamValue.ToString()
+                    };
+                    return modCommon.getBoResponseWithData(returnErr, s1, errparam);
+                }
+
+                return modCommon.getBoResponse(returnErr, errparam);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("cashWithdraw:.strRequest: " + strRequest, ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
+
+        // DNS.2022.12.1.53.APITietkiem DNSE-1889
+        public static object cancelCashWithdraw(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", id1214 = "", accountNo = "", description = "", flag = "";
+
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("id1214  ", out jToken))
+                    id1214 = jToken.ToString();
+                if (request.TryGetValue("accountNo", out jToken))
+                    accountNo = jToken.ToString();
+                if (request.TryGetValue("description", out jToken))
+                    description = jToken.ToString();
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[7];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = requestId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_id1214  ";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = id1214;
+                v_objParam.ParamSize = id1214.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_accountNo";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountNo;
+                v_objParam.ParamSize = accountNo.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_description";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = description;
+                v_objParam.ParamSize = description.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = flag.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_DO_CANCELCASHWITHDRAW, ref v_arrParam, 5);
+                string errparam = (string)v_arrParam[6].ParamValue;
+
+                return modCommon.getBoResponse(returnErr, errparam);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("cancelCashWithdraw:.strRequest: " + strRequest, ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
 
         // DNS.2022.10.1.43.APITietkiem: DNSE-1819
         public static object accountSavingsSettlement(string strRequest, string p_ipAddress)
@@ -988,6 +1200,185 @@ namespace RestAPI.Bussiness
             }
         }
 
+        // DNS.2022.10.1.43.APITietkiem: DNSE-1890
+        public static object savingsOpen(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", id1214 = "", accountNo = "", toaccountNo = "", amt = "", description = "", flag = "";
+
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("id1214", out jToken))
+                    id1214 = jToken.ToString();
+                if (request.TryGetValue("accountNo", out jToken))
+                    accountNo = jToken.ToString();
+                if (request.TryGetValue("toaccountNo", out jToken))
+                    toaccountNo = jToken.ToString();
+                if (request.TryGetValue("amt", out jToken))
+                    amt = jToken.ToString();
+                if (request.TryGetValue("description", out jToken))
+                    description = jToken.ToString();
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+
+
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[12];
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = requestId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_id1214";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = id1214;
+                v_objParam.ParamSize = id1214.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_accountNo";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountNo;
+                v_objParam.ParamSize = accountNo.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_toaccountNo";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = toaccountNo;
+                v_objParam.ParamSize = toaccountNo.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_amt";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = amt;
+                v_objParam.ParamSize = amt.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_description";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = description;
+                v_objParam.ParamSize = description.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = flag.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[7] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[8] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_type";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[9] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_1216_txnum";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[10] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_1217_txnum";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[11] = v_objParam;
+
+
+                long returnErr = TransactionProcess.doTransaction(COMMAND_DO_SAVINGSOPEN, ref v_arrParam, 7);
+                string v_strerrorMessage = (string)v_arrParam[8].ParamValue;
+                string v_errtype = (string)v_arrParam[9].ParamValue;
+
+                if (returnErr == 0)
+                {
+                    savingsOpen s1 = new savingsOpen()
+                    {
+
+                        txnum_1216 = v_arrParam[10].ParamValue.ToString(),
+                        txnum_1217 = v_arrParam[11].ParamValue.ToString()
+                    };
+                    return modCommon.getBoResponseWithData(returnErr, s1, v_strerrorMessage);
+                }
+                else
+                {
+                    if (v_errtype == "err_1216")
+                    {
+                        savingsOpenErr1216 s1216 = new savingsOpenErr1216()
+                        {
+
+                            errmsg_1216 = v_arrParam[8].ParamValue.ToString()
+
+                        };
+                        return modCommon.getBoResponseWithData(returnErr, s1216);
+                    }
+                    else if (v_errtype == "err_1217")
+                    {
+                        savingsOpenErr1217 s1217 = new savingsOpenErr1217()
+                        {
+
+                            errmsg_1217 = v_arrParam[8].ParamValue.ToString()
+
+                        };
+                        return modCommon.getBoResponseWithData(returnErr, s1217);
+                    }
+                    else if (v_errtype == "err")
+                    {
+                        return modCommon.getBoResponse(returnErr, v_strerrorMessage);
+                    }
+                }
+                return modCommon.getBoResponse(returnErr, v_strerrorMessage);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("savingsOpen:.strRequest: " + strRequest, ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
         public static object trfMoney2Bank(string strRequest, string p_ipAddress)
         {
             try

@@ -116,4 +116,27 @@ namespace RestAPI.Bussiness
     {
         public string taxAmount_errmsg = "";
     }
+
+    #region DNS.2022.10.1.43.APITietkiem
+    public class cashWithdraw
+    {
+        public string Autoid = "";
+    }
+
+    public class savingsOpen
+    {
+        public string txnum_1216 = "";
+        public string txnum_1217 = "";
+    }
+
+    public class savingsOpenErr1216
+    {
+        public string errmsg_1216 = "";
+    }
+
+    public class savingsOpenErr1217
+    {
+        public string errmsg_1217 = "";
+    }
+    #endregion
 }
