@@ -674,7 +674,7 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string requestId = "", lnTypeId = "", autoApply = "", basis = "", loanCalendar = "", preferentialDays = "", term = "", rate1 = "", rate2 = "", rate3 = "", cfRate1 = "", cfRate2 = "", cfRate3 = "", autoPrepay = "", autoRenew = "", prepayFee = "", warningDays = "", notes = "";
+                string requestId = "", lnTypeId = "", name = "", autoApply = "", basis = "", loanCalendar = "", preferentialDays = "", term = "", rate1 = "", rate2 = "", rate3 = "", cfRate1 = "", cfRate2 = "", cfRate3 = "", autoPrepay = "", autoRenew = "", prepayFee = "", warningDays = "", notes = "";
 
                 if (request.TryGetValue("requestId", out jToken))
                     requestId = jToken.ToString();
@@ -712,13 +712,15 @@ namespace RestAPI.Bussiness
                     warningDays = jToken.ToString();
                 if (request.TryGetValue("notes", out jToken))
                     notes = jToken.ToString();
+                if (request.TryGetValue("name", out jToken))
+                    name = jToken.ToString();
 
 
                 string ipAddress = p_ipAddress;
                 if (p_ipAddress == null || p_ipAddress.Length == 0)
                     ipAddress = modCommon.GetClientIp();
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[37];
+                StoreParameter[] v_arrParam = new StoreParameter[39];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_requestId";
@@ -983,8 +985,6 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[34] = v_objParam;
 
-
-
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_err_code";
                 v_objParam.ParamDirection = "2";
@@ -999,6 +999,21 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[36] = v_objParam;
 
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_name";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = name;
+                v_objParam.ParamSize = name.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[37] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_new_name";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[38] = v_objParam;
+
 
                 long returnErr = TransactionProcess.doTransaction(COMMAND_PO_EDITLOANTYPE, ref v_arrParam, 35);
                 string v_strerrorMessage = (string)v_arrParam[36].ParamValue;
@@ -1008,6 +1023,7 @@ namespace RestAPI.Bussiness
                     EditLoanType s1 = new EditLoanType()
                     {
                         lnTypeId = v_arrParam[18].ParamValue.ToString(),
+                        name = v_arrParam[38].ParamValue.ToString(),
                         autoApply = v_arrParam[19].ParamValue.ToString(),
                         basis = v_arrParam[20].ParamValue.ToString(),
                         loanCalendar = v_arrParam[21].ParamValue.ToString(),

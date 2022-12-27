@@ -98,6 +98,7 @@ namespace RestAPI.Bussiness
     public class EditLoanType
     {
         public string lnTypeId = "";
+        public string name = "";
         public string autoApply = "";
         public string basis = "";
         public string loanCalendar = "";
