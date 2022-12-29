@@ -906,7 +906,7 @@ namespace RestAPI.Bussiness
 
                 if (request.TryGetValue("requestId", out jToken))
                     requestId = jToken.ToString();
-                if (request.TryGetValue("id1214  ", out jToken))
+                if (request.TryGetValue("id1214", out jToken))
                     id1214 = jToken.ToString();
                 if (request.TryGetValue("accountNo", out jToken))
                     accountNo = jToken.ToString();
@@ -930,7 +930,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[0] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_id1214  ";
+                v_objParam.ParamName = "p_id1214";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = id1214;
                 v_objParam.ParamSize = id1214.Length;
