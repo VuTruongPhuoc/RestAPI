@@ -788,15 +788,15 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string requestId = "", accountNo = "", amt = "", description = "", flag = "";
+                string requestId = "", accountNo = "", amount = "", description = "", flag = "";
 
 
                 if (request.TryGetValue("requestId", out jToken))
                     requestId = jToken.ToString();
                 if (request.TryGetValue("accountNo", out jToken))
                     accountNo = jToken.ToString();
-                if (request.TryGetValue("amt", out jToken))
-                    amt = jToken.ToString();
+                if (request.TryGetValue("amount", out jToken))
+                    amount = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))
                     description = jToken.ToString();
                 if (request.TryGetValue("flag", out jToken))
@@ -827,8 +827,8 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_amt";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = amt;
-                v_objParam.ParamSize = amt.Length;
+                v_objParam.ParamValue = amount;
+                v_objParam.ParamSize = amount.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[2] = v_objParam;
 
@@ -901,13 +901,13 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string requestId = "", id1214 = "", accountNo = "", description = "", flag = "";
+                string requestId = "", refId = "", accountNo = "", description = "", flag = "";
 
 
                 if (request.TryGetValue("requestId", out jToken))
                     requestId = jToken.ToString();
-                if (request.TryGetValue("id1214", out jToken))
-                    id1214 = jToken.ToString();
+                if (request.TryGetValue("refId", out jToken))
+                    refId = jToken.ToString();
                 if (request.TryGetValue("accountNo", out jToken))
                     accountNo = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))
@@ -932,8 +932,8 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_id1214";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = id1214;
-                v_objParam.ParamSize = id1214.Length;
+                v_objParam.ParamValue = refId;
+                v_objParam.ParamSize = refId.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[1] = v_objParam;
 
@@ -1207,19 +1207,19 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string requestId = "", id1214 = "", accountNo = "", toaccountNo = "", amt = "", description = "", flag = "";
+                string requestId = "", refId = "", accountNo = "", toAccountNo = "", amount = "", description = "", flag = "";
 
 
                 if (request.TryGetValue("requestId", out jToken))
                     requestId = jToken.ToString();
-                if (request.TryGetValue("id1214", out jToken))
-                    id1214 = jToken.ToString();
+                if (request.TryGetValue("refId", out jToken))
+                    refId = jToken.ToString();
                 if (request.TryGetValue("accountNo", out jToken))
                     accountNo = jToken.ToString();
-                if (request.TryGetValue("toaccountNo", out jToken))
-                    toaccountNo = jToken.ToString();
-                if (request.TryGetValue("amt", out jToken))
-                    amt = jToken.ToString();
+                if (request.TryGetValue("toAccountNo", out jToken))
+                    toAccountNo = jToken.ToString();
+                if (request.TryGetValue("amount", out jToken))
+                    amount = jToken.ToString();
                 if (request.TryGetValue("description", out jToken))
                     description = jToken.ToString();
                 if (request.TryGetValue("flag", out jToken))
@@ -1244,8 +1244,8 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_id1214";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = id1214;
-                v_objParam.ParamSize = id1214.Length;
+                v_objParam.ParamValue = refId;
+                v_objParam.ParamSize = refId.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[1] = v_objParam;
 
@@ -1260,16 +1260,16 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_toaccountNo";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = toaccountNo;
-                v_objParam.ParamSize = toaccountNo.Length;
+                v_objParam.ParamValue = toAccountNo;
+                v_objParam.ParamSize = toAccountNo.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[3] = v_objParam;
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_amt";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = amt;
-                v_objParam.ParamSize = amt.Length;
+                v_objParam.ParamValue = amount;
+                v_objParam.ParamSize = amount.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[4] = v_objParam;
 
