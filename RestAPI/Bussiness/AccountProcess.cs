@@ -610,7 +610,7 @@ namespace RestAPI.Bussiness
                 StoreParameter[] v_arrParam = new StoreParameter[12];
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_requestId";
+                v_objParam.ParamName = "p_requestid";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = requestId;
                 v_objParam.ParamSize = requestId.Length;
@@ -618,7 +618,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[0] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_custodyCode";
+                v_objParam.ParamName = "p_custodycd";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = custodyCode;
                 v_objParam.ParamSize = custodyCode.Length;
@@ -626,7 +626,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[1] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_accountld";
+                v_objParam.ParamName = "p_acctno";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = accountld;
                 v_objParam.ParamSize = accountld.Length;
@@ -634,7 +634,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[2] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_feeType";
+                v_objParam.ParamName = "p_feetype";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = feeType;
                 v_objParam.ParamSize = feeType.Length;
@@ -642,7 +642,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[3] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_feeCode";
+                v_objParam.ParamName = "p_feecode";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = feeCode;
                 v_objParam.ParamSize = feeCode.Length;
@@ -666,7 +666,7 @@ namespace RestAPI.Bussiness
                 v_arrParam[6] = v_objParam;
 
                 v_objParam = new StoreParameter();
-                v_objParam.ParamName = "p_withdrawType";
+                v_objParam.ParamName = "p_withdrawtype";
                 v_objParam.ParamDirection = "1";
                 v_objParam.ParamValue = withdrawType;
                 v_objParam.ParamSize = withdrawType.Length;
