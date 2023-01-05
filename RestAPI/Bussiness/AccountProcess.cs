@@ -581,15 +581,15 @@ namespace RestAPI.Bussiness
             {
                 JObject request = JObject.Parse(strRequest);
                 JToken jToken;
-                string requestId = "", custodyCode = "", accountld = "", feeType = "", feeCode = "", amount = "", refId = "", withdrawType = "", description = "", flag = "";
+                string requestId = "", custodyCode = "", accountId = "", feeType = "", feeCode = "", amount = "", refId = "", withdrawType = "", description = "", flag = "";
 
 
                 if (request.TryGetValue("requestId", out jToken))
                     requestId = jToken.ToString();
                 if (request.TryGetValue("custodyCode", out jToken))
                     custodyCode = jToken.ToString();
-                if (request.TryGetValue("accountld", out jToken))
-                    accountld = jToken.ToString();
+                if (request.TryGetValue("accountId", out jToken))
+                    accountId = jToken.ToString();
                 if (request.TryGetValue("feeType", out jToken))
                     feeType = jToken.ToString();
                 if (request.TryGetValue("feeCode", out jToken))
@@ -628,8 +628,8 @@ namespace RestAPI.Bussiness
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_acctno";
                 v_objParam.ParamDirection = "1";
-                v_objParam.ParamValue = accountld;
-                v_objParam.ParamSize = accountld.Length;
+                v_objParam.ParamValue = accountId;
+                v_objParam.ParamSize = accountId.Length;
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[2] = v_objParam;
 
