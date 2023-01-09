@@ -203,6 +203,147 @@ namespace RestAPI.Controllers
             }
         }
 
+        // DNS.2022.12.1.53.APITietkiem DNSE-1889
+        [Route("accounts/cancel-cash-withdraw")]
+        [System.Web.Http.HttpPost]
+        public HttpResponseMessage cancelCashWithdraw(HttpRequestMessage request)
+        {
+            string preFixlogSession = "accounts/cancel-cash-withdraw" + request.Method;
+            Log.Info(preFixlogSession + "======================BEGIN");
+            Bussiness.modCommon.LogFullRequest(request);
+
+            try
+            {
+                if (request.Content.Headers.ContentType == null || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                {
+                    string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
+                    var result = Bussiness.AccountProcess.cancelCashWithdraw(request.Content.ReadAsStringAsync().Result, ipaddress);
+
+                    if (result.GetType() == typeof(BoResponse) && ((BoResponse)result).s == "ok")
+                    {
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
+                        Log.Info(preFixlogSession + "======================END");
+                        return responses;
+                    }
+                    else
+                    {
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        Log.Info(preFixlogSession + "======================END");
+                        return responses;
+                    }
+                }
+                else
+                {
+                    var v_err_request = JObject.Parse("{'error': 400, 'message': 'Invalid Input Content-Type'}");
+                    Log.Info(preFixlogSession + "======================END");
+                    return request.CreateResponse(HttpStatusCode.BadRequest, v_err_request);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error(preFixlogSession, ex);
+                var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, ex);
+                Log.Info(preFixlogSession + "======================END");
+                return responses;
+            }
+        }
+
+        // DNS.2022.12.1.53.APITietkiem DNSE-1890
+        [Route("accounts/savings-open")]
+        [System.Web.Http.HttpPost]
+        public HttpResponseMessage savingsOpen(HttpRequestMessage request)
+        {
+            string preFixlogSession = "accounts/savings-open" + request.Method;
+            Log.Info(preFixlogSession + "======================BEGIN");
+            Bussiness.modCommon.LogFullRequest(request);
+
+            try
+            {
+                if (request.Content.Headers.ContentType == null || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                {
+                    string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
+                    var result = Bussiness.AccountProcess.savingsOpen(request.Content.ReadAsStringAsync().Result, ipaddress);
+
+                    if (result.GetType() == typeof(BoResponseWithData) && ((BoResponseWithData)result).s == Constants.Result_OK)
+                    {
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
+                        Log.Info(preFixlogSession + "======================END");
+                        return responses;
+                    }
+                    else
+                    {
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        Log.Info(preFixlogSession + "======================END");
+                        return responses;
+                    }
+                }
+                else
+                {
+                    var v_err_request = JObject.Parse("{'error': 400, 'message': 'Invalid Input Content-Type'}");
+                    Log.Info(preFixlogSession + "======================END");
+                    return request.CreateResponse(HttpStatusCode.BadRequest, v_err_request);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error(preFixlogSession, ex);
+                var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, ex);
+                Log.Info(preFixlogSession + "======================END");
+                return responses;
+            }
+        }
+
+        // DNS.2022.12.1.53.APITietkiem DNSE-1888
+        [Route("accounts/cash-withdraw")]
+        [System.Web.Http.HttpPost]
+        public HttpResponseMessage cashWithdraw(HttpRequestMessage request)
+        {
+            string preFixlogSession = "accounts/cash-withdraw" + request.Method;
+            Log.Info(preFixlogSession + "======================BEGIN");
+            Bussiness.modCommon.LogFullRequest(request);
+
+            try
+            {
+                if (request.Content.Headers.ContentType == null || request.Content.Headers.ContentType.MediaType.ToLower() == "application/json")
+                {
+                    string ipaddress = modCommon.getRequestHeaderValue(request, "client-ip");
+                    var result = Bussiness.AccountProcess.cashWithdraw(request.Content.ReadAsStringAsync().Result, ipaddress);
+
+                    if (result.GetType() == typeof(BoResponseWithData) && ((BoResponseWithData)result).s == Constants.Result_OK)
+                    {
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.OK, result);
+                        Log.Info(preFixlogSession + "======================END");
+                        return responses;
+                    }
+                    else
+                    {
+                        var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.BadRequest, result);
+                        Log.Info(preFixlogSession + "======================END");
+                        return responses;
+                    }
+                }
+                else
+                {
+                    var v_err_request = JObject.Parse("{'error': 400, 'message': 'Invalid Input Content-Type'}");
+                    Log.Info(preFixlogSession + "======================END");
+                    return request.CreateResponse(HttpStatusCode.BadRequest, v_err_request);
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error(preFixlogSession, ex);
+                var responses = Bussiness.modCommon.CreateResponseAPI(request, HttpStatusCode.InternalServerError, ex);
+                Log.Info(preFixlogSession + "======================END");
+                return responses;
+            }
+        }
+
         //DNS.2022.12.1.56.APIChuyentien: DNSE-1908
         [Route("accounts/cash-withdraw-type")]
         [System.Web.Http.HttpPost]
