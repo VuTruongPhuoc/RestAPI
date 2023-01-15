@@ -40,6 +40,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_CASHWITHDRAW = "fopks_restapi.pr_cash_withdraw";
         private static string COMMAND_DO_CANCELCASHWITHDRAW = "fopks_restapi.pr_cancel_cash_withdraw";
         private static string COMMAND_DO_SAVINGSOPEN = "fopks_restapi.pr_savings_open";
+        private static string COMMAND_DO_CASHWITHDRAWTYPE = "fopks_restapi.pr_cash_withdraw_type";
 
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
@@ -572,6 +573,152 @@ namespace RestAPI.Bussiness
             catch (Exception ex)
             {
                 Log.Error("accountSaving: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
+
+        //DNS.2022.12.1.56.APIChuyentien: DNSE-1908
+        public static object cashWithdrawType(string strRequest)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", custodyCode = "", accountId = "", feeType = "", feeCode = "", amount = "", refId = "", withdrawType = "", description = "", flag = "";
+
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("custodyCode", out jToken))
+                    custodyCode = jToken.ToString();
+                if (request.TryGetValue("accountId", out jToken))
+                    accountId = jToken.ToString();
+                if (request.TryGetValue("feeType", out jToken))
+                    feeType = jToken.ToString();
+                if (request.TryGetValue("feeCode", out jToken))
+                    feeCode = jToken.ToString();
+                if (request.TryGetValue("amount", out jToken))
+                    amount = jToken.ToString();
+                if (request.TryGetValue("refId", out jToken))
+                    refId = jToken.ToString();
+                if (request.TryGetValue("withdrawType", out jToken))
+                    withdrawType = jToken.ToString();
+                if (request.TryGetValue("description", out jToken))
+                    description = jToken.ToString();
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+
+
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[12];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestid";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = requestId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_custodycd";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = custodyCode;
+                v_objParam.ParamSize = custodyCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_acctno";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = accountId;
+                v_objParam.ParamSize = accountId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_feetype";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = feeType;
+                v_objParam.ParamSize = feeType.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_feecode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = feeCode;
+                v_objParam.ParamSize = feeCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_amount";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = amount;
+                v_objParam.ParamSize = amount.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[5] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_refId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = refId;
+                v_objParam.ParamSize = refId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[6] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_withdrawtype";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = withdrawType;
+                v_objParam.ParamSize = withdrawType.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[7] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_description";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = description;
+                v_objParam.ParamSize = description.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[8] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = flag.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[9] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[10] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[11] = v_objParam;
+
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_DO_CASHWITHDRAWTYPE, ref v_arrParam, 10);
+                string errparam = (string)v_arrParam[11].ParamValue;
+
+
+                return modCommon.getBoResponse(returnErr, errparam);
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error("cashWithdrawType: ", ex);
                 return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
