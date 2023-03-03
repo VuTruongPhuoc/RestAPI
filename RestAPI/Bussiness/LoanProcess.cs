@@ -1105,6 +1105,7 @@ namespace RestAPI.Bussiness
                             autoRenew = ds.Tables[0].Rows[i]["ADVPAY"].ToString(),
                             prepayFee = Convert.ToDouble(ds.Tables[0].Rows[i]["ADVPAYFEE"].ToString()),
                             warningDays = Convert.ToInt64(ds.Tables[0].Rows[i]["WARNINGDAYS"].ToString()),
+                            status = ds.Tables[0].Rows[i]["STATUS"].ToString(),
                             note = ds.Tables[0].Rows[i]["NOTES"].ToString()
                         };
                     }

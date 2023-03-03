@@ -29,6 +29,7 @@ namespace RestAPI.Models
         public string autoRenew = "";
         public double prepayFee = 0;
         public Int64 warningDays = 0;
+        public string status = "";
         public string note = "";
     }
 
