@@ -18,6 +18,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_PO_LOANRATE = "fopks_restapi.pr_loan_rate";
         private static string COMMAND_PO_ADDLOANTYPE = "fopks_restapi.pr_add_loantype";
         private static string COMMAND_PO_EDITLOANTYPE = "fopks_restapi.pr_edit_loantype";
+        private static string COMMAND_GET_LOANTYPE = "fopks_restapi.pr_get_loantype";
 
         //Thong tin mon vay DNS.2022.01.1.02
         public static object getloaninfo(string strRequest, string id)
@@ -1053,6 +1054,72 @@ namespace RestAPI.Bussiness
                 return modCommon.getBoResponse(400, "Bad Request");
             }
         }
+
+        //DNS.2023.01.1.03.API0047: DNSE-1930
+        public static object getLoanType(string strRequest, string lnTypeId)
+        {
+            try
+            {
+
+                List<KeyField> keyField = new List<KeyField>();
+
+                KeyField fieldlnTypeId = new KeyField();
+                fieldlnTypeId.keyName = "p_lnTypeId";
+                fieldlnTypeId.keyValue = lnTypeId;
+                fieldlnTypeId.keyType = "VARCHAR2";
+                keyField.Add(fieldlnTypeId);
+
+                DataSet ds = null;
+                ds = GetDataProcess.executeGetData(COMMAND_GET_LOANTYPE, keyField);
+
+                Models.getLoanType[] loantype = null;
+                if (ds == null)
+                {
+                    return new ErrorMapHepper().getResponse("500", "bad request!");
+                }
+                else if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    loantype = new getLoanType[ds.Tables[0].Rows.Count];
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        loantype[i] = new getLoanType()
+                        {
+                            lnTypeId = ds.Tables[0].Rows[i]["ACTYPE"].ToString(),
+                            name = ds.Tables[0].Rows[i]["TYPENAME"].ToString(),
+                            loanType = ds.Tables[0].Rows[i]["LOANTYPE"].ToString(),
+                            sourceType = ds.Tables[0].Rows[i]["RRTYPE"].ToString(),
+                            custBank = ds.Tables[0].Rows[i]["CUSTBANK"].ToString(),
+                            autoApply = ds.Tables[0].Rows[i]["AUTOAPPLY"].ToString(),
+                            complyApply = ds.Tables[0].Rows[i]["CHKSYSCTRL"].ToString(),
+                            basis = ds.Tables[0].Rows[i]["DRATE"].ToString(),
+                            loanCalendar = ds.Tables[0].Rows[i]["LNCLDR"].ToString(),
+                            preferentialDays = Convert.ToInt64(ds.Tables[0].Rows[i]["PRINFRQ"].ToString()),
+                            term = Convert.ToInt64(ds.Tables[0].Rows[i]["PRINPERIOD"].ToString()),
+                            rate1 = Convert.ToDouble(ds.Tables[0].Rows[i]["RATE1"].ToString()),
+                            rate2 = Convert.ToDouble(ds.Tables[0].Rows[i]["RATE2"].ToString()),
+                            rate3 = Convert.ToDouble(ds.Tables[0].Rows[i]["RATE3"].ToString()),
+                            cfRate1 = Convert.ToDouble(ds.Tables[0].Rows[i]["CFRATE1"].ToString()),
+                            cfRate2 = Convert.ToDouble(ds.Tables[0].Rows[i]["CFRATE2"].ToString()),
+                            cfRate3 = Convert.ToDouble(ds.Tables[0].Rows[i]["CFRATE3"].ToString()),
+                            autoPrepay = ds.Tables[0].Rows[i]["PREPAID"].ToString(),
+                            autoRenew = ds.Tables[0].Rows[i]["ADVPAY"].ToString(),
+                            prepayFee = Convert.ToDouble(ds.Tables[0].Rows[i]["ADVPAYFEE"].ToString()),
+                            warningDays = Convert.ToInt64(ds.Tables[0].Rows[i]["WARNINGDAYS"].ToString()),
+                            status = ds.Tables[0].Rows[i]["STATUS"].ToString(),
+                            note = ds.Tables[0].Rows[i]["NOTES"].ToString()
+                        };
+                    }
+                }
+
+                return new list() { s = "ok", d = loantype };
+            }
+            catch (Exception ex)
+            {
+                Log.Error("getLoanType: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
+            }
+        }
+
 
         // API UPDATE LAI VAY: DNS.2022.03.1.12
         public static object LoanRate(string strRequest, string id, string p_ipAddress) 
