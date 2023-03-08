@@ -41,6 +41,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_CANCELCASHWITHDRAW = "fopks_restapi.pr_cancel_cash_withdraw";
         private static string COMMAND_DO_SAVINGSOPEN = "fopks_restapi.pr_savings_open";
         private static string COMMAND_DO_CASHWITHDRAWTYPE = "fopks_restapi.pr_cash_withdraw_type";
+        private static string COMMAND_DO_VSD_MESSAGE_0047 = "fopks_restapi.pr_vsd_message_0047";
         private static string COMMAND_DO_UPDATECOSTPRICE = "fopks_restapi.pr_update_costprice";
 
         #region execution
@@ -1690,6 +1691,83 @@ namespace RestAPI.Bussiness
             {
                 Log.Error("trfMoney2Bank:.strRequest: " + strRequest, ex);
                 return modCommon.getBoResponse(400, "Bad Request");
+            }
+        }
+
+        // DNS.2023.01.1.03.API0047: DNSE-1929
+        public static object vsdMessage0047(string strRequest, string p_ipAddress)
+        {
+            try
+            {
+                JObject request = JObject.Parse(strRequest);
+                JToken jToken;
+                string requestId = "", custodyCode = "", flag = "";
+
+
+                if (request.TryGetValue("requestId", out jToken))
+                    requestId = jToken.ToString();
+                if (request.TryGetValue("custodyCode", out jToken))
+                    custodyCode = jToken.ToString();
+                if (request.TryGetValue("flag", out jToken))
+                    flag = jToken.ToString();
+
+                string ipAddress = p_ipAddress;
+                if (p_ipAddress == null || p_ipAddress.Length == 0)
+                    ipAddress = modCommon.GetClientIp();
+                StoreParameter v_objParam = new StoreParameter();
+                StoreParameter[] v_arrParam = new StoreParameter[5];
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_requestId";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = requestId;
+                v_objParam.ParamSize = requestId.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[0] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_custodyCode";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = custodyCode;
+                v_objParam.ParamSize = custodyCode.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[1] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_flag";
+                v_objParam.ParamDirection = "1";
+                v_objParam.ParamValue = flag;
+                v_objParam.ParamSize = flag.Length;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[2] = v_objParam;
+
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_code";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errcode;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[3] = v_objParam;
+
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_err_param";
+                v_objParam.ParamDirection = "2";
+                //v_objParam.ParamValue = errparam;
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.String").Name;
+                v_arrParam[4] = v_objParam;
+
+                long returnErr = 0;
+                returnErr = TransactionProcess.doTransaction(COMMAND_DO_VSD_MESSAGE_0047, ref v_arrParam, 3);
+                string errparam = (string)v_arrParam[4].ParamValue;
+
+                return modCommon.getBoResponse(returnErr, errparam);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("vsdMessage0047:.strRequest: " + strRequest, ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
 
