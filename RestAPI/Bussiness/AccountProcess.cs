@@ -43,6 +43,7 @@ namespace RestAPI.Bussiness
         private static string COMMAND_DO_CASHWITHDRAWTYPE = "fopks_restapi.pr_cash_withdraw_type";
         private static string COMMAND_DO_VSD_MESSAGE_0047 = "fopks_restapi.pr_vsd_message_0047";
         private static string COMMAND_DO_UPDATECOSTPRICE = "fopks_restapi.pr_update_costprice";
+        private static string COMMAND_DO_CASH_IN_ADVANCE = "fopks_api.pr_GetInfor4AdvancePayment";
 
         #region execution
         public static object getAccountExecutions(string strRequest, string accountNo)
@@ -3697,6 +3698,62 @@ namespace RestAPI.Bussiness
             {
                 Log.Error("updatecostprice " + strRequest, ex);
                 return modCommon.getBoResponse(400, "Bad Request");
+            }
+        }
+
+        public static object getCashInAdvance(string strRequest, string accountNo)
+        {
+            try
+            {
+
+                List<KeyField> keyField = new List<KeyField>();
+
+                KeyField fieldAccountNo = new KeyField();
+                fieldAccountNo.keyName = "AFACCTNO";
+                fieldAccountNo.keyValue = accountNo;
+                fieldAccountNo.keyType = "VARCHAR2";
+                keyField.Add(fieldAccountNo);
+
+                DataSet ds = null;
+                ds = GetDataProcess.executeGetData(COMMAND_DO_CASH_IN_ADVANCE, keyField);
+
+                Models.getCashInAdvance[] summary = null;
+                if (ds == null)
+                {
+                    return new ErrorMapHepper().getResponse("500", "bad request!");
+                }
+                else if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    summary = new getCashInAdvance[ds.Tables[0].Rows.Count];
+                    for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                    {
+                        summary[i] = new getCashInAdvance()
+                        {
+                            accountNo = ds.Tables[0].Rows[i]["AFACCTNO"].ToString(),
+                            txDate = Convert.ToDateTime(ds.Tables[0].Rows[i]["TXDATE"]).ToString("yyyy/MM/dd"),
+                            clearingDate = Convert.ToDateTime(ds.Tables[0].Rows[i]["DUEDATE"]).ToString("yyyy/MM/dd"),
+                            execAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["AMT"].ToString()),
+                            advancedAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["AAMT"].ToString()),
+                            pendingAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["PDAAMT"].ToString()),
+                            availableAdvanceAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["MAXAVLAMT"].ToString()),
+                            advanceDays = Convert.ToInt32(ds.Tables[0].Rows[i]["DAYS"].ToString()),
+                            minAdvanceAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["ADVMINAMT"].ToString()),
+                            feeRate = Convert.ToDouble(ds.Tables[0].Rows[i]["FEERATE"].ToString()) / (Convert.ToInt32(ds.Tables[0].Rows[i]["DRATE"].ToString()) * 100),
+                            autoAdvance = ds.Tables[0].Rows[i]["AUTOADV"].ToString(),
+                            minFeeAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["MINFEEAMT"].ToString()),
+                            basis = Convert.ToInt32(ds.Tables[0].Rows[i]["DRATE"].ToString()),
+                            maxAdvanceAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["ADVMAXAMT"].ToString()),
+                            maxFeeAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["MAXFEEAMT"].ToString()),
+                        };
+                    }
+                }
+
+                return new list() { s = "ok", d = summary };
+            }
+            catch (Exception ex)
+            {
+                Log.Error("getCashInAdvance: ", ex);
+                return new ErrorMapHepper().getResponse("400", "bad request!");
             }
         }
     }
