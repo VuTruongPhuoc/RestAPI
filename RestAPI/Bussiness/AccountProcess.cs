@@ -3730,15 +3730,15 @@ namespace RestAPI.Bussiness
                         summary[i] = new getCashInAdvance()
                         {
                             accountNo = ds.Tables[0].Rows[i]["AFACCTNO"].ToString(),
-                            txDate = Convert.ToDateTime(ds.Tables[0].Rows[i]["TXDATE"]).ToString("yyyy/MM/dd"),
-                            clearingDate = Convert.ToDateTime(ds.Tables[0].Rows[i]["DUEDATE"]).ToString("yyyy/MM/dd"),
+                            txDate = Convert.ToDateTime(ds.Tables[0].Rows[i]["TXDATE"]).ToString("yyyy-MM-dd"),
+                            clearingDate = Convert.ToDateTime(ds.Tables[0].Rows[i]["DUEDATE"]).ToString("yyyy-MM-dd"),
                             execAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["AMT"].ToString()),
                             advancedAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["AAMT"].ToString()),
                             pendingAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["PDAAMT"].ToString()),
                             availableAdvanceAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["MAXAVLAMT"].ToString()),
                             advanceDays = Convert.ToInt32(ds.Tables[0].Rows[i]["DAYS"].ToString()),
                             minAdvanceAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["ADVMINAMT"].ToString()),
-                            feeRate = Convert.ToDouble(ds.Tables[0].Rows[i]["FEERATE"].ToString()) / (Convert.ToInt32(ds.Tables[0].Rows[i]["DRATE"].ToString()) * 100),
+                            feeRate = Convert.ToDouble(ds.Tables[0].Rows[i]["FEERATE"].ToString()),
                             autoAdvance = ds.Tables[0].Rows[i]["AUTOADV"].ToString(),
                             minFeeAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["MINFEEAMT"].ToString()),
                             basis = Convert.ToInt32(ds.Tables[0].Rows[i]["DRATE"].ToString()),
