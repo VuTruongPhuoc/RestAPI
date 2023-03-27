@@ -232,5 +232,24 @@ namespace RestAPI.Models
         public string benBankNapasCode;
         public string srcTransId;
     }
+
+    public class getCashInAdvance
+    {
+        public String accountNo;
+        public String txDate;
+        public String clearingDate;
+        public long execAmount = 0;
+        public long advancedAmount = 0;
+        public long pendingAmount = 0;
+        public long availableAdvanceAmount = 0;
+        public int advanceDays;
+        public long minAdvanceAmount = 0;
+        public double feeRate;
+        public String autoAdvance;
+        public long minFeeAmount = 0;
+        public int basis;
+        public long maxAdvanceAmount = 0;
+        public long maxFeeAmount = 0;
+    }
 }
 
