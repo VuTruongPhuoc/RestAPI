@@ -250,6 +250,12 @@ namespace RestAPI.Models
         public int basis;
         public long maxAdvanceAmount = 0;
         public long maxFeeAmount = 0;
+        public long pendingApproval = 0;
+    }
+
+    public class advancePayment1153
+    {
+        public string status;
     }
 }
 

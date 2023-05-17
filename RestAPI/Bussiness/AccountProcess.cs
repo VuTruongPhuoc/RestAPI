@@ -2935,7 +2935,7 @@ namespace RestAPI.Bussiness
                     ipAddress = modCommon.GetClientIp();
 
                 StoreParameter v_objParam = new StoreParameter();
-                StoreParameter[] v_arrParam = new StoreParameter[11];
+                StoreParameter[] v_arrParam = new StoreParameter[12];
 
                 v_objParam = new StoreParameter();
                 v_objParam.ParamName = "p_accountId";
@@ -3025,11 +3025,21 @@ namespace RestAPI.Bussiness
                 v_objParam.ParamType = Type.GetType("System.String").Name;
                 v_arrParam[10] = v_objParam;
 
+                v_objParam = new StoreParameter();
+                v_objParam.ParamName = "p_status";
+                v_objParam.ParamDirection = "2";
+                v_objParam.ParamSize = 4000;
+                v_objParam.ParamType = Type.GetType("System.Int64").Name;
+                v_arrParam[11] = v_objParam;
                 long returnErr = 0;
                 returnErr = TransactionProcess.doTransaction(COMMAND_DO_ADVANCEPAYMENT, ref v_arrParam, 9);
                 string errparam = (string)v_arrParam[10].ParamValue;
 
-
+                if (returnErr == 0)
+                {
+                    advancePayment1153 status = new advancePayment1153() { status = v_arrParam[11].ParamValue.ToString() };
+                    return modCommon.getBoResponseWithData(returnErr, status, errparam);
+                }
                 return modCommon.getBoResponse(returnErr, errparam);
 
             }
@@ -3744,6 +3754,7 @@ namespace RestAPI.Bussiness
                             basis = Convert.ToInt32(ds.Tables[0].Rows[i]["DRATE"].ToString()),
                             maxAdvanceAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["ADVMAXAMT"].ToString()),
                             maxFeeAmount = Convert.ToInt64(ds.Tables[0].Rows[i]["MAXFEEAMT"].ToString()),
+                            pendingApproval = Convert.ToInt64(ds.Tables[0].Rows[i]["PENDINGAPPROVAL"].ToString()),
                         };
                     }
                 }
