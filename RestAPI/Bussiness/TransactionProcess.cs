@@ -87,12 +87,12 @@ namespace RestAPI.Bussiness
             {
                 Log.Info(preFixlogSession + "======================BEGIN");
                 //1.ghi khoa duy nhat cua request de tranh trung
-                if (!isHostActive())
-                {
-                    Log.Info(preFixlogSession + "isHostActive: false");
-                    Log.Info(preFixlogSession + "======================END");
-                    return -100023; // ma loi dinh nghia trong deferror: he thong khong active
-                }
+                //if (!isHostActive())
+                //{
+                //    Log.Info(preFixlogSession + "isHostActive: false");
+                //    Log.Info(preFixlogSession + "======================END");
+                //    return -100023; // ma loi dinh nghia trong deferror: he thong khong active
+                //}
 
                 // for BO process
                 using (TransactionScope tran = new TransactionScope())

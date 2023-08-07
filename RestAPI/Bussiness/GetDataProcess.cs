@@ -67,7 +67,7 @@ namespace RestAPI.Bussiness
 
                 DataSet v_ds = null;
                 DataAccess v_DataAccess = new DataAccess(gc_DBModule);
-                //v_DataAccess.NewDBInstance("@DIRECT_HOST");
+                v_DataAccess.NewDBInstance("@DIRECT_HOST");
 
                 ReportParameters v_objRptParam = new ReportParameters();
                 ReportParameters[] v_arrRptPara = new ReportParameters[length];
@@ -78,12 +78,12 @@ namespace RestAPI.Bussiness
                 {
                     v_objRptParam = new ReportParameters();
                     v_objRptParam.ParamName = pv_keyField[i].keyName;
+                    v_objRptParam.ParamDescription = "1";
                     v_objRptParam.ParamValue = pv_keyField[i].keyValue;
                     if (String.IsNullOrEmpty(pv_keyField[i].keyValue))
                         v_objRptParam.ParamSize = 0;
                     else
                         v_objRptParam.ParamSize =  pv_keyField[i].keyValue.Length;
-
                     if (pv_keyField[i].keyType.ToUpper() == "VARCHAR2")
                         v_objRptParam.ParamType = Type.GetType("System.String").Name;
                     else
@@ -92,7 +92,6 @@ namespace RestAPI.Bussiness
                     v_arrRptPara[i] = v_objRptParam;
 
                 }
-
                 v_ds = v_DataAccess.ExecuteStoredReturnDataset(v_strStoredName, v_arrRptPara);
 
                 Log.Info(preFixlogSession + "======================END");

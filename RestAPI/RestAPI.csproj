@@ -16,7 +16,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RestAPI</RootNamespace>
     <AssemblyName>RestAPI</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -138,6 +138,7 @@
     <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -155,6 +156,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -179,6 +181,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
@@ -272,19 +275,28 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Bussiness\AccountProcess.cs" />
+    <Compile Include="Bussiness\AfmastProcess.cs" />
+    <Compile Include="Bussiness\AllcodeProcess.cs" />
     <Compile Include="Bussiness\BussinessObject.cs" />
     <Compile Include="Bussiness\CacheObject.cs" />
+    <Compile Include="Bussiness\CfmastProcess.cs" />
+    <Compile Include="Bussiness\CimastProcess.cs" />
     <Compile Include="Bussiness\CorporateActionsProcess.cs" />
     <Compile Include="Bussiness\CustomersProcess.cs" />
     <Compile Include="Bussiness\ErrorMapHelper.cs" />
     <Compile Include="Bussiness\LoanProcess.cs" />
     <Compile Include="Bussiness\modCommon.cs" />
     <Compile Include="Bussiness\GetDataProcess.cs" />
+    <Compile Include="Bussiness\OdmastProcess.cs" />
     <Compile Include="Bussiness\SystemProcess.cs" />
     <Compile Include="Bussiness\TradingProcess .cs" />
     <Compile Include="Bussiness\TransactionProcess.cs" />
     <Compile Include="Bussiness\UtilObject.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\AfmastController.cs" />
+    <Compile Include="Controllers\AllcodeController.cs" />
+    <Compile Include="Controllers\CfmastController.cs" />
+    <Compile Include="Controllers\CimastController.cs" />
     <Compile Include="Controllers\CorporateActionsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\LoanController.cs" />
@@ -296,6 +308,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AfmastModel.cs" />
+    <Compile Include="Models\AllCodeModel.cs" />
+    <Compile Include="Models\CfmastModel.cs" />
+    <Compile Include="Models\CimastModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LoanModels.cs" />
     <Compile Include="Models\TradingModels.cs" />
@@ -385,6 +401,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Allcode\" />
     <Folder Include="Views\HoldBank\" />
   </ItemGroup>
   <ItemGroup>
