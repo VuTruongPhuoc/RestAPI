@@ -1,0 +1,2 @@
+﻿2021-02-18 10:12:36,630 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[b05efd16-a75a-4eee-894d-cebdabd66445], timer=637492399566111112 ============= BEGIN
+2021-02-18 10:12:37,755 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1143.3886](ms) ============= END

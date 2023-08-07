@@ -1,0 +1,884 @@
+﻿2023-08-01 11:35:12,786 [70] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[f4c5ee1d-7d40-4b9b-a417-e99dfabfd064], timer=638264865127835443 ============= BEGIN
+2023-08-01 11:35:12,847 [69] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[e5a5ad77-2a10-4201-b379-26c5f4eed227], timer=638264865128473733 ============= BEGIN
+2023-08-01 11:35:13,333 [69] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 11:35:13,339 [69] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:e5a5ad77-2a10-4201-b379-26c5f4eed227| Body: ===============================END
+2023-08-01 11:35:13,344 [69] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 11:35:13,362 [70] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[578.37](ms) ============= END
+2023-08-01 11:35:13,720 [69] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 11:35:13,962 [69] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 11:35:13,962 [69] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 11:35:13,987 [69] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[1140.2647](ms) ============= END
+2023-08-01 13:15:03,536 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[f1262f47-e8dd-4920-b129-46e37e10a488], timer=638264925035337326 ============= BEGIN
+2023-08-01 13:15:03,665 [17] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-08-01 13:15:03,666 [17] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:68f7ed23-aa20-432d-87dd-360378caa29f| GUID:f1262f47-e8dd-4920-b129-46e37e10a488| Body: ===============================END
+2023-08-01 13:15:03,671 [17] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-08-01 13:15:03,890 [17] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 95
+2023-08-01 13:15:04,977 [17] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-08-01 13:15:04,983 [17] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-08-01 13:15:05,033 [17] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-08-01 13:15:05,045 [17] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-08-01 13:15:05,045 [17] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-08-01 13:15:05,052 [76] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[1518.2793](ms) ============= END
+2023-08-01 13:28:32,462 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[a3a46ad9-bd67-4c8a-b450-52e133584274], timer=638264933124616578 ============= BEGIN
+2023-08-01 13:28:33,137 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[675.7108](ms) ============= END
+2023-08-01 13:29:07,986 [63] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[18ff4f47-d13e-44c4-931a-9b62ebd3af25], timer=638264933479869940 ============= BEGIN
+2023-08-01 13:29:07,993 [63] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 13:29:07,996 [63] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:18ff4f47-d13e-44c4-931a-9b62ebd3af25| Body: ===============================END
+2023-08-01 13:29:07,999 [63] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 13:29:08,182 [63] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 13:29:08,380 [63] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 13:29:08,380 [63] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 13:29:08,386 [63] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[399.8794](ms) ============= END
+2023-08-01 13:29:14,483 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/allcode], Method=[GET], GUID=[6ba42cc9-c89b-498d-a7c5-0b84e7f923de], timer=638264933544832659 ============= BEGIN
+2023-08-01 13:29:14,525 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/allcode], Method=[GET], duration time process=[41.8879](ms) ============= END
+2023-08-01 13:31:54,278 [76] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[074c5287-9ee2-4de6-8bc3-81deff130d2f], timer=638264935142784778 ============= BEGIN
+2023-08-01 13:31:54,288 [76] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[9.9744](ms) ============= END
+2023-08-01 13:31:57,586 [70] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[c1f430d8-3ce2-4bb7-a630-356c9a904721], timer=638264935175868612 ============= BEGIN
+2023-08-01 13:31:57,589 [70] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 13:31:57,589 [70] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:c1f430d8-3ce2-4bb7-a630-356c9a904721| Body: ===============================END
+2023-08-01 13:31:57,589 [70] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 13:31:57,593 [70] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 13:31:57,594 [70] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 13:31:57,594 [70] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 13:31:57,595 [63] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[8.3041](ms) ============= END
+2023-08-01 13:32:03,814 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/allcode], Method=[GET], GUID=[4099c737-9c92-4704-bf32-8b8dd6e188d3], timer=638264935238144096 ============= BEGIN
+2023-08-01 13:32:03,817 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/allcode], Method=[GET], duration time process=[2.9932](ms) ============= END
+2023-08-01 13:34:31,159 [72] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[724d3739-8e7f-485b-b2c9-a5b31c825b66], timer=638264936711598716 ============= BEGIN
+2023-08-01 13:34:31,164 [72] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 13:34:31,164 [72] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:724d3739-8e7f-485b-b2c9-a5b31c825b66| Body: ===============================END
+2023-08-01 13:34:31,164 [72] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 13:34:31,169 [72] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 13:34:31,169 [72] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 13:34:31,169 [72] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 13:34:31,170 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[10.9707](ms) ============= END
+2023-08-01 13:35:18,519 [63] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[d4afce6a-2154-4ba0-b23b-7ca7f71fccd1], timer=638264937185193309 ============= BEGIN
+2023-08-01 13:35:18,520 [63] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 13:35:18,520 [63] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:d4afce6a-2154-4ba0-b23b-7ca7f71fccd1| Body: ===============================END
+2023-08-01 13:35:18,520 [63] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 13:35:18,540 [63] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 13:35:18,540 [63] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 13:35:18,540 [63] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 13:35:18,542 [71] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[22.9457](ms) ============= END
+2023-08-01 13:35:19,505 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/allcode], Method=[GET], GUID=[901df7bb-fadd-47ca-ad51-1ecdb93f8be0], timer=638264937195055362 ============= BEGIN
+2023-08-01 13:35:19,509 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/allcode], Method=[GET], duration time process=[3.9879](ms) ============= END
+2023-08-01 13:36:07,221 [63] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[978e99ec-bc4f-474c-ac8b-673fcc744d37], timer=638264937672219535 ============= BEGIN
+2023-08-01 13:36:07,236 [28] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[14.6067](ms) ============= END
+2023-08-01 13:36:17,014 [76] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[658cc2da-6d8c-453b-b55f-e02ccd44c744], timer=638264937770143889 ============= BEGIN
+2023-08-01 13:36:17,016 [76] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 13:36:17,016 [76] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:658cc2da-6d8c-453b-b55f-e02ccd44c744| Body: ===============================END
+2023-08-01 13:36:17,016 [76] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 13:36:17,019 [76] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 13:36:17,020 [76] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 13:36:17,020 [76] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 13:36:17,022 [28] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[7.984](ms) ============= END
+2023-08-01 13:49:21,638 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[346590d3-e4f8-4638-b56a-b46f0593a422], timer=638264945616328380 ============= BEGIN
+2023-08-01 13:49:21,686 [20] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 13:49:21,688 [20] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:92e59612-d7b7-4457-9d9c-e4ee30274ec1| GUID:346590d3-e4f8-4638-b56a-b46f0593a422| Body: ===============================END
+2023-08-01 13:49:21,688 [20] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 13:49:21,742 [20] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 13:49:21,748 [20] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 13:49:21,748 [20] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 13:49:21,752 [69] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[120.0944](ms) ============= END
+2023-08-01 13:52:52,389 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[5c2d66e9-7d9c-4bd9-82e1-101191976499], timer=638264947723892519 ============= BEGIN
+2023-08-01 13:52:52,401 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[12.4776](ms) ============= END
+2023-08-01 14:04:28,137 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[d29c5e7c-b342-45fd-bf20-9dde8b01d02d], timer=638264954681354853 ============= BEGIN
+2023-08-01 14:04:28,170 [28] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[1394a20c-57e4-4743-a278-42784173e941], timer=638264954681703954 ============= BEGIN
+2023-08-01 14:04:28,614 [28] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 14:04:28,622 [28] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:1394a20c-57e4-4743-a278-42784173e941| Body: ===============================END
+2023-08-01 14:04:28,628 [28] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 14:04:28,843 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[707.69](ms) ============= END
+2023-08-01 14:04:28,914 [28] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 14:04:28,977 [28] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 14:04:28,978 [28] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 14:04:28,983 [60] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[813.5274](ms) ============= END
+2023-08-01 14:04:41,730 [26] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[4bd01fd4-2873-4c57-8137-739197cf1203], timer=638264954817300718 ============= BEGIN
+2023-08-01 14:04:41,753 [26] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[22.9389](ms) ============= END
+2023-08-01 14:05:04,897 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[4ec9c211-0a99-4d4e-a5a5-4b696b0f25e3], timer=638264955048974077 ============= BEGIN
+2023-08-01 14:05:04,898 [68] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 14:05:04,898 [68] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:4ec9c211-0a99-4d4e-a5a5-4b696b0f25e3| Body: ===============================END
+2023-08-01 14:05:04,898 [68] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 14:05:04,910 [68] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 14:05:04,910 [68] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 14:05:04,910 [68] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 14:05:04,910 [64] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[12.9646](ms) ============= END
+2023-08-01 14:05:07,775 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/allcode], Method=[GET], GUID=[127a5b89-730d-47ec-91ae-bc4146e8b0dc], timer=638264955077758971 ============= BEGIN
+2023-08-01 14:05:07,779 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/allcode], Method=[GET], duration time process=[3.9777](ms) ============= END
+2023-08-01 14:06:03,805 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[35224123-3110-412f-a087-e26904f2b6ff], timer=638264955638050001 ============= BEGIN
+2023-08-01 14:06:03,817 [64] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 14:06:03,824 [64] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:35224123-3110-412f-a087-e26904f2b6ff| Body: {"CUSTID":"00010000000008","FULLNAME":"cao ha ca","CUSTODYCD":"001C000008","IDTYPE":"","IDCODE":"030202003222","IDDATE":"2026-08-01T14:05:07","ADDRESS":"ha noi","PHONE":"ss","MOBILE":"0932478492","EMAIL":"cacao@GMAIL.COM"}===============================END
+2023-08-01 14:06:03,829 [64] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 14:06:03,872 [64] INFO  RestAPI.Bussiness.CfmastProcess - postCfmaststrRequest{"CUSTID":"00010000000008","FULLNAME":"cao ha ca","CUSTODYCD":"001C000008","IDTYPE":"","IDCODE":"030202003222","IDDATE":"2026-08-01T14:05:07","ADDRESS":"ha noi","PHONE":"ss","MOBILE":"0932478492","EMAIL":"cacao@GMAIL.COM"}
+2023-08-01 14:06:03,937 [64] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemCFMAST: ======================BEGIN
+2023-08-01 14:06:04,038 [64] ERROR RestAPI.Bussiness.TransactionProcess - isHostActive
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-00904: "CSPKS_SYSTEM"."FN_GET_SYSVAR": invalid identifier
+   at DataAccessLayer.OracleHelper.ExecuteDataset(String ConnectionString, CommandType CommandType, String CommandText, OracleParameter[] CommandParameters)
+   at DataAccessLayer.OracleHelper.ExecuteDataset(String ConnectionString, CommandType CommandType, String CommandText)
+   at DataAccessLayer.DataAccess.ExecuteSQLReturnDataset(CommandType CommandType, String CommandText)
+   at RestAPI.Bussiness.TransactionProcess.isHostActive() in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\TransactionProcess.cs:line 31
+2023-08-01 14:06:04,041 [64] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemCFMAST: isHostActive: false
+2023-08-01 14:06:04,041 [64] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemCFMAST: ======================END
+2023-08-01 14:06:04,111 [64] ERROR RestAPI.Bussiness.GetDataProcess - Oracle.DataAccess.Client.OracleException (0x80004005): ORA-00942: table or view does not exist
+   at DataAccessLayer.DataAccess.ExecuteSQLParametersReturnDataset(String pv_strSQLCommand, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.getErrmsg(Int64 errorCode, String lang) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 41
+2023-08-01 14:06:04,113 [64] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-100023","errmsg":"Undefined Error!"}
+2023-08-01 14:06:04,113 [64] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 14:06:04,114 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[309.5251](ms) ============= END
+2023-08-01 14:06:16,107 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[9ab15538-3d4c-422b-b8a9-48987e7706ad], timer=638264955761078250 ============= BEGIN
+2023-08-01 14:06:16,111 [74] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 14:06:16,111 [74] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:9ab15538-3d4c-422b-b8a9-48987e7706ad| Body: ===============================END
+2023-08-01 14:06:16,111 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 14:06:16,114 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 14:06:16,114 [74] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 14:06:16,114 [74] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 14:06:16,115 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[7.981](ms) ============= END
+2023-08-01 14:06:29,045 [64] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[f5aec5ee-001a-4baf-b726-0396aa65b90a], timer=638264955890453236 ============= BEGIN
+2023-08-01 14:06:29,099 [64] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-08-01 14:06:29,099 [64] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:a1f2080f-cf76-43c5-9869-f0e8ce85d67e| GUID:f5aec5ee-001a-4baf-b726-0396aa65b90a| Body: ===============================END
+2023-08-01 14:06:29,101 [64] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-08-01 14:06:29,183 [64] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 95
+2023-08-01 14:06:29,184 [64] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-08-01 14:06:29,187 [64] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-08-01 14:06:29,206 [64] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-08-01 14:06:29,210 [64] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-08-01 14:06:29,210 [64] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-08-01 14:06:29,211 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[166.0792](ms) ============= END
+2023-08-01 14:06:37,778 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[3e8a9b53-f1bb-4b92-9930-09d5660aca7f], timer=638264955977783200 ============= BEGIN
+2023-08-01 14:06:37,779 [74] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 14:06:37,780 [74] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:fd58e7e6-90b1-4820-ac06-41fc2b4c3ce9| GUID:3e8a9b53-f1bb-4b92-9930-09d5660aca7f| Body: ===============================END
+2023-08-01 14:06:37,780 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 14:06:37,781 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 14:06:37,782 [74] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 14:06:37,782 [74] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 14:06:37,804 [57] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[25.2687](ms) ============= END
+2023-08-01 14:06:53,111 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[aa2fab81-7940-4b9e-b53a-ce5493354d16], timer=638264956131115311 ============= BEGIN
+2023-08-01 14:06:53,112 [20] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 14:06:53,113 [20] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:3e27ce6c-3fe1-40a2-8496-a0ae5fddd44f| GUID:aa2fab81-7940-4b9e-b53a-ce5493354d16| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2020-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 14:06:53,124 [20] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 14:06:53,126 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[14.9876](ms) ============= END
+2023-08-01 14:09:48,926 [73] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[1996f6cc-d0d9-4b38-938d-27ff98ece6be], timer=638264957889264178 ============= BEGIN
+2023-08-01 14:09:48,949 [73] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 14:09:48,949 [73] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:e00995f9-4486-4cae-9471-3484f01d21a4| GUID:1996f6cc-d0d9-4b38-938d-27ff98ece6be| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2020-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 14:09:48,949 [73] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 14:09:48,950 [73] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[24.0461](ms) ============= END
+2023-08-01 14:10:01,064 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[09be1c98-7ba1-43a3-aded-80121126d64e], timer=638264958010643643 ============= BEGIN
+2023-08-01 14:10:01,065 [20] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 14:10:01,065 [20] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:426ce77c-de90-4158-a795-29a4df8781fd| GUID:09be1c98-7ba1-43a3-aded-80121126d64e| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2023-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 14:10:01,065 [20] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 14:10:01,066 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[1.9961](ms) ============= END
+2023-08-01 14:15:37,701 [71] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[4c7a76e1-ea96-4e32-969a-4a8600129fe7], timer=638264961377000177 ============= BEGIN
+2023-08-01 14:15:38,183 [71] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[483.505](ms) ============= END
+2023-08-01 14:15:48,612 [71] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[4b6a3a65-5d37-4909-937d-1e69089406ed], timer=638264961486120599 ============= BEGIN
+2023-08-01 14:15:48,617 [71] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 14:15:48,621 [71] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:8cfe3a22-0938-4316-a08e-903a19561188| GUID:4b6a3a65-5d37-4909-937d-1e69089406ed| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2023-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 14:15:48,673 [71] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 14:15:48,752 [71] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[140.8118](ms) ============= END
+2023-08-01 14:19:13,324 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[54f307a9-a779-4a20-bf5b-52a234054ca2], timer=638264963533238915 ============= BEGIN
+2023-08-01 14:19:13,691 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[367.3459](ms) ============= END
+2023-08-01 14:20:37,424 [63] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[57a9455d-9a5f-4cbe-89a1-fbe8c7896d45], timer=638264964374245100 ============= BEGIN
+2023-08-01 14:20:37,429 [63] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 14:20:37,433 [63] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:2e245d05-c8a8-4976-888b-df2d7cf92415| GUID:57a9455d-9a5f-4cbe-89a1-fbe8c7896d45| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 14:20:37,481 [63] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 14:20:37,568 [63] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[144.1579](ms) ============= END
+2023-08-01 14:22:20,114 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[be97974b-de85-40ce-a07c-667e357c95e1], timer=638264965401144184 ============= BEGIN
+2023-08-01 14:22:20,119 [65] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 14:22:20,119 [65] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:9465c33f-99e4-4382-802d-0caf1e16fb86| GUID:be97974b-de85-40ce-a07c-667e357c95e1| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 14:22:20,122 [65] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 14:22:20,156 [65] INFO  RestAPI.Bussiness.CfmastProcess - postCfmaststrRequest{
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+2023-08-01 14:22:20,160 [65] ERROR RestAPI.Bussiness.CfmastProcess - postCfmmast {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RestAPI.Bussiness.CfmastProcess.postCfmast(String strRequest, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 240
+2023-08-01 14:22:20,228 [65] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"400","errmsg":"Bad Request"}
+2023-08-01 14:22:20,229 [65] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 14:22:20,234 [71] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[119.6797](ms) ============= END
+2023-08-01 14:51:43,057 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[842801e3-3fe6-4f73-b25e-683ea39698da], timer=638264983030556941 ============= BEGIN
+2023-08-01 14:51:43,085 [68] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 14:51:43,085 [68] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:9783728e-e3b7-4ba9-bc10-a690d2920088| GUID:842801e3-3fe6-4f73-b25e-683ea39698da| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 14:51:43,087 [68] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 14:51:43,088 [68] INFO  RestAPI.Bussiness.CfmastProcess - postCfmaststrRequest{
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+2023-08-01 14:51:43,091 [68] ERROR RestAPI.Bussiness.CfmastProcess - postCfmmast {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RestAPI.Bussiness.CfmastProcess.postCfmast(String strRequest, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 240
+2023-08-01 14:51:43,096 [68] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"400","errmsg":"Bad Request"}
+2023-08-01 14:51:43,096 [68] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 14:51:43,099 [72] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[43.8845](ms) ============= END
+2023-08-01 14:55:55,973 [62] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[6261a5c8-6151-49d8-b6f6-08fd9659c314], timer=638264985559703595 ============= BEGIN
+2023-08-01 14:55:56,486 [62] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[514.8906](ms) ============= END
+2023-08-01 14:56:19,684 [62] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[afc19617-6db7-41a9-9ca2-597be048c9e0], timer=638264985796844244 ============= BEGIN
+2023-08-01 14:56:19,689 [62] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 14:56:19,696 [62] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:e6ab8705-8728-4ba6-82fa-89381cded00c| GUID:afc19617-6db7-41a9-9ca2-597be048c9e0| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 14:56:19,699 [62] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 14:56:19,732 [62] INFO  RestAPI.Bussiness.CfmastProcess - postCfmaststrRequest{
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+2023-08-01 14:56:19,771 [62] ERROR RestAPI.Bussiness.CfmastProcess - postCfmmast {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RestAPI.Bussiness.CfmastProcess.postCfmast(String strRequest, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 240
+2023-08-01 14:56:19,928 [62] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"400","errmsg":"Bad Request"}
+2023-08-01 14:56:19,928 [62] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 14:56:19,934 [69] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[250.3756](ms) ============= END
+2023-08-01 14:59:28,454 [45] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[70bd8402-18bf-4927-9a91-bdc18918e9db], timer=638264987684536106 ============= BEGIN
+2023-08-01 14:59:28,887 [45] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[432.809](ms) ============= END
+2023-08-01 14:59:41,840 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[f6d784a3-8367-4f88-81b4-3f4062ab95d8], timer=638264987818406894 ============= BEGIN
+2023-08-01 14:59:41,850 [74] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 14:59:41,856 [74] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:b338ae9b-d022-4b5f-af29-7799c628d63a| GUID:f6d784a3-8367-4f88-81b4-3f4062ab95d8| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 14:59:41,859 [74] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 14:59:41,887 [74] INFO  RestAPI.Bussiness.CfmastProcess - postCfmaststrRequest{
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+2023-08-01 14:59:41,950 [74] ERROR RestAPI.Bussiness.CfmastProcess - postCfmmast {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RestAPI.Bussiness.CfmastProcess.postCfmast(String strRequest, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 240
+2023-08-01 14:59:42,134 [74] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"400","errmsg":"Bad Request"}
+2023-08-01 14:59:42,134 [74] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 14:59:42,138 [26] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[298.203](ms) ============= END
+2023-08-01 15:03:41,843 [71] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[942d205b-4852-49ec-b129-f01e3eecae76], timer=638264990218419920 ============= BEGIN
+2023-08-01 15:03:42,331 [71] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[489.8355](ms) ============= END
+2023-08-01 15:03:45,726 [57] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[42bd7258-6a70-4a66-980d-50e51dd50d5f], timer=638264990257264451 ============= BEGIN
+2023-08-01 15:03:45,730 [57] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 15:03:45,734 [57] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:58e64669-2d9d-4dd8-aa6f-e9099d5dc396| GUID:42bd7258-6a70-4a66-980d-50e51dd50d5f| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 15:03:45,735 [57] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 15:03:45,753 [57] INFO  RestAPI.Bussiness.CfmastProcess - postCfmaststrRequest{
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+2023-08-01 15:03:45,813 [57] ERROR RestAPI.Bussiness.CfmastProcess - postCfmmast {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RestAPI.Bussiness.CfmastProcess.postCfmast(String strRequest, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 240
+2023-08-01 15:03:46,002 [57] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"400","errmsg":"Bad Request"}
+2023-08-01 15:03:46,002 [57] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 15:03:46,008 [57] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[282.1556](ms) ============= END
+2023-08-01 15:07:22,843 [76] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[8bb1d6dc-788c-4900-bc46-2994da11e68c], timer=638264992428421956 ============= BEGIN
+2023-08-01 15:07:23,188 [76] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[345.2548](ms) ============= END
+2023-08-01 15:07:28,613 [58] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[709fd38b-90c9-4210-87bf-b4824087c9dc], timer=638264992486138709 ============= BEGIN
+2023-08-01 15:07:28,619 [58] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 15:07:28,623 [58] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:afdbed3d-029e-4045-9319-ec00e84d2a4c| GUID:709fd38b-90c9-4210-87bf-b4824087c9dc| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 15:07:28,624 [58] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 15:07:28,654 [58] INFO  RestAPI.Bussiness.CfmastProcess - postCfmaststrRequest{
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+2023-08-01 15:07:28,691 [58] ERROR RestAPI.Bussiness.CfmastProcess - postCfmmast {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RestAPI.Bussiness.CfmastProcess.postCfmast(String strRequest, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 240
+2023-08-01 15:07:28,825 [58] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"400","errmsg":"Bad Request"}
+2023-08-01 15:07:28,826 [58] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 15:07:28,829 [76] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[215.3431](ms) ============= END
+2023-08-01 15:15:53,530 [63] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[5855b550-54b1-4372-bdd7-961213490f59], timer=638264997535294290 ============= BEGIN
+2023-08-01 15:15:53,903 [63] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[373.2891](ms) ============= END
+2023-08-01 15:16:03,450 [76] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[a0e58548-bff2-49c9-88e4-721f7f7acb75], timer=638264997634506467 ============= BEGIN
+2023-08-01 15:16:03,455 [76] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 15:16:03,458 [76] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:2fe3f3c2-d306-4f93-a853-a384dfb51bff| GUID:a0e58548-bff2-49c9-88e4-721f7f7acb75| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 15:16:03,460 [76] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 15:16:03,478 [76] INFO  RestAPI.Bussiness.CfmastProcess - postCfmaststrRequest{
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+2023-08-01 15:16:03,511 [76] ERROR RestAPI.Bussiness.CfmastProcess - postCfmmast {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RestAPI.Bussiness.CfmastProcess.postCfmast(String strRequest, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 240
+2023-08-01 15:16:03,646 [76] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"400","errmsg":"Bad Request"}
+2023-08-01 15:16:03,647 [76] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 15:16:03,650 [55] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[199.5038](ms) ============= END
+2023-08-01 15:47:54,227 [73] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[b5cf4b46-da65-48a5-bd02-fd71a3ac6914], timer=638265016742255421 ============= BEGIN
+2023-08-01 15:47:54,702 [73] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[477.1683](ms) ============= END
+2023-08-01 16:02:26,019 [71] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/0001000007], Method=[DELETE], GUID=[d96b6e33-24c2-44fd-9b49-ba1c9a0eba01], timer=638265025460127570 ============= BEGIN
+2023-08-01 16:02:26,362 [71] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/0001000007], Method=[DELETE], duration time process=[349.825](ms) ============= END
+2023-08-01 16:03:22,648 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[cfdef910-3243-4270-bd7e-0956c84dbd28], timer=638265026026455470 ============= BEGIN
+2023-08-01 16:03:23,137 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[492.4209](ms) ============= END
+2023-08-01 16:03:53,203 [63] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[6abab018-ced8-421c-8855-31ec8805d275], timer=638265026332038922 ============= BEGIN
+2023-08-01 16:03:53,210 [63] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 16:03:53,217 [63] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:2c1f2de2-bf4f-48e2-ad67-1dcd255a256d| GUID:6abab018-ced8-421c-8855-31ec8805d275| Body: ===============================END
+2023-08-01 16:03:53,222 [63] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 16:03:53,736 [63] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 16:03:53,925 [63] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 16:03:53,925 [63] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 16:03:53,932 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[728.5488](ms) ============= END
+2023-08-01 16:04:13,504 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/0001000007], Method=[DELETE], GUID=[54173ea4-855b-4d7b-8234-d8aa52bce262], timer=638265026535048020 ============= BEGIN
+2023-08-01 16:04:13,561 [19] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================BEGIN
+2023-08-01 16:04:13,561 [19] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/0001000007| method:DELETE| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:501a098e-4fd0-421d-8305-069f2f8394ad| GUID:54173ea4-855b-4d7b-8234-d8aa52bce262| Body: ===============================END
+2023-08-01 16:04:13,565 [19] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 16:04:13,615 [19] ERROR RestAPI.Bussiness.CfmastProcess - deleteCfmast: 
+Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Path '', line 0, position 0.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at RestAPI.Bussiness.CfmastProcess.deleteCfmast(String strRequest, String custid, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 259
+2023-08-01 16:04:13,619 [19] ERROR RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE
+System.ArgumentException: Object serialized to Integer. JObject instance expected.
+   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 91
+   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\Users\vuphu\Downloads\restapi\RestAPI\Controllers\CfmastController.cs:line 174
+2023-08-01 16:04:13,633 [19] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: InternalServerError| Method: DELETE| Message: {"ClassName":"System.ArgumentException","Message":"Object serialized to Integer. JObject instance expected.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)\r\n   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Bussiness\\modCommon.cs:line 91\r\n   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Controllers\\CfmastController.cs:line 174","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nFromObject\nNewtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed\nNewtonsoft.Json.Linq.JObject\nNewtonsoft.Json.Linq.JObject FromObject(System.Object, Newtonsoft.Json.JsonSerializer)","HResult":-2147024809,"Source":"Newtonsoft.Json","WatsonBuckets":null,"ParamName":null}
+2023-08-01 16:04:13,633 [19] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================END
+2023-08-01 16:04:13,635 [50] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/0001000007], Method=[DELETE], duration time process=[131.1686](ms) ============= END
+2023-08-01 16:42:46,685 [55] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[8e8c0548-bfd6-405a-96ee-3341c83c061e], timer=638265049666845684 ============= BEGIN
+2023-08-01 16:42:47,098 [55] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[413.8461](ms) ============= END
+2023-08-01 16:43:05,782 [55] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[48b619bb-6708-471d-b676-ba4efecb7d49], timer=638265049857828689 ============= BEGIN
+2023-08-01 16:43:05,864 [55] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[81.349](ms) ============= END
+2023-08-01 16:43:57,522 [54] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/0001000007], Method=[DELETE], GUID=[f8b1bd0d-68fa-4edd-80c7-bd7d90c9577a], timer=638265050375214411 ============= BEGIN
+2023-08-01 16:43:58,025 [54] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================BEGIN
+2023-08-01 16:43:58,031 [54] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/0001000007| method:DELETE| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:78d84993-7d8b-43d0-bbbd-27bb8a7a5919| GUID:f8b1bd0d-68fa-4edd-80c7-bd7d90c9577a| Body: ===============================END
+2023-08-01 16:43:58,034 [54] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 16:43:58,069 [54] ERROR RestAPI.Bussiness.CfmastProcess - deleteCfmast: 
+Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Path '', line 0, position 0.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at RestAPI.Bussiness.CfmastProcess.deleteCfmast(String strRequest, String custid, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 259
+2023-08-01 16:43:58,147 [54] ERROR RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE
+System.ArgumentException: Object serialized to Integer. JObject instance expected.
+   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 91
+   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\Users\vuphu\Downloads\restapi\RestAPI\Controllers\CfmastController.cs:line 174
+2023-08-01 16:43:58,255 [54] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: InternalServerError| Method: DELETE| Message: {"ClassName":"System.ArgumentException","Message":"Object serialized to Integer. JObject instance expected.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)\r\n   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Bussiness\\modCommon.cs:line 91\r\n   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Controllers\\CfmastController.cs:line 174","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nFromObject\nNewtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed\nNewtonsoft.Json.Linq.JObject\nNewtonsoft.Json.Linq.JObject FromObject(System.Object, Newtonsoft.Json.JsonSerializer)","HResult":-2147024809,"Source":"Newtonsoft.Json","WatsonBuckets":null,"ParamName":null}
+2023-08-01 16:43:58,255 [54] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================END
+2023-08-01 16:43:58,327 [26] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/0001000007], Method=[DELETE], duration time process=[805.3765](ms) ============= END
+2023-08-01 16:44:18,113 [72] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/0001000007], Method=[DELETE], GUID=[5d5c9d5d-8ae5-47ff-b4d0-72d1ea39ed69], timer=638265050581137196 ============= BEGIN
+2023-08-01 16:44:18,115 [72] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================BEGIN
+2023-08-01 16:44:18,115 [72] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/0001000007| method:DELETE| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:693ef54e-ab7f-41b9-b743-41d851d3636f| GUID:5d5c9d5d-8ae5-47ff-b4d0-72d1ea39ed69| Body: ===============================END
+2023-08-01 16:44:18,115 [72] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 16:44:18,115 [72] ERROR RestAPI.Bussiness.CfmastProcess - deleteCfmast: 
+Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Path '', line 0, position 0.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at RestAPI.Bussiness.CfmastProcess.deleteCfmast(String strRequest, String custid, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 259
+2023-08-01 16:44:18,115 [72] ERROR RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE
+System.ArgumentException: Object serialized to Integer. JObject instance expected.
+   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 91
+   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\Users\vuphu\Downloads\restapi\RestAPI\Controllers\CfmastController.cs:line 174
+2023-08-01 16:44:18,115 [72] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: InternalServerError| Method: DELETE| Message: {"ClassName":"System.ArgumentException","Message":"Object serialized to Integer. JObject instance expected.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)\r\n   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Bussiness\\modCommon.cs:line 91\r\n   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Controllers\\CfmastController.cs:line 174","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nFromObject\nNewtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed\nNewtonsoft.Json.Linq.JObject\nNewtonsoft.Json.Linq.JObject FromObject(System.Object, Newtonsoft.Json.JsonSerializer)","HResult":-2147024809,"Source":"Newtonsoft.Json","WatsonBuckets":null,"ParamName":null}
+2023-08-01 16:44:18,115 [72] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================END
+2023-08-01 16:44:18,116 [44] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/0001000007], Method=[DELETE], duration time process=[2.9924](ms) ============= END
+2023-08-01 16:58:36,587 [38] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[0793d8ad-6b26-4f09-8889-6a2aa34f1f3f], timer=638265059165868360 ============= BEGIN
+2023-08-01 16:58:36,591 [38] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 16:58:36,592 [38] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:e91edb3f-a99a-43d6-8430-cc9bfdcbbc01| GUID:0793d8ad-6b26-4f09-8889-6a2aa34f1f3f| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 16:58:36,592 [38] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 16:58:36,594 [38] INFO  RestAPI.Bussiness.CfmastProcess - postCfmaststrRequest{
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+2023-08-01 16:58:36,626 [38] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemCFMAST: ======================BEGIN
+2023-08-01 16:58:36,859 [38] ERROR RestAPI.Bussiness.TransactionProcess - isHostActive
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-00904: "CSPKS_SYSTEM"."FN_GET_SYSVAR": invalid identifier
+   at DataAccessLayer.OracleHelper.ExecuteDataset(String ConnectionString, CommandType CommandType, String CommandText, OracleParameter[] CommandParameters)
+   at DataAccessLayer.OracleHelper.ExecuteDataset(String ConnectionString, CommandType CommandType, String CommandText)
+   at DataAccessLayer.DataAccess.ExecuteSQLReturnDataset(CommandType CommandType, String CommandText)
+   at RestAPI.Bussiness.TransactionProcess.isHostActive() in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\TransactionProcess.cs:line 31
+2023-08-01 16:58:36,861 [38] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemCFMAST: isHostActive: false
+2023-08-01 16:58:36,861 [38] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemCFMAST: ======================END
+2023-08-01 16:58:36,862 [38] ERROR RestAPI.Bussiness.CfmastProcess - postCfmmast {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RestAPI.Bussiness.CfmastProcess.postCfmast(String strRequest, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 241
+2023-08-01 16:58:36,905 [38] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"400","errmsg":"Bad Request"}
+2023-08-01 16:58:36,905 [38] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 16:58:36,907 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[320.2386](ms) ============= END
+2023-08-01 16:59:40,225 [43] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/0001000007], Method=[DELETE], GUID=[d25383d9-1495-4de6-b4c2-e468edb2b6ea], timer=638265059802244735 ============= BEGIN
+2023-08-01 16:59:40,227 [43] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================BEGIN
+2023-08-01 16:59:40,227 [43] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/0001000007| method:DELETE| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:5dbc93be-e7ac-483c-80f5-56e73b1e9c0a| GUID:d25383d9-1495-4de6-b4c2-e468edb2b6ea| Body: ===============================END
+2023-08-01 16:59:40,227 [43] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 16:59:40,228 [43] ERROR RestAPI.Bussiness.CfmastProcess - deleteCfmast: 
+Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Path '', line 0, position 0.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at RestAPI.Bussiness.CfmastProcess.deleteCfmast(String strRequest, String custid, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 259
+2023-08-01 16:59:40,228 [43] ERROR RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE
+System.ArgumentException: Object serialized to Integer. JObject instance expected.
+   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 91
+   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\Users\vuphu\Downloads\restapi\RestAPI\Controllers\CfmastController.cs:line 174
+2023-08-01 16:59:40,228 [43] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: InternalServerError| Method: DELETE| Message: {"ClassName":"System.ArgumentException","Message":"Object serialized to Integer. JObject instance expected.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)\r\n   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Bussiness\\modCommon.cs:line 91\r\n   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Controllers\\CfmastController.cs:line 174","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nFromObject\nNewtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed\nNewtonsoft.Json.Linq.JObject\nNewtonsoft.Json.Linq.JObject FromObject(System.Object, Newtonsoft.Json.JsonSerializer)","HResult":-2147024809,"Source":"Newtonsoft.Json","WatsonBuckets":null,"ParamName":null}
+2023-08-01 16:59:40,228 [43] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================END
+2023-08-01 16:59:40,229 [45] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/0001000007], Method=[DELETE], duration time process=[4.9822](ms) ============= END
+2023-08-01 17:01:25,098 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[3c955e94-f5fc-42ed-8ff4-d3b53d615e6e], timer=638265060850849355 ============= BEGIN
+2023-08-01 17:01:25,689 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[604.2305](ms) ============= END
+2023-08-01 17:01:31,182 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[289334a6-fce1-44c6-b46d-3b07e61fed86], timer=638265060911823362 ============= BEGIN
+2023-08-01 17:01:33,647 [6] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 17:01:33,660 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:289334a6-fce1-44c6-b46d-3b07e61fed86| Body: ===============================END
+2023-08-01 17:01:34,385 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 17:01:36,420 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 17:01:38,834 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 17:01:38,834 [6] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 17:01:38,845 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[7663.2637](ms) ============= END
+2023-08-01 17:04:24,595 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[482a24df-0712-4a71-8753-a1403099b718], timer=638265062645785665 ============= BEGIN
+2023-08-01 17:04:25,392 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[813.4529](ms) ============= END
+2023-08-01 17:04:39,637 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[DELETE], GUID=[5a2b9719-0858-4f15-b596-694d45cf057f], timer=638265062796373324 ============= BEGIN
+2023-08-01 17:04:39,716 [6] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================BEGIN
+2023-08-01 17:04:39,731 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/delete/0001000007| method:DELETE| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:97eaacbd-781b-42e4-9311-85e197eb196f| GUID:5a2b9719-0858-4f15-b596-694d45cf057f| Body: ===============================END
+2023-08-01 17:04:39,734 [6] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 17:04:39,775 [6] ERROR RestAPI.Bussiness.CfmastProcess - deleteCfmast: 
+Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Path '', line 0, position 0.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at RestAPI.Bussiness.CfmastProcess.deleteCfmast(String strRequest, String custid, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 259
+2023-08-01 17:04:39,854 [6] ERROR RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE
+System.ArgumentException: Object serialized to Integer. JObject instance expected.
+   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 91
+   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\Users\vuphu\Downloads\restapi\RestAPI\Controllers\CfmastController.cs:line 174
+2023-08-01 17:04:39,918 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: InternalServerError| Method: DELETE| Message: {"ClassName":"System.ArgumentException","Message":"Object serialized to Integer. JObject instance expected.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)\r\n   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Bussiness\\modCommon.cs:line 91\r\n   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Controllers\\CfmastController.cs:line 174","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nFromObject\nNewtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed\nNewtonsoft.Json.Linq.JObject\nNewtonsoft.Json.Linq.JObject FromObject(System.Object, Newtonsoft.Json.JsonSerializer)","HResult":-2147024809,"Source":"Newtonsoft.Json","WatsonBuckets":null,"ParamName":null}
+2023-08-01 17:04:39,918 [6] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================END
+2023-08-01 17:04:39,936 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[DELETE], duration time process=[298.8011](ms) ============= END
+2023-08-01 17:05:10,151 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[e84da3ce-8fbc-4f91-8bec-7d2f6edf269c], timer=638265063101295559 ============= BEGIN
+2023-08-01 17:05:11,030 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[901.4066](ms) ============= END
+2023-08-01 17:05:42,037 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[GET], GUID=[566142bf-7647-4117-b240-81ed7f258bf4], timer=638265063420374393 ============= BEGIN
+2023-08-01 17:05:42,073 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[GET], duration time process=[35.9032](ms) ============= END
+2023-08-01 17:06:40,520 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[4d5afd36-5de9-4169-9135-27eff5407106], timer=638265064005051299 ============= BEGIN
+2023-08-01 17:06:41,356 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[851.0016](ms) ============= END
+2023-08-01 17:06:50,454 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[GET], GUID=[40206830-f322-40cb-9e19-7b5a70591d8f], timer=638265064104541023 ============= BEGIN
+2023-08-01 17:06:50,487 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[GET], duration time process=[32.9083](ms) ============= END
+2023-08-01 17:19:24,379 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[f63c5395-d16c-4121-bdc4-ad71ca0bfa9a], timer=638265071643653224 ============= BEGIN
+2023-08-01 17:19:25,090 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[725.3504](ms) ============= END
+2023-08-01 17:20:08,222 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[8c6d7160-bc62-49f4-8978-2a4aeb3bbc47], timer=638265072082223895 ============= BEGIN
+2023-08-01 17:20:08,229 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[6.9205](ms) ============= END
+2023-08-01 17:20:18,635 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[d79cec02-eef4-447c-8ced-02ee947a14c0], timer=638265072186359873 ============= BEGIN
+2023-08-01 17:20:18,650 [17] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-01 17:20:18,668 [17] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:f096720a-8398-47d6-8911-9a4debcfe083| GUID:d79cec02-eef4-447c-8ced-02ee947a14c0| Body: ===============================END
+2023-08-01 17:20:18,675 [17] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-01 17:20:19,679 [17] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-01 17:20:19,871 [17] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-01 17:20:19,871 [17] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-01 17:20:19,883 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[1247.8123](ms) ============= END
+2023-08-01 17:20:55,228 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[GET], GUID=[41f800a3-8ce0-41af-9932-71108dc48231], timer=638265072552289301 ============= BEGIN
+2023-08-01 17:20:55,259 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[GET], duration time process=[30.9463](ms) ============= END
+2023-08-01 17:21:59,116 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[GET], GUID=[e18f0eb6-8b9c-4a46-bb55-0c303991422a], timer=638265073191156066 ============= BEGIN
+2023-08-01 17:21:59,119 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[GET], duration time process=[4.0164](ms) ============= END
+2023-08-01 17:22:18,402 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], GUID=[4e05207e-28fb-49e7-805b-729cdeddf326], timer=638265073384016701 ============= BEGIN
+2023-08-01 17:22:18,407 [6] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================BEGIN
+2023-08-01 17:22:18,411 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:c3f84ac2-116e-48ff-ba8f-40a499d71fb5| GUID:4e05207e-28fb-49e7-805b-729cdeddf326| Body: {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}===============================END
+2023-08-01 17:22:18,415 [6] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 17:22:18,453 [6] INFO  RestAPI.Bussiness.CfmastProcess - postCfmaststrRequest{
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+2023-08-01 17:22:18,517 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemCFMAST: ======================BEGIN
+2023-08-01 17:22:18,680 [6] ERROR RestAPI.Bussiness.TransactionProcess - isHostActive
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-00904: "CSPKS_SYSTEM"."FN_GET_SYSVAR": invalid identifier
+   at DataAccessLayer.OracleHelper.ExecuteDataset(String ConnectionString, CommandType CommandType, String CommandText, OracleParameter[] CommandParameters)
+   at DataAccessLayer.OracleHelper.ExecuteDataset(String ConnectionString, CommandType CommandType, String CommandText)
+   at DataAccessLayer.DataAccess.ExecuteSQLReturnDataset(CommandType CommandType, String CommandText)
+   at RestAPI.Bussiness.TransactionProcess.isHostActive() in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\TransactionProcess.cs:line 31
+2023-08-01 17:22:18,685 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemCFMAST: isHostActive: false
+2023-08-01 17:22:18,685 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemCFMAST: ======================END
+2023-08-01 17:22:18,686 [6] ERROR RestAPI.Bussiness.CfmastProcess - postCfmmast {
+    "Custid": "00010000000008",
+    "Fullname": "Vu Thi Cao",
+    "Custodycd": "001C000008",
+    "Idtype": "002",
+    "Idcode": "0302020033123",
+    "Iddate": "2018-07-02",
+    "Address": "Ha Noi",
+    "Phone": "Xiaomi",
+    "Mobile": "0396092387",
+    "Email": "cao2f@gmail.com"
+}
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at RestAPI.Bussiness.CfmastProcess.postCfmast(String strRequest, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 241
+2023-08-01 17:22:18,690 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"400","errmsg":"Bad Request"}
+2023-08-01 17:22:18,690 [6] INFO  RestAPI.Controllers.CfmastController - cfmastsPOST======================END
+2023-08-01 17:22:18,691 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[POST], duration time process=[290.0128](ms) ============= END
+2023-08-01 17:23:13,146 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[DELETE], GUID=[dbc3fb38-8352-4b9c-ba96-283e49101cf1], timer=638265073931468095 ============= BEGIN
+2023-08-01 17:23:13,222 [7] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================BEGIN
+2023-08-01 17:23:13,222 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/delete/0001000007| method:DELETE| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:c958f2cb-4e2f-40c1-b4b8-fb722aad7ee0| GUID:dbc3fb38-8352-4b9c-ba96-283e49101cf1| Body: ===============================END
+2023-08-01 17:23:13,222 [7] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-01 17:23:13,225 [7] ERROR RestAPI.Bussiness.CfmastProcess - deleteCfmast: 
+Newtonsoft.Json.JsonReaderException: Error reading JObject from JsonReader. Path '', line 0, position 0.
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at RestAPI.Bussiness.CfmastProcess.deleteCfmast(String strRequest, String custid, String p_ipAddress) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CfmastProcess.cs:line 259
+2023-08-01 17:23:13,227 [7] ERROR RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE
+System.ArgumentException: Object serialized to Integer. JObject instance expected.
+   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 91
+   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\Users\vuphu\Downloads\restapi\RestAPI\Controllers\CfmastController.cs:line 174
+2023-08-01 17:23:13,248 [7] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: InternalServerError| Method: DELETE| Message: {"ClassName":"System.ArgumentException","Message":"Object serialized to Integer. JObject instance expected.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)\r\n   at RestAPI.Bussiness.modCommon.CreateResponseAPI(HttpRequestMessage request, HttpStatusCode statusCode, Object obj) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Bussiness\\modCommon.cs:line 91\r\n   at RestAPI.Controllers.CfmastController.deleteCfmast(HttpRequestMessage request, String custid) in C:\\Users\\vuphu\\Downloads\\restapi\\RestAPI\\Controllers\\CfmastController.cs:line 174","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nFromObject\nNewtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed\nNewtonsoft.Json.Linq.JObject\nNewtonsoft.Json.Linq.JObject FromObject(System.Object, Newtonsoft.Json.JsonSerializer)","HResult":-2147024809,"Source":"Newtonsoft.Json","WatsonBuckets":null,"ParamName":null}
+2023-08-01 17:23:13,248 [7] INFO  RestAPI.Controllers.CfmastController - cfmast/0001000007 DELETE======================END
+2023-08-01 17:23:13,249 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[DELETE], duration time process=[102.7259](ms) ============= END
+2023-08-01 17:28:17,397 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[3b19bffc-13a4-44de-8032-58ca0a4649cf], timer=638265076973771193 ============= BEGIN
+2023-08-01 17:28:18,220 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[842.7368](ms) ============= END
+2023-08-01 17:28:54,518 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[GET], GUID=[9e9408fd-05b7-4264-8b9b-1d01e4c2ab57], timer=638265077345180428 ============= BEGIN
+2023-08-01 17:28:54,554 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/delete/0001000007], Method=[GET], duration time process=[36.8969](ms) ============= END

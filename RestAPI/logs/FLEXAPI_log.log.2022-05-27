@@ -1,0 +1,4 @@
+﻿2022-05-27 13:40:17,958 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[7402400f-452a-4357-bee6-5ed8635424f7], timer=637892556179328500 ============= BEGIN
+2022-05-27 13:40:19,044 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1112.0143](ms) ============= END
+2022-05-27 13:40:21,316 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], GUID=[fcb131ff-00bd-404e-82df-d097eeb99a47], timer=637892556213168483 ============= BEGIN
+2022-05-27 13:40:21,461 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], duration time process=[145.0252](ms) ============= END

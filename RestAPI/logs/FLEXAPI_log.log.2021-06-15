@@ -1,0 +1,48 @@
+﻿2021-06-15 14:20:47,510 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/rightRegister], Method=[POST], GUID=[3406f3c9-bd45-43d2-8b33-2a2a41d834ed], timer=637593636475033768 ============= BEGIN
+2021-06-15 14:20:47,534 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[5d16e26a-84a3-42c2-826e-316c01e9216a], timer=637593636475043759 ============= BEGIN
+2021-06-15 14:20:48,332 [6] INFO  RestAPI.Controllers.AccountsController - accounts/rightRegister ======================BEGIN
+2021-06-15 14:20:48,336 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/rightRegister| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:aeccfad2-5f8e-4a1d-a355-f44d2c9a4f82| GUID:3406f3c9-bd45-43d2-8b33-2a2a41d834ed| Body: {
+   "keyID":"0001005025014037",
+   "custodyCode":"064C100155",
+   "accountId":"0001006153",
+   "exerciseQuantity":"500",
+   "decription":"Quyen mua",
+   "refId":"00010009120"  
+}===============================END
+2021-06-15 14:20:48,517 [6] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2021-06-15 14:20:48,549 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1045.1839](ms) ============= END
+2021-06-15 14:20:48,655 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_rightRegister: ======================BEGIN
+2021-06-15 14:20:50,804 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], GUID=[a2e69b57-3d37-4985-8e75-85ce96c4741e], timer=637593636508042528 ============= BEGIN
+2021-06-15 14:20:50,854 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], duration time process=[49.968](ms) ============= END
+2021-06-15 14:20:51,069 [6] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_rightRegister: ======================BEGIN
+2021-06-15 14:20:51,150 [6] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_rightRegister: ======================END
+2021-06-15 14:20:51,150 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_rightRegister: callDBTransaction.v_lngErrorCode: -10012
+2021-06-15 14:20:51,156 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_rightRegister: ======================END
+2021-06-15 14:20:51,300 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-10012","errmsg":"[-10012]: Trùng mã yêu cầu"}
+2021-06-15 14:20:51,300 [6] INFO  RestAPI.Controllers.AccountsController - accounts/rightRegister ======================END
+2021-06-15 14:20:51,364 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/rightRegister], Method=[POST], duration time process=[3861.3734](ms) ============= END
+2021-06-15 14:21:09,585 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/rightRegister], Method=[POST], GUID=[2b4a5bdd-c768-4b43-bf4f-3ff509ce0664], timer=637593636695851985 ============= BEGIN
+2021-06-15 14:21:18,574 [5] INFO  RestAPI.Controllers.AccountsController - accounts/rightRegister ======================BEGIN
+2021-06-15 14:21:18,575 [5] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/rightRegister| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:f72f3e3e-4c3e-4914-9a85-9ffa21f15f5d| GUID:2b4a5bdd-c768-4b43-bf4f-3ff509ce0664| Body: {
+   "keyID":"0001005025014037",
+   "custodyCode":"064C100155",
+   "accountId":"0001006153",
+   "exerciseQuantity":"500",
+   "decription":"Quyen mua",
+   "refId":"00010009121"  
+}===============================END
+2021-06-15 14:21:18,682 [5] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2021-06-15 14:21:21,474 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_rightRegister: ======================BEGIN
+2021-06-15 14:21:21,486 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_rightRegister: ======================BEGIN
+2021-06-15 14:21:21,541 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_rightRegister: ======================END
+2021-06-15 14:21:21,541 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_rightRegister: callDBTransaction.v_lngErrorCode: -300021
+2021-06-15 14:21:21,545 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_rightRegister: ======================END
+2021-06-15 14:21:33,418 [5] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-300021","errmsg":"[-300021]: Vượt qua số dư chứng khoán quyền"}
+2021-06-15 14:21:35,952 [5] INFO  RestAPI.Controllers.AccountsController - accounts/rightRegister ======================END
+2021-06-15 14:21:40,982 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/rightRegister], Method=[POST], duration time process=[31397.1698](ms) ============= END

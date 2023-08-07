@@ -1,0 +1,904 @@
+﻿2023-07-31 11:28:31,852 [30] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[9c3c4f72-b0ee-426a-a969-b7db339d8844], timer=638263997118450140 ============= BEGIN
+2023-07-31 11:28:33,096 [30] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1250.1817](ms) ============= END
+2023-07-31 11:28:33,185 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], GUID=[e0fba43f-9703-4b2c-b42c-e63c99580038], timer=638263997131849625 ============= BEGIN
+2023-07-31 11:28:33,192 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], duration time process=[7.9742](ms) ============= END
+2023-07-31 11:29:12,070 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[45191e0a-a829-4914-9b73-fa5617a1f070], timer=638263997520707416 ============= BEGIN
+2023-07-31 11:29:12,074 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[3.8606](ms) ============= END
+2023-07-31 11:29:52,776 [36] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts], Method=[GET], GUID=[d03e8991-33e2-4e99-9609-fcc6d274ab64], timer=638263997927760407 ============= BEGIN
+2023-07-31 11:29:52,879 [36] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts], Method=[GET], duration time process=[103.3274](ms) ============= END
+2023-07-31 11:30:54,015 [31] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/001C000001], Method=[GET], GUID=[2a8957f7-3072-4c6b-9f8c-bc1a754eaed0], timer=638263998540156921 ============= BEGIN
+2023-07-31 11:30:54,019 [31] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/001C000001], Method=[GET], duration time process=[3.9898](ms) ============= END
+2023-07-31 13:43:01,337 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[a1b92d62-8a91-474d-b63d-db14039b68c1], timer=638264077813222541 ============= BEGIN
+2023-07-31 13:43:02,543 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1220.3232](ms) ============= END
+2023-07-31 13:46:04,168 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[68b18258-6366-4c18-a67c-ba70e5b1e2f1], timer=638264079641527958 ============= BEGIN
+2023-07-31 13:46:05,446 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1292.7873](ms) ============= END
+2023-07-31 13:46:32,736 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[9195a515-0bd3-488b-8730-59f897e583c1], timer=638264079927355381 ============= BEGIN
+2023-07-31 13:46:32,738 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[2.9867](ms) ============= END
+2023-07-31 13:46:44,752 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/acfmast], Method=[GET], GUID=[63a8368c-c0a4-4a96-9ac2-bd63b9425ec9], timer=638264080047524032 ============= BEGIN
+2023-07-31 13:46:44,775 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/acfmast], Method=[GET], duration time process=[22.9373](ms) ============= END
+2023-07-31 13:46:53,325 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[08b60a2b-83f7-4bdd-b378-b7f380b5c4c8], timer=638264080133257004 ============= BEGIN
+2023-07-31 13:46:53,330 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[5.0071](ms) ============= END
+2023-07-31 13:47:17,554 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/acfmast/cfmast], Method=[GET], GUID=[848a62e7-9141-472c-91ad-38d70c983697], timer=638264080375545168 ============= BEGIN
+2023-07-31 13:47:17,557 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/acfmast/cfmast], Method=[GET], duration time process=[3.2403](ms) ============= END
+2023-07-31 13:48:30,016 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/acfmast], Method=[GET], GUID=[71f3c443-8e0c-4cc1-b558-c34d92eefd83], timer=638264081100157403 ============= BEGIN
+2023-07-31 13:48:30,311 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/acfmast], Method=[GET], duration time process=[295.995](ms) ============= END
+2023-07-31 13:51:33,421 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[d078a05e-c406-4bff-91e4-1f6408e376f4], timer=638264082934075454 ============= BEGIN
+2023-07-31 13:51:33,421 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[0eb0e123-e3bf-4778-aa35-5634cbc3b979], timer=638264082934075454 ============= BEGIN
+2023-07-31 13:51:34,555 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1147.1348](ms) ============= END
+2023-07-31 13:51:34,571 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1163.0922](ms) ============= END
+2023-07-31 13:52:52,581 [14] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/cfmast], Method=[GET], GUID=[51689a2f-be01-4371-96c0-995fe19e032f], timer=638264083725812051 ============= BEGIN
+2023-07-31 13:52:52,603 [14] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/cfmast], Method=[GET], duration time process=[22.0361](ms) ============= END
+2023-07-31 13:53:01,131 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[463b091f-1930-4a99-a1e7-1f65efdb0aec], timer=638264083811303811 ============= BEGIN
+2023-07-31 13:53:01,134 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[4.031](ms) ============= END
+2023-07-31 13:55:26,787 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[b98c5c7a-4610-419b-825e-e3402f046133], timer=638264085267863455 ============= BEGIN
+2023-07-31 13:55:27,151 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[364.7721](ms) ============= END
+2023-07-31 13:55:34,435 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[56965540-8bc9-4e06-ab7e-74538182bac1], timer=638264085344355926 ============= BEGIN
+2023-07-31 13:55:34,453 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[17.6932](ms) ============= END
+2023-07-31 13:55:34,708 [14] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[a34a9f73-9263-4201-a6aa-7c57c815d856], timer=638264085347088625 ============= BEGIN
+2023-07-31 13:55:34,711 [14] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[2.9922](ms) ============= END
+2023-07-31 13:56:03,930 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[b2bf53a1-eb7b-43b9-a6c2-28eb728e240a], timer=638264085639294162 ============= BEGIN
+2023-07-31 13:56:03,935 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[5.9826](ms) ============= END
+2023-07-31 13:56:35,163 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[61dabbf0-5236-413f-8bfa-0c981e6a3f50], timer=638264085951626800 ============= BEGIN
+2023-07-31 13:56:35,612 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[449.3235](ms) ============= END
+2023-07-31 13:56:44,048 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[069b298a-7f15-46de-a8f3-7222dad55a95], timer=638264086040483999 ============= BEGIN
+2023-07-31 13:56:44,062 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[13.9622](ms) ============= END
+2023-07-31 13:56:44,300 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[005dd73a-f584-4d37-8f82-56be0d6d5808], timer=638264086043007247 ============= BEGIN
+2023-07-31 13:56:44,302 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[1.9965](ms) ============= END
+2023-07-31 13:56:48,836 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/cfmast], Method=[GET], GUID=[846f257c-d437-4a18-aa08-9921a1820134], timer=638264086088365729 ============= BEGIN
+2023-07-31 13:56:48,841 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/cfmast], Method=[GET], duration time process=[5.3224](ms) ============= END
+2023-07-31 13:58:03,129 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[7c61c085-a4b6-46cc-888a-9b596d9b02d0], timer=638264086831067321 ============= BEGIN
+2023-07-31 13:58:03,810 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[702.5204](ms) ============= END
+2023-07-31 13:59:55,963 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[0c7e3db8-7d64-4559-9929-a74cfcc904ba], timer=638264087959638529 ============= BEGIN
+2023-07-31 13:59:55,985 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[21.9383](ms) ============= END
+2023-07-31 13:59:58,494 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/getall], Method=[GET], GUID=[786ad623-e929-454f-97ed-4a9db91c4f4c], timer=638264087984940522 ============= BEGIN
+2023-07-31 13:59:58,500 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/getall], Method=[GET], duration time process=[6.1023](ms) ============= END
+2023-07-31 14:08:03,185 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[dcd26b35-01ce-483b-8a2a-d1c945daea27], timer=638264092831755062 ============= BEGIN
+2023-07-31 14:08:04,350 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1174.7628](ms) ============= END
+2023-07-31 14:09:01,091 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[14c16550-0f52-4013-962c-26d0bf9f6bdf], timer=638264093410900961 ============= BEGIN
+2023-07-31 14:09:01,093 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[2.9883](ms) ============= END
+2023-07-31 14:10:55,161 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[ddd11a4b-753f-4f88-8849-7c96e04ac869], timer=638264094551459866 ============= BEGIN
+2023-07-31 14:10:56,037 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[891.3021](ms) ============= END
+2023-07-31 14:11:01,771 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[59b4ec7c-2d37-4ccd-b3d8-f373642507ba], timer=638264094617719718 ============= BEGIN
+2023-07-31 14:11:01,807 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[35.9048](ms) ============= END
+2023-07-31 14:11:02,027 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[016f0c50-a8d6-4933-87cf-1d1eaad83d93], timer=638264094620273997 ============= BEGIN
+2023-07-31 14:11:02,030 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[2.9995](ms) ============= END
+2023-07-31 14:14:27,064 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[144fe7f1-4fac-47a5-8ae9-029614454d91], timer=638264096670512230 ============= BEGIN
+2023-07-31 14:14:27,610 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[558.4775](ms) ============= END
+2023-07-31 14:14:32,030 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[d16ad85f-c8c4-46d7-a189-29ab8305f5d2], timer=638264096720302747 ============= BEGIN
+2023-07-31 14:14:32,053 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[21.9399](ms) ============= END
+2023-07-31 14:14:32,490 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[1a0673ef-755c-4a2a-9b91-062d8a0359bb], timer=638264096724904137 ============= BEGIN
+2023-07-31 14:14:32,491 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[1.2846](ms) ============= END
+2023-07-31 14:33:05,553 [51] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[8cdbe9dc-f565-4da0-9d74-d9f61e04214b], timer=638264107855517163 ============= BEGIN
+2023-07-31 14:33:06,106 [51] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[554.7645](ms) ============= END
+2023-07-31 14:33:12,704 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[88acf381-163a-43fd-a718-108b5e64a94b], timer=638264107927038286 ============= BEGIN
+2023-07-31 14:33:12,719 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[15.0529](ms) ============= END
+2023-07-31 14:33:14,806 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[6d58c6bf-9f93-452f-8839-af9e2df3f615], timer=638264107948066273 ============= BEGIN
+2023-07-31 14:33:14,814 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[7.9393](ms) ============= END
+2023-07-31 14:35:30,101 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[931d1102-3d8e-4660-9080-3c4be0ff2612], timer=638264109301010056 ============= BEGIN
+2023-07-31 14:35:30,562 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[460.7819](ms) ============= END
+2023-07-31 14:35:39,461 [44] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[8adb5402-14a6-44ff-83e0-e15091b4fe62], timer=638264109394618881 ============= BEGIN
+2023-07-31 14:35:39,477 [44] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[16.0105](ms) ============= END
+2023-07-31 14:35:55,922 [29] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[a3dc4941-4c4f-4db2-9131-54a7309a4004], timer=638264109559218195 ============= BEGIN
+2023-07-31 14:35:55,925 [29] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[3.8544](ms) ============= END
+2023-07-31 14:38:23,753 [29] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/c111], Method=[GET], GUID=[4f8503b8-91f1-4d3a-9783-1bca4ce43485], timer=638264111037524975 ============= BEGIN
+2023-07-31 14:38:23,761 [29] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/c111], Method=[GET], duration time process=[8.9767](ms) ============= END
+2023-07-31 14:45:37,069 [43] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[095b37cf-cea9-4a06-a987-a05fcaa951b4], timer=638264115370686964 ============= BEGIN
+2023-07-31 14:45:37,460 [43] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[392.0414](ms) ============= END
+2023-07-31 14:45:58,122 [25] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[dcbd2533-ec81-4402-a3bc-10201accd4c4], timer=638264115581227499 ============= BEGIN
+2023-07-31 14:45:58,128 [25] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 14:45:58,147 [25] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:dcbd2533-ec81-4402-a3bc-10201accd4c4| Body: ===============================END
+2023-07-31 14:45:58,152 [25] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 14:46:00,342 [25] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 14:46:00,366 [25] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 14:46:00,367 [25] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 14:46:00,393 [25] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 14:46:00,560 [25] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 14:46:00,561 [25] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 14:46:00,574 [28] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[2451.6923](ms) ============= END
+2023-07-31 14:46:00,579 [46] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[cca17ec3-bac9-4443-bd35-f2bc3b448211], timer=638264115605794252 ============= BEGIN
+2023-07-31 14:46:00,580 [46] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 14:46:00,581 [46] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:cca17ec3-bac9-4443-bd35-f2bc3b448211| Body: ===============================END
+2023-07-31 14:46:00,581 [46] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 14:46:00,614 [46] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 14:46:00,614 [46] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 14:46:00,614 [46] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 14:46:00,615 [46] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 14:46:00,615 [46] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 14:46:00,615 [46] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 14:46:00,616 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[37.008](ms) ============= END
+2023-07-31 14:46:25,299 [43] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[b54a720c-899a-4f32-a0c0-4fe9003ae02b], timer=638264115852994351 ============= BEGIN
+2023-07-31 14:46:25,345 [43] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 14:46:25,347 [43] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:b54a720c-899a-4f32-a0c0-4fe9003ae02b| Body: ===============================END
+2023-07-31 14:46:25,349 [43] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 14:46:25,368 [43] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 14:46:25,368 [43] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 14:46:25,368 [43] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 14:46:25,369 [43] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 14:46:25,369 [43] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 14:46:25,369 [43] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 14:46:25,370 [39] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[70.7653](ms) ============= END
+2023-07-31 14:46:32,837 [32] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[77a15811-e1fe-4e5c-bd92-86c9c0a1f495], timer=638264115928378775 ============= BEGIN
+2023-07-31 14:46:32,840 [32] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 14:46:32,840 [32] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:77a15811-e1fe-4e5c-bd92-86c9c0a1f495| Body: ===============================END
+2023-07-31 14:46:32,840 [32] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 14:46:32,843 [32] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 14:46:32,844 [32] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 14:46:32,844 [32] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 14:46:32,844 [32] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 14:46:32,845 [32] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 14:46:32,845 [32] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 14:46:32,845 [46] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[7.9743](ms) ============= END
+2023-07-31 14:46:33,096 [50] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[9bde9cb7-0564-49bd-90ff-775f3594c9d9], timer=638264115930961806 ============= BEGIN
+2023-07-31 14:46:33,098 [50] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 14:46:33,098 [50] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:9bde9cb7-0564-49bd-90ff-775f3594c9d9| Body: ===============================END
+2023-07-31 14:46:33,098 [50] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 14:46:33,102 [50] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 14:46:33,102 [50] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 14:46:33,102 [50] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 14:46:33,103 [50] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 14:46:33,103 [50] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 14:46:33,103 [50] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 14:46:33,104 [28] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[7.9792](ms) ============= END
+2023-07-31 14:57:35,798 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[53ae2908-6297-4db6-ba82-56c3ed194691], timer=638264122557961592 ============= BEGIN
+2023-07-31 14:57:36,205 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[409.3501](ms) ============= END
+2023-07-31 14:57:47,126 [25] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[7a2b3fe4-327e-45eb-9632-f24b2c579f57], timer=638264122671255111 ============= BEGIN
+2023-07-31 14:57:47,133 [25] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 14:57:47,138 [25] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:7a2b3fe4-327e-45eb-9632-f24b2c579f57| Body: ===============================END
+2023-07-31 14:57:47,142 [25] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 14:57:47,262 [25] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 14:57:47,287 [25] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 14:57:47,289 [25] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 14:57:47,291 [25] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 14:57:47,455 [25] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 14:57:47,455 [25] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 14:57:47,459 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[333.4962](ms) ============= END
+2023-07-31 14:57:47,466 [44] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[87abd09a-96b3-42e8-b51a-5f27372a1c13], timer=638264122674669862 ============= BEGIN
+2023-07-31 14:57:47,467 [44] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 14:57:47,467 [44] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:87abd09a-96b3-42e8-b51a-5f27372a1c13| Body: ===============================END
+2023-07-31 14:57:47,467 [44] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 14:57:47,470 [44] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 14:57:47,470 [44] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 14:57:47,470 [44] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 14:57:47,470 [44] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 14:57:47,471 [44] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 14:57:47,471 [44] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 14:57:47,472 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[5.5633](ms) ============= END
+2023-07-31 15:00:37,914 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[37cb1069-f50c-41c4-bf22-827e42bdc36a], timer=638264124379133180 ============= BEGIN
+2023-07-31 15:00:38,250 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[337.1149](ms) ============= END
+2023-07-31 15:01:01,858 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[d1638125-7e56-4f22-82e5-a701412b516b], timer=638264124618588326 ============= BEGIN
+2023-07-31 15:01:01,864 [52] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 15:01:01,868 [52] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:d1638125-7e56-4f22-82e5-a701412b516b| Body: ===============================END
+2023-07-31 15:01:01,872 [52] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 15:01:01,930 [52] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 15:01:01,950 [52] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 15:01:01,951 [52] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 15:01:01,952 [52] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 15:01:02,097 [52] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 15:01:02,097 [52] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 15:01:02,102 [46] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[243.3936](ms) ============= END
+2023-07-31 15:01:02,138 [37] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[1973ed2c-9a89-44c6-8f43-add1fdeaed10], timer=638264124621384796 ============= BEGIN
+2023-07-31 15:01:02,140 [37] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 15:01:02,140 [37] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:1973ed2c-9a89-44c6-8f43-add1fdeaed10| Body: ===============================END
+2023-07-31 15:01:02,141 [37] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 15:01:02,144 [37] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 15:01:02,144 [37] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 15:01:02,144 [37] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 15:01:02,145 [37] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 15:01:02,145 [37] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 15:01:02,145 [37] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 15:01:02,146 [47] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[8.1518](ms) ============= END
+2023-07-31 15:01:17,601 [47] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000001], Method=[GET], GUID=[370bdeb8-5db1-45ac-ab2e-aa415843616e], timer=638264124776016738 ============= BEGIN
+2023-07-31 15:01:17,649 [47] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000001======================BEGIN
+2023-07-31 15:01:17,651 [47] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000001| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:370bdeb8-5db1-45ac-ab2e-aa415843616e| Body: ===============================END
+2023-07-31 15:01:17,653 [47] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 15:01:17,657 [47] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 15:01:17,657 [47] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 15:01:17,657 [47] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 15:01:17,658 [47] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 15:01:17,658 [47] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 15:01:17,658 [47] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000001======================END
+2023-07-31 15:01:17,659 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000001], Method=[GET], duration time process=[57.9505](ms) ============= END
+2023-07-31 15:13:16,669 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[93dc7ce1-af89-4d8a-a449-9e98a871b8f0], timer=638264131966688177 ============= BEGIN
+2023-07-31 15:13:17,224 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[555.2236](ms) ============= END
+2023-07-31 15:13:26,488 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[3654a12c-8a77-4450-9c46-22092dbfc5c7], timer=638264132064885366 ============= BEGIN
+2023-07-31 15:13:26,495 [19] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 15:13:26,500 [19] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:3654a12c-8a77-4450-9c46-22092dbfc5c7| Body: ===============================END
+2023-07-31 15:13:26,503 [19] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 15:13:26,636 [19] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 15:13:26,654 [19] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 15:13:26,656 [19] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 15:13:26,658 [19] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 15:13:26,829 [19] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 15:13:26,829 [19] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 15:13:26,833 [43] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[345.0533](ms) ============= END
+2023-07-31 15:13:26,841 [39] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[d38b22ff-a685-402e-91e7-22a2d79bbc6b], timer=638264132068415683 ============= BEGIN
+2023-07-31 15:13:26,842 [39] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 15:13:26,843 [39] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:d38b22ff-a685-402e-91e7-22a2d79bbc6b| Body: ===============================END
+2023-07-31 15:13:26,843 [39] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 15:13:26,847 [39] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 15:13:26,847 [39] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 15:13:26,847 [39] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 15:13:26,848 [39] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 15:13:26,848 [39] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 15:13:26,848 [39] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 15:13:26,849 [32] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[7.9801](ms) ============= END
+2023-07-31 15:13:30,078 [39] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast1], Method=[GET], GUID=[f85cf874-5308-4906-991c-4072d6f517d1], timer=638264132100783105 ============= BEGIN
+2023-07-31 15:13:30,088 [39] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast1], Method=[GET], duration time process=[9.9516](ms) ============= END
+2023-07-31 15:13:35,779 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[576f8fcf-932c-4bfa-9dae-f6f121009eb1], timer=638264132157795148 ============= BEGIN
+2023-07-31 15:13:35,781 [7] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 15:13:35,781 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:576f8fcf-932c-4bfa-9dae-f6f121009eb1| Body: ===============================END
+2023-07-31 15:13:35,781 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 15:13:35,785 [7] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 15:13:35,785 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 15:13:35,785 [7] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 15:13:35,786 [7] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 15:13:35,786 [7] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 15:13:35,786 [7] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 15:13:35,787 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[7.9215](ms) ============= END
+2023-07-31 15:13:36,450 [53] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[db6a8401-5310-4a32-9e64-5a28ca9a7f77], timer=638264132164506459 ============= BEGIN
+2023-07-31 15:13:36,451 [53] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 15:13:36,451 [53] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:db6a8401-5310-4a32-9e64-5a28ca9a7f77| Body: ===============================END
+2023-07-31 15:13:36,451 [53] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 15:13:36,454 [53] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 15:13:36,454 [53] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 15:13:36,454 [53] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 15:13:36,455 [53] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 15:13:36,456 [53] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 15:13:36,456 [53] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 15:13:36,456 [43] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[6.0074](ms) ============= END
+2023-07-31 15:16:25,257 [53] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[bf2f317d-4940-4e78-bb5a-1b486dc6e22d], timer=638264133852558635 ============= BEGIN
+2023-07-31 15:16:26,118 [53] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[861.3478](ms) ============= END
+2023-07-31 15:16:32,880 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[abd6343a-3052-4c12-9236-147f388fe619], timer=638264133928800242 ============= BEGIN
+2023-07-31 15:16:32,888 [19] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 15:16:32,898 [19] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:abd6343a-3052-4c12-9236-147f388fe619| Body: ===============================END
+2023-07-31 15:16:32,905 [19] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 15:16:32,997 [19] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 15:16:33,015 [19] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 15:16:33,020 [19] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 15:16:33,021 [19] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 15:16:33,310 [19] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 15:16:33,311 [19] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 15:16:33,320 [39] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[440.4398](ms) ============= END
+2023-07-31 15:16:33,332 [23] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[8d2f04d7-57fa-431b-a055-2a5431c99376], timer=638264133933314325 ============= BEGIN
+2023-07-31 15:16:33,334 [23] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 15:16:33,334 [23] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:8d2f04d7-57fa-431b-a055-2a5431c99376| Body: ===============================END
+2023-07-31 15:16:33,334 [23] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 15:16:33,337 [23] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 15:16:33,337 [23] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 15:16:33,338 [23] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 15:16:33,339 [23] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 15:16:33,339 [23] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 15:16:33,340 [23] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 15:16:33,341 [28] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[10.0023](ms) ============= END
+2023-07-31 15:16:48,718 [28] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000001], Method=[GET], GUID=[0e043991-38f9-488c-bdac-3db5fc2fb9fa], timer=638264134087186755 ============= BEGIN
+2023-07-31 15:16:48,804 [28] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000001======================BEGIN
+2023-07-31 15:16:48,804 [28] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000001| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:0e043991-38f9-488c-bdac-3db5fc2fb9fa| Body: ===============================END
+2023-07-31 15:16:48,807 [28] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================BEGIN
+2023-07-31 15:16:48,814 [28] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 21:
+PL/SQL: ORA-00904: "CFMAST": invalid identifier
+ORA-06550: line 1, column 7:
+PL/SQL: SQL Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 15:16:48,814 [28] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataselect * from cfmast: ======================END
+2023-07-31 15:16:48,814 [28] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 15:16:48,815 [28] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 15:16:48,815 [28] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 15:16:48,816 [28] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000001======================END
+2023-07-31 15:16:48,817 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000001], Method=[GET], duration time process=[98.8666](ms) ============= END
+2023-07-31 15:20:45,103 [50] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[d8eb6dd4-f82c-446c-9294-52a8480d0a3d], timer=638264136451012359 ============= BEGIN
+2023-07-31 15:20:45,109 [18] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[3a6e408f-5d04-40e4-909b-8d10e1757be8], timer=638264136451082077 ============= BEGIN
+2023-07-31 15:20:45,822 [18] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 15:20:45,834 [18] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:3a6e408f-5d04-40e4-909b-8d10e1757be8| Body: ===============================END
+2023-07-31 15:20:46,009 [50] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[908.4322](ms) ============= END
+2023-07-31 15:20:46,557 [18] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 15:20:46,557 [18] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 15:20:46,565 [18] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[1456.9783](ms) ============= END
+2023-07-31 15:20:51,002 [53] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[29e59147-2cec-4ef6-abc1-aac7f5019a65], timer=638264136510029717 ============= BEGIN
+2023-07-31 15:20:51,004 [53] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 15:20:51,004 [53] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:29e59147-2cec-4ef6-abc1-aac7f5019a65| Body: ===============================END
+2023-07-31 15:20:51,008 [53] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 15:20:51,008 [53] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 15:20:51,012 [50] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[9.9749](ms) ============= END
+2023-07-31 16:22:20,200 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[18bbc37b-3566-47a9-b21e-38cb940328a1], timer=638264173401987358 ============= BEGIN
+2023-07-31 16:22:21,102 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[903.2125](ms) ============= END
+2023-07-31 16:22:29,666 [43] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[e4285314-3726-4c7f-822d-83e82e3c8205], timer=638264173496650893 ============= BEGIN
+2023-07-31 16:22:29,673 [43] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 16:22:29,681 [43] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:e4285314-3726-4c7f-822d-83e82e3c8205| Body: ===============================END
+2023-07-31 16:22:29,909 [43] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 16:22:29,912 [43] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 16:22:30,111 [43] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 16:22:30,111 [43] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 16:22:30,122 [37] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[457.033](ms) ============= END
+2023-07-31 16:23:55,738 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[dba5d161-18bc-4d75-b3da-5f1c44774035], timer=638264174357349859 ============= BEGIN
+2023-07-31 16:23:56,592 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[856.0308](ms) ============= END
+2023-07-31 16:24:02,674 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[a2fc599e-9d17-43ee-9064-3abdeb831c5a], timer=638264174426748824 ============= BEGIN
+2023-07-31 16:24:02,682 [16] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 16:24:02,689 [16] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:a2fc599e-9d17-43ee-9064-3abdeb831c5a| Body: ===============================END
+2023-07-31 16:24:02,694 [16] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-07-31 16:24:02,796 [16] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-07-31 16:24:02,947 [16] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 16:24:02,947 [16] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 16:24:02,951 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[276.8882](ms) ============= END
+2023-07-31 16:31:07,977 [22] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[bcb5ab25-bbfb-45b5-9585-e3427100a627], timer=638264178679751273 ============= BEGIN
+2023-07-31 16:31:08,398 [22] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[423.2275](ms) ============= END
+2023-07-31 16:31:12,625 [37] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[25370d06-7974-46b1-adaf-9e98a1fe4cbc], timer=638264178726255144 ============= BEGIN
+2023-07-31 16:31:12,632 [37] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 16:31:12,638 [37] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:25370d06-7974-46b1-adaf-9e98a1fe4cbc| Body: ===============================END
+2023-07-31 16:31:12,643 [37] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-07-31 16:31:12,775 [37] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-07-31 16:31:12,928 [37] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 16:31:12,928 [37] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 16:31:12,932 [22] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[307.2059](ms) ============= END
+2023-07-31 16:36:08,817 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[4bfcc91b-47d1-4c3d-9b74-71b0b389f8af], timer=638264181688166204 ============= BEGIN
+2023-07-31 16:36:09,169 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[351.8238](ms) ============= END
+2023-07-31 16:36:16,526 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[472da85e-5b67-4753-b5bf-aa9f7b0530a3], timer=638264181765260106 ============= BEGIN
+2023-07-31 16:36:16,532 [49] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 16:36:16,539 [49] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:472da85e-5b67-4753-b5bf-aa9f7b0530a3| Body: ===============================END
+2023-07-31 16:36:16,546 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-07-31 16:36:16,657 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-07-31 16:36:16,788 [49] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 16:36:16,788 [49] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 16:36:16,791 [41] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[265.453](ms) ============= END
+2023-07-31 16:36:24,264 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000001], Method=[GET], GUID=[83b09d26-6d76-424d-80a3-3dc2eb8e23bb], timer=638264181842647673 ============= BEGIN
+2023-07-31 16:36:24,310 [15] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000001======================BEGIN
+2023-07-31 16:36:24,310 [15] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000001| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:83b09d26-6d76-424d-80a3-3dc2eb8e23bb| Body: ===============================END
+2023-07-31 16:36:24,312 [15] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 16:36:24,316 [15] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 16:36:24,333 [15] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 16:36:24,335 [15] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 16:36:24,336 [15] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 16:36:24,337 [15] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 16:36:24,337 [15] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000001======================END
+2023-07-31 16:36:24,338 [41] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000001], Method=[GET], duration time process=[73.8019](ms) ============= END
+2023-07-31 16:36:30,944 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[d8219d75-2bea-4f7a-8f6d-9f6aed8041aa], timer=638264181909447378 ============= BEGIN
+2023-07-31 16:36:30,946 [15] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 16:36:30,946 [15] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:d8219d75-2bea-4f7a-8f6d-9f6aed8041aa| Body: ===============================END
+2023-07-31 16:36:30,947 [15] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-07-31 16:36:30,948 [15] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-07-31 16:36:30,949 [15] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 16:36:30,949 [15] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 16:36:30,951 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[6.9898](ms) ============= END
+2023-07-31 16:39:40,745 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[53b9f44f-f697-48b0-8aac-770ea816456d], timer=638264183807458535 ============= BEGIN
+2023-07-31 16:39:40,751 [13] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 16:39:40,752 [13] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:53b9f44f-f697-48b0-8aac-770ea816456d| Body: ===============================END
+2023-07-31 16:39:40,752 [13] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 16:39:40,756 [13] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 16:39:40,756 [13] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 16:39:40,756 [13] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 16:39:40,757 [13] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 16:39:40,757 [13] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 16:39:40,757 [13] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 16:39:40,758 [50] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[12.6777](ms) ============= END
+2023-07-31 16:39:41,631 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[a4a09639-277c-4ef5-9e1d-ef97c2e1c31e], timer=638264183816318807 ============= BEGIN
+2023-07-31 16:39:41,632 [5] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 16:39:41,632 [5] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:a4a09639-277c-4ef5-9e1d-ef97c2e1c31e| Body: ===============================END
+2023-07-31 16:39:41,632 [5] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 16:39:41,671 [5] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 16:39:41,671 [5] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 16:39:41,671 [5] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 16:39:41,671 [5] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 16:39:41,672 [5] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 16:39:41,672 [5] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 16:39:41,673 [23] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[41.5633](ms) ============= END
+2023-07-31 16:43:54,762 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[3ab95962-6f58-481e-8971-48a8a7535386], timer=638264186347614011 ============= BEGIN
+2023-07-31 16:43:55,231 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[468.7333](ms) ============= END
+2023-07-31 16:45:05,023 [41] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[7f12d229-9415-4fcb-8bd9-d4b3c8994dbb], timer=638264187050230910 ============= BEGIN
+2023-07-31 16:45:05,053 [41] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 16:45:05,058 [41] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:7f12d229-9415-4fcb-8bd9-d4b3c8994dbb| Body: ===============================END
+2023-07-31 16:45:05,061 [41] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-07-31 16:45:05,300 [41] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-07-31 16:45:05,497 [41] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 16:45:05,497 [41] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 16:45:05,502 [41] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[478.9835](ms) ============= END
+2023-07-31 16:46:24,190 [18] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[f990b9ae-4871-426e-ac28-54b2d6aedd75], timer=638264187841899938 ============= BEGIN
+2023-07-31 16:46:24,680 [18] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[490.0064](ms) ============= END
+2023-07-31 16:46:37,646 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[65573d60-5f29-45af-a49a-80f278b74a0f], timer=638264187976468473 ============= BEGIN
+2023-07-31 16:46:37,649 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[2.9914](ms) ============= END
+2023-07-31 16:46:41,746 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[89dfc178-0cd5-49ee-ac41-c0f06d4e99a2], timer=638264188017463269 ============= BEGIN
+2023-07-31 16:46:41,754 [13] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 16:46:41,758 [13] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:89dfc178-0cd5-49ee-ac41-c0f06d4e99a2| Body: ===============================END
+2023-07-31 16:46:41,760 [13] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-07-31 16:46:41,839 [13] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-07-31 16:46:42,032 [13] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 16:46:42,032 [13] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 16:46:42,037 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[291.0609](ms) ============= END
+2023-07-31 16:46:45,850 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[5ead636f-9650-4678-9504-8869eab5ea73], timer=638264188058500426 ============= BEGIN
+2023-07-31 16:46:45,894 [49] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 16:46:45,894 [49] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:5ead636f-9650-4678-9504-8869eab5ea73| Body: ===============================END
+2023-07-31 16:46:45,895 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 16:46:45,900 [49] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 16:46:45,920 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 16:46:45,922 [49] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 16:46:45,925 [49] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 16:46:45,926 [49] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 16:46:45,926 [49] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 16:46:45,928 [18] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[78.5025](ms) ============= END
+2023-07-31 16:46:47,368 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[0d388d93-6b0c-4ad9-8741-09881ef3b98e], timer=638264188073684832 ============= BEGIN
+2023-07-31 16:46:47,370 [19] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 16:46:47,370 [19] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:0d388d93-6b0c-4ad9-8741-09881ef3b98e| Body: ===============================END
+2023-07-31 16:46:47,370 [19] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 16:46:47,375 [19] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 16:46:47,375 [19] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 16:46:47,375 [19] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 16:46:47,376 [19] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 16:46:47,376 [19] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 16:46:47,376 [19] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 16:46:47,378 [36] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[9.7707](ms) ============= END
+2023-07-31 16:50:52,769 [39] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[09d09b96-dfcf-425d-8009-652af0be956a], timer=638264190527678563 ============= BEGIN
+2023-07-31 16:50:53,218 [39] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[450.2035](ms) ============= END
+2023-07-31 16:51:18,427 [41] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[33d5caf1-878d-4205-8b9e-021e78731e5d], timer=638264190784275929 ============= BEGIN
+2023-07-31 16:51:18,472 [41] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 16:51:18,477 [41] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:33d5caf1-878d-4205-8b9e-021e78731e5d| Body: ===============================END
+2023-07-31 16:51:18,482 [41] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 16:51:18,582 [41] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 16:51:18,600 [41] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 16:51:18,602 [41] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 16:51:18,604 [41] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 16:51:18,736 [41] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 16:51:18,736 [41] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 16:51:18,740 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[312.7782](ms) ============= END
+2023-07-31 16:51:18,932 [43] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[55029b60-5af4-4556-91c2-1ecfb33376b6], timer=638264190789324818 ============= BEGIN
+2023-07-31 16:51:18,935 [43] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 16:51:18,935 [43] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:55029b60-5af4-4556-91c2-1ecfb33376b6| Body: ===============================END
+2023-07-31 16:51:18,935 [43] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 16:51:18,939 [43] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 16:51:18,939 [43] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 16:51:18,939 [43] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 16:51:18,940 [43] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 16:51:18,940 [43] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 16:51:18,940 [43] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 16:51:18,941 [35] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[9.0317](ms) ============= END
+2023-07-31 16:59:38,806 [50] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[f75fc5df-c742-40eb-90d9-724be4abf25c], timer=638264195788054845 ============= BEGIN
+2023-07-31 16:59:39,143 [50] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[338.0657](ms) ============= END
+2023-07-31 17:01:02,824 [32] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[0c69987f-4061-469e-bf3d-26f3b08a44ee], timer=638264196628245267 ============= BEGIN
+2023-07-31 17:01:02,918 [32] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[93.9576](ms) ============= END
+2023-07-31 17:13:35,423 [50] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[022cc5f0-82cc-4006-93fa-85534d96ccb3], timer=638264204154222524 ============= BEGIN
+2023-07-31 17:13:35,983 [50] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[561.2142](ms) ============= END
+2023-07-31 17:13:40,690 [81] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[a03ad4ce-85f3-408d-aea1-154837b06686], timer=638264204206905868 ============= BEGIN
+2023-07-31 17:13:40,710 [81] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 17:13:40,759 [81] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:a03ad4ce-85f3-408d-aea1-154837b06686| Body: ===============================END
+2023-07-31 17:13:40,825 [81] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-07-31 17:13:41,208 [81] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-07-31 17:13:41,376 [81] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 17:13:41,377 [81] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 17:13:41,381 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[690.6894](ms) ============= END
+2023-07-31 17:13:49,762 [81] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/000100000000002], Method=[GET], GUID=[9fae8545-7a46-49f2-8139-fb3f39b93a4c], timer=638264204297629407 ============= BEGIN
+2023-07-31 17:13:49,815 [81] INFO  RestAPI.Controllers.CfmastController - cfmast/000100000000002======================BEGIN
+2023-07-31 17:13:49,815 [81] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/000100000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:9fae8545-7a46-49f2-8139-fb3f39b93a4c| Body: ===============================END
+2023-07-31 17:13:49,817 [81] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-07-31 17:13:49,847 [81] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETALLCFMAST'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 17:13:49,874 [81] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-07-31 17:13:49,876 [81] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 17:13:49,882 [81] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 17:13:49,884 [81] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 17:13:49,885 [81] INFO  RestAPI.Controllers.CfmastController - cfmast/000100000000002======================END
+2023-07-31 17:13:49,889 [32] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/000100000000002], Method=[GET], duration time process=[126.7551](ms) ============= END
+2023-07-31 17:19:16,660 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[8ca6d025-dc3f-4ec0-a122-e0713ba9a4d7], timer=638264207566584672 ============= BEGIN
+2023-07-31 17:19:17,096 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[437.8552](ms) ============= END
+2023-07-31 17:19:21,299 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[fbea91d7-201a-44b5-b4dd-4eaf4269bff6], timer=638264207612992122 ============= BEGIN
+2023-07-31 17:19:21,306 [65] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 17:19:21,311 [65] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:fbea91d7-201a-44b5-b4dd-4eaf4269bff6| Body: ===============================END
+2023-07-31 17:19:21,317 [65] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-07-31 17:19:21,455 [65] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-07-31 17:19:21,641 [65] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 17:19:21,641 [65] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 17:19:21,646 [29] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[347.6419](ms) ============= END
+2023-07-31 17:19:33,378 [58] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[5f073ecc-e45e-486c-ae30-2fda8342422f], timer=638264207733784976 ============= BEGIN
+2023-07-31 17:19:33,424 [58] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 17:19:33,424 [58] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:5f073ecc-e45e-486c-ae30-2fda8342422f| Body: ===============================END
+2023-07-31 17:19:33,426 [58] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 17:19:33,553 [58] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 17:19:33,568 [58] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 17:19:33,570 [58] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 17:19:33,572 [58] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 17:19:33,573 [58] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 17:19:33,573 [58] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 17:19:33,574 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[196.0318](ms) ============= END
+2023-07-31 17:19:33,710 [57] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[5db1e34a-6cc6-4e45-980f-1890e7a6e131], timer=638264207737108236 ============= BEGIN
+2023-07-31 17:19:33,712 [57] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 17:19:33,712 [57] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:5db1e34a-6cc6-4e45-980f-1890e7a6e131| Body: ===============================END
+2023-07-31 17:19:33,712 [57] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 17:19:33,717 [57] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 17:19:33,717 [57] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 17:19:33,717 [57] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 17:19:33,718 [57] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 17:19:33,718 [57] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 17:19:33,718 [57] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 17:19:33,719 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[8.9757](ms) ============= END
+2023-07-31 17:19:38,715 [57] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/000100000000], Method=[GET], GUID=[dc7cac7a-d5a7-4fa3-8f2f-80ef027af9ed], timer=638264207787157973 ============= BEGIN
+2023-07-31 17:19:38,717 [57] INFO  RestAPI.Controllers.CfmastController - cfmast/000100000000======================BEGIN
+2023-07-31 17:19:38,717 [57] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/000100000000| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:dc7cac7a-d5a7-4fa3-8f2f-80ef027af9ed| Body: ===============================END
+2023-07-31 17:19:38,717 [57] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 17:19:38,720 [57] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 17:19:38,720 [57] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 17:19:38,720 [57] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 17:19:38,720 [57] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 17:19:38,721 [57] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 17:19:38,721 [57] INFO  RestAPI.Controllers.CfmastController - cfmast/000100000000======================END
+2023-07-31 17:19:38,722 [58] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/000100000000], Method=[GET], duration time process=[6.4601](ms) ============= END
+2023-07-31 17:20:42,975 [56] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[d67322ac-322d-4b27-99be-31664891d12d], timer=638264208429750318 ============= BEGIN
+2023-07-31 17:20:42,981 [56] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 17:20:42,981 [56] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:d67322ac-322d-4b27-99be-31664891d12d| Body: ===============================END
+2023-07-31 17:20:42,981 [56] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 17:20:42,985 [56] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 17:20:42,985 [56] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 17:20:42,985 [56] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 17:20:42,986 [56] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 17:20:42,986 [56] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 17:20:42,986 [56] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 17:20:42,988 [38] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[13.2417](ms) ============= END
+2023-07-31 17:20:44,406 [47] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[e970b5ed-e6a8-43e0-b686-3c8923afdf0a], timer=638264208444067825 ============= BEGIN
+2023-07-31 17:20:44,408 [47] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 17:20:44,408 [47] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:e970b5ed-e6a8-43e0-b686-3c8923afdf0a| Body: ===============================END
+2023-07-31 17:20:44,408 [47] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 17:20:44,412 [47] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 17:20:44,413 [47] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 17:20:44,413 [47] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 17:20:44,413 [47] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 17:20:44,413 [47] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 17:20:44,413 [47] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 17:20:44,414 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[7.9787](ms) ============= END
+2023-07-31 17:51:32,009 [128] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[2894d222-73a1-4a73-8636-3bd4bf39d586], timer=638264226920087608 ============= BEGIN
+2023-07-31 17:51:32,365 [128] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[356.3236](ms) ============= END
+2023-07-31 17:51:48,265 [114] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[94b7b3bd-b48d-4420-a6df-4d7c35b08566], timer=638264227082659894 ============= BEGIN
+2023-07-31 17:51:48,299 [114] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 17:51:48,303 [114] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:94b7b3bd-b48d-4420-a6df-4d7c35b08566| Body: ===============================END
+2023-07-31 17:51:48,307 [114] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 17:51:48,412 [114] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 17:51:48,428 [114] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 17:51:48,429 [114] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 17:51:48,431 [114] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 17:51:48,548 [114] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 17:51:48,548 [114] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 17:51:48,552 [114] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[286.6269](ms) ============= END
+2023-07-31 17:51:48,678 [130] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[a02b26f4-8323-4022-874c-6f7947319744], timer=638264227086788689 ============= BEGIN
+2023-07-31 17:51:48,680 [130] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 17:51:48,680 [130] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:a02b26f4-8323-4022-874c-6f7947319744| Body: ===============================END
+2023-07-31 17:51:48,680 [130] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 17:51:48,685 [130] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 17:51:48,686 [130] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 17:51:48,686 [130] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 17:51:48,686 [130] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 17:51:48,686 [130] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 17:51:48,686 [130] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 17:51:48,687 [132] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[9.0439](ms) ============= END
+2023-07-31 17:52:44,438 [133] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/'00010000000002'], Method=[GET], GUID=[26176452-c8a9-4dbf-8d5a-a313bda5ae51], timer=638264227644380817 ============= BEGIN
+2023-07-31 17:52:44,442 [133] INFO  RestAPI.Controllers.CfmastController - cfmast/'00010000000002'======================BEGIN
+2023-07-31 17:52:44,442 [133] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/'00010000000002'| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:26176452-c8a9-4dbf-8d5a-a313bda5ae51| Body: ===============================END
+2023-07-31 17:52:44,442 [133] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 17:52:44,446 [133] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 17:52:44,446 [133] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 17:52:44,446 [133] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 17:52:44,447 [133] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 17:52:44,447 [133] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 17:52:44,447 [133] INFO  RestAPI.Controllers.CfmastController - cfmast/'00010000000002'======================END
+2023-07-31 17:52:44,448 [114] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/'00010000000002'], Method=[GET], duration time process=[9.9968](ms) ============= END
+2023-07-31 17:53:46,587 [142] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/"00010000000002"], Method=[GET], GUID=[7c63921c-4728-4c52-8776-70058e9ad2b8], timer=638264228265850758 ============= BEGIN
+2023-07-31 17:53:46,594 [142] INFO  RestAPI.Controllers.CfmastController - cfmast/"00010000000002"======================BEGIN
+2023-07-31 17:53:46,594 [142] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/"00010000000002"| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:7c63921c-4728-4c52-8776-70058e9ad2b8| Body: ===============================END
+2023-07-31 17:53:46,594 [142] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 17:53:46,597 [142] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 17:53:46,597 [142] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 17:53:46,597 [142] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 17:53:46,598 [142] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 17:53:46,598 [142] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 17:53:46,598 [142] INFO  RestAPI.Controllers.CfmastController - cfmast/"00010000000002"======================END
+2023-07-31 17:53:46,599 [132] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/"00010000000002"], Method=[GET], duration time process=[13.953](ms) ============= END
+2023-07-31 23:57:28,574 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[a35d70d0-efbc-4a1b-8284-0c727c0e1fdd], timer=638264446485596676 ============= BEGIN
+2023-07-31 23:57:29,892 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1332.6097](ms) ============= END
+2023-07-31 23:57:36,879 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[75a461a0-8f52-4106-a2fa-fe18f8394d18], timer=638264446568799539 ============= BEGIN
+2023-07-31 23:57:36,893 [9] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-07-31 23:57:36,916 [9] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:75a461a0-8f52-4106-a2fa-fe18f8394d18| Body: ===============================END
+2023-07-31 23:57:36,924 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-07-31 23:57:37,683 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-07-31 23:57:37,862 [9] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-07-31 23:57:37,862 [9] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-07-31 23:57:37,875 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[995.8531](ms) ============= END
+2023-07-31 23:57:46,054 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[6263d875-5f1a-4ebe-902f-2610054a890c], timer=638264446660546329 ============= BEGIN
+2023-07-31 23:57:46,111 [7] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 23:57:46,111 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:6263d875-5f1a-4ebe-902f-2610054a890c| Body: ===============================END
+2023-07-31 23:57:46,113 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 23:57:46,196 [7] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 23:57:46,234 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 23:57:46,236 [7] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 23:57:46,255 [7] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 23:57:46,257 [7] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 23:57:46,257 [7] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 23:57:46,259 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[204.977](ms) ============= END
+2023-07-31 23:57:47,274 [14] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[002e152b-6a81-4e29-92dd-cbbd087ae518], timer=638264446672745607 ============= BEGIN
+2023-07-31 23:57:47,276 [14] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 23:57:47,276 [14] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:002e152b-6a81-4e29-92dd-cbbd087ae518| Body: ===============================END
+2023-07-31 23:57:47,276 [14] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 23:57:47,281 [14] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 23:57:47,281 [14] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 23:57:47,281 [14] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 23:57:47,282 [14] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 23:57:47,282 [14] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 23:57:47,282 [14] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 23:57:47,283 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[9.0388](ms) ============= END
+2023-07-31 23:57:59,015 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/000100000000], Method=[GET], GUID=[eb06ef07-a929-43cd-b143-f7070fbdec0a], timer=638264446790150125 ============= BEGIN
+2023-07-31 23:57:59,018 [15] INFO  RestAPI.Controllers.CfmastController - cfmast/000100000000======================BEGIN
+2023-07-31 23:57:59,018 [15] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/000100000000| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:eb06ef07-a929-43cd-b143-f7070fbdec0a| Body: ===============================END
+2023-07-31 23:57:59,018 [15] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 23:57:59,023 [15] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 23:57:59,023 [15] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 23:57:59,023 [15] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 23:57:59,023 [15] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 23:57:59,023 [15] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 23:57:59,023 [15] INFO  RestAPI.Controllers.CfmastController - cfmast/000100000000======================END
+2023-07-31 23:57:59,024 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/000100000000], Method=[GET], duration time process=[9.7552](ms) ============= END
+2023-07-31 23:58:01,898 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], GUID=[008cbbd4-055c-42a5-945f-c075ce18f01e], timer=638264446818981681 ============= BEGIN
+2023-07-31 23:58:01,901 [16] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================BEGIN
+2023-07-31 23:58:01,901 [16] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Purpose:prefetch;prerender| Purpose:prefetch| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:008cbbd4-055c-42a5-945f-c075ce18f01e| Body: ===============================END
+2023-07-31 23:58:01,901 [16] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-07-31 23:58:01,903 [16] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETCFMASTBYCUSTID'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 96
+2023-07-31 23:58:01,903 [16] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-07-31 23:58:01,903 [16] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-07-31 23:58:01,904 [16] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-07-31 23:58:01,904 [16] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-07-31 23:58:01,904 [16] INFO  RestAPI.Controllers.CfmastController - cfmast/00010000000002======================END
+2023-07-31 23:58:01,905 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/00010000000002], Method=[GET], duration time process=[6.9962](ms) ============= END

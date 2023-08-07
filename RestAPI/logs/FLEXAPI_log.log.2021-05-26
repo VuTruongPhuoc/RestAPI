@@ -1,0 +1,49 @@
+﻿2021-05-26 16:55:59,289 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[01979da3-bd59-43e6-befe-874be3b859ec], timer=637576449592776402 ============= BEGIN
+2021-05-26 16:56:00,067 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[789.2077](ms) ============= END
+2021-05-26 16:56:27,120 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/stockTranfer], Method=[POST], GUID=[0a6e62a6-9b6a-4a0a-bea7-a6b75e603312], timer=637576449871207022 ============= BEGIN
+2021-05-26 16:56:27,337 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/stockTranfer], Method=[POST], duration time process=[216.7941](ms) ============= END
+2021-05-26 16:57:02,490 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/stockTransfer], Method=[POST], GUID=[34ed4ba0-2e23-44c8-88b7-1281cad0fbf0], timer=637576450224900718 ============= BEGIN
+2021-05-26 16:57:07,341 [10] INFO  RestAPI.Controllers.AccountsController - internalStockTranfer======================BEGIN
+2021-05-26 16:57:07,552 [10] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/stockTransfer| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:4db10ae7-56b8-4c13-bd93-d5cc1d6dc018| GUID:34ed4ba0-2e23-44c8-88b7-1281cad0fbf0| Body: { 
+    "requestid":"A0003", 
+    "account":"0001006119", 
+    "symbol":"FLC", 
+    "tradeQuantity":"100", 
+    "blockedqtty": "0",
+    "toAccount":"0001006123", 
+    "Description":"YenNT test ck: 0001006119 sang tk 0001006123" 
+ }===============================END
+2021-05-26 16:57:09,875 [10] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2021-05-26 16:57:12,691 [10] INFO  RestAPI.Bussiness.AccountProcess - internalStockTranfer======================BEGIN
+2021-05-26 16:57:58,026 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_inStockTranfer: ======================BEGIN
+2021-05-26 16:58:00,166 [10] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_inStockTranfer: ======================BEGIN
+2021-05-26 16:58:00,247 [10] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_inStockTranfer: ======================END
+2021-05-26 16:58:00,247 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_inStockTranfer: callDBTransaction.v_lngErrorCode: -10012
+2021-05-26 16:58:00,260 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_inStockTranfer: ======================END
+2021-05-26 16:58:12,961 [10] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-10012","errmsg":"[-10012]: Trùng mã yêu cầu"}
+2021-05-26 16:58:13,694 [10] INFO  RestAPI.Controllers.AccountsController - internalStockTranfer======================END
+2021-05-26 16:58:16,213 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/stockTransfer], Method=[POST], duration time process=[73723.0039](ms) ============= END
+2021-05-26 16:58:28,521 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/stockTransfer], Method=[POST], GUID=[124134a0-8266-4b5c-8909-e2f5fb37444d], timer=637576451085211662 ============= BEGIN
+2021-05-26 16:58:37,448 [6] INFO  RestAPI.Controllers.AccountsController - internalStockTranfer======================BEGIN
+2021-05-26 16:58:37,448 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/stockTransfer| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:e9b1f0c3-9417-4e6f-a15c-16b5b45ee3b2| GUID:124134a0-8266-4b5c-8909-e2f5fb37444d| Body: { 
+    "requestid":"HU000003", 
+    "account":"0001006119", 
+    "symbol":"FLC", 
+    "tradeQuantity":"100", 
+    "blockedqtty": "0",
+    "toAccount":"0001006123", 
+    "Description":"YenNT test ck: 0001006119 sang tk 0001006123" 
+ }===============================END
+2021-05-26 16:58:37,478 [6] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2021-05-26 16:58:43,502 [6] INFO  RestAPI.Bussiness.AccountProcess - internalStockTranfer======================BEGIN
+2021-05-26 16:58:45,448 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_inStockTranfer: ======================BEGIN
+2021-05-26 16:58:45,454 [6] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_inStockTranfer: ======================BEGIN
+2021-05-26 16:58:46,216 [6] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_inStockTranfer: ======================END
+2021-05-26 16:58:46,216 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_inStockTranfer: callDBTransaction.v_lngErrorCode: 0
+2021-05-26 16:58:46,242 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_inStockTranfer: ======================END

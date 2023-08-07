@@ -1,0 +1,68 @@
+﻿2021-02-25 09:43:51,213 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[81c26d02-cbce-49a0-9cab-e96f37085ab8], timer=637498430311980179 ============= BEGIN
+2021-02-25 09:43:51,874 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[675.3094](ms) ============= END
+2021-02-25 09:46:22,707 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/cashTranfer], Method=[POST], GUID=[0adf69cf-a6a6-4406-aa5d-b9b3d6ef6977], timer=637498431827074252 ============= BEGIN
+2021-02-25 09:46:22,717 [6] INFO  RestAPI.Controllers.AccountsController - accounts/cashTranfer======================BEGIN
+2021-02-25 09:46:22,730 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/cashTranfer| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:175697c8-4477-49a9-8b33-1d5d7e22a950| GUID:0adf69cf-a6a6-4406-aa5d-b9b3d6ef6977| Body: { "requestid":"CT0009", 
+    "account":"0001006119", 
+    "amount":"10000", 
+    "toAccount":"0001006123", 
+    "Description":"YenNT test chuyen tien: 0001006119 sang tk 0001006123" 
+}
+
+
+===============================END
+2021-02-25 09:46:22,795 [6] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2021-02-25 09:46:22,814 [6] INFO  RestAPI.Bussiness.AccountProcess - internalCashTranfer======================BEGIN
+2021-02-25 09:46:22,891 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_internalCashTranfer: ======================BEGIN
+2021-02-25 09:46:24,716 [6] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_internalCashTranfer: ======================BEGIN
+2021-02-25 09:46:24,777 [6] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_internalCashTranfer: ======================END
+2021-02-25 09:46:24,777 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_internalCashTranfer: callDBTransaction.v_lngErrorCode: -60006
+2021-02-25 09:46:24,792 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_internalCashTranfer: ======================END
+2021-02-25 09:46:24,965 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-60006","errmsg":"[-60006] Số tiểu khoản chuyển không đúng hoặc trạng thái đang không hoạt động!"}
+2021-02-25 09:46:24,965 [6] INFO  RestAPI.Controllers.AccountsController - accounts/cashTranfer======================END
+2021-02-25 09:46:24,984 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/cashTranfer], Method=[POST], duration time process=[2276.7017](ms) ============= END
+2021-02-25 09:46:40,609 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/cashTranfer], Method=[POST], GUID=[3a315ea9-5571-417e-8656-82b0dbe7cc5d], timer=637498432006088579 ============= BEGIN
+2021-02-25 09:46:47,456 [6] INFO  RestAPI.Controllers.AccountsController - accounts/cashTranfer======================BEGIN
+2021-02-25 09:46:47,456 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/cashTranfer| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:4b1b10c8-8915-44f7-a223-b8c951f8256b| GUID:3a315ea9-5571-417e-8656-82b0dbe7cc5d| Body: { "requestid":"CT0009", 
+    "account":"0001006119", 
+    "amount":"10000", 
+    "toAccount":"0001006123", 
+    "Description":"YenNT test chuyen tien: 0001006119 sang tk 0001006123" 
+}
+
+
+===============================END
+2021-02-25 09:46:47,502 [6] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2021-02-25 09:46:50,488 [6] INFO  RestAPI.Bussiness.AccountProcess - internalCashTranfer======================BEGIN
+2021-02-25 09:48:01,364 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[c206953f-9f80-453a-8817-8d03f9f40422], timer=637498432813541089 ============= BEGIN
+2021-02-25 09:48:02,516 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1161.8725](ms) ============= END
+2021-02-25 09:48:40,084 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/cashTranfer], Method=[POST], GUID=[55f5fca7-3d78-4819-abc2-389b37c84bbc], timer=637498433200847449 ============= BEGIN
+2021-02-25 09:48:42,236 [5] INFO  RestAPI.Controllers.AccountsController - accounts/cashTranfer======================BEGIN
+2021-02-25 09:48:42,247 [5] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/cashTranfer| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:3b919616-60f4-417c-87b4-05167bcc0e95| GUID:55f5fca7-3d78-4819-abc2-389b37c84bbc| Body: { "requestid":"CT0009", 
+    "account":"0001006119", 
+    "amount":"10000", 
+    "toAccount":"0001006123", 
+    "Description":"YenNT test chuyen tien: 0001006119 sang tk 0001006123" 
+}
+
+
+===============================END
+2021-02-25 09:48:42,273 [5] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2021-02-25 09:48:43,865 [5] INFO  RestAPI.Bussiness.AccountProcess - internalCashTranfer======================BEGIN
+2021-02-25 09:48:43,920 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_internalCashTranfer: ======================BEGIN
+2021-02-25 09:48:44,381 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_internalCashTranfer: ======================BEGIN
+2021-02-25 09:48:44,433 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_internalCashTranfer: ======================END
+2021-02-25 09:48:44,433 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_internalCashTranfer: callDBTransaction.v_lngErrorCode: -10012
+2021-02-25 09:48:44,446 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_internalCashTranfer: ======================END
+2021-02-25 09:48:44,572 [5] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-10012","errmsg":"[-10012]: Trùng mã yêu cầu"}
+2021-02-25 09:48:44,572 [5] INFO  RestAPI.Controllers.AccountsController - accounts/cashTranfer======================END
+2021-02-25 09:48:44,627 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/cashTranfer], Method=[POST], duration time process=[4542.4602](ms) ============= END

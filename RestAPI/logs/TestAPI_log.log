@@ -1,0 +1,1308 @@
+﻿2023-08-07 10:18:30,533 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[7dfcb84f-2e67-44af-ba7b-bed61c24a904], timer=638270003105198155 ============= BEGIN
+2023-08-07 10:18:30,535 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/afmast], Method=[GET], GUID=[040c39fc-010b-41af-b7ee-58b69b1c760d], timer=638270003105357718 ============= BEGIN
+2023-08-07 10:18:31,819 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/afmast], Method=[GET], duration time process=[1282.4948](ms) ============= END
+2023-08-07 10:18:31,885 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1365.2765](ms) ============= END
+2023-08-07 10:18:46,898 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[f74a25b9-e51a-4883-af7c-e72c33f7bc9d], timer=638270003268987784 ============= BEGIN
+2023-08-07 10:18:46,902 [16] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 10:18:46,926 [16] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:7d325376-af27-40fc-acbb-56698a00c6f1| GUID:f74a25b9-e51a-4883-af7c-e72c33f7bc9d| Body: ===============================END
+2023-08-07 10:18:46,930 [16] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 10:18:50,103 [16] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 10:18:50,336 [16] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 10:18:50,336 [16] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 10:18:50,350 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[3451.9822](ms) ============= END
+2023-08-07 10:19:05,042 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/00010000000002], Method=[GET], GUID=[0f9df4f7-6c44-40e8-870d-f093c3934fdc], timer=638270003450423566 ============= BEGIN
+2023-08-07 10:19:05,088 [9] INFO  RestAPI.Controllers.AfmastController - afmast/00010000000002======================BEGIN
+2023-08-07 10:19:05,088 [9] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/00010000000002| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:06d5ea3b-7c6d-498a-b565-497b204108b6| GUID:0f9df4f7-6c44-40e8-870d-f093c3934fdc| Body: ===============================END
+2023-08-07 10:19:05,089 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 10:19:05,181 [9] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETALLAFMAST'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 95
+2023-08-07 10:19:05,214 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 10:19:05,216 [9] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-08-07 10:19:05,250 [9] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-08-07 10:19:05,254 [9] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-08-07 10:19:05,254 [9] INFO  RestAPI.Controllers.AfmastController - afmast/00010000000002======================END
+2023-08-07 10:19:05,256 [14] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/00010000000002], Method=[GET], duration time process=[214.3184](ms) ============= END
+2023-08-07 10:19:18,327 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[4882aa03-ffea-4694-8a5f-b5025caa803a], timer=638270003583276967 ============= BEGIN
+2023-08-07 10:19:18,328 [11] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 10:19:18,328 [11] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:aacb5d5a-4a72-430f-ae24-a7f21c89fe93| GUID:4882aa03-ffea-4694-8a5f-b5025caa803a| Body: ===============================END
+2023-08-07 10:19:18,328 [11] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 10:19:18,330 [11] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 10:19:18,330 [11] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 10:19:18,330 [11] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 10:19:18,330 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[3.0307](ms) ============= END
+2023-08-07 10:19:22,905 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000005], Method=[GET], GUID=[341795ac-6dca-45f6-815f-032fcad917f5], timer=638270003629053888 ============= BEGIN
+2023-08-07 10:19:22,907 [11] INFO  RestAPI.Controllers.AfmastController - afmast/0001000005======================BEGIN
+2023-08-07 10:19:22,907 [11] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/0001000005| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:d8e7cb3a-f910-46bd-9d48-3842995e346b| GUID:341795ac-6dca-45f6-815f-032fcad917f5| Body: ===============================END
+2023-08-07 10:19:22,907 [11] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 10:19:22,909 [11] ERROR RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'GETALLAFMAST'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteStoredReturnDataset(String pv_strStoredName, ReportParameters[] pv_rptParameters)
+   at RestAPI.Bussiness.GetDataProcess.executeGetData(String pv_strMethod, List`1 pv_keyField) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\GetDataProcess.cs:line 95
+2023-08-07 10:19:22,909 [11] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 10:19:22,909 [11] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-08-07 10:19:22,910 [11] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-08-07 10:19:22,910 [11] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"-1","errmsg":"Internal Server Error!"}
+2023-08-07 10:19:22,910 [11] INFO  RestAPI.Controllers.AfmastController - afmast/0001000005======================END
+2023-08-07 10:19:22,911 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000005], Method=[GET], duration time process=[5.9509](ms) ============= END
+2023-08-07 10:21:07,553 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[f98ab50c-b977-46a3-b4d2-6d8516b34bf0], timer=638270004675522572 ============= BEGIN
+2023-08-07 10:21:07,919 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[367.2211](ms) ============= END
+2023-08-07 10:21:11,319 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000005], Method=[GET], GUID=[ff711187-cea8-45e2-bf70-30ef1c36a286], timer=638270004713190559 ============= BEGIN
+2023-08-07 10:21:11,357 [12] INFO  RestAPI.Controllers.AfmastController - afmast/0001000005======================BEGIN
+2023-08-07 10:21:11,361 [12] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/0001000005| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:58aad885-32cb-483a-ae4a-6bff1c72f01e| GUID:ff711187-cea8-45e2-bf70-30ef1c36a286| Body: ===============================END
+2023-08-07 10:21:11,363 [12] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAfmastbyAcctno: ======================BEGIN
+2023-08-07 10:21:11,508 [12] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAfmastbyAcctno: ======================END
+2023-08-07 10:21:11,657 [12] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 10:21:11,657 [12] INFO  RestAPI.Controllers.AfmastController - afmast/0001000005======================END
+2023-08-07 10:21:11,660 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000005], Method=[GET], duration time process=[341.6265](ms) ============= END
+2023-08-07 10:31:24,405 [22] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[bd2cae54-0da6-47e6-92f7-da2aa2db3521], timer=638270010844037109 ============= BEGIN
+2023-08-07 10:31:24,893 [22] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[490.0428](ms) ============= END
+2023-08-07 10:32:40,757 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], GUID=[90a66060-b0e5-4a1e-8db2-4b8c0ef77fc5], timer=638270011607561010 ============= BEGIN
+2023-08-07 10:32:40,768 [13] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================BEGIN
+2023-08-07 10:32:40,777 [13] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:d7740bbf-cc09-4d1c-9e43-e75989d06488| GUID:90a66060-b0e5-4a1e-8db2-4b8c0ef77fc5| Body:  {
+    "custid": "00010000000002",
+    "acctno": "0001000006",
+    "martype": "N",
+    "mrcrlimitmax": "1000000000"
+}===============================END
+2023-08-07 10:32:40,780 [13] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 10:32:40,821 [13] INFO  RestAPI.Bussiness.AfmastProcess - postafmaststrRequest {
+    "custid": "00010000000002",
+    "acctno": "0001000006",
+    "martype": "N",
+    "mrcrlimitmax": "1000000000"
+}
+2023-08-07 10:32:40,895 [13] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 10:32:40,900 [13] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 10:32:41,409 [13] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================END
+2023-08-07 10:32:41,409 [13] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 10:32:41,419 [13] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================END
+2023-08-07 10:32:41,584 [13] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: POST| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 10:32:41,584 [13] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================END
+2023-08-07 10:32:41,591 [24] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], duration time process=[835.7052](ms) ============= END
+2023-08-07 10:33:56,125 [31] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006], Method=[PUT], GUID=[eb2fb09a-5cbc-4d20-a30a-4aea085b332e], timer=638270012361255191 ============= BEGIN
+2023-08-07 10:33:56,233 [31] INFO  RestAPI.Controllers.AfmastController - afmast/0001000006 PUT======================BEGIN
+2023-08-07 10:33:56,233 [31] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/0001000006| method:PUT| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:338b1c4a-0f0b-49eb-af70-594be6a070bc| GUID:eb2fb09a-5cbc-4d20-a30a-4aea085b332e| Body:  {
+    "custid": "00010000000002",
+    "acctno": "0001000006",
+    "martype": "N",
+    "mrcrlimitmax": "1000000001"
+}===============================END
+2023-08-07 10:33:56,233 [31] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 10:33:56,236 [31] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: ======================BEGIN
+2023-08-07 10:33:56,236 [31] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_SuaAFMAST: ======================BEGIN
+2023-08-07 10:33:56,274 [31] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_SuaAFMAST: ======================END
+2023-08-07 10:33:56,274 [31] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 10:33:56,274 [31] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: ======================END
+2023-08-07 10:33:56,275 [31] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 10:33:56,275 [31] INFO  RestAPI.Controllers.AfmastController - afmast/0001000006 PUT======================END
+2023-08-07 10:33:56,275 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006], Method=[PUT], duration time process=[149.6734](ms) ============= END
+2023-08-07 10:36:43,896 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006], Method=[DELETE], GUID=[c3845c5f-c2d8-44d9-a107-5209cd0935f0], timer=638270014038960178 ============= BEGIN
+2023-08-07 10:36:43,902 [9] INFO  RestAPI.Controllers.AfmastController - afmast/0001000006 DELETE======================BEGIN
+2023-08-07 10:36:43,907 [9] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/0001000006| method:DELETE| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:16fb7859-a8e6-410b-8cc2-bed50c2a76af| GUID:c3845c5f-c2d8-44d9-a107-5209cd0935f0| Body: ===============================END
+2023-08-07 10:36:43,907 [9] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 10:36:43,908 [9] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_XoaAFMAST: ======================BEGIN
+2023-08-07 10:36:43,908 [9] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_XoaAFMAST: ======================BEGIN
+2023-08-07 10:36:44,001 [9] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_XoaAFMAST: ======================END
+2023-08-07 10:36:44,001 [9] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_XoaAFMAST: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 10:36:44,002 [9] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_XoaAFMAST: ======================END
+2023-08-07 10:36:44,002 [9] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: DELETE| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 10:36:44,002 [9] INFO  RestAPI.Controllers.AfmastController - afmast/0001000006 DELETE======================END
+2023-08-07 10:36:44,002 [24] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006], Method=[DELETE], duration time process=[106.6095](ms) ============= END
+2023-08-07 10:50:20,569 [23] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[1bf4e058-a7df-4ae1-b19f-e843ed451910], timer=638270022205678895 ============= BEGIN
+2023-08-07 10:50:21,030 [23] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[462.7186](ms) ============= END
+2023-08-07 10:50:34,590 [36] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[384124bd-0687-497b-9990-36dd46e1344f], timer=638270022345908627 ============= BEGIN
+2023-08-07 10:50:34,601 [36] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 10:50:34,607 [36] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:text/html| Accept-Encoding:gzip| Accept-Language:en| Host:localhost:54240| User-Agent:Mozilla/5.0| sec-ch-ua:"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"| sec-ch-ua-mobile:?0| sec-ch-ua-platform:"Windows"| Upgrade-Insecure-Requests:1| Sec-Fetch-Site:none| Sec-Fetch-Mode:navigate| Sec-Fetch-User:?1| Sec-Fetch-Dest:document| GUID:384124bd-0687-497b-9990-36dd46e1344f| Body: ===============================END
+2023-08-07 10:50:34,610 [36] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 10:50:34,868 [36] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 10:50:35,026 [36] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 10:50:35,026 [36] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 10:50:35,032 [36] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[442.0873](ms) ============= END
+2023-08-07 11:02:16,689 [38] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[4cd8e2ba-3650-464b-b501-b3e8d7a59e25], timer=638270029366870881 ============= BEGIN
+2023-08-07 11:02:17,140 [38] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[453.3984](ms) ============= END
+2023-08-07 11:02:30,506 [27] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[53a972c2-a785-4b43-993a-d29604b53a44], timer=638270029505064705 ============= BEGIN
+2023-08-07 11:02:30,512 [27] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 11:02:30,516 [27] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:53a972c2-a785-4b43-993a-d29604b53a44| Body: ===============================END
+2023-08-07 11:02:30,519 [27] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 11:02:30,676 [27] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 11:02:30,836 [27] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:02:30,836 [27] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 11:02:30,840 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[333.7544](ms) ============= END
+2023-08-07 11:02:35,413 [38] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/getmaxacctno], Method=[GET], GUID=[6b7aded2-3dd0-495b-b187-0a92a098dca6], timer=638270029554129616 ============= BEGIN
+2023-08-07 11:02:35,478 [38] INFO  RestAPI.Controllers.CfmastController - cfmast/getmaxacctno======================BEGIN
+2023-08-07 11:02:35,478 [38] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:6b7aded2-3dd0-495b-b187-0a92a098dca6| Body: ===============================END
+2023-08-07 11:02:35,480 [38] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================BEGIN
+2023-08-07 11:02:35,497 [38] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetCfmastByCustid: ======================END
+2023-08-07 11:02:35,498 [38] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:02:35,498 [38] INFO  RestAPI.Controllers.CfmastController - cfmast/getmaxacctno======================END
+2023-08-07 11:02:35,500 [27] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast/getmaxacctno], Method=[GET], duration time process=[87.1463](ms) ============= END
+2023-08-07 11:03:06,329 [26] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[3543385d-d7f1-476a-8878-194a579f22f1], timer=638270029863299101 ============= BEGIN
+2023-08-07 11:03:06,331 [26] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 11:03:06,331 [26] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:3543385d-d7f1-476a-8878-194a579f22f1| Body: ===============================END
+2023-08-07 11:03:06,331 [26] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 11:03:06,335 [26] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 11:03:06,336 [26] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:03:06,336 [26] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 11:03:06,337 [30] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[7.9788](ms) ============= END
+2023-08-07 11:03:16,333 [27] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[ea9ae42e-0a6b-44b4-b966-1efa2aa41f0c], timer=638270029963331813 ============= BEGIN
+2023-08-07 11:03:16,337 [27] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 11:03:16,337 [27] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:ea9ae42e-0a6b-44b4-b966-1efa2aa41f0c| Body: ===============================END
+2023-08-07 11:03:16,338 [27] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 11:03:16,341 [27] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 11:03:16,344 [27] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:03:16,344 [27] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 11:03:16,345 [35] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[12.2444](ms) ============= END
+2023-08-07 11:05:14,217 [35] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[6594e60e-ff45-4702-8cd3-7bd270bf49c3], timer=638270031142173274 ============= BEGIN
+2023-08-07 11:05:14,221 [35] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 11:05:14,221 [35] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:6594e60e-ff45-4702-8cd3-7bd270bf49c3| Body: ===============================END
+2023-08-07 11:05:14,221 [35] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 11:05:14,224 [35] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 11:05:14,224 [35] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:05:14,224 [35] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 11:05:14,225 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[7.9796](ms) ============= END
+2023-08-07 11:05:16,591 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[b078292b-e009-4e69-a702-f02f98f4f8ba], timer=638270031165919605 ============= BEGIN
+2023-08-07 11:05:16,594 [13] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 11:05:16,594 [13] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:b078292b-e009-4e69-a702-f02f98f4f8ba| Body: ===============================END
+2023-08-07 11:05:16,594 [13] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 11:05:16,597 [13] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 11:05:16,597 [13] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:05:16,597 [13] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 11:05:16,597 [26] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[5.9833](ms) ============= END
+2023-08-07 11:05:16,631 [38] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], GUID=[fabacc6e-f3fb-4912-b450-872d71741a14], timer=638270031166318538 ============= BEGIN
+2023-08-07 11:05:16,639 [35] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================BEGIN
+2023-08-07 11:05:16,640 [35] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:POST| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:fabacc6e-f3fb-4912-b450-872d71741a14| Body: {"CUSTID":"000100000000011","ACCTNO":"0001000006","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}===============================END
+2023-08-07 11:05:16,641 [35] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 11:05:16,667 [35] INFO  RestAPI.Bussiness.AfmastProcess - postafmaststrRequest{"CUSTID":"000100000000011","ACCTNO":"0001000006","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}
+2023-08-07 11:05:16,716 [35] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:05:16,719 [35] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:05:16,743 [35] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================END
+2023-08-07 11:05:16,743 [35] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: callDBTransaction.v_lngErrorCode: -1400
+2023-08-07 11:05:16,746 [35] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================END
+2023-08-07 11:05:16,748 [35] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-1400","errmsg":"ORA-01400: cannot insert NULL into (\"KHACHHANG\".\"AFMAST\".\"ACCTNO\")"}
+2023-08-07 11:05:16,748 [35] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================END
+2023-08-07 11:05:16,752 [32] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], duration time process=[120.6022](ms) ============= END
+2023-08-07 11:06:10,584 [30] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[bbc348b2-79df-45f6-8dd4-c906462759b2], timer=638270031705844404 ============= BEGIN
+2023-08-07 11:06:10,585 [30] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 11:06:10,586 [30] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:bbc348b2-79df-45f6-8dd4-c906462759b2| Body: ===============================END
+2023-08-07 11:06:10,586 [30] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 11:06:10,589 [30] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 11:06:10,589 [30] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:06:10,589 [30] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 11:06:10,590 [32] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[6.1398](ms) ============= END
+2023-08-07 11:06:16,246 [37] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[bb3edd00-4297-461a-88a8-f32c6469c64f], timer=638270031762463579 ============= BEGIN
+2023-08-07 11:06:16,247 [37] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 11:06:16,247 [37] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:bb3edd00-4297-461a-88a8-f32c6469c64f| Body: ===============================END
+2023-08-07 11:06:16,247 [37] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 11:06:16,326 [37] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 11:06:16,326 [37] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:06:16,326 [37] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 11:06:16,327 [26] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[80.7382](ms) ============= END
+2023-08-07 11:08:27,155 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], GUID=[8c612473-d050-4cb8-9e21-7fa4516cfafa], timer=638270033071553173 ============= BEGIN
+2023-08-07 11:08:27,167 [30] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================BEGIN
+2023-08-07 11:08:27,167 [30] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:POST| ClientIPAddress:::1| Connection:Keep-Alive| Expect:100-continue| Host:localhost:54240| GUID:8c612473-d050-4cb8-9e21-7fa4516cfafa| Body: {"CUSTID":"000100000000011","ACCTNO":"0001000006","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}===============================END
+2023-08-07 11:08:27,167 [30] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 11:08:27,167 [30] INFO  RestAPI.Bussiness.AfmastProcess - postafmaststrRequest{"CUSTID":"000100000000011","ACCTNO":"0001000006","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}
+2023-08-07 11:08:27,168 [30] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:08:27,168 [30] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:08:27,171 [30] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================END
+2023-08-07 11:08:27,171 [30] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: callDBTransaction.v_lngErrorCode: -1400
+2023-08-07 11:08:27,171 [30] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================END
+2023-08-07 11:08:27,171 [30] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-1400","errmsg":"ORA-01400: cannot insert NULL into (\"KHACHHANG\".\"AFMAST\".\"ACCTNO\")"}
+2023-08-07 11:08:27,171 [30] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================END
+2023-08-07 11:08:27,172 [23] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], duration time process=[16.9555](ms) ============= END
+2023-08-07 11:09:17,435 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006], Method=[POST], GUID=[be501b82-9f81-4ab9-8684-770076d8ea01], timer=638270033574353469 ============= BEGIN
+2023-08-07 11:09:17,472 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006], Method=[POST], duration time process=[35.7538](ms) ============= END
+2023-08-07 11:09:27,782 [34] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006], Method=[POST], GUID=[1619ab80-9284-4d4d-91be-942376c6d1ad], timer=638270033677810241 ============= BEGIN
+2023-08-07 11:09:27,783 [34] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006], Method=[POST], duration time process=[1.9966](ms) ============= END
+2023-08-07 11:09:40,485 [38] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], GUID=[5009bd7f-7d01-472f-a443-ded0ffe4139a], timer=638270033804853898 ============= BEGIN
+2023-08-07 11:09:40,487 [38] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================BEGIN
+2023-08-07 11:09:40,487 [38] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:5f53970b-c524-41fb-b3f7-db179f02e07e| GUID:5009bd7f-7d01-472f-a443-ded0ffe4139a| Body:  {
+    "custid": "00010000000002",
+    "acctno": "0001000006",
+    "martype": "N",
+    "mrcrlimitmax": "1000000000.0"
+}===============================END
+2023-08-07 11:09:40,487 [38] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 11:09:40,487 [38] INFO  RestAPI.Bussiness.AfmastProcess - postafmaststrRequest {
+    "custid": "00010000000002",
+    "acctno": "0001000006",
+    "martype": "N",
+    "mrcrlimitmax": "1000000000.0"
+}
+2023-08-07 11:09:40,487 [38] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:09:40,487 [38] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:09:40,498 [38] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================END
+2023-08-07 11:09:40,499 [38] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 11:09:40,499 [38] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================END
+2023-08-07 11:09:40,499 [38] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: POST| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 11:09:40,499 [38] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================END
+2023-08-07 11:09:40,500 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], duration time process=[14.9604](ms) ============= END
+2023-08-07 11:10:20,581 [32] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[096a1449-c751-4edd-8e7a-31fa8007450a], timer=638270034205816408 ============= BEGIN
+2023-08-07 11:10:20,587 [32] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 11:10:20,587 [32] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:096a1449-c751-4edd-8e7a-31fa8007450a| Body: ===============================END
+2023-08-07 11:10:20,587 [32] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 11:10:20,592 [32] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 11:10:20,592 [32] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:10:20,592 [32] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 11:10:20,594 [34] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[12.9643](ms) ============= END
+2023-08-07 11:10:26,839 [34] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[8b64b643-955c-40c3-a64b-d553f90c63ed], timer=638270034268395741 ============= BEGIN
+2023-08-07 11:10:26,841 [34] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 11:10:26,841 [34] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:8b64b643-955c-40c3-a64b-d553f90c63ed| Body: ===============================END
+2023-08-07 11:10:26,841 [34] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 11:10:26,844 [34] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 11:10:26,845 [34] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:10:26,845 [34] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 11:10:26,846 [30] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[6.9826](ms) ============= END
+2023-08-07 11:10:57,078 [25] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], GUID=[76a118c5-ef2d-4cf3-a37e-75f972f9e2b2], timer=638270034570787476 ============= BEGIN
+2023-08-07 11:10:57,083 [10] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================BEGIN
+2023-08-07 11:10:57,084 [10] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:POST| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:76a118c5-ef2d-4cf3-a37e-75f972f9e2b2| Body: {"CUSTID":"000100000000011","ACCTNO":"0001000007","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}===============================END
+2023-08-07 11:10:57,084 [10] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 11:10:57,084 [10] INFO  RestAPI.Bussiness.AfmastProcess - postafmaststrRequest{"CUSTID":"000100000000011","ACCTNO":"0001000007","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}
+2023-08-07 11:10:57,084 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:10:57,085 [10] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:10:57,087 [10] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================END
+2023-08-07 11:10:57,087 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: callDBTransaction.v_lngErrorCode: -1400
+2023-08-07 11:10:57,087 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================END
+2023-08-07 11:10:57,087 [10] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-1400","errmsg":"ORA-01400: cannot insert NULL into (\"KHACHHANG\".\"AFMAST\".\"ACCTNO\")"}
+2023-08-07 11:10:57,087 [10] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================END
+2023-08-07 11:10:57,089 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], duration time process=[10.2618](ms) ============= END
+2023-08-07 11:12:15,492 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[d0e8f8ca-391d-4581-8b99-96d5bf5b4de3], timer=638270035354927575 ============= BEGIN
+2023-08-07 11:12:15,496 [5] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 11:12:15,496 [5] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:d0e8f8ca-391d-4581-8b99-96d5bf5b4de3| Body: ===============================END
+2023-08-07 11:12:15,496 [5] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 11:12:15,500 [5] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 11:12:15,500 [5] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:12:15,500 [5] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 11:12:15,501 [31] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[8.977](ms) ============= END
+2023-08-07 11:12:24,558 [30] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[9c3b0241-23f3-4bce-bab6-47e218110728], timer=638270035445589944 ============= BEGIN
+2023-08-07 11:12:24,562 [30] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 11:12:24,562 [30] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:9c3b0241-23f3-4bce-bab6-47e218110728| Body: ===============================END
+2023-08-07 11:12:24,562 [30] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 11:12:24,679 [30] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 11:12:24,679 [30] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:12:24,679 [30] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 11:12:24,680 [29] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[121.9705](ms) ============= END
+2023-08-07 11:14:53,580 [25] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], GUID=[99a5cbb1-5143-40d7-8663-a86f79a80c1f], timer=638270036935801342 ============= BEGIN
+2023-08-07 11:14:53,592 [41] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================BEGIN
+2023-08-07 11:14:53,593 [41] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:POST| ClientIPAddress:::1| Connection:Keep-Alive| Expect:100-continue| Host:localhost:54240| GUID:99a5cbb1-5143-40d7-8663-a86f79a80c1f| Body: {"CUSTID":"00010000000002","ACCTNO":"0001000007","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}===============================END
+2023-08-07 11:14:53,593 [41] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 11:14:53,593 [41] INFO  RestAPI.Bussiness.AfmastProcess - postafmaststrRequest{"CUSTID":"00010000000002","ACCTNO":"0001000007","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}
+2023-08-07 11:14:53,594 [41] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:14:53,594 [41] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:14:53,599 [41] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================END
+2023-08-07 11:14:53,599 [41] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: callDBTransaction.v_lngErrorCode: -1400
+2023-08-07 11:14:53,600 [41] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================END
+2023-08-07 11:14:53,600 [41] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-1400","errmsg":"ORA-01400: cannot insert NULL into (\"KHACHHANG\".\"AFMAST\".\"ACCTNO\")"}
+2023-08-07 11:14:53,600 [41] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================END
+2023-08-07 11:14:53,603 [24] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], duration time process=[22.943](ms) ============= END
+2023-08-07 11:19:27,045 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[add3ec70-8cdd-47b9-9d25-fc857935feb7], timer=638270039670284375 ============= BEGIN
+2023-08-07 11:19:27,860 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[831.76](ms) ============= END
+2023-08-07 11:19:42,367 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[2fe16de0-2e03-4ede-85c6-1ffd80600d37], timer=638270039823675885 ============= BEGIN
+2023-08-07 11:19:42,384 [6] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 11:19:42,403 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:2fe16de0-2e03-4ede-85c6-1ffd80600d37| Body: ===============================END
+2023-08-07 11:19:42,411 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 11:19:43,251 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 11:19:43,468 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:19:43,468 [6] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 11:19:43,484 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[1116.8318](ms) ============= END
+2023-08-07 11:19:50,544 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[94b438ae-58c9-4de3-b437-15ce0dadef36], timer=638270039905440058 ============= BEGIN
+2023-08-07 11:19:50,548 [6] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 11:19:50,548 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:94b438ae-58c9-4de3-b437-15ce0dadef36| Body: ===============================END
+2023-08-07 11:19:50,548 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 11:19:50,574 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 11:19:50,575 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:19:50,575 [6] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 11:19:50,577 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[33.8786](ms) ============= END
+2023-08-07 11:20:24,359 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], GUID=[cf16f3bf-620f-4b3c-921f-5561e4423c4a], timer=638270040243598963 ============= BEGIN
+2023-08-07 11:20:24,372 [7] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================BEGIN
+2023-08-07 11:20:24,373 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:POST| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:cf16f3bf-620f-4b3c-921f-5561e4423c4a| Body: {"CUSTID":"000100000000011","ACCTNO":"0001000007","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}===============================END
+2023-08-07 11:20:30,247 [7] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 11:20:35,413 [7] INFO  RestAPI.Bussiness.AfmastProcess - postafmaststrRequest{"CUSTID":"000100000000011","ACCTNO":"0001000007","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}
+2023-08-07 11:23:09,271 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[8b72ddbd-771f-4277-882d-502492552edf], timer=638270041892583717 ============= BEGIN
+2023-08-07 11:23:09,845 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[587.3686](ms) ============= END
+2023-08-07 11:23:21,140 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[786ce395-ef28-47b1-858f-fdf42abf1a29], timer=638270042011402641 ============= BEGIN
+2023-08-07 11:23:21,151 [9] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 11:23:21,165 [9] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:786ce395-ef28-47b1-858f-fdf42abf1a29| Body: ===============================END
+2023-08-07 11:23:21,168 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 11:23:21,687 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 11:23:21,833 [9] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:23:21,833 [9] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 11:23:21,842 [15] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[702.6737](ms) ============= END
+2023-08-07 11:23:24,891 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[d089e2e0-4c22-45c8-b0a6-464df88f3cef], timer=638270042048917970 ============= BEGIN
+2023-08-07 11:23:24,897 [12] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 11:23:24,897 [12] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:d089e2e0-4c22-45c8-b0a6-464df88f3cef| Body: ===============================END
+2023-08-07 11:23:24,898 [12] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 11:23:24,928 [12] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 11:23:24,929 [12] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:23:24,929 [12] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 11:23:24,930 [14] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[39.015](ms) ============= END
+2023-08-07 11:23:24,962 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], GUID=[6989ee0a-196c-479c-bc1f-83c81ccff4b7], timer=638270042049629368 ============= BEGIN
+2023-08-07 11:23:24,970 [10] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================BEGIN
+2023-08-07 11:23:24,972 [10] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:POST| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:6989ee0a-196c-479c-bc1f-83c81ccff4b7| Body: {"CUSTID":"00010000000010","ACCTNO":"0001000007","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}===============================END
+2023-08-07 11:23:24,973 [10] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 11:23:24,983 [10] INFO  RestAPI.Bussiness.AfmastProcess - postafmaststrRequest{"CUSTID":"00010000000010","ACCTNO":"0001000007","MARTYPE":"O","MRCRLIMITMAX":1000000000.0}
+2023-08-07 11:23:25,034 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:23:25,038 [10] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:23:25,093 [10] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================END
+2023-08-07 11:23:25,093 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: callDBTransaction.v_lngErrorCode: -1400
+2023-08-07 11:23:25,103 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================END
+2023-08-07 11:23:25,104 [10] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-1400","errmsg":"ORA-01400: cannot insert NULL into (\"KHACHHANG\".\"AFMAST\".\"ACCTNO\")"}
+2023-08-07 11:23:25,104 [10] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================END
+2023-08-07 11:23:25,106 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], duration time process=[143.2862](ms) ============= END
+2023-08-07 11:25:24,616 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[4318eb3c-fb27-4d0f-99b4-f5ae313066c7], timer=638270043246162099 ============= BEGIN
+2023-08-07 11:25:24,622 [11] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 11:25:24,622 [11] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:4318eb3c-fb27-4d0f-99b4-f5ae313066c7| Body: ===============================END
+2023-08-07 11:25:24,622 [11] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 11:25:24,628 [11] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 11:25:24,628 [11] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:25:24,628 [11] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 11:25:24,629 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[12.9637](ms) ============= END
+2023-08-07 11:25:26,955 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[08d9f354-f33e-452d-a1e7-0d01b6e78007], timer=638270043269552109 ============= BEGIN
+2023-08-07 11:25:26,958 [10] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 11:25:26,958 [10] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:08d9f354-f33e-452d-a1e7-0d01b6e78007| Body: ===============================END
+2023-08-07 11:25:26,958 [10] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 11:25:26,966 [10] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 11:25:26,966 [10] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:25:26,966 [10] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 11:25:26,967 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[12.1139](ms) ============= END
+2023-08-07 11:25:27,002 [18] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], GUID=[3b61a2a9-029f-4fcb-ba2c-4521915c15f7], timer=638270043270022540 ============= BEGIN
+2023-08-07 11:25:27,006 [19] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================BEGIN
+2023-08-07 11:25:27,006 [19] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:POST| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:3b61a2a9-029f-4fcb-ba2c-4521915c15f7| Body: {"custid":"000100000000011","acctno":"0001000007","martype":"O","mrcrlimitmax":1000000000.0}===============================END
+2023-08-07 11:25:27,006 [19] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 11:25:27,006 [19] INFO  RestAPI.Bussiness.AfmastProcess - postafmaststrRequest{"custid":"000100000000011","acctno":"0001000007","martype":"O","mrcrlimitmax":1000000000.0}
+2023-08-07 11:25:27,007 [19] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:25:27,007 [19] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 11:25:27,040 [19] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================END
+2023-08-07 11:25:27,040 [19] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 11:25:27,042 [19] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================END
+2023-08-07 11:25:27,042 [19] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: POST| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 11:25:27,042 [19] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================END
+2023-08-07 11:25:27,042 [14] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], duration time process=[39.9108](ms) ============= END
+2023-08-07 11:34:01,904 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[6a6f6062-367e-4900-947c-f7c8f7244559], timer=638270048419047058 ============= BEGIN
+2023-08-07 11:34:01,914 [13] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 11:34:01,914 [13] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:6a6f6062-367e-4900-947c-f7c8f7244559| Body: ===============================END
+2023-08-07 11:34:01,916 [13] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 11:34:01,938 [13] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 11:34:01,939 [13] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 11:34:01,939 [13] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 11:34:01,940 [24] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[35.9033](ms) ============= END
+2023-08-07 13:24:25,166 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[a68bd396-f8f5-4c5a-a241-902486cfe2e4], timer=638270114651612177 ============= BEGIN
+2023-08-07 13:24:25,269 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[107.9755](ms) ============= END
+2023-08-07 13:24:49,862 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[546ec9cf-7bb5-4443-a903-2d0d9631bb8a], timer=638270114898622978 ============= BEGIN
+2023-08-07 13:24:49,867 [42] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:24:49,867 [42] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:546ec9cf-7bb5-4443-a903-2d0d9631bb8a| Body: ===============================END
+2023-08-07 13:24:49,867 [42] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:24:49,921 [42] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:24:49,923 [42] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:24:49,923 [42] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:24:49,924 [78] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[61.8352](ms) ============= END
+2023-08-07 13:24:52,450 [77] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[a30dc7ef-621d-499b-8c7e-7c6cdf8691f4], timer=638270114924502486 ============= BEGIN
+2023-08-07 13:24:52,454 [77] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 13:24:52,454 [77] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:a30dc7ef-621d-499b-8c7e-7c6cdf8691f4| Body: ===============================END
+2023-08-07 13:24:52,454 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 13:24:52,705 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 13:24:52,706 [77] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:24:52,706 [77] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 13:24:52,706 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[256.3692](ms) ============= END
+2023-08-07 13:24:52,732 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[09df5352-24f9-42bb-9010-a29e6750a356], timer=638270114927325400 ============= BEGIN
+2023-08-07 13:24:52,735 [74] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 13:24:52,735 [74] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:09df5352-24f9-42bb-9010-a29e6750a356| Body: ===============================END
+2023-08-07 13:24:52,735 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 13:24:52,738 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 13:24:52,738 [74] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:24:52,738 [74] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 13:24:52,738 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[5.9841](ms) ============= END
+2023-08-07 13:24:54,596 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[4ba6790c-2537-47d7-9f6a-24e7aa441657], timer=638270114945963515 ============= BEGIN
+2023-08-07 13:24:54,599 [49] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:24:54,599 [49] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:4ba6790c-2537-47d7-9f6a-24e7aa441657| Body: ===============================END
+2023-08-07 13:24:54,599 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:24:54,602 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:24:54,602 [49] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:24:54,602 [49] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:24:54,603 [78] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[7.1299](ms) ============= END
+2023-08-07 13:24:56,047 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[09b37273-fa54-494f-882a-06b9e8decca6], timer=638270114960471448 ============= BEGIN
+2023-08-07 13:24:56,051 [74] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 13:24:56,051 [74] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:09b37273-fa54-494f-882a-06b9e8decca6| Body: ===============================END
+2023-08-07 13:24:56,051 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 13:24:56,053 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 13:24:56,053 [74] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:24:56,053 [74] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 13:24:56,054 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[6.981](ms) ============= END
+2023-08-07 13:24:56,062 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[fbd78298-1083-423d-944b-105a51b46795], timer=638270114960621075 ============= BEGIN
+2023-08-07 13:24:56,064 [42] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 13:24:56,064 [42] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:fbd78298-1083-423d-944b-105a51b46795| Body: ===============================END
+2023-08-07 13:24:56,064 [42] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 13:24:56,067 [42] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 13:24:56,067 [42] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:24:56,067 [42] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 13:24:56,067 [78] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[5.7988](ms) ============= END
+2023-08-07 13:25:00,033 [77] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[3b176856-87c5-430f-9636-547dfff10b1d], timer=638270115000338990 ============= BEGIN
+2023-08-07 13:25:00,034 [77] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:25:00,035 [77] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:3b176856-87c5-430f-9636-547dfff10b1d| Body: ===============================END
+2023-08-07 13:25:00,035 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:25:00,036 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:25:00,037 [77] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:00,037 [77] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:25:00,039 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[5.3069](ms) ============= END
+2023-08-07 13:25:01,564 [78] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[4c6959d2-1f1e-473f-b952-1711bf0887d8], timer=638270115015641711 ============= BEGIN
+2023-08-07 13:25:01,566 [78] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 13:25:01,566 [78] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:4c6959d2-1f1e-473f-b952-1711bf0887d8| Body: ===============================END
+2023-08-07 13:25:01,566 [78] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 13:25:01,568 [78] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 13:25:01,570 [78] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:01,570 [78] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 13:25:01,571 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[6.9818](ms) ============= END
+2023-08-07 13:25:01,596 [43] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[8f425b99-df48-424d-a3e7-105839b18dae], timer=638270115015965460 ============= BEGIN
+2023-08-07 13:25:01,597 [43] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 13:25:01,597 [43] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:8f425b99-df48-424d-a3e7-105839b18dae| Body: ===============================END
+2023-08-07 13:25:01,597 [43] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 13:25:01,599 [43] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 13:25:01,599 [43] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:01,599 [43] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 13:25:01,600 [77] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[3.9902](ms) ============= END
+2023-08-07 13:25:04,867 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[171b0dcc-2e56-4078-9b6a-b9ee75b87fc8], timer=638270115048672482 ============= BEGIN
+2023-08-07 13:25:04,868 [74] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:25:04,868 [74] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:171b0dcc-2e56-4078-9b6a-b9ee75b87fc8| Body: ===============================END
+2023-08-07 13:25:04,868 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:25:04,870 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:25:04,870 [74] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:04,870 [74] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:25:04,870 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[3.5805](ms) ============= END
+2023-08-07 13:25:09,080 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[f812f56d-321c-498b-8ad2-5f8092298c9c], timer=638270115090809506 ============= BEGIN
+2023-08-07 13:25:09,082 [52] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 13:25:09,082 [52] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:f812f56d-321c-498b-8ad2-5f8092298c9c| Body: ===============================END
+2023-08-07 13:25:09,082 [52] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 13:25:09,084 [52] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 13:25:09,084 [52] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:09,084 [52] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 13:25:09,085 [77] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[4.9868](ms) ============= END
+2023-08-07 13:25:09,095 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[fcd0a753-0600-4dde-8bf1-d79d5b7173ab], timer=638270115090959105 ============= BEGIN
+2023-08-07 13:25:09,097 [49] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 13:25:09,097 [49] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:fcd0a753-0600-4dde-8bf1-d79d5b7173ab| Body: ===============================END
+2023-08-07 13:25:09,097 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 13:25:09,099 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 13:25:09,099 [49] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:09,099 [49] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 13:25:09,100 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[4.7434](ms) ============= END
+2023-08-07 13:25:13,656 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[b5ac216a-2cdb-4819-b747-e5d6ef9980f7], timer=638270115136562157 ============= BEGIN
+2023-08-07 13:25:13,657 [74] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:25:13,658 [74] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:b5ac216a-2cdb-4819-b747-e5d6ef9980f7| Body: ===============================END
+2023-08-07 13:25:13,658 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:25:13,660 [74] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:25:13,661 [74] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:13,661 [74] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:25:13,663 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[6.9859](ms) ============= END
+2023-08-07 13:25:37,336 [77] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[0461952a-3c7e-4094-8d05-a5888e8b3f48], timer=638270115373362582 ============= BEGIN
+2023-08-07 13:25:37,340 [77] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 13:25:37,340 [77] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:0461952a-3c7e-4094-8d05-a5888e8b3f48| Body: ===============================END
+2023-08-07 13:25:37,340 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 13:25:37,342 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 13:25:37,342 [77] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:37,342 [77] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 13:25:37,343 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[6.9763](ms) ============= END
+2023-08-07 13:25:39,899 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[f9ec6d6a-b411-4986-b865-4793dfa22d73], timer=638270115398996858 ============= BEGIN
+2023-08-07 13:25:39,901 [65] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:25:39,901 [65] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:f9ec6d6a-b411-4986-b865-4793dfa22d73| Body: ===============================END
+2023-08-07 13:25:39,901 [65] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:25:39,904 [65] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:25:39,905 [65] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:39,905 [65] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:25:39,906 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[6.9805](ms) ============= END
+2023-08-07 13:25:41,471 [78] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[b10f5f5d-d7e8-4f23-90d2-39246747b031], timer=638270115414716688 ============= BEGIN
+2023-08-07 13:25:41,473 [78] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 13:25:41,473 [78] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:b10f5f5d-d7e8-4f23-90d2-39246747b031| Body: ===============================END
+2023-08-07 13:25:41,473 [78] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 13:25:41,475 [78] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 13:25:41,475 [78] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:41,475 [78] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 13:25:41,476 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[4.993](ms) ============= END
+2023-08-07 13:25:41,496 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[53e64b3a-afcd-4084-9f8a-971fed4b9fe7], timer=638270115414966011 ============= BEGIN
+2023-08-07 13:25:41,498 [68] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 13:25:41,498 [68] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:53e64b3a-afcd-4084-9f8a-971fed4b9fe7| Body: ===============================END
+2023-08-07 13:25:41,498 [68] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 13:25:41,502 [68] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 13:25:41,502 [68] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:41,502 [68] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 13:25:41,503 [78] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[7.0024](ms) ============= END
+2023-08-07 13:25:44,912 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], GUID=[f51ae8a9-2ba7-4b41-8310-cf7ab872f80e], timer=638270115449124748 ============= BEGIN
+2023-08-07 13:25:44,917 [52] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================BEGIN
+2023-08-07 13:25:44,917 [52] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:POST| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:f51ae8a9-2ba7-4b41-8310-cf7ab872f80e| Body: {"custid":"00010000000002","acctno":"0001000008","martype":"O","mrcrlimitmax":1000000000.0}===============================END
+2023-08-07 13:25:44,918 [52] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 13:25:44,940 [52] INFO  RestAPI.Bussiness.AfmastProcess - postafmaststrRequest{"custid":"00010000000002","acctno":"0001000008","martype":"O","mrcrlimitmax":1000000000.0}
+2023-08-07 13:25:44,943 [52] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 13:25:44,944 [52] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================BEGIN
+2023-08-07 13:25:44,951 [52] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_ThemAFMAST: ======================END
+2023-08-07 13:25:44,951 [52] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 13:25:44,953 [52] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_ThemAFMAST: ======================END
+2023-08-07 13:25:44,954 [52] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: POST| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 13:25:44,954 [52] INFO  RestAPI.Controllers.AfmastController - afmastsPOST======================END
+2023-08-07 13:25:44,954 [78] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[POST], duration time process=[42.2563](ms) ============= END
+2023-08-07 13:25:46,425 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[fe633877-1b7d-4a44-9ce7-0e04ac13e478], timer=638270115464252282 ============= BEGIN
+2023-08-07 13:25:46,426 [42] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:25:46,426 [42] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:fe633877-1b7d-4a44-9ce7-0e04ac13e478| Body: ===============================END
+2023-08-07 13:25:46,426 [42] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:25:46,428 [42] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:25:46,428 [42] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:25:46,428 [42] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:25:46,429 [78] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[2.9908](ms) ============= END
+2023-08-07 13:26:00,871 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[37949745-e67b-45df-ac40-1768c2f6923f], timer=638270115608715480 ============= BEGIN
+2023-08-07 13:26:00,873 [52] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:26:00,873 [52] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:37949745-e67b-45df-ac40-1768c2f6923f| Body: ===============================END
+2023-08-07 13:26:00,873 [52] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:26:00,875 [52] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:26:00,875 [52] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:26:00,875 [52] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:26:00,876 [77] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[4.9878](ms) ============= END
+2023-08-07 13:26:03,503 [78] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[b13b9477-cfdf-4b3a-86d4-fc00b294e3c6], timer=638270115635030090 ============= BEGIN
+2023-08-07 13:26:03,504 [78] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 13:26:03,505 [78] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:b13b9477-cfdf-4b3a-86d4-fc00b294e3c6| Body: ===============================END
+2023-08-07 13:26:03,505 [78] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 13:26:03,507 [78] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 13:26:03,508 [78] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:26:03,508 [78] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 13:26:03,509 [59] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[5.9714](ms) ============= END
+2023-08-07 13:26:03,519 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[ceeb1af7-dae9-4919-86b6-4c9fb76ad239], timer=638270115635199510 ============= BEGIN
+2023-08-07 13:26:03,521 [68] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 13:26:03,521 [68] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:ceeb1af7-dae9-4919-86b6-4c9fb76ad239| Body: ===============================END
+2023-08-07 13:26:03,521 [68] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 13:26:03,523 [68] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 13:26:03,523 [68] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:26:03,523 [68] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 13:26:03,524 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[4.7635](ms) ============= END
+2023-08-07 13:26:06,767 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/00010000000002], Method=[PUT], GUID=[7e50bfaa-8517-4a22-8305-0f153d96b09f], timer=638270115667676383 ============= BEGIN
+2023-08-07 13:26:06,856 [49] INFO  RestAPI.Controllers.AfmastController - afmast/00010000000002 PUT======================BEGIN
+2023-08-07 13:26:06,856 [49] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/00010000000002| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:7e50bfaa-8517-4a22-8305-0f153d96b09f| Body: {"custid":"00010000000002","acctno":"0001000008","martype":"N","mrcrlimitmax":1000000000.0}===============================END
+2023-08-07 13:26:06,856 [49] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 13:26:06,861 [49] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: ======================BEGIN
+2023-08-07 13:26:06,861 [49] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_SuaAFMAST: ======================BEGIN
+2023-08-07 13:26:06,866 [49] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_SuaAFMAST: ======================END
+2023-08-07 13:26:06,866 [49] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 13:26:06,867 [49] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: ======================END
+2023-08-07 13:26:06,867 [49] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 13:26:06,867 [49] INFO  RestAPI.Controllers.AfmastController - afmast/00010000000002 PUT======================END
+2023-08-07 13:26:06,867 [74] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/00010000000002], Method=[PUT], duration time process=[100.2615](ms) ============= END
+2023-08-07 13:26:08,310 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[7556ae95-d653-41a1-8121-d4e52a3bba97], timer=638270115683106380 ============= BEGIN
+2023-08-07 13:26:08,314 [65] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:26:08,314 [65] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:7556ae95-d653-41a1-8121-d4e52a3bba97| Body: ===============================END
+2023-08-07 13:26:08,314 [65] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:26:08,317 [65] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:26:08,317 [65] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:26:08,317 [65] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:26:08,317 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[7.0201](ms) ============= END
+2023-08-07 13:26:13,290 [81] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[1eaf3051-bad3-416d-a55e-f81f7a3517e3], timer=638270115732909713 ============= BEGIN
+2023-08-07 13:26:13,293 [81] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:26:13,293 [81] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:1eaf3051-bad3-416d-a55e-f81f7a3517e3| Body: ===============================END
+2023-08-07 13:26:13,293 [81] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:26:13,299 [81] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:26:13,299 [81] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:26:13,300 [81] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:26:13,301 [81] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[10.9736](ms) ============= END
+2023-08-07 13:27:57,562 [77] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[fd6398d8-15f7-478d-9cb1-d833f5ef4a36], timer=638270116775627356 ============= BEGIN
+2023-08-07 13:27:57,567 [77] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:27:57,567 [77] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:fd6398d8-15f7-478d-9cb1-d833f5ef4a36| Body: ===============================END
+2023-08-07 13:27:57,567 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:27:57,571 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:27:57,572 [77] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:27:57,572 [77] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:27:57,572 [85] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[9.9893](ms) ============= END
+2023-08-07 13:28:00,239 [84] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[afa8f7e3-3c87-4658-b22b-eca3f872c960], timer=638270116802396264 ============= BEGIN
+2023-08-07 13:28:00,242 [84] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 13:28:00,242 [84] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:afa8f7e3-3c87-4658-b22b-eca3f872c960| Body: ===============================END
+2023-08-07 13:28:00,242 [84] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 13:28:00,245 [84] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 13:28:00,246 [84] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:28:00,246 [84] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 13:28:00,246 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[7.0014](ms) ============= END
+2023-08-07 13:28:00,271 [82] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[2c9a6e0e-7ef6-4776-9ae5-bf15a354ddf5], timer=638270116802715414 ============= BEGIN
+2023-08-07 13:28:00,274 [82] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 13:28:00,274 [82] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:2c9a6e0e-7ef6-4776-9ae5-bf15a354ddf5| Body: ===============================END
+2023-08-07 13:28:00,274 [82] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 13:28:00,276 [82] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 13:28:00,276 [82] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:28:00,276 [82] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 13:28:00,277 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[5.9903](ms) ============= END
+2023-08-07 13:28:03,246 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/00010000000002], Method=[PUT], GUID=[3b4ad978-2453-456d-a2a6-2160e41a4bea], timer=638270116832467938 ============= BEGIN
+2023-08-07 13:28:03,251 [84] INFO  RestAPI.Controllers.AfmastController - afmast/00010000000002 PUT======================BEGIN
+2023-08-07 13:28:03,251 [84] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/00010000000002| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:3b4ad978-2453-456d-a2a6-2160e41a4bea| Body: {"custid":"00010000000002","acctno":"0001000008","martype":"N","mrcrlimitmax":1000000000.0}===============================END
+2023-08-07 13:28:03,251 [84] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 13:28:03,251 [84] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: ======================BEGIN
+2023-08-07 13:28:03,251 [84] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_SuaAFMAST: ======================BEGIN
+2023-08-07 13:28:03,253 [84] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_SuaAFMAST: ======================END
+2023-08-07 13:28:03,253 [84] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 13:28:03,253 [84] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: ======================END
+2023-08-07 13:28:03,253 [84] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 13:28:03,253 [84] INFO  RestAPI.Controllers.AfmastController - afmast/00010000000002 PUT======================END
+2023-08-07 13:28:03,254 [83] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/00010000000002], Method=[PUT], duration time process=[7.9802](ms) ============= END
+2023-08-07 13:28:05,729 [77] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[604436a3-91cf-4a79-97bf-0556be53f5a9], timer=638270116857294720 ============= BEGIN
+2023-08-07 13:28:05,730 [77] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:28:05,730 [77] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:604436a3-91cf-4a79-97bf-0556be53f5a9| Body: ===============================END
+2023-08-07 13:28:05,730 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:28:05,731 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:28:05,731 [77] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:28:05,731 [77] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:28:05,732 [85] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[3.0155](ms) ============= END
+2023-08-07 13:28:10,854 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[c4b8f785-d436-445f-803c-8c062961574f], timer=638270116908543735 ============= BEGIN
+2023-08-07 13:28:10,856 [65] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:28:10,856 [65] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:c4b8f785-d436-445f-803c-8c062961574f| Body: ===============================END
+2023-08-07 13:28:10,856 [65] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:28:10,858 [65] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:28:10,859 [65] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:28:10,859 [65] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:28:10,860 [83] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[5.9851](ms) ============= END
+2023-08-07 13:29:54,866 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[PUT], GUID=[0d53505a-443b-4b72-b71e-407a7738fb4b], timer=638270117948663372 ============= BEGIN
+2023-08-07 13:29:54,972 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[PUT], duration time process=[105.7864](ms) ============= END
+2023-08-07 13:30:15,809 [65] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000008], Method=[PUT], GUID=[7078a819-28da-4e27-b668-8d81d4997b74], timer=638270118158091755 ============= BEGIN
+2023-08-07 13:30:15,812 [65] INFO  RestAPI.Controllers.AfmastController - afmast/0001000008 PUT======================BEGIN
+2023-08-07 13:30:15,813 [65] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/0001000008| method:PUT| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:8a6c94c7-0729-421e-8901-e9adf9436c15| GUID:7078a819-28da-4e27-b668-8d81d4997b74| Body:  {
+    "custid": "00010000000002",
+    "acctno": "0001000008",
+    "martype": "N",
+    "mrcrlimitmax": "1000000000.0"
+}===============================END
+2023-08-07 13:30:15,814 [65] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 13:30:15,814 [65] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: ======================BEGIN
+2023-08-07 13:30:15,814 [65] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_SuaAFMAST: ======================BEGIN
+2023-08-07 13:30:15,816 [65] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_SuaAFMAST: ======================END
+2023-08-07 13:30:15,816 [65] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 13:30:15,816 [65] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: ======================END
+2023-08-07 13:30:15,816 [65] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 13:30:15,816 [65] INFO  RestAPI.Controllers.AfmastController - afmast/0001000008 PUT======================END
+2023-08-07 13:30:15,818 [83] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000008], Method=[PUT], duration time process=[8.9839](ms) ============= END
+2023-08-07 13:30:44,631 [84] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[a7ce2174-637f-48b5-b5e3-50e848b6f716], timer=638270118446319984 ============= BEGIN
+2023-08-07 13:30:44,637 [84] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:30:44,639 [84] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:a7ce2174-637f-48b5-b5e3-50e848b6f716| Body: ===============================END
+2023-08-07 13:30:44,639 [84] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:30:44,641 [84] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:30:44,642 [84] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:30:44,642 [84] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:30:44,643 [81] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[11.5877](ms) ============= END
+2023-08-07 13:30:47,267 [77] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[0dc7a519-8b4c-4832-a93e-6982fe6c159d], timer=638270118472672971 ============= BEGIN
+2023-08-07 13:30:47,271 [77] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 13:30:47,271 [77] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:0dc7a519-8b4c-4832-a93e-6982fe6c159d| Body: ===============================END
+2023-08-07 13:30:47,271 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 13:30:47,385 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 13:30:47,385 [77] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:30:47,385 [77] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 13:30:47,385 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[118.6853](ms) ============= END
+2023-08-07 13:30:47,418 [82] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[eb8a5887-9235-4460-937c-67281c71cdc3], timer=638270118474188900 ============= BEGIN
+2023-08-07 13:30:47,422 [82] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 13:30:47,422 [82] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:eb8a5887-9235-4460-937c-67281c71cdc3| Body: ===============================END
+2023-08-07 13:30:47,422 [82] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 13:30:47,424 [82] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 13:30:47,424 [82] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:30:47,424 [82] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 13:30:47,425 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[6.9987](ms) ============= END
+2023-08-07 13:31:35,553 [68] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[1277172c-9b15-4a5c-a3f6-21e824c665c0], timer=638270118955535676 ============= BEGIN
+2023-08-07 13:31:35,554 [68] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:31:35,554 [68] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:1277172c-9b15-4a5c-a3f6-21e824c665c0| Body: ===============================END
+2023-08-07 13:31:35,554 [68] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:31:35,556 [68] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:31:35,557 [68] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:31:35,557 [68] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:31:35,557 [86] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[4.0217](ms) ============= END
+2023-08-07 13:31:37,564 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[903bf114-36ce-4a3b-a6b6-c8cfba57cd38], timer=638270118975642646 ============= BEGIN
+2023-08-07 13:31:37,566 [48] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 13:31:37,566 [48] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:903bf114-36ce-4a3b-a6b6-c8cfba57cd38| Body: ===============================END
+2023-08-07 13:31:37,566 [48] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 13:31:37,569 [48] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 13:31:37,569 [48] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:31:37,569 [48] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 13:31:37,570 [83] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[5.9843](ms) ============= END
+2023-08-07 13:31:37,596 [77] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], GUID=[ffd44981-5a5f-42a7-9305-ea0e78163075], timer=638270118975961973 ============= BEGIN
+2023-08-07 13:31:37,598 [77] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================BEGIN
+2023-08-07 13:31:37,598 [77] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/getmaxacctno| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:ffd44981-5a5f-42a7-9305-ea0e78163075| Body: ===============================END
+2023-08-07 13:31:37,598 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================BEGIN
+2023-08-07 13:31:37,601 [77] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetmaxacctnobyafmast: ======================END
+2023-08-07 13:31:37,601 [77] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:31:37,601 [77] INFO  RestAPI.Controllers.AfmastController - afmast/getmaxacctno======================END
+2023-08-07 13:31:37,602 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/getmaxacctno], Method=[GET], duration time process=[5.9837](ms) ============= END
+2023-08-07 13:31:40,306 [84] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000008], Method=[PUT], GUID=[87deb373-af3e-4814-ad61-3d1f5018cfd0], timer=638270119003064081 ============= BEGIN
+2023-08-07 13:31:40,312 [48] INFO  RestAPI.Controllers.AfmastController - afmast/0001000008 PUT======================BEGIN
+2023-08-07 13:31:40,312 [48] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast/0001000008| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:87deb373-af3e-4814-ad61-3d1f5018cfd0| Body: {"custid":"00010000000002","acctno":"0001000008","martype":"O","mrcrlimitmax":1000000000.0}===============================END
+2023-08-07 13:31:40,312 [48] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 13:31:40,313 [48] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: ======================BEGIN
+2023-08-07 13:31:40,313 [48] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_SuaAFMAST: ======================BEGIN
+2023-08-07 13:31:40,315 [48] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_SuaAFMAST: ======================END
+2023-08-07 13:31:40,315 [48] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 13:31:40,316 [48] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_SuaAFMAST: ======================END
+2023-08-07 13:31:40,316 [48] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 13:31:40,316 [48] INFO  RestAPI.Controllers.AfmastController - afmast/0001000008 PUT======================END
+2023-08-07 13:31:40,317 [81] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000008], Method=[PUT], duration time process=[10.9716](ms) ============= END
+2023-08-07 13:31:41,585 [42] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], GUID=[d6d3ef7e-9b9d-49d9-b2b9-2fb826cce515], timer=638270119015855828 ============= BEGIN
+2023-08-07 13:31:41,586 [42] INFO  RestAPI.Controllers.AfmastController - afmast======================BEGIN
+2023-08-07 13:31:41,586 [42] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/afmast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:d6d3ef7e-9b9d-49d9-b2b9-2fb826cce515| Body: ===============================END
+2023-08-07 13:31:41,586 [42] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================BEGIN
+2023-08-07 13:31:41,587 [42] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllAfmast: ======================END
+2023-08-07 13:31:41,587 [42] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 13:31:41,587 [42] INFO  RestAPI.Controllers.AfmastController - afmast======================END
+2023-08-07 13:31:41,588 [52] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast], Method=[GET], duration time process=[3.3528](ms) ============= END
+2023-08-07 13:32:22,292 [54] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[0e056273-a7c4-43b9-bae3-5e47ee803ff4], timer=638270119422923458 ============= BEGIN
+2023-08-07 13:32:22,304 [54] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[11.9563](ms) ============= END
+2023-08-07 14:36:57,634 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[9268c0f0-59eb-437b-9bdb-f05740ff8a4c], timer=638270158176196524 ============= BEGIN
+2023-08-07 14:36:58,919 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1298.5836](ms) ============= END
+2023-08-07 14:36:59,965 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[1eaa479f-121d-44a7-8297-abe0b0187a97], timer=638270158199656348 ============= BEGIN
+2023-08-07 14:36:59,980 [6] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 14:37:00,002 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:79e9b381-ed81-48f4-b61b-03b74a4473c8| GUID:1eaa479f-121d-44a7-8297-abe0b0187a97| Body: ===============================END
+2023-08-07 14:37:00,008 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 14:37:03,573 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 14:37:03,579 [6] ERROR RestAPI.Bussiness.CimastProcess - getcfmast 
+System.ArgumentException: Column 'PHONE' does not belong to table Table.
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at RestAPI.Bussiness.CimastProcess.getAllCimast() in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\CimastProcess.cs:line 42
+2023-08-07 14:37:03,611 [6] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2023-08-07 14:37:03,626 [6] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2023-08-07 14:37:03,840 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"400","errmsg":"bad request!"}
+2023-08-07 14:37:03,841 [6] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 14:37:03,854 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[3888.8937](ms) ============= END
+2023-08-07 14:39:23,113 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[1ed2020d-7b90-4452-b8ef-97150305e534], timer=638270159631114427 ============= BEGIN
+2023-08-07 14:39:23,573 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[461.1113](ms) ============= END
+2023-08-07 14:39:37,333 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[254f65b8-e3f3-40bc-87d3-3c0b190fd520], timer=638270159773330942 ============= BEGIN
+2023-08-07 14:39:37,338 [12] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 14:39:37,341 [12] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:2e1fc72d-101f-4520-952b-05a9c5ec4c69| GUID:254f65b8-e3f3-40bc-87d3-3c0b190fd520| Body: ===============================END
+2023-08-07 14:39:37,344 [12] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 14:39:37,429 [12] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 14:39:37,598 [12] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 14:39:37,598 [12] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 14:39:37,602 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[269.0393](ms) ============= END
+2023-08-07 14:49:55,628 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006/addmoney/50000], Method=[PUT], GUID=[30309dc3-e217-428e-b373-231024708504], timer=638270165956282612 ============= BEGIN
+2023-08-07 14:49:55,645 [19] DEBUG RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006/addmoney/50000 ], Already exist GUID in header
+2023-08-07 14:49:55,645 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006/addmoney/50000], Method=[PUT], GUID=[30309dc3-e217-428e-b373-231024708504], timer=638270165956441647 ============= BEGIN
+2023-08-07 14:49:55,648 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006/addmoney/50000], Method=[PUT], duration time process=[3.99](ms) ============= END
+2023-08-07 14:49:55,654 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/afmast/0001000006/addmoney/50000], Method=[PUT], duration time process=[26.0829](ms) ============= END
+2023-08-07 14:50:09,815 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], GUID=[f4423d9c-0a7c-427a-9bff-58f7470822a4], timer=638270166098158615 ============= BEGIN
+2023-08-07 14:50:09,822 [13] DEBUG RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000 ], Already exist GUID in header
+2023-08-07 14:50:09,822 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], GUID=[f4423d9c-0a7c-427a-9bff-58f7470822a4], timer=638270166098218775 ============= BEGIN
+2023-08-07 14:50:09,823 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], duration time process=[1.9625](ms) ============= END
+2023-08-07 14:50:09,824 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], duration time process=[8.9803](ms) ============= END
+2023-08-07 14:50:32,130 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[cf0a6bcf-6a60-4c17-8c3f-52d89a794607], timer=638270166321293149 ============= BEGIN
+2023-08-07 14:50:32,558 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[428.9997](ms) ============= END
+2023-08-07 14:50:38,044 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], GUID=[083f251a-d6b7-4df4-9a37-ba9798d0f40d], timer=638270166380435099 ============= BEGIN
+2023-08-07 14:50:38,092 [19] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 50000 PUT======================BEGIN
+2023-08-07 14:50:38,099 [19] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/addmoney/50000| method:PUT| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:37f2152e-9e1c-4e55-a3c9-338344a680b6| GUID:083f251a-d6b7-4df4-9a37-ba9798d0f40d| Body: {
+    "afacctno": "0001000006"
+}===============================END
+2023-08-07 14:50:38,101 [19] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 14:50:38,187 [19] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 14:50:38,190 [19] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 14:50:38,737 [19] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 14:50:38,737 [19] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 14:50:38,780 [19] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 14:50:38,949 [19] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 14:50:38,949 [19] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 50000 PUT======================END
+2023-08-07 14:50:38,956 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], duration time process=[912.8131](ms) ============= END
+2023-08-07 14:50:50,277 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[1b1b8c80-e72e-4838-9b37-c5e739cc5d21], timer=638270166502774918 ============= BEGIN
+2023-08-07 14:50:50,281 [21] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 14:50:50,282 [21] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:9f8fd545-ac96-4f1c-a11a-ca4164a1d14d| GUID:1b1b8c80-e72e-4838-9b37-c5e739cc5d21| Body: ===============================END
+2023-08-07 14:50:50,285 [21] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 14:50:50,337 [21] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 14:50:50,367 [21] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 14:50:50,367 [21] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 14:50:50,368 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[91.0988](ms) ============= END
+2023-08-07 14:54:23,444 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[e46cfaaf-42dc-42c8-8345-e18e0e0b3389], timer=638270168634436766 ============= BEGIN
+2023-08-07 14:54:23,765 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[321.4455](ms) ============= END
+2023-08-07 14:57:32,981 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtract/50000], Method=[PUT], GUID=[0be0fc3b-0d5f-4589-a02d-6c64a11e1c47], timer=638270170529819222 ============= BEGIN
+2023-08-07 14:57:32,988 [21] DEBUG RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtract/50000 ], Already exist GUID in header
+2023-08-07 14:57:32,988 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtract/50000], Method=[PUT], GUID=[0be0fc3b-0d5f-4589-a02d-6c64a11e1c47], timer=638270170529888268 ============= BEGIN
+2023-08-07 14:57:32,988 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtract/50000], Method=[PUT], duration time process=[0](ms) ============= END
+2023-08-07 14:57:32,990 [18] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtract/50000], Method=[PUT], duration time process=[8.4877](ms) ============= END
+2023-08-07 14:57:38,574 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[294584e8-a422-4fa2-bc2e-227e3117c023], timer=638270170585744747 ============= BEGIN
+2023-08-07 14:57:38,583 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[8.976](ms) ============= END
+2023-08-07 14:57:48,273 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtract/50000], Method=[PUT], GUID=[90987b1e-8550-4008-94c0-38365a2c5966], timer=638270170682739187 ============= BEGIN
+2023-08-07 14:57:48,277 [21] DEBUG RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtract/50000 ], Already exist GUID in header
+2023-08-07 14:57:48,277 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtract/50000], Method=[PUT], GUID=[90987b1e-8550-4008-94c0-38365a2c5966], timer=638270170682771378 ============= BEGIN
+2023-08-07 14:57:48,277 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtract/50000], Method=[PUT], duration time process=[0.7721](ms) ============= END
+2023-08-07 14:57:48,278 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtract/50000], Method=[PUT], duration time process=[4.9892](ms) ============= END
+2023-08-07 14:57:55,685 [22] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/50000], Method=[PUT], GUID=[30e264a2-5359-4f7c-a45c-cbb9d2a26563], timer=638270170756851438 ============= BEGIN
+2023-08-07 14:57:55,727 [22] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 50000 PUT======================BEGIN
+2023-08-07 14:57:55,730 [22] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/subtractmoney/50000| method:PUT| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:7bb40234-e562-4e96-93de-2c48199e1b20| GUID:30e264a2-5359-4f7c-a45c-cbb9d2a26563| Body: {
+    "afacctno": "0001000006",
+    "depofeeamt": 0.0,
+    "lastchange": "2023-08-07"
+}===============================END
+2023-08-07 14:57:55,732 [22] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 14:57:55,802 [22] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 14:57:55,805 [22] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 14:57:56,000 [22] ERROR RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'SUATHEMTIENCIMAST'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteOracleStored(String pv_strStoredName, StoreParameter[]& pv_StoreParameters, Int32 pv_ReturnIndex)
+   at RestAPI.Bussiness.TransactionProcess.callDBTransaction(String pv_strProcessID, StoreParameter[]& pv_keyField, Int32 returnIndex) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\TransactionProcess.cs:line 146
+2023-08-07 14:57:56,002 [22] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 14:57:56,002 [22] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: -1
+2023-08-07 14:57:56,009 [22] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 14:57:56,139 [22] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: PUT| Message: {"s":"-1","errmsg":"System Error"}
+2023-08-07 14:57:56,139 [22] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 50000 PUT======================END
+2023-08-07 14:57:56,144 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/50000], Method=[PUT], duration time process=[459.2668](ms) ============= END
+2023-08-07 15:01:25,747 [27] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[37374daf-f28f-40fe-9c09-d8a2797c687c], timer=638270172857451743 ============= BEGIN
+2023-08-07 15:01:26,165 [27] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[420.7552](ms) ============= END
+2023-08-07 15:01:31,502 [22] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/50000], Method=[PUT], GUID=[0f4d116d-fd68-415b-b1db-fa96fa1a64f3], timer=638270172915024149 ============= BEGIN
+2023-08-07 15:01:31,565 [22] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 50000 PUT======================BEGIN
+2023-08-07 15:01:31,573 [22] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/subtractmoney/50000| method:PUT| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:f19d30fe-9ca6-4f4d-ab3f-6346a10cc0fa| GUID:0f4d116d-fd68-415b-b1db-fa96fa1a64f3| Body: {
+    "afacctno": "0001000006",
+    "depofeeamt": 0.0,
+    "lastchange": "2023-08-07"
+}===============================END
+2023-08-07 15:01:31,575 [22] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:01:31,651 [22] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:01:31,654 [22] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:01:31,741 [22] ERROR RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: 
+Oracle.DataAccess.Client.OracleException (0x80004005): ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'SUATHEMTIENCIMAST'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+   at DataAccessLayer.DataAccess.ExecuteOracleStored(String pv_strStoredName, StoreParameter[]& pv_StoreParameters, Int32 pv_ReturnIndex)
+   at RestAPI.Bussiness.TransactionProcess.callDBTransaction(String pv_strProcessID, StoreParameter[]& pv_keyField, Int32 returnIndex) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\TransactionProcess.cs:line 146
+2023-08-07 15:01:31,743 [22] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 15:01:31,743 [22] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: -1
+2023-08-07 15:01:31,744 [22] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 15:01:31,902 [22] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: PUT| Message: {"s":"-1","errmsg":"System Error"}
+2023-08-07 15:01:31,902 [22] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 50000 PUT======================END
+2023-08-07 15:01:31,909 [22] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/50000], Method=[PUT], duration time process=[406.7546](ms) ============= END
+2023-08-07 15:02:11,534 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[6051b477-f467-4b97-a3d2-7328520de269], timer=638270173315127908 ============= BEGIN
+2023-08-07 15:02:12,331 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[819.0337](ms) ============= END
+2023-08-07 15:02:22,111 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/50000], Method=[PUT], GUID=[f4982686-ef24-4c4f-ab57-e4f420b1092b], timer=638270173421114162 ============= BEGIN
+2023-08-07 15:02:22,190 [7] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 50000 PUT======================BEGIN
+2023-08-07 15:02:22,208 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/subtractmoney/50000| method:PUT| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:0609f7c6-df9e-4dbd-a96e-668a3ec38ec7| GUID:f4982686-ef24-4c4f-ab57-e4f420b1092b| Body: {
+    "afacctno": "0001000006",
+    "depofeeamt": 0.0,
+    "lastchange": "2023-08-07"
+}===============================END
+2023-08-07 15:02:27,648 [7] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:04:21,040 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[42ab2e9c-d80c-4b5a-b55d-9bb2c3cb4a3d], timer=638270174610248684 ============= BEGIN
+2023-08-07 15:04:21,745 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[719.3432](ms) ============= END
+2023-08-07 15:04:25,589 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/50000], Method=[PUT], GUID=[7ceddc46-51ae-4a23-aac8-e03b6e648e73], timer=638270174655895099 ============= BEGIN
+2023-08-07 15:04:25,665 [10] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 50000 PUT======================BEGIN
+2023-08-07 15:04:25,687 [10] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/subtractmoney/50000| method:PUT| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:b7e9d69c-2ec1-4b45-b471-5d9d6dca7642| GUID:7ceddc46-51ae-4a23-aac8-e03b6e648e73| Body: {
+    "afacctno": "0001000006",
+    "depofeeamt": 0.0,
+    "lastchange": "2023-08-07"
+}===============================END
+2023-08-07 15:04:25,690 [10] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:04:25,788 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suatrutiencimast: ======================BEGIN
+2023-08-07 15:04:25,800 [10] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suatrutiencimast: ======================BEGIN
+2023-08-07 15:04:26,778 [10] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suatrutiencimast: ======================END
+2023-08-07 15:04:26,778 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suatrutiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:04:26,788 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suatrutiencimast: ======================END
+2023-08-07 15:04:26,976 [10] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:04:26,976 [10] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 50000 PUT======================END
+2023-08-07 15:04:26,991 [14] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/50000], Method=[PUT], duration time process=[1402.1353](ms) ============= END
+2023-08-07 15:05:00,954 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], GUID=[ae807c96-4805-48e9-96d3-127e09ad19a6], timer=638270175009546090 ============= BEGIN
+2023-08-07 15:05:00,961 [9] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 50000 PUT======================BEGIN
+2023-08-07 15:05:00,961 [9] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/addmoney/50000| method:PUT| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:b0c371bf-38f5-42a0-bec0-4f64bed0554e| GUID:ae807c96-4805-48e9-96d3-127e09ad19a6| Body: {
+    "afacctno": "0001000006",
+    "depofeeamt": 0.0,
+    "lastchange": "2023-08-07"
+}===============================END
+2023-08-07 15:05:00,961 [9] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:05:00,963 [9] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:05:00,963 [9] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:05:01,023 [9] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 15:05:01,023 [9] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:05:01,024 [9] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 15:05:01,024 [9] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:05:01,024 [9] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 50000 PUT======================END
+2023-08-07 15:05:01,025 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], duration time process=[70.5665](ms) ============= END
+2023-08-07 15:05:16,082 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], GUID=[27d4379f-c092-419f-9093-17adc00cca8f], timer=638270175160827217 ============= BEGIN
+2023-08-07 15:05:16,087 [7] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 50000 PUT======================BEGIN
+2023-08-07 15:05:16,087 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/addmoney/50000| method:PUT| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.32.3| Postman-Token:3db82172-705a-49ae-9e35-dfe8e10ed996| GUID:27d4379f-c092-419f-9093-17adc00cca8f| Body: {
+    "afacctno": "0001000006",
+    "depofeeamt": 0.0,
+    "lastchange": "2023-08-07"
+}===============================END
+2023-08-07 15:05:16,088 [7] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:05:16,091 [7] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:05:16,091 [7] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:05:16,105 [7] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 15:05:16,105 [7] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:05:16,105 [7] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 15:05:16,105 [7] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:05:16,105 [7] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 50000 PUT======================END
+2023-08-07 15:05:16,106 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], duration time process=[23.9358](ms) ============= END
+2023-08-07 15:18:58,742 [29] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[dfbef6ef-7e16-4f16-9930-254ed036e5d0], timer=638270183387422668 ============= BEGIN
+2023-08-07 15:18:58,765 [29] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 15:18:58,767 [29] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:dfbef6ef-7e16-4f16-9930-254ed036e5d0| Body: ===============================END
+2023-08-07 15:18:58,783 [29] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 15:18:58,990 [29] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 15:18:59,030 [29] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:18:59,030 [29] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 15:18:59,032 [14] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[290.0191](ms) ============= END
+2023-08-07 15:19:22,846 [23] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[b293c013-022a-4532-887b-e90d9c1541e8], timer=638270183628460579 ============= BEGIN
+2023-08-07 15:19:22,850 [23] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 15:19:22,850 [23] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:b293c013-022a-4532-887b-e90d9c1541e8| Body: ===============================END
+2023-08-07 15:19:22,850 [23] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 15:19:23,037 [23] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 15:19:23,038 [23] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:19:23,038 [23] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 15:19:23,038 [25] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[192.7713](ms) ============= END
+2023-08-07 15:19:41,062 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], GUID=[fee0aebe-7ee4-466a-a18c-68950fda7159], timer=638270183810627629 ============= BEGIN
+2023-08-07 15:19:41,066 [9] INFO  RestAPI.Controllers.CfmastController - cfmast======================BEGIN
+2023-08-07 15:19:41,069 [9] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cfmast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:fee0aebe-7ee4-466a-a18c-68950fda7159| Body: ===============================END
+2023-08-07 15:19:41,069 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================BEGIN
+2023-08-07 15:19:41,071 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDataGetAllCfmast: ======================END
+2023-08-07 15:19:41,072 [9] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:19:41,072 [9] INFO  RestAPI.Controllers.CfmastController - cfmast======================END
+2023-08-07 15:19:41,073 [35] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cfmast], Method=[GET], duration time process=[10.9706](ms) ============= END
+2023-08-07 15:21:57,647 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[c38b6e3e-06dc-4265-a26d-564c284ac011], timer=638270185176476731 ============= BEGIN
+2023-08-07 15:21:57,653 [11] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:21:57,653 [11] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:c38b6e3e-06dc-4265-a26d-564c284ac011| Body: ===============================END
+2023-08-07 15:21:57,657 [11] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:21:57,806 [11] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:21:57,999 [11] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:21:57,999 [11] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:21:58,001 [30] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[353.5621](ms) ============= END
+2023-08-07 15:22:07,239 [23] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[9ceee255-abec-4fd8-8afb-3af55faea1e2], timer=638270185272394858 ============= BEGIN
+2023-08-07 15:22:07,241 [23] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:22:07,241 [23] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:9ceee255-abec-4fd8-8afb-3af55faea1e2| Body: ===============================END
+2023-08-07 15:22:07,241 [23] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:22:07,242 [23] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:22:07,243 [23] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:22:07,243 [23] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:22:07,245 [29] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[6.0084](ms) ============= END
+2023-08-07 15:22:07,258 [11] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/50000], Method=[PUT], GUID=[cd8061c4-5f5f-404b-9307-8e0117711a29], timer=638270185272584321 ============= BEGIN
+2023-08-07 15:22:07,267 [32] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 50000 PUT======================BEGIN
+2023-08-07 15:22:07,267 [32] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/subtractmoney/50000| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:cd8061c4-5f5f-404b-9307-8e0117711a29| Body: {"afacctno":"0001000006","acctno":null,"balance":0.0,"pp":0.0,"cidepofeeacr":0.0,"depofeeamt":0.0,"currentdebt":0.0,"lastchange":"2023-08-07T15:22:07.202582+07:00","status":"\u0000"}===============================END
+2023-08-07 15:22:07,268 [32] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:22:07,291 [32] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suatrutiencimast: ======================BEGIN
+2023-08-07 15:22:07,292 [32] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suatrutiencimast: ======================BEGIN
+2023-08-07 15:22:07,298 [32] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suatrutiencimast: ======================END
+2023-08-07 15:22:07,298 [32] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suatrutiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:22:07,298 [32] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suatrutiencimast: ======================END
+2023-08-07 15:22:07,298 [32] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:22:07,298 [32] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 50000 PUT======================END
+2023-08-07 15:22:07,298 [18] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/50000], Method=[PUT], duration time process=[39.8879](ms) ============= END
+2023-08-07 15:22:09,461 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[832f0854-4582-4715-98ed-2685b8eb4b09], timer=638270185294616456 ============= BEGIN
+2023-08-07 15:22:09,462 [5] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:22:09,462 [5] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:832f0854-4582-4715-98ed-2685b8eb4b09| Body: ===============================END
+2023-08-07 15:22:09,462 [5] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:22:09,464 [5] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:22:09,464 [5] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:22:09,464 [5] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:22:09,464 [33] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[2.9898](ms) ============= END
+2023-08-07 15:22:48,472 [12] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[f88c2cd0-c0a7-4316-be9c-677f81767263], timer=638270185684724177 ============= BEGIN
+2023-08-07 15:22:48,474 [12] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:22:48,474 [12] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:f88c2cd0-c0a7-4316-be9c-677f81767263| Body: ===============================END
+2023-08-07 15:22:48,474 [12] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:22:48,478 [12] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:22:48,479 [12] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:22:48,479 [12] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:22:48,481 [32] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[9.0709](ms) ============= END
+2023-08-07 15:23:10,066 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], GUID=[3e283f12-380a-453e-9072-aeff50d04670], timer=638270185900665592 ============= BEGIN
+2023-08-07 15:23:10,092 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[cd8d93cd-f000-4cf6-b242-d3dea45fc76c], timer=638270185900924806 ============= BEGIN
+2023-08-07 15:23:10,093 [13] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:23:10,094 [13] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:cd8d93cd-f000-4cf6-b242-d3dea45fc76c| Body: ===============================END
+2023-08-07 15:23:10,094 [13] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:23:10,105 [5] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 50000 PUT======================BEGIN
+2023-08-07 15:23:10,106 [5] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/addmoney/50000| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:3e283f12-380a-453e-9072-aeff50d04670| Body: {"afacctno":"0001000006","acctno":null,"balance":0.0,"pp":0.0,"cidepofeeacr":0.0,"depofeeamt":0.0,"currentdebt":0.0,"lastchange":"2023-08-07T15:23:08.8319171+07:00","status":"\u0000"}===============================END
+2023-08-07 15:23:10,106 [5] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:23:10,106 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:23:10,106 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:23:10,128 [13] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:23:10,129 [13] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:23:10,129 [13] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:23:10,130 [33] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[37.9627](ms) ============= END
+2023-08-07 15:23:10,139 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 15:23:10,139 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:23:10,139 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 15:23:10,139 [5] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:23:10,139 [5] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 50000 PUT======================END
+2023-08-07 15:23:10,141 [13] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/50000], Method=[PUT], duration time process=[74.7611](ms) ============= END
+2023-08-07 15:26:18,594 [40] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[873bcb28-a339-4914-8a6c-67530ccfbbc9], timer=638270187785943159 ============= BEGIN
+2023-08-07 15:26:18,597 [40] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:26:18,597 [40] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:873bcb28-a339-4914-8a6c-67530ccfbbc9| Body: ===============================END
+2023-08-07 15:26:18,597 [40] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:26:18,602 [40] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:26:18,603 [40] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:26:18,603 [40] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:26:18,604 [29] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[9.9716](ms) ============= END
+2023-08-07 15:26:21,508 [26] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[b0b28ad2-8278-43d9-83b9-7a13cc3f65af], timer=638270187815087345 ============= BEGIN
+2023-08-07 15:26:21,509 [26] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:26:21,509 [26] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:b0b28ad2-8278-43d9-83b9-7a13cc3f65af| Body: ===============================END
+2023-08-07 15:26:21,509 [26] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:26:21,511 [26] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:26:21,511 [26] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:26:21,511 [26] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:26:21,512 [41] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[4.0891](ms) ============= END
+2023-08-07 15:26:24,717 [26] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[93fc0e48-b18e-4d19-b5bb-56c6768b0c6d], timer=638270187847173552 ============= BEGIN
+2023-08-07 15:26:24,719 [26] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:26:24,719 [26] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:93fc0e48-b18e-4d19-b5bb-56c6768b0c6d| Body: ===============================END
+2023-08-07 15:26:24,719 [26] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:26:24,719 [30] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/1], Method=[PUT], GUID=[0d57e9d1-d77a-4255-8505-6af163d3b08b], timer=638270187847191499 ============= BEGIN
+2023-08-07 15:26:24,720 [26] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:26:24,720 [26] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:26:24,720 [26] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:26:24,721 [26] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[3.8269](ms) ============= END
+2023-08-07 15:26:24,723 [17] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 1 PUT======================BEGIN
+2023-08-07 15:26:24,723 [17] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/addmoney/1| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:0d57e9d1-d77a-4255-8505-6af163d3b08b| Body: {"afacctno":"0001000006","acctno":null,"balance":0.0,"pp":0.0,"cidepofeeacr":0.0,"depofeeamt":0.0,"currentdebt":0.0,"lastchange":"2023-08-07T15:26:24.6832454+07:00","status":"\u0000"}===============================END
+2023-08-07 15:26:24,723 [17] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:26:24,723 [17] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:26:24,723 [17] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:26:24,731 [17] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 15:26:24,731 [17] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:26:24,732 [17] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 15:26:24,732 [17] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:26:24,732 [17] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 1 PUT======================END
+2023-08-07 15:26:24,733 [39] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/1], Method=[PUT], duration time process=[13.9713](ms) ============= END
+2023-08-07 15:26:34,579 [39] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[3ce7b8f1-b56d-4da2-984c-3707cdede215], timer=638270187945799684 ============= BEGIN
+2023-08-07 15:26:34,581 [39] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:26:34,582 [39] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:3ce7b8f1-b56d-4da2-984c-3707cdede215| Body: ===============================END
+2023-08-07 15:26:34,582 [39] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:26:34,585 [39] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:26:34,585 [39] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:26:34,585 [39] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:26:34,586 [30] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[6.8667](ms) ============= END
+2023-08-07 15:26:36,754 [29] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[e4731f55-7663-4f7d-8ce7-34e335f23ceb], timer=638270187967544697 ============= BEGIN
+2023-08-07 15:26:36,756 [29] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:26:36,756 [29] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:e4731f55-7663-4f7d-8ce7-34e335f23ceb| Body: ===============================END
+2023-08-07 15:26:36,756 [29] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:26:36,761 [29] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:26:36,762 [29] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:26:36,762 [29] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:26:36,763 [40] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[8.977](ms) ============= END
+2023-08-07 15:26:39,207 [30] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[b14d3c26-4b99-49e1-97ff-4949d581a57f], timer=638270187992076942 ============= BEGIN
+2023-08-07 15:26:39,207 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/1], Method=[PUT], GUID=[1069d66e-b2f6-41c1-b5ed-4b284dd41c0e], timer=638270187992076942 ============= BEGIN
+2023-08-07 15:26:39,208 [30] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:26:39,208 [30] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:b14d3c26-4b99-49e1-97ff-4949d581a57f| Body: ===============================END
+2023-08-07 15:26:39,208 [30] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:26:39,213 [26] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 1 PUT======================BEGIN
+2023-08-07 15:26:39,213 [26] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/addmoney/1| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:1069d66e-b2f6-41c1-b5ed-4b284dd41c0e| Body: {"afacctno":"0001000006","acctno":null,"balance":0.0,"pp":0.0,"cidepofeeacr":0.0,"depofeeamt":0.0,"currentdebt":0.0,"lastchange":"2023-08-07T15:26:39.1747854+07:00","status":"\u0000"}===============================END
+2023-08-07 15:26:39,213 [26] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:26:39,214 [26] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:26:39,214 [26] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:26:39,215 [30] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:26:39,215 [30] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:26:39,215 [30] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:26:39,216 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[9.0174](ms) ============= END
+2023-08-07 15:26:39,321 [26] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 15:26:39,321 [26] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:26:39,321 [26] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 15:26:39,321 [26] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:26:39,321 [26] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 1 PUT======================END
+2023-08-07 15:26:39,322 [41] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/1], Method=[PUT], duration time process=[115.2973](ms) ============= END
+2023-08-07 15:27:18,084 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[1e1b1e85-05bf-4c5a-9d0f-a8d6678e8110], timer=638270188380847299 ============= BEGIN
+2023-08-07 15:27:18,087 [48] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:27:18,087 [48] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:1e1b1e85-05bf-4c5a-9d0f-a8d6678e8110| Body: ===============================END
+2023-08-07 15:27:18,087 [48] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:27:18,091 [48] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:27:18,091 [48] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:27:18,091 [48] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:27:18,091 [41] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[6.9872](ms) ============= END
+2023-08-07 15:28:13,325 [47] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/1], Method=[PUT], GUID=[b808b502-7fd4-4002-bb14-49d29799cd6b], timer=638270188933259108 ============= BEGIN
+2023-08-07 15:28:13,325 [41] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[f41f558e-dd06-4106-88ad-e0c5b5c5c656], timer=638270188933259108 ============= BEGIN
+2023-08-07 15:28:13,327 [41] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:28:13,327 [41] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:f41f558e-dd06-4106-88ad-e0c5b5c5c656| Body: ===============================END
+2023-08-07 15:28:13,327 [41] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:28:13,329 [41] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:28:13,330 [41] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:28:13,330 [41] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:28:13,332 [48] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[6.9801](ms) ============= END
+2023-08-07 15:28:13,358 [30] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 1 PUT======================BEGIN
+2023-08-07 15:28:13,358 [30] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/addmoney/1| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:b808b502-7fd4-4002-bb14-49d29799cd6b| Body: {"afacctno":"0001000006","acctno":null,"balance":0.0,"pp":0.0,"cidepofeeacr":0.0,"depofeeamt":0.0,"currentdebt":0.0,"lastchange":"2023-08-07T15:27:36.1772159+07:00","status":"\u0000"}===============================END
+2023-08-07 15:28:13,358 [30] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:28:13,360 [30] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:28:13,360 [30] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:28:13,367 [30] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 15:28:13,367 [30] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:28:13,367 [30] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 15:28:13,367 [30] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:28:13,367 [30] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 1 PUT======================END
+2023-08-07 15:28:13,368 [22] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/1], Method=[PUT], duration time process=[42.8849](ms) ============= END
+2023-08-07 15:32:21,538 [55] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[f4ce3485-2f1c-4876-bc30-c5afa0e81f43], timer=638270191415383732 ============= BEGIN
+2023-08-07 15:32:21,542 [55] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:32:21,542 [55] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:f4ce3485-2f1c-4876-bc30-c5afa0e81f43| Body: ===============================END
+2023-08-07 15:32:21,542 [55] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:32:21,546 [55] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:32:21,547 [55] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:32:21,547 [55] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:32:21,548 [22] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[10.379](ms) ============= END
+2023-08-07 15:32:55,649 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/1], Method=[PUT], GUID=[4d8a720b-417b-44b0-932e-a2a6fcbcf784], timer=638270191756497882 ============= BEGIN
+2023-08-07 15:32:55,658 [46] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 1 PUT======================BEGIN
+2023-08-07 15:32:55,658 [46] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/addmoney/1| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:4d8a720b-417b-44b0-932e-a2a6fcbcf784| Body: {"afacctno":"0001000006","acctno":null,"balance":0.0,"pp":0.0,"cidepofeeacr":0.0,"depofeeamt":0.0,"currentdebt":0.0,"lastchange":"2023-08-07T15:32:43.3950533+07:00","status":"\u0000"}===============================END
+2023-08-07 15:32:55,658 [46] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:32:55,659 [46] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:32:55,659 [46] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:32:55,766 [46] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 15:32:55,766 [46] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:32:55,766 [46] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 15:32:55,766 [46] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:32:55,766 [46] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 1 PUT======================END
+2023-08-07 15:32:55,768 [58] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/1], Method=[PUT], duration time process=[119.2006](ms) ============= END
+2023-08-07 15:36:48,666 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[96f68811-c8c3-485c-a4f5-32f5ca811231], timer=638270194086655929 ============= BEGIN
+2023-08-07 15:36:48,670 [49] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:36:48,670 [49] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:96f68811-c8c3-485c-a4f5-32f5ca811231| Body: ===============================END
+2023-08-07 15:36:48,670 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:36:48,675 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:36:48,675 [49] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:36:48,675 [49] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:36:48,676 [58] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[11.0029](ms) ============= END
+2023-08-07 15:36:53,587 [45] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/1], Method=[PUT], GUID=[18fed6c7-80db-4555-8587-88ef9c1ade00], timer=638270194135878334 ============= BEGIN
+2023-08-07 15:36:53,591 [60] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 1 PUT======================BEGIN
+2023-08-07 15:36:53,591 [60] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/addmoney/1| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:18fed6c7-80db-4555-8587-88ef9c1ade00| Body: {"afacctno":"0001000006","acctno":null,"balance":0.0,"pp":0.0,"cidepofeeacr":0.0,"depofeeamt":0.0,"currentdebt":0.0,"lastchange":"2023-08-07T15:36:53.5509314+07:00","status":"\u0000"}===============================END
+2023-08-07 15:36:53,591 [60] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:36:53,592 [60] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:36:53,592 [60] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================BEGIN
+2023-08-07 15:36:53,600 [60] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suathemtiencimast: ======================END
+2023-08-07 15:36:53,600 [60] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:36:53,600 [60] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suathemtiencimast: ======================END
+2023-08-07 15:36:53,600 [60] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:36:53,600 [60] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 addmoney/ 1 PUT======================END
+2023-08-07 15:36:53,601 [58] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/addmoney/1], Method=[PUT], duration time process=[13.1798](ms) ============= END
+2023-08-07 15:36:54,159 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[61e48af6-34dc-4228-b071-a4bfdfe37260], timer=638270194141597580 ============= BEGIN
+2023-08-07 15:36:54,161 [7] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:36:54,161 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:61e48af6-34dc-4228-b071-a4bfdfe37260| Body: ===============================END
+2023-08-07 15:36:54,161 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:36:54,166 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:36:54,167 [7] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:36:54,167 [7] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:36:54,168 [53] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[7.9](ms) ============= END
+2023-08-07 15:36:56,228 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[e5e65a44-acf1-4a5c-a949-b5af0f98c692], timer=638270194162284589 ============= BEGIN
+2023-08-07 15:36:56,230 [49] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:36:56,230 [49] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:e5e65a44-acf1-4a5c-a949-b5af0f98c692| Body: ===============================END
+2023-08-07 15:36:56,230 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:36:56,232 [49] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:36:56,233 [49] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:36:56,233 [49] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:36:56,234 [58] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[5.9837](ms) ============= END
+2023-08-07 15:39:18,573 [20] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[9e94bf70-458f-485a-8c16-1ad9c91208e5], timer=638270195585735258 ============= BEGIN
+2023-08-07 15:39:18,579 [20] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:39:18,580 [20] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Connection:Keep-Alive| Host:localhost:54240| GUID:9e94bf70-458f-485a-8c16-1ad9c91208e5| Body: ===============================END
+2023-08-07 15:39:18,580 [20] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:39:18,584 [20] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:39:18,584 [20] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:39:18,584 [20] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:39:18,585 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[11.8446](ms) ============= END
+2023-08-07 15:39:24,864 [41] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/1], Method=[PUT], GUID=[0e5b39bb-ca45-4c48-95ec-164145b5f5b0], timer=638270195648644709 ============= BEGIN
+2023-08-07 15:39:24,869 [27] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 1 PUT======================BEGIN
+2023-08-07 15:39:24,869 [27] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast/0001000006/subtractmoney/1| method:PUT| ClientIPAddress:::1| Expect:100-continue| Host:localhost:54240| GUID:0e5b39bb-ca45-4c48-95ec-164145b5f5b0| Body: {"afacctno":"0001000006","acctno":null,"balance":0.0,"pp":0.0,"cidepofeeacr":0.0,"depofeeamt":0.0,"currentdebt":0.0,"lastchange":"2023-08-07T15:39:24.830561+07:00","status":"\u0000"}===============================END
+2023-08-07 15:39:24,869 [27] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in C:\Users\vuphu\Downloads\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2023-08-07 15:39:24,870 [27] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suatrutiencimast: ======================BEGIN
+2023-08-07 15:39:24,870 [27] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suatrutiencimast: ======================BEGIN
+2023-08-07 15:39:24,872 [27] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_suatrutiencimast: ======================END
+2023-08-07 15:39:24,872 [27] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suatrutiencimast: callDBTransaction.v_lngErrorCode: 0
+2023-08-07 15:39:24,872 [27] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_suatrutiencimast: ======================END
+2023-08-07 15:39:24,873 [27] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PUT| Message: {"s":"ok","errmsg":"success"}
+2023-08-07 15:39:24,873 [27] INFO  RestAPI.Controllers.CimastController - cimast/0001000006 subtractmoney/ 1 PUT======================END
+2023-08-07 15:39:24,873 [60] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast/0001000006/subtractmoney/1], Method=[PUT], duration time process=[8.9749](ms) ============= END
+2023-08-07 15:39:25,415 [56] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[6e5449a5-d0bb-48b0-9b7e-3be75b1f2126], timer=638270195654157385 ============= BEGIN
+2023-08-07 15:39:25,416 [56] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:39:25,416 [56] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:6e5449a5-d0bb-48b0-9b7e-3be75b1f2126| Body: ===============================END
+2023-08-07 15:39:25,416 [56] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:39:25,418 [56] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:39:25,418 [56] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:39:25,418 [56] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:39:25,418 [45] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[2.9934](ms) ============= END
+2023-08-07 15:39:27,042 [28] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], GUID=[49089a99-336f-44f6-8a54-11f1315b28a0], timer=638270195670425018 ============= BEGIN
+2023-08-07 15:39:27,044 [28] INFO  RestAPI.Controllers.CimastController - cimast======================BEGIN
+2023-08-07 15:39:27,044 [28] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/api/cimast| method:GET| ClientIPAddress:::1| Host:localhost:54240| GUID:49089a99-336f-44f6-8a54-11f1315b28a0| Body: ===============================END
+2023-08-07 15:39:27,044 [28] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================BEGIN
+2023-08-07 15:39:27,048 [28] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatagetallcimast: ======================END
+2023-08-07 15:39:27,050 [28] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2023-08-07 15:39:27,050 [28] INFO  RestAPI.Controllers.CimastController - cimast======================END
+2023-08-07 15:39:27,051 [54] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/cimast], Method=[GET], duration time process=[8.9738](ms) ============= END
+2023-08-07 15:41:02,119 [27] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[fd651e35-8e44-42f4-82d1-3fb3208c8147], timer=638270196621199405 ============= BEGIN
+2023-08-07 15:41:02,149 [27] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[29.9184](ms) ============= END
+2023-08-07 15:41:09,081 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/semast], Method=[GET], GUID=[bde640b8-8e75-4bc1-a2d2-88254908ad08], timer=638270196690814291 ============= BEGIN
+2023-08-07 15:41:09,182 [49] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/api/semast], Method=[GET], duration time process=[101.1891](ms) ============= END

@@ -1,0 +1,85 @@
+﻿2022-04-12 19:27:01,073 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[26513147-7626-4eb3-8eaa-8d366a78e348], timer=637853884210706766 ============= BEGIN
+2022-04-12 19:27:02,230 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1160.058](ms) ============= END
+2022-04-12 19:27:03,132 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], GUID=[75cf311a-9aa4-4650-9fcc-f8edf8b4a108], timer=637853884231328184 ============= BEGIN
+2022-04-12 19:27:03,188 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], duration time process=[55.9727](ms) ============= END
+2022-04-12 19:27:19,767 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/], Method=[PATCH], GUID=[a10362fb-2828-46ff-b604-ab2331f41462], timer=637853884397677811 ============= BEGIN
+2022-04-12 19:27:20,014 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/], Method=[PATCH], duration time process=[246.9838](ms) ============= END
+2022-04-12 19:27:54,887 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/37598], Method=[PATCH], GUID=[81fe921f-c2cf-4eaf-8cd5-ad144018ce09], timer=637853884748872359 ============= BEGIN
+2022-04-12 19:27:54,922 [5] INFO  RestAPI.Controllers.LoanController - loan/37598PATCH======================BEGIN
+2022-04-12 19:27:54,933 [5] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/loan/37598| method:PATCH| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:ae358a27-4b66-4768-ad5f-083bf0e7c5fb| GUID:81fe921f-c2cf-4eaf-8cd5-ad144018ce09| Body: { "requestId": "1213445565", "undueInterest": 1, "dueInterest": 0, "overdueInterest": 0, "interestOnOverduePrincipal": 0, "undueFee": 1, "dueFee": 1.2, "overdueFee": 1, "feeOnOverduePrincipal": 1, "flag": "dcv" }===============================END
+2022-04-12 19:28:02,791 [5] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2022-04-12 19:28:12,897 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: ======================BEGIN
+2022-04-12 19:28:14,214 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_loan_rate: ======================BEGIN
+2022-04-12 19:28:14,324 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_loan_rate: ======================END
+2022-04-12 19:28:14,324 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: callDBTransaction.v_lngErrorCode: -10012
+2022-04-12 19:28:14,332 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: ======================END
+2022-04-12 19:28:37,685 [5] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: PATCH| Message: {"s":"-10012","errmsg":"[-10012]: Trùng mã yêu cầu"}
+2022-04-12 19:28:37,685 [5] INFO  RestAPI.Controllers.LoanController - loan/37598PATCH======================END
+2022-04-12 19:28:37,757 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/37598], Method=[PATCH], duration time process=[42870.3442](ms) ============= END
+2022-04-12 19:28:43,195 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/37598], Method=[PATCH], GUID=[1a832f27-653c-43b0-9d05-1a05bd99fdbb], timer=637853885231952197 ============= BEGIN
+2022-04-12 19:28:43,209 [10] INFO  RestAPI.Controllers.LoanController - loan/37598PATCH======================BEGIN
+2022-04-12 19:28:43,209 [10] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/loan/37598| method:PATCH| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:4f079189-bab4-42e5-89d4-4334a01ba1e6| GUID:1a832f27-653c-43b0-9d05-1a05bd99fdbb| Body: { "requestId": "1213453453445565", "undueInterest": 1, "dueInterest": 0, "overdueInterest": 0, "interestOnOverduePrincipal": 0, "undueFee": 1, "dueFee": 1.2, "overdueFee": 1, "feeOnOverduePrincipal": 1, "flag": "dcv" }===============================END
+2022-04-12 19:28:49,035 [10] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2022-04-12 19:28:53,674 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: ======================BEGIN
+2022-04-12 19:28:53,685 [10] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_loan_rate: ======================BEGIN
+2022-04-12 19:28:53,764 [10] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_loan_rate: ======================END
+2022-04-12 19:28:53,764 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: callDBTransaction.v_lngErrorCode: 0
+2022-04-12 19:28:53,810 [10] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: ======================END
+2022-04-12 19:29:11,631 [10] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: PATCH| Message: {"s":"ok","errmsg":"Success","d":{"newundueInterest":1.0,"newdueInterest":0.0,"newoverdueInterest":0.0,"newinterestOnOverduePrincipal":0.0,"newundueFee":1.0,"newdueFee":1.2,"newoverdueFee":1.0,"newfeeOnOverduePrincipal":1.0}}
+2022-04-12 19:29:11,631 [10] INFO  RestAPI.Controllers.LoanController - loan/37598PATCH======================END
+2022-04-12 19:29:11,654 [10] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/37598], Method=[PATCH], duration time process=[28459.1364](ms) ============= END
+2022-04-12 19:31:43,932 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[38cdf2f7-a2a1-4d0b-bcbc-3d05ca5d0706], timer=637853887039312431 ============= BEGIN
+2022-04-12 19:31:44,278 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/37598], Method=[PATCH], GUID=[d6cd57ae-0271-40b2-994b-9b97c95e4c01], timer=637853887042782587 ============= BEGIN
+2022-04-12 19:31:45,177 [6] INFO  RestAPI.Controllers.LoanController - loan/37598PATCH======================BEGIN
+2022-04-12 19:31:45,181 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/loan/37598| method:PATCH| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:c7b0ce88-8e45-44b7-a6d3-204c7598f1a3| GUID:d6cd57ae-0271-40b2-994b-9b97c95e4c01| Body: { "requestId": "1213453457344565565", "undueInterest": 1, "dueInterest": 0, "overdueInterest": 0, "interestOnOverduePrincipal": 0, "undueFee": 1, "dueFee": 1.2, "overdueFee": 1, "feeOnOverduePrincipal": 1, "flag": "dcv" }===============================END
+2022-04-12 19:31:47,543 [6] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2022-04-12 19:31:48,223 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[4292.0545](ms) ============= END
+2022-04-12 19:31:50,121 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: ======================BEGIN
+2022-04-12 19:31:50,619 [6] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_loan_rate: ======================BEGIN
+2022-04-12 19:31:50,729 [6] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_loan_rate: ======================END
+2022-04-12 19:31:50,729 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: callDBTransaction.v_lngErrorCode: 0
+2022-04-12 19:31:50,785 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: ======================END
+2022-04-12 19:32:09,899 [6] ERROR RestAPI.Controllers.LoanController - loan/37598PATCH
+System.InvalidCastException: Unable to cast object of type 'RestAPI.Bussiness.BoResponseWithData' to type 'RestAPI.Bussiness.BoResponse'.
+   at RestAPI.Controllers.LoanController.LoanRate(HttpRequestMessage request, String id) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Controllers\LoanController.cs:line 127
+2022-04-12 19:32:10,071 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: InternalServerError| Method: PATCH| Message: {"ClassName":"System.InvalidCastException","Message":"Unable to cast object of type 'RestAPI.Bussiness.BoResponseWithData' to type 'RestAPI.Bussiness.BoResponse'.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at RestAPI.Controllers.LoanController.LoanRate(HttpRequestMessage request, String id) in D:\\FSS_DEV\\DNSE\\gits\\restapi\\RestAPI\\Controllers\\LoanController.cs:line 127","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nLoanRate\nRestAPI, Version=1.0.6.17, Culture=neutral, PublicKeyToken=null\nRestAPI.Controllers.LoanController\nSystem.Net.Http.HttpResponseMessage LoanRate(System.Net.Http.HttpRequestMessage, System.String)","HResult":-2147467262,"Source":"RestAPI","WatsonBuckets":null}
+2022-04-12 19:32:10,071 [6] INFO  RestAPI.Controllers.LoanController - loan/37598PATCH======================END
+2022-04-12 19:32:10,155 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/37598], Method=[PATCH], duration time process=[25877.4351](ms) ============= END
+2022-04-12 19:32:16,443 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/37598], Method=[PATCH], GUID=[195c6913-ac43-40d7-a7ff-c254769d17a7], timer=637853887364433988 ============= BEGIN
+2022-04-12 19:32:16,463 [5] INFO  RestAPI.Controllers.LoanController - loan/37598PATCH======================BEGIN
+2022-04-12 19:32:16,464 [5] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/loan/37598| method:PATCH| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:e46376b3-6174-49e0-873c-f81914ba3a32| GUID:195c6913-ac43-40d7-a7ff-c254769d17a7| Body: { "requestId": "1213453344565565", "undueInterest": 1, "dueInterest": 0, "overdueInterest": 0, "interestOnOverduePrincipal": 0, "undueFee": 1, "dueFee": 1.2, "overdueFee": 1, "feeOnOverduePrincipal": 1, "flag": "dcv" }===============================END
+2022-04-12 19:32:19,012 [5] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2022-04-12 19:32:20,891 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: ======================BEGIN
+2022-04-12 19:32:20,901 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_loan_rate: ======================BEGIN
+2022-04-12 19:32:20,975 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_loan_rate: ======================END
+2022-04-12 19:32:20,975 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: callDBTransaction.v_lngErrorCode: 0
+2022-04-12 19:32:21,006 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: ======================END
+2022-04-12 19:33:59,041 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[c1801f3f-0890-4736-ac99-a15c39d48fab], timer=637853888390390080 ============= BEGIN
+2022-04-12 19:33:59,579 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[539.4162](ms) ============= END
+2022-04-12 19:34:08,152 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/37598], Method=[PATCH], GUID=[307e8004-1cfc-4b33-b4af-a1cfa04b5ef5], timer=637853888481527444 ============= BEGIN
+2022-04-12 19:34:08,440 [5] INFO  RestAPI.Controllers.LoanController - loan/37598PATCH======================BEGIN
+2022-04-12 19:34:08,447 [5] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/loan/37598| method:PATCH| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:2f008234-556c-40f0-a570-65c0fe1a08cf| GUID:307e8004-1cfc-4b33-b4af-a1cfa04b5ef5| Body: { "requestId": "1213456565653344565565", "undueInterest": 1, "dueInterest": 0, "overdueInterest": 0, "interestOnOverduePrincipal": 0, "undueFee": 1, "dueFee": 1.2, "overdueFee": 1, "feeOnOverduePrincipal": 1, "flag": "dcv" }===============================END
+2022-04-12 19:34:10,104 [5] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923
+2022-04-12 19:34:14,206 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: ======================BEGIN
+2022-04-12 19:34:14,673 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_loan_rate: ======================BEGIN
+2022-04-12 19:34:14,788 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_loan_rate: ======================END
+2022-04-12 19:34:14,788 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: callDBTransaction.v_lngErrorCode: 0
+2022-04-12 19:34:14,826 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_loan_rate: ======================END
+2022-04-12 19:34:21,783 [5] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: PATCH| Message: {"s":"ok","errmsg":"Success","d":{"newundueInterest":1.0,"newdueInterest":0.0,"newoverdueInterest":0.0,"newinterestOnOverduePrincipal":0.0,"newundueFee":1.0,"newdueFee":1.2,"newoverdueFee":1.0,"newfeeOnOverduePrincipal":1.0}}
+2022-04-12 19:34:22,696 [5] INFO  RestAPI.Controllers.LoanController - loan/37598PATCH======================END
+2022-04-12 19:34:24,287 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/loan/37598], Method=[PATCH], duration time process=[16134.5128](ms) ============= END

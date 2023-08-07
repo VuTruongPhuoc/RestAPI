@@ -1,0 +1,19 @@
+﻿2021-05-21 10:25:35,916 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[75621a7b-5c94-4f08-a339-cebf1a0552f3], timer=637571895359061175 ============= BEGIN
+2021-05-21 10:25:36,924 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1017.7889](ms) ============= END
+2021-05-21 10:25:40,064 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], GUID=[86302da0-1b25-4ca9-af45-61ce2ce88969], timer=637571895400643807 ============= BEGIN
+2021-05-21 10:25:40,088 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], duration time process=[24.0981](ms) ============= END
+2021-05-21 10:26:06,376 [8] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/cashTransfer], Method=[POST], GUID=[30484db9-2c74-41d7-9254-3d8b329c0c4c], timer=637571895663764821 ============= BEGIN
+2021-05-21 10:26:14,486 [8] INFO  RestAPI.Controllers.AccountsController - accounts/cashTranfer======================BEGIN
+2021-05-21 10:26:14,688 [8] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/cashTransfer| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:bc5cd03a-81f6-40f3-8773-8ace478995a1| GUID:30484db9-2c74-41d7-9254-3d8b329c0c4c| Body: { 
+    "requestid":"HU0018", 
+    "account":"0001006127", 
+    "amount":"10000", 
+    "toAccount":"0001006129", 
+    "Description":"YenNT test chuyen tien: 0001006127 sang tk 0001006129" 
+}
+
+===============================END
+2021-05-21 10:26:17,496 [8] ERROR RestAPI.Bussiness.modCommon - getRequestHeaderValue:.Error:.name=client-ip
+System.InvalidOperationException: The given header was not found.
+   at System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   at RestAPI.Bussiness.modCommon.getRequestHeaderValue(HttpRequestMessage request, String name) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\modCommon.cs:line 923

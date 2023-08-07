@@ -1,0 +1,7 @@
+﻿2021-04-02 10:53:10,861 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000115/securitiesPortfolio], Method=[GET], GUID=[b1f90229-6a41-477a-b439-42b58d4e20ee], timer=637529575908430712 ============= BEGIN
+2021-04-02 10:53:10,947 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[5814d2d0-bdad-4118-baf2-0f97e23a2e30], timer=637529575908430712 ============= BEGIN
+2021-04-02 10:53:11,734 [6] INFO  RestAPI.Controllers.AccountsController - accounts/0001000115/securitiesPortfolio GET======================BEGIN
+2021-04-02 10:53:11,809 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000115/securitiesPortfolio| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:f39a30b8-4ba9-4392-b5d0-e6bf2bfd7282| GUID:b1f90229-6a41-477a-b439-42b58d4e20ee| Body: {}===============================END
+2021-04-02 10:53:15,593 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[4749.1372](ms) ============= END
+2021-04-02 10:55:57,137 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================BEGIN
+2021-04-02 10:55:58,825 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================END

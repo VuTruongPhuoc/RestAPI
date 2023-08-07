@@ -1,0 +1,50 @@
+﻿2021-07-06 14:51:19,607 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001006130/deposit], Method=[POST], GUID=[778c74a6-3d81-46b9-ba20-ed5a1294b75b], timer=637611798796066687 ============= BEGIN
+2021-07-06 14:51:19,607 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[ad7ccd50-d34b-48a3-b5e1-e2a0314121c8], timer=637611798796046722 ============= BEGIN
+2021-07-06 14:51:20,626 [5] INFO  RestAPI.Controllers.AccountsController - accounts/0001006130/postAccountsDeposit POST======================BEGIN
+2021-07-06 14:51:20,630 [5] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001006130/deposit| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:775a735c-a675-4a94-9ce6-38d8be6f319a| GUID:778c74a6-3d81-46b9-ba20-ed5a1294b75b| Body: {
+"bankAccount": "12210000375797",
+"bankTxnum": "0001123456802",
+"amount": 300000,
+"description":"Nop tien",
+"flag":"2021070600"
+}===============================END
+2021-07-06 14:51:20,703 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[1098.6035](ms) ============= END
+2021-07-06 14:51:20,714 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_deposit: ======================BEGIN
+2021-07-06 14:51:23,536 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_deposit: ======================BEGIN
+2021-07-06 14:51:23,659 [5] ERROR RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_deposit: 
+Oracle.DataAccess.Client.OracleException ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'PR_POST_DEPOSIT'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored    at DataAccessLayer.DataAccess.ExecuteOracleStored(String pv_strStoredName, StoreParameter[]& pv_StoreParameters, Int32 pv_ReturnIndex)
+   at RestAPI.Bussiness.TransactionProcess.callDBTransaction(String pv_strProcessID, StoreParameter[]& pv_keyField, Int32 returnIndex) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\TransactionProcess.cs:line 146
+2021-07-06 14:51:23,680 [5] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_deposit: ======================END
+2021-07-06 14:51:23,680 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_deposit: callDBTransaction.v_lngErrorCode: -1
+2021-07-06 14:51:23,697 [5] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_deposit: ======================END
+2021-07-06 14:51:23,849 [5] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-1","errmsg":"System Error"}
+2021-07-06 14:51:23,850 [5] INFO  RestAPI.Controllers.AccountsController - accounts/0001006130/postAccountsDeposit POST======================END
+2021-07-06 14:51:23,876 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001006130/deposit], Method=[POST], duration time process=[4269.4045](ms) ============= END
+2021-07-06 14:51:24,816 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], GUID=[757c07b8-3b49-409a-8436-e87e5fbcc7d3], timer=637611798848160935 ============= BEGIN
+2021-07-06 14:51:24,843 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], duration time process=[26.972](ms) ============= END
+2021-07-06 14:51:49,530 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001006130/deposit], Method=[POST], GUID=[b11224c1-2147-4e0d-bfc6-5586a27bc8e0], timer=637611799095305472 ============= BEGIN
+2021-07-06 14:51:52,702 [6] INFO  RestAPI.Controllers.AccountsController - accounts/0001006130/postAccountsDeposit POST======================BEGIN
+2021-07-06 14:51:52,702 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001006130/deposit| method:POST| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:aefef87f-46b9-400f-9e13-9a5b52aac4bb| GUID:b11224c1-2147-4e0d-bfc6-5586a27bc8e0| Body: {
+"bankAccount": "12210000375797",
+"bankTxnum": "0001123456802",
+"amount": 300000,
+"description":"Nop tien",
+"flag":"2021070600"
+}===============================END
+2021-07-06 14:52:13,253 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_deposit: ======================BEGIN
+2021-07-06 14:52:13,265 [6] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_deposit: ======================BEGIN
+2021-07-06 14:52:13,292 [6] ERROR RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_deposit: 
+Oracle.DataAccess.Client.OracleException ORA-06550: line 1, column 7:
+PLS-00306: wrong number or types of arguments in call to 'PR_POST_DEPOSIT'
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored    at DataAccessLayer.DataAccess.ExecuteOracleStored(String pv_strStoredName, StoreParameter[]& pv_StoreParameters, Int32 pv_ReturnIndex)
+   at RestAPI.Bussiness.TransactionProcess.callDBTransaction(String pv_strProcessID, StoreParameter[]& pv_keyField, Int32 returnIndex) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\TransactionProcess.cs:line 146
+2021-07-06 14:52:13,292 [6] INFO  RestAPI.Bussiness.TransactionProcess - callDBTransaction_fopks_restapi.pr_post_deposit: ======================END
+2021-07-06 14:52:13,292 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_deposit: callDBTransaction.v_lngErrorCode: -1
+2021-07-06 14:52:13,294 [6] INFO  RestAPI.Bussiness.TransactionProcess - doTransaction_fopks_restapi.pr_post_deposit: ======================END
+2021-07-06 14:53:12,958 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: POST| Message: {"s":"-1","errmsg":"System Error"}
+2021-07-06 14:53:12,958 [6] INFO  RestAPI.Controllers.AccountsController - accounts/0001006130/postAccountsDeposit POST======================END
+2021-07-06 14:53:12,987 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001006130/deposit], Method=[POST], duration time process=[83456.9285](ms) ============= END

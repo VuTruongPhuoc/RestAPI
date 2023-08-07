@@ -1,0 +1,152 @@
+﻿2021-04-01 15:59:29,222 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], GUID=[7ee9e391-0c79-4908-bd4b-fb3e9c5bc3c2], timer=637528895692118185 ============= BEGIN
+2021-04-01 15:59:30,079 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/], Method=[GET], duration time process=[868.1116](ms) ============= END
+2021-04-01 15:59:31,616 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], GUID=[a9e3ecdb-4a2d-4797-b38c-9f9a24709315], timer=637528895716163567 ============= BEGIN
+2021-04-01 15:59:31,650 [5] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/favicon.ico], Method=[GET], duration time process=[32.9686](ms) ============= END
+2021-04-01 16:01:21,099 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], GUID=[9bdac3a9-1b31-4c5d-a9d2-7043368a7765], timer=637528896810992530 ============= BEGIN
+2021-04-01 16:01:21,208 [9] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================BEGIN
+2021-04-01 16:01:21,223 [9] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/securitiesPortfolio| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:49a570dc-fd36-4ec1-bcd2-a9cee5cd0950| GUID:9bdac3a9-1b31-4c5d-a9d2-7043368a7765| Body: ===============================END
+2021-04-01 16:01:21,228 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================BEGIN
+2021-04-01 16:01:22,946 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================END
+2021-04-01 16:01:23,122 [9] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:01:23,122 [9] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================END
+2021-04-01 16:01:23,159 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], duration time process=[2059.89](ms) ============= END
+2021-04-01 16:01:42,692 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], GUID=[b644cb66-a005-4cee-9ac7-989d5b1a2b17], timer=637528897026924916 ============= BEGIN
+2021-04-01 16:01:42,810 [7] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================BEGIN
+2021-04-01 16:01:42,810 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/securitiesPortfolio| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:0f89737c-dc7a-4a0c-af61-5c9bb95aa8ae| GUID:b644cb66-a005-4cee-9ac7-989d5b1a2b17| Body: ===============================END
+2021-04-01 16:01:42,810 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================BEGIN
+2021-04-01 16:01:42,821 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================END
+2021-04-01 16:01:42,821 [7] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:01:42,821 [7] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================END
+2021-04-01 16:01:42,906 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], duration time process=[213.7804](ms) ============= END
+2021-04-01 16:01:43,862 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], GUID=[86088f4d-e318-4012-a59c-9c5d1a43236a], timer=637528897038620928 ============= BEGIN
+2021-04-01 16:01:43,866 [6] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================BEGIN
+2021-04-01 16:01:43,866 [6] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/securitiesPortfolio| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:14c06f67-ee29-44e7-b395-1acd59cba614| GUID:86088f4d-e318-4012-a59c-9c5d1a43236a| Body: ===============================END
+2021-04-01 16:01:43,866 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================BEGIN
+2021-04-01 16:01:43,872 [6] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================END
+2021-04-01 16:01:43,872 [6] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:01:43,872 [6] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================END
+2021-04-01 16:01:43,907 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], duration time process=[44.9546](ms) ============= END
+2021-04-01 16:01:44,892 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], GUID=[925eb440-5d12-4709-909a-d9c9bf4f1128], timer=637528897048920390 ============= BEGIN
+2021-04-01 16:01:44,903 [7] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================BEGIN
+2021-04-01 16:01:44,903 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/securitiesPortfolio| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:4357d95a-759d-4449-ba2b-fdb12a5abcf1| GUID:925eb440-5d12-4709-909a-d9c9bf4f1128| Body: ===============================END
+2021-04-01 16:01:44,903 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================BEGIN
+2021-04-01 16:01:44,908 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================END
+2021-04-01 16:01:44,908 [7] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:01:44,908 [7] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================END
+2021-04-01 16:01:44,929 [6] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], duration time process=[37.9607](ms) ============= END
+2021-04-01 16:02:46,264 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], GUID=[0b10b071-5486-40a9-bbdd-ec8cef78b664], timer=637528897662642860 ============= BEGIN
+2021-04-01 16:02:46,268 [7] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================BEGIN
+2021-04-01 16:02:46,268 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/securitiesPortfolio| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:209194d7-e6b6-47c9-b89e-eb7674b0af5a| GUID:0b10b071-5486-40a9-bbdd-ec8cef78b664| Body: ===============================END
+2021-04-01 16:02:54,071 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================BEGIN
+2021-04-01 16:02:54,084 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================END
+2021-04-01 16:03:30,773 [7] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:03:30,773 [7] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================END
+2021-04-01 16:03:30,826 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], duration time process=[44561.854](ms) ============= END
+2021-04-01 16:03:41,545 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], GUID=[b76f0cd7-f2c9-477e-bd5d-536f9d4d2000], timer=637528898215452770 ============= BEGIN
+2021-04-01 16:03:41,701 [9] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================BEGIN
+2021-04-01 16:03:41,702 [9] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/securitiesPortfolio| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:68566541-790c-4899-bb02-ea3ab2eb36af| GUID:b76f0cd7-f2c9-477e-bd5d-536f9d4d2000| Body: {
+    
+}===============================END
+2021-04-01 16:04:00,290 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================BEGIN
+2021-04-01 16:04:00,295 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================END
+2021-04-01 16:04:04,190 [9] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:04:04,190 [9] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================END
+2021-04-01 16:04:04,366 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], duration time process=[22820.8805](ms) ============= END
+2021-04-01 16:04:10,779 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], GUID=[25408089-42d8-40b7-a193-1f8ea414c532], timer=637528898507785898 ============= BEGIN
+2021-04-01 16:04:10,786 [7] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================BEGIN
+2021-04-01 16:04:10,786 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/securitiesPortfolio| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:272c156a-2cab-498c-aa1c-e20829491ff0| GUID:25408089-42d8-40b7-a193-1f8ea414c532| Body: { 
+}===============================END
+2021-04-01 16:04:12,612 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================BEGIN
+2021-04-01 16:04:12,617 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================END
+2021-04-01 16:04:18,996 [7] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:04:18,996 [7] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================END
+2021-04-01 16:04:19,043 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], duration time process=[8264.536](ms) ============= END
+2021-04-01 16:06:59,497 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], GUID=[6b21483c-4abc-4ac6-81d6-cc05e35980af], timer=637528900194970638 ============= BEGIN
+2021-04-01 16:06:59,502 [7] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================BEGIN
+2021-04-01 16:06:59,503 [7] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/securitiesPortfolio| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:4d0cde94-523e-4ae8-ae53-1e6fbf9b2969| GUID:6b21483c-4abc-4ac6-81d6-cc05e35980af| Body: { 
+    "symbol":"ACB",
+    "price":0.0
+}===============================END
+2021-04-01 16:07:08,580 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================BEGIN
+2021-04-01 16:07:08,616 [7] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getSecuritiesPortfolio: ======================END
+2021-04-01 16:07:09,993 [7] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:07:09,993 [7] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/securitiesPortfolio GET======================END
+2021-04-01 16:07:10,142 [7] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/securitiesPortfolio], Method=[GET], duration time process=[10645.1433](ms) ============= END
+2021-04-01 16:07:27,910 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], GUID=[5018fe1a-1d85-4e8a-94ed-0aa66ba112d2], timer=637528900479108562 ============= BEGIN
+2021-04-01 16:07:29,941 [9] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================BEGIN
+2021-04-01 16:07:29,942 [9] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/getAvailableTrade| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:0fcdac06-924f-44bb-9c26-d5d3c1800762| GUID:5018fe1a-1d85-4e8a-94ed-0aa66ba112d2| Body: { 
+    "symbol":"ACB",
+    "price":0.0
+}===============================END
+2021-04-01 16:07:47,520 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getAvailableTrade: ======================BEGIN
+2021-04-01 16:07:47,589 [9] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getAvailableTrade: ======================END
+2021-04-01 16:07:56,269 [9] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:07:56,269 [9] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================END
+2021-04-01 16:07:56,281 [9] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], duration time process=[28370.7415](ms) ============= END
+2021-04-01 16:13:19,280 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], GUID=[0970ae8f-d4f2-4da9-9de1-7b6909d28dc0], timer=637528903992801892 ============= BEGIN
+2021-04-01 16:13:21,145 [16] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================BEGIN
+2021-04-01 16:13:21,146 [16] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/getAvailableTrade| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:cf8e2bdc-f3f3-4b73-adbe-e9d2333d0e08| GUID:0970ae8f-d4f2-4da9-9de1-7b6909d28dc0| Body: { 
+    "symbol":"ACB",
+    "price":1.0
+}===============================END
+2021-04-01 16:13:21,644 [16] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getAvailableTrade: ======================BEGIN
+2021-04-01 16:13:21,650 [16] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getAvailableTrade: ======================END
+2021-04-01 16:13:21,651 [16] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:13:21,651 [16] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================END
+2021-04-01 16:13:21,686 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], duration time process=[2406.5351](ms) ============= END
+2021-04-01 16:13:27,119 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], GUID=[854003e4-3e22-474b-b05f-56b215ba8ce2], timer=637528904071191617 ============= BEGIN
+2021-04-01 16:13:29,383 [21] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================BEGIN
+2021-04-01 16:13:29,384 [21] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/getAvailableTrade| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:c4363723-964b-41a8-aee0-52fbd5513933| GUID:854003e4-3e22-474b-b05f-56b215ba8ce2| Body: { 
+    "symbol":"ACB",
+    "price":1.5
+}===============================END
+2021-04-01 16:13:30,217 [21] ERROR RestAPI.Bussiness.AccountProcess - getAvailableTrade: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Int64.Parse(String s)
+   at RestAPI.Bussiness.AccountProcess.getAvailableTrade(String strRequest, String accountNo) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\AccountProcess.cs:line 250
+2021-04-01 16:13:30,235 [21] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2021-04-01 16:13:30,252 [21] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2021-04-01 16:13:30,256 [21] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"400","errmsg":"bad request!"}
+2021-04-01 16:13:30,256 [21] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================END
+2021-04-01 16:13:30,417 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], duration time process=[3298.6213](ms) ============= END
+2021-04-01 16:15:21,434 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], GUID=[5aefee84-5adc-445a-9167-a956f99ec870], timer=637528905214340911 ============= BEGIN
+2021-04-01 16:15:26,569 [16] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================BEGIN
+2021-04-01 16:15:26,570 [16] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/getAvailableTrade| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:1f673c6d-6ad8-4447-bc79-6bf2860061dc| GUID:5aefee84-5adc-445a-9167-a956f99ec870| Body: { 
+    "symbol":"ACB",
+    "price": 1.5
+}===============================END
+2021-04-01 16:15:48,572 [16] ERROR RestAPI.Bussiness.AccountProcess - getAvailableTrade: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Int64.Parse(String s)
+   at RestAPI.Bussiness.AccountProcess.getAvailableTrade(String strRequest, String accountNo) in D:\FSS_DEV\DNSE\gits\restapi\RestAPI\Bussiness\AccountProcess.cs:line 250
+2021-04-01 16:15:50,365 [16] DEBUG RestAPI.Bussiness.ErrorMapHepper - Begin init ErrorList
+2021-04-01 16:15:50,367 [16] DEBUG RestAPI.Bussiness.ErrorMapHepper - End init ErrorList
+2021-04-01 16:15:50,367 [16] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: BadRequest| Method: GET| Message: {"s":"400","errmsg":"bad request!"}
+2021-04-01 16:15:50,367 [16] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================END
+2021-04-01 16:15:50,452 [24] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], duration time process=[29018.2814](ms) ============= END
+2021-04-01 16:15:57,340 [16] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], GUID=[112a6f64-ad65-419a-8c6f-ed4c6bdeeefd], timer=637528905573403192 ============= BEGIN
+2021-04-01 16:15:59,324 [16] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================BEGIN
+2021-04-01 16:15:59,324 [16] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/getAvailableTrade| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:8360c995-777f-427e-a4a5-05f61d2f8f33| GUID:112a6f64-ad65-419a-8c6f-ed4c6bdeeefd| Body: { 
+    "symbol":"ACB",
+    "price": 0.0
+}===============================END
+2021-04-01 16:16:20,128 [16] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getAvailableTrade: ======================BEGIN
+2021-04-01 16:16:20,137 [16] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getAvailableTrade: ======================END
+2021-04-01 16:16:20,137 [16] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:16:20,137 [16] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================END
+2021-04-01 16:16:20,151 [19] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], duration time process=[22811.6381](ms) ============= END
+2021-04-01 16:16:26,006 [17] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], GUID=[41ce5e0e-2796-4741-a563-73013cb577e1], timer=637528905860069614 ============= BEGIN
+2021-04-01 16:16:28,780 [17] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================BEGIN
+2021-04-01 16:16:28,780 [17] INFO  RestAPI.Bussiness.modCommon - LogFullRequest| uri:http://localhost:54240/accounts/0001000044/getAvailableTrade| method:GET| ClientIPAddress:::1| Connection:keep-alive| Accept:*/*| Accept-Encoding:gzip| Host:localhost:54240| User-Agent:PostmanRuntime/7.26.8| Postman-Token:abf5543f-3064-4252-b9ed-5b3ff5725cc0| GUID:41ce5e0e-2796-4741-a563-73013cb577e1| Body: { 
+    "symbol":"ACB",
+    "price": 0
+}===============================END
+2021-04-01 16:16:50,793 [17] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getAvailableTrade: ======================BEGIN
+2021-04-01 16:16:50,808 [17] INFO  RestAPI.Bussiness.GetDataProcess - executeGetDatafopks_restapi.pr_getAvailableTrade: ======================END
+2021-04-01 16:16:56,325 [17] INFO  RestAPI.Bussiness.modCommon - Responses HttpStatusCode: OK| Method: GET
+2021-04-01 16:16:56,326 [17] INFO  RestAPI.Controllers.AccountsController - accounts/0001000044/getAvailableTrade GET======================END
+2021-04-01 16:16:56,368 [21] INFO  RestAPI.WebApiApplication - URL=[http://localhost:54240/accounts/0001000044/getAvailableTrade], Method=[GET], duration time process=[30361.4401](ms) ============= END
